@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.active_item{
+    color: #e2e8f0;
+    background: #6e8192;
+}

@@ -1,0 +1,28 @@
+<?php
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\apiController;
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {return $request->user();});
+// Route::get('/api/{e}',[apiController::class,'index']);
+// Route::get('/getTask/{e}',[apiController::class,'getTasks']);
+// Route::get('/getProfileimg/{e}',[apiController::class,'getProfileimg']);
+// Route::post('/register',[apiController::class,'register']);
+// Route::post('/login',[apiController::class,'login']);
+// Route::post('/changeusername',[apiController::class,'changeusername']);
+// Route::post('/changepassword',[apiController::class,'changepassword']);
+// Route::post('/changeemail',[apiController::class,'changeemail']);
+// Route::post('/changephoneNum',[apiController::class,'changephoneNum']);
+// Route::post('/changebio',[apiController::class,'changebio']);
+// Route::post('/changeimg/{e}',[apiController::class,'changeimg']);
+// Route::get('/showimg/{e}',[apiController::class,'showimg']);
+// Route::get('/mobileAPI/{e}',[apiController::class,'mobileAPI']);
+// Route::get('/getdata/{e}',[apiController::class,'getdata']);
+// Route::get('/getChartdata/{e}',[apiController::class,'getChartdata']);
+// Route::post('/savedatatodatabase',[apiController::class,'savedatatodatabase']);
+// Route::post('/addToDoList',[apiController::class,'addToDoList']);
+// Route::post('/completedTasks',[apiController::class,'completedTasks']);
+// Route::get('/fetchUserDate/{e}',[apiController::class,'fetchUserDate']);
+// Route::post('/updateDatabse',[apiController::class,'updateDatabse']);
+// Route::post('/updatetaskstatus',[apiController::class,'updatetaskstatus']);
+// Route::post('/completedtask',[apiController::class,'completedtask']);
+// Route::post('/delete_task',[apiController::class,'delete_task']);
