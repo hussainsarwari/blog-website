@@ -21,4 +21,7 @@ class tools extends Controller
     public function CV_generator(){
       return view('CV_generator');
     }
+    public function onlinecodeeditor(){
+      return view('online_code_editor');
+    }
 }
