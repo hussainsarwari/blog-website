@@ -219,25 +219,28 @@
         </div>
     </header>
     <div
-        class="rounded-full w-[8em] h-8em md:w-[30em] md:h-[30em] bg-yellow-300 absolute top-[60em] md:top-[50em] left-0 md:left-10 shadow-2xl shadow-yellow-500 box1">
+        class="rounded-full w-[8em] h-[8em] md:w-[30em] md:h-[30em] bg-yellow-300 absolute top-[60em] md:top-[50em] left-0 md:left-10 shadow-2xl shadow-yellow-500 box1">
     </div>
 
     {{-- main section --}}
     <div class="relative w-full h-screen mb-20 ">
         <div
-            class="w-[55em] h-[85em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
+            class="w-[55em] h-[85em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-0 lg:right-[5em] rounded-full ">
         </div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
 
             <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online code editor</h1>
             <form action="" method="post"
-                class="text-black overflow-x-hidden flex flex-col justify-center mx-5 search bg-slate-50 shadow-2xl shadow-slate-500 rounded-lg py-5 p-4 z-50 w-fit relative top-[20em] online_code_editor">
+                class="text-black overflow-x-hidden flex flex-col justify-center mx-5  bg-slate-50 shadow-2xl shadow-slate-500 rounded-lg py-5 p-4 z-50 w-fit relative top-[10rem] lg:top-[20em] online_code_editor">
                 @csrf
                 <div class="flex flex-col justify-between mb-2 md:flex-row header">
-                    <span class="title">Code Editro</span>
-                  <p>Select your programming language:
-                      <select  class="text-center text-black border-2 border-blue-300 rounded-lg w-[15em] h-[2em]" name="programming_language" id="programming_language">
+                    <span class="text-sm my-3  text-center w-full lg:text-md  flex flex-col justify-center">
+                      <span class="text-sm lg:text-[1.7em] font-bold py-[1em]">Code Editro </span>
+                    <p>
+                        Select your programming language:
+                        </p>
+                      <select  class="text-center text-black border-2 border-blue-300 rounded-lg  h-[2em]" name="programming_language" id="programming_language">
                         <option value="java">java</option>
                         <option value="javascript">javascript</option>
                         <option value="C++">C++</option>
@@ -245,7 +248,7 @@
                         <option value="php">php</option>
                         <option value="C#">C#</option>
                     </select>
-                </p>
+                </span>
                 </div>
                 <hr>
                 <div class="flex flex-row">
@@ -265,7 +268,7 @@
                     </div>
                 </div>
                     
-                <button type="submit"
+                <button type="button"
                     class="p-2 my-3 text-white bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700">
                     Run
                 </button>
@@ -279,7 +282,7 @@
     {{-- footer section --}}
 
 
-    <footer class="py-4 relative top-[250em] h-[130em] md:h-[70em] w-full ">
+    <footer class="py-4 relative top-[50em] h-[130em] md:h-[70em] w-full  border-none">
         <img class="absolute bottom-[58em] lg:bottom-[15em]  left-0 w-full rotate-180 d-none d-sm-inline"
             src="{{ asset('images/banner-bg.svg') }}" alt="footer-background-1">
         <img class="absolute bottom-[55em] left-0 w-full d-sm-none footer-img"
