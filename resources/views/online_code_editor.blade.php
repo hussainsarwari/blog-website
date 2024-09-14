@@ -225,7 +225,7 @@
     {{-- main section --}}
     <div class="relative w-full h-screen mb-20 ">
         <div
-            class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
+            class="w-[55em] h-[85em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
         </div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
@@ -234,10 +234,10 @@
             <form action="" method="post"
                 class="text-black overflow-x-hidden flex flex-col justify-center mx-5 search bg-slate-50 shadow-2xl shadow-slate-500 rounded-lg py-5 p-4 z-50 w-fit relative top-[20em] online_code_editor">
                 @csrf
-                <div class="flex flex-row justify-between mb-2 header">
+                <div class="flex flex-col justify-between mb-2 md:flex-row header">
                     <span class="title">Code Editro</span>
                   <p>Select your programming language:
-                      <select  class="text-center text-black border-2 border-blue-300 rounded-lg" name="programming_language" id="programming_language">
+                      <select  class="text-center text-black border-2 border-blue-300 rounded-lg w-[15em] h-[2em]" name="programming_language" id="programming_language">
                         <option value="java">java</option>
                         <option value="javascript">javascript</option>
                         <option value="C++">C++</option>
@@ -249,15 +249,17 @@
                 </div>
                 <hr>
                 <div class="flex flex-row">
-                    <textarea name="code_editor" id="code_editor" class="p-2 resize-none focus:outline-none" required placeholder="Write your code here" cols="60" rows="10"></textarea>
-                    <div class="result w-[30em] h-[30em] bg-white ml-2 pt-2 flex flex-col">
+                    <code class="text-black h-[35em]:">
+                        <textarea name="code_editor" id="code_editor" class="p-2 resize-none focus:outline-none" required placeholder="Write your code here" cols="60" rows="20"></textarea>
+                    </code>
+                    <div class="result w-[30em] h-[30em] bg-white ml-2 p-2 flex flex-col">
                         <div class="text-center result-header">Result <hr></div>
                         <div class="resutl-content h-[25em] w-full">
                             
 
                         </div>
                           <button type="submit"
-                    class="p-2 my-3 text-white bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700">
+                    class="p-2 my-3 text-black border-2 border-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white">
                     Copy
                 </button>
                     </div>
