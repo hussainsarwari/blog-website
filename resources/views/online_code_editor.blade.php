@@ -236,8 +236,8 @@
                 @csrf
                 <div class="flex flex-col justify-between mb-2 md:flex-row header">
                     <span class="text-sm my-3  text-center w-full lg:text-md  flex flex-col justify-center">
-                      <span class="text-sm lg:text-[1.7em] font-bold py-[1em]">Code Editro </span>
-                    <p>
+                      <span class="text-sm lg:text-[1.7em] font-bold ">Code Editro </span>
+                    <p class="py-[1em]">
                         Select your programming language:
                         </p>
                       <select  class="text-center text-black border-2 border-blue-300 rounded-lg  h-[2em]" name="programming_language" id="programming_language">
@@ -251,11 +251,11 @@
                 </span>
                 </div>
                 <hr>
-                <div class="flex flex-row">
-                    <code class="text-black h-[35em]:">
+                <div class="grid grid-cols-6 lg:grid-cols-12 gap-6">
+                    <code class="text-black col-span-6 ">
                         <textarea name="code_editor" id="code_editor" class="p-2 resize-none focus:outline-none" required placeholder="Write your code here" cols="60" rows="20"></textarea>
                     </code>
-                    <div class="result w-[30em] h-[30em] bg-white ml-2 p-2 flex flex-col">
+                    <div class="result  h-[30em] col-span-6 bg-white ml-2 p-2 flex flex-col justify-center">
                         <div class="text-center result-header">Result <hr></div>
                         <div class="resutl-content h-[25em] w-full">
                             
