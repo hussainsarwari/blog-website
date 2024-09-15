@@ -13,6 +13,7 @@ const previosPageBtn=document.querySelector(".previos_page");
 let maxpageNumber;
 let pageNum=1;
 let file ;
+let scale=1;
 let flag=false;//this flag checks that user uploaded pdf or not
 // Listen for the file selection (change event)
 fileInput.addEventListener('change', function() {
@@ -47,7 +48,7 @@ open_editor_box_btn.addEventListener("click",async ()=>{
         editor_box.classList.remove("hidden");
 
 
-renderpdf(pageNum);
+renderpdf(pageNum,scale);
 
         
 
@@ -70,7 +71,7 @@ nextPageBtn.addEventListener("click",()=>{
   if (pageNum<maxpageNumber) {
     
     pageNum=++pageNum
-    renderpdf(pageNum);
+    renderpdf(pageNum,scale);
   }
 })
 
@@ -78,7 +79,7 @@ previosPageBtn.addEventListener("click",()=>{
   if (pageNum>1) {
     
     pageNum=--pageNum;
-    renderpdf(pageNum);
+    renderpdf(pageNum,scale);
     
   }
 })
@@ -87,11 +88,14 @@ previosPageBtn.addEventListener("click",()=>{
 const zoom_in=document.querySelector(".zoom-in-btn")
 const zoom_out=document.querySelector(".zoom-out-btn")
 
-zoom_in.addEventListener("click",())
+zoom_in.addEventListener("click",()=>{
+  scale+=0.2
+  renderpdf(pageNum,scale);
+})
 
 
 
-async function renderpdf(pageNum)  {
+async function renderpdf(pageNum,scale)  {
   
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument(arrayBuffer).promise;
@@ -102,7 +106,7 @@ async function renderpdf(pageNum)  {
   // Render each page
   
   const page = await pdf.getPage(pageNum);
-  const viewport = page.getViewport({ scale: 1.5 });
+  const viewport = page.getViewport({ scale: scale });
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
   maxpageNumber =pdf.numPages;
