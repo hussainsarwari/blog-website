@@ -26,13 +26,38 @@
 <body class="overflow-x-hidden">
     
 
-
-    <div id="preloader" class="flex justify-center" style="align-items: center;">
-        <div class="text-2xl text-center ">
-            Welcome To your site :)
-
+<div id="preloader">
+    <div class="loader flex justify-center" style="align-items: center;">
+        <div class="box box0">
+            <div></div>
+          </div>
+          <div class="box box1">
+            <div></div>
+          </div>
+          <div class="box box2">
+            <div></div>
+          </div>
+          <div class="box box3">
+            <div></div>
+          </div>
+          <div class="box box4">
+            <div></div>
+          </div>
+          <div class="box box5">
+            <div></div>
+          </div>
+          <div class="box box6">
+            <div></div>
+          </div>
+          <div class="box box7">
+            <div></div>
+          </div>
+          <div class="ground">
+            <div></div>
+          </div>
         </div>
-    </div>  
+    </div>
+
 
     
     <header class="header-area header-sticky h-[80px] md:h-[140px]">
@@ -172,33 +197,44 @@
             </form>
         </div>
         
-<div class=" grid-cols-5 grid-rows-12  w-full h-full  fixed top-0 z-[200] editor_box hidden">
-    <div class="col-span-5 row-span-1 bg-[#333] text-center py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-center ">Online code Editor </div>
-    <div class="row-span-12 bg-slate-200">
-        <p class="text-center py-2">PDF Pages <hr>
-        </p>
-    </div>
-    <div class="row-span-12 col-span-4 bg-slate-50 grid grid-cols-1 grid-rows-12">
-        <span class="editor_section font-bold  row-span-1 flex justify-center items-center  w-full ">
-          <p class="pdftitle">  
-            </p>
-           <div class="absolute right-2">
+<div class=" grid-cols-12 grid-rows-12  w-full h-full  fixed top-0 z-[200] editor_box hidden">
+    <div class="col-span-12 row-span-1 bg-[#333] text-center py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-center ">Online code Editor </div>
+ 
+    <div class="row-span-12 col-span-12 bg-slate-100 grid grid-cols-1 grid-rows-12">
+        <span class="editor_section font-bold  row-span-1 z-[200] bg-white shadow-lg flex justify-evenly items-center  w-full ">
+          
+          
                
-               <button class="zoom-in-btn rounded-full  border-2 border-blue-400 w-[2em] h-[2em] text-blue-400 ">+</button>
-               <button class="zoom-out-btn rounded-full  border-2 border-blue-400 w-[2em] h-[2em] text-blue-400">-</button>
-            </div>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add New Text">Text</button>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add New Image">Image</button>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Highlight">Highlight</button>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Underline">Underline</button>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Comment">Comments</button>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Shape">Shapes</button>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " >Watermarks</button>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add link">Links</button>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 ">Form Fields</button>
+               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 ">Delete</button>
+               <button class="zoom-in-btn rounded-[1em]  border-2 border-blue-400 w-[3em] h-[2em] text-blue-400 ">+</button>
+               <button class="zoom-out-btn rounded-[1em]  border-2 border-blue-400 w-[3em] h-[2em] text-blue-400">-</button>
+         
         </span>
             
-            <div class="show_pdf col-span-1 row-span-10 m-auto overflow-scroll ">
+            <div class="show_pdf relative col-span-1 row-span-10 m-auto overflow-hidden ">
+                <canvas id="pdf-canvas">
 
+                </canvas>
+                <canvas id="selection-canvas" style="width: 100%;height: 100%;position: absolute;top: 0em;">
+                    
+                </canvas>
 
             </div>
             
-            <div class="buttons  col-span-1 row-span-12 p-3 flex justify-evenly bg-white " >
-                <button class="next_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Next page</button>
-                <button class="previos_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">previos page</button>
-           
+            <div class="buttons  col-span-1 row-span-12 p-3 flex justify-evenly bg-white shadow-lg z-[200]" >
                 <button class="border-2  text-blue-400 mr-2 border-blue-400 py-1  px-[6em] rounded-md close-editor-btn">Cancel</button>
+                <button class="previos_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">previos page</button>
+                <button class="next_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Next page</button>
+           
                 <button class="bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Save</button>
             </div>
     </div>
