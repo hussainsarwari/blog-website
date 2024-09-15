@@ -166,13 +166,13 @@
                       </label>
                       <span id="errorMessage" class="text-red-300 absolute top-[12em] lg:top-[23.5em] hidden">Please choose pdf </span>
                       <span id="successMessage" class="text-green-300 absolute top-[12em] lg:top-[23.5em] hidden">File added succesfully </span>
-                    <button type="button" class=" bg-white shadow-md w-100  relative top-[14em] lg:top-[24em]  p-3 px-5  font-bold rounded-lg text-primary focus:outline-none">
+                    <button type="button" class=" bg-white shadow-md w-100  relative top-[14em] lg:top-[24em]  p-3 px-5  font-bold rounded-lg text-primary focus:outline-none open_editor_box_btn">
                         Import PDF
                     </button>
             </form>
         </div>
         
-<div class="grid grid-cols-5 grid-rows-12  w-full h-full bg-blue-400 fixed top-0 z-[200]">
+<div class=" grid-cols-5 grid-rows-12  w-full h-full  fixed top-0 z-[200] editor_box hidden">
     <div class="col-span-5 row-span-1 bg-[#333] text-center py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-center ">Online code Editor </div>
     <div class="row-span-12 bg-slate-200">
         <p class="text-center py-2">PDF Pages <hr>
@@ -183,14 +183,14 @@
            editor tools
         </span>
 
-            <div class="show_pdf col-span-1 row-span-10 bg-black">
+            <div class="show_pdf col-span-1 row-span-10 ">
 
 
             </div>
             
             <div class="buttons  col-span-1 row-span-12 p-3 flex justify-end " >
-                <button class="border-2  text-blue-400 mr-2 border-blue-400 py-1  px-[6em] rounded-md">Cancel</button>
-                <button class="bg-blue-400 text-white py-2  px-[6em] rounded-md close-editor-btn">Save</button>
+                <button class="border-2  text-blue-400 mr-2 border-blue-400 py-1  px-[6em] rounded-md close-editor-btn">Cancel</button>
+                <button class="bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Save</button>
             </div>
     </div>
     
