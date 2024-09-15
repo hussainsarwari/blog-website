@@ -10,6 +10,7 @@
     @vite(['resources/css/templatemo-art-factory.css'])
     @vite(['resources/css/style.css'])
     @vite(['resources/css/app.css'])
+    @vite(['resources/js/pdf_editor.js'])
 
     
     <script type="module" src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
@@ -20,7 +21,6 @@
     <script type="module" src="{{asset('js/scrollreveal.min.js')}}"></script>
     <script type="module" src="{{asset('js/waypoints.min.js')}}"></script>
     <script type="module" src="{{asset('js/custom.js')}}"></script>
-    <script type="module" src="{{asset('js/pdf_editor.js')}}"></script>
 
 </head>
 <body class="overflow-x-hidden">
@@ -179,16 +179,25 @@
         </p>
     </div>
     <div class="row-span-12 col-span-4 bg-slate-50 grid grid-cols-1 grid-rows-12">
-        <span class="editor_section  row-span-1 flex justify-center items-center ">
-           editor tools
+        <span class="editor_section font-bold  row-span-1 flex justify-center items-center  w-full ">
+          <p class="pdftitle">  
+            </p>
+           <div class="absolute right-2">
+               
+               <button class="zoom-in-btn rounded-full  border-2 border-blue-400 w-[2em] h-[2em] text-blue-400 ">+</button>
+               <button class="zoom-out-btn rounded-full  border-2 border-blue-400 w-[2em] h-[2em] text-blue-400">-</button>
+            </div>
         </span>
-
-            <div class="show_pdf col-span-1 row-span-10 ">
+            
+            <div class="show_pdf col-span-1 row-span-10 m-auto overflow-scroll ">
 
 
             </div>
             
-            <div class="buttons  col-span-1 row-span-12 p-3 flex justify-end " >
+            <div class="buttons  col-span-1 row-span-12 p-3 flex justify-evenly bg-white " >
+                <button class="next_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Next page</button>
+                <button class="previos_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">previos page</button>
+           
                 <button class="border-2  text-blue-400 mr-2 border-blue-400 py-1  px-[6em] rounded-md close-editor-btn">Cancel</button>
                 <button class="bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Save</button>
             </div>

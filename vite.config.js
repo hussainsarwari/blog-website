@@ -12,10 +12,12 @@ export default defineConfig({
                 'resources/css/style.css',
                 'resources/css/style2.css',
                 'resources/css/templatemo-art-factory.css',
+                'resources/js/pdf_editor.js',
                 'resources/js/app.js',
             ],
             refresh: true,
         }),
+
         vue({
             template: {
                 transformAssetUrls: {
@@ -25,6 +27,7 @@ export default defineConfig({
             },
         }),
     ],
+
     resolve: {
         alias: {
             vue: 'vue/dist/vue.esm-bundler.js',
