@@ -30,12 +30,38 @@
 
 
 
-    <div id="preloader" class="flex justify-center" style="align-items: center;">
-        <div class="text-2xl text-center ">
-            Welcome To your site :)
-
+    <div id="preloader">
+        <div class="loader flex justify-center" style="align-items: center;">
+            <div class="box box0">
+                <div></div>
+              </div>
+              <div class="box box1">
+                <div></div>
+              </div>
+              <div class="box box2">
+                <div></div>
+              </div>
+              <div class="box box3">
+                <div></div>
+              </div>
+              <div class="box box4">
+                <div></div>
+              </div>
+              <div class="box box5">
+                <div></div>
+              </div>
+              <div class="box box6">
+                <div></div>
+              </div>
+              <div class="box box7">
+                <div></div>
+              </div>
+              <div class="ground">
+                <div></div>
+              </div>
+            </div>
         </div>
-    </div>
+    
 
 
     <header class="header-area header-sticky h-[80px] md:h-[140px]">
@@ -62,7 +88,7 @@
                 <form action="" method="post" class="flex flex-row mx-5 search">
                     @csrf
                     <input
-                        class="p-1 mx-2 bg-blue-300 border-b border-blue-500 text3white graye-no focus:bg-blue-100 ne focus:outline-none focus:bg-blue-400 placeholder:text-white"
+                        class="p-1 mx-2 bg-blue-300 border-b border-blue-500 text3white graye-no  ne focus:outline-none focus:bg-blue-400 placeholder:text-white"
                         placeholder="Search" type="search" name="search" required id="search">
                     <button type="submit">
                         <svg class="mx-2 bi bi-search" fill="#fff" height="20" viewbox="0 0 16 16" width="20"
@@ -143,7 +169,7 @@
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('Online-code-editor') }}">Online coding</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-pdf-edito') }}">PDF Editor</a>
+                                        href="{{ url('online-pdf-editor') }}">PDF Editor</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-pdf-compression') }}">PDF Compression</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
@@ -219,25 +245,28 @@
         </div>
     </header>
     <div
-        class="rounded-full w-[8em] h-8em md:w-[30em] md:h-[30em] bg-yellow-300 absolute top-[60em] md:top-[50em] left-0 md:left-10 shadow-2xl shadow-yellow-500 box1">
+        class="rounded-full w-[8em] h-[8em] md:w-[30em] md:h-[30em] bg-yellow-300 absolute top-[60em] md:top-[50em] left-0 md:left-10 shadow-2xl shadow-yellow-500 box1">
     </div>
 
     {{-- main section --}}
     <div class="relative w-full h-screen mb-20 ">
         <div
-            class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
+            class="w-[55em] h-[85em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-0 lg:right-[5em] rounded-full ">
         </div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
 
             <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online code editor</h1>
             <form action="" method="post"
-                class="text-black overflow-x-hidden flex flex-col justify-center mx-5 search bg-slate-50 shadow-2xl shadow-slate-500 rounded-lg py-5 p-4 z-50 w-fit relative top-[20em] online_code_editor">
+                class="text-black overflow-x-hidden flex flex-col justify-center mx-5  bg-slate-50 shadow-2xl shadow-slate-500 rounded-lg py-5 p-4 z-50 w-fit relative top-[10rem] lg:top-[20em] online_code_editor">
                 @csrf
-                <div class="flex flex-row justify-between mb-2 header">
-                    <span class="title">Code Editro</span>
-                  <p>Select your programming language:
-                      <select  class="text-center text-black border-2 border-blue-300 rounded-lg" name="programming_language" id="programming_language">
+                <div class="flex flex-col justify-between mb-2 md:flex-row header">
+                    <span class="text-sm my-3  text-center w-full lg:text-md  flex flex-col justify-center">
+                      <span class="text-sm lg:text-[1.7em] font-bold ">Code Editro </span>
+                    <p class="py-[1em]">
+                        Select your programming language:
+                        </p>
+                      <select  class="text-center text-black border-2 border-blue-300 rounded-lg  h-[2em]" name="programming_language" id="programming_language">
                         <option value="java">java</option>
                         <option value="javascript">javascript</option>
                         <option value="C++">C++</option>
@@ -245,25 +274,27 @@
                         <option value="php">php</option>
                         <option value="C#">C#</option>
                     </select>
-                </p>
+                </span>
                 </div>
                 <hr>
-                <div class="flex flex-row">
-                    <textarea name="code_editor" id="code_editor" class="p-2 resize-none focus:outline-none" required placeholder="Write your code here" cols="60" rows="10"></textarea>
-                    <div class="result w-[30em] h-[30em] bg-white ml-2 pt-2 flex flex-col">
+                <div class="grid grid-cols-6 lg:grid-cols-12 gap-6">
+                    <code class="text-black col-span-6 ">
+                        <textarea name="code_editor" id="code_editor" class="p-2 resize-none focus:outline-none" required placeholder="Write your code here" cols="60" rows="20"></textarea>
+                    </code>
+                    <div class="result  h-[30em] col-span-6 bg-white ml-2 p-2 flex flex-col justify-center">
                         <div class="text-center result-header">Result <hr></div>
                         <div class="resutl-content h-[25em] w-full">
                             
 
                         </div>
                           <button type="submit"
-                    class="p-2 my-3 text-white bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700">
+                    class="p-2 my-3 text-black border-2 border-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white">
                     Copy
                 </button>
                     </div>
                 </div>
                     
-                <button type="submit"
+                <button type="button"
                     class="p-2 my-3 text-white bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700">
                     Run
                 </button>
@@ -277,7 +308,7 @@
     {{-- footer section --}}
 
 
-    <footer class="py-4 relative top-[250em] h-[130em] md:h-[70em] w-full ">
+    <footer class="py-4 relative top-[50em] h-[130em] md:h-[70em] w-full  border-none">
         <img class="absolute bottom-[58em] lg:bottom-[15em]  left-0 w-full rotate-180 d-none d-sm-inline"
             src="{{ asset('images/banner-bg.svg') }}" alt="footer-background-1">
         <img class="absolute bottom-[55em] left-0 w-full d-sm-none footer-img"
@@ -384,7 +415,7 @@
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-edito') }}">PDF Editor</a>
+                                href="{{ url('online-pdf-editor') }}">PDF Editor</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Time management</title>
-    @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
     @vite(['resources/css/templatemo-art-factory.css'])
     @vite(['resources/css/style.css'])
+    @vite(['resources/css/app.css'])
+    @vite(['resources/js/pdf_editor.js'])
+
+    
     <script type="module" src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
     <script type="module" src="{{asset('js/jquery.counterup.min.js')}}"></script>
     <script type="module" src="{{asset('js/popper.js')}}"></script>
@@ -18,42 +21,44 @@
     <script type="module" src="{{asset('js/scrollreveal.min.js')}}"></script>
     <script type="module" src="{{asset('js/waypoints.min.js')}}"></script>
     <script type="module" src="{{asset('js/custom.js')}}"></script>
+
 </head>
 <body class="overflow-x-hidden">
     
 
-    <div id="preloader">
-        <div class="loader flex justify-center" style="align-items: center;">
-            <div class="box box0">
-                <div></div>
-              </div>
-              <div class="box box1">
-                <div></div>
-              </div>
-              <div class="box box2">
-                <div></div>
-              </div>
-              <div class="box box3">
-                <div></div>
-              </div>
-              <div class="box box4">
-                <div></div>
-              </div>
-              <div class="box box5">
-                <div></div>
-              </div>
-              <div class="box box6">
-                <div></div>
-              </div>
-              <div class="box box7">
-                <div></div>
-              </div>
-              <div class="ground">
-                <div></div>
-              </div>
-            </div>
+<div id="preloader">
+    <div class="loader flex justify-center" style="align-items: center;">
+        <div class="box box0">
+            <div></div>
+          </div>
+          <div class="box box1">
+            <div></div>
+          </div>
+          <div class="box box2">
+            <div></div>
+          </div>
+          <div class="box box3">
+            <div></div>
+          </div>
+          <div class="box box4">
+            <div></div>
+          </div>
+          <div class="box box5">
+            <div></div>
+          </div>
+          <div class="box box6">
+            <div></div>
+          </div>
+          <div class="box box7">
+            <div></div>
+          </div>
+          <div class="ground">
+            <div></div>
+          </div>
         </div>
-    
+    </div>
+
+
     
     <header class="header-area header-sticky h-[80px] md:h-[140px]">
         <div class="flex justify-between p-3 bg-blue-300 col d-none d-md-flex">
@@ -108,12 +113,12 @@
                                     
                                     <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg download rounded-xl peer-hover:flex hover:flex h-fit">
                                             
-                                          
+                                            
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('instagram-online-video-downloader')}}">Instagram video downloader</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('youtube-online-video-downloader')}}">youtube video downloader</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('short-url')}}">Short URL</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('Paraphrase')}}">Paraphrase</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('CV-generator')}}">CV generator</a>
+                                       <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('CV-generator')}}">CV generator</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('Online-code-editor')}}">Online coding</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-editor')}}">PDF Editor</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-compression')}}">PDF Compression</a>
@@ -165,48 +170,98 @@
         </div>
     </header>
 
+
+    {{-- main section --}}
     <div class="relative w-full h-screen mb-20 " >
         <div class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-md absolute top-[-18em] right-[-5em] rounded-full"></div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
-            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Instagram online Video Downloader</h1>
-            <form action="" method="post" class="flex flex-row mx-5 search">
+            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online PDF editor for free</h1>
+            <form action="" method="post" class="flex flex-col justify-center mx-5 ">
                     @csrf
-                <input class="p-3 shadow-md  w-[20em] lg:w-[50em] h-[3em] rounded-[30em] text-white bg-blue-400  outline-none focus:outline-none focus:bg-blue-400 placeholder:text-white relative top-[7em] lg:top-[21em] right-[-1em]" placeholder="Enter Video URL" type="instagram-downloader" name="instagram-downloader" required id="instagram-downloader">
-                <button type="submit" class="relative top-[7em] lg:top-[21em] right-[2em] lg:right-[4em] ">
-                    <svg class="mx-2 bi bi-search " fill="#fff" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg>
+
+                    <label class="relative top-[10em] lg:top-[20em] inline-block cursor-pointer bg-white text-primary font-medium py-2 px-4 border border-blue-500 rounded-lg shadow-sm  transition duration-300 ease-in-out">
+                        <span class="flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                          </svg>
+                          Choose File
+                        </span>
+                        <input type="file" id="pdf" class="absolute inset-0 opacity-0 cursor-pointer">
+                      </label>
+                      <span id="errorMessage" class="text-red-300 absolute top-[12em] lg:top-[23.5em] hidden">Please choose pdf </span>
+                      <span id="successMessage" class="text-green-300 absolute top-[12em] lg:top-[23.5em] hidden">File added succesfully </span>
+                    <button type="button" class=" bg-white shadow-md w-100  relative top-[14em] lg:top-[24em]  p-3 px-5  font-bold rounded-lg text-primary focus:outline-none open_editor_box_btn">
+                        Import PDF
                     </button>
             </form>
         </div>
-        <div class="result w-[20em]  lg:w-[50em] bg-slate-100 shadow-lg rounded-xl flex justify-center flex-col p-3 relative m-auto top-[25em] lg:top-[35em] ">
-            
+        
+<div class=" grid-cols-12 grid-rows-12  w-full h-full  fixed top-0 z-[200] editor_box hidden">
+    <div class="col-span-12 row-span-1 bg-[#333] text-center py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-center ">Online code Editor </div>
+ 
+    <div class="row-span-12 col-span-12 bg-slate-100 grid grid-cols-1 grid-rows-12">
+        <span class="editor_section font-bold  row-span-1 z-[200] bg-white shadow-lg flex justify-evenly items-center  w-full ">
           
-            <p class="flex justify-between w-full">
-                <span class="w-full text-sm font-bold text-center lg:text-3xl">Number</span>
-                <span class="w-full text-sm font-bold text-center lg:text-3xl">Size</span>
-                <span class="w-full text-sm font-bold text-center lg:text-3xl">Title</span>
-                <span class="w-full text-sm font-bold text-center lg:text-3xl">Download</span>
-            </p>
-            <hr>
-            <ul>
-                <li class="flex justify-between w-full h-10">
-                    <span class="w-full text-sm font-bold text-center lg:text-xl">1</span>
-                    <span class="w-full text-sm font-bold text-center lg:text-xl">720px</span>
-                    <span class="w-full text-sm font-bold text-center lg:text-xl">Title</span>
-                    <span class="w-full text-sm font-bold text-center lg:text-xl">
-                       <a href="{{url('instagram-download-btn')}}">
-                        <button>Download</button></span>
-                    </a>
-                </li>
-                <hr>
-             
-            </ul>
+          
+               
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add New Text">Text</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add New Image">Image</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Highlight">Highlight</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Underline">Underline</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Comment">Comments</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Shape">Shapes</button>
+               <div class="">
+                <span class="z-[400]  text-sm p-2 hover:text-blue-600 text-blue-400 cursor-pointer scroll-to-section peer " id="watermark"  style="  border: none; cursor: pointer;"    >Watermark</span>
+                <!-- Dropdown menu -->
+                <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit z-[500]">
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add new WaterMark</button> 
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Remove Watermark </button>
+               </div>
+            </div>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add link">Links</button>
+               <div class="">
+                <span class="z-[400]  text-sm p-2 hover:text-blue-600 text-blue-400 cursor-pointer scroll-to-section peer " id="form_feild"  style="  border: none; cursor: pointer;"    >Form feilds</span>
+                <!-- Dropdown menu -->
+                <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit z-[500]">
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Checkbox</button> 
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Radio button </button>
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add List </button>
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Date  </button>
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Number </button>
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Textarea </button>
+               </div>
+            </div>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 ">Delete</button>
+               <button class="zoom-in-btn rounded-[1em]  border-2 border-blue-400 w-[3em] h-[2em] text-blue-400 ">+</button>
+               <button class="zoom-out-btn rounded-[1em]  border-2 border-blue-400 w-[3em] h-[2em] text-blue-400">-</button>
+         
+        </span>
             
-        
-        
-        </div>
+            <div class="show_pdf relative col-span-1 row-span-10 m-auto overflow-hidden ">
+                <canvas id="pdf-canvas">
+
+                </canvas>
+                <canvas id="selection-canvas" style="width: 100%;height: 100%;position: absolute;top: 0em;">
+                    
+                </canvas>
+
+            </div>
+            
+            <div class="buttons  col-span-1 row-span-12 p-3 flex justify-evenly bg-white shadow-lg z-[200]" >
+                <button class="border-2  text-blue-400 mr-2 border-blue-400 py-1  px-[6em] rounded-md close-editor-btn">Cancel</button>
+                <button class="previos_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">previos page</button>
+                <button class="next_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Next page</button>
+           
+                <button class="bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Save</button>
+            </div>
     </div>
+    
+  
+</div>
+    
+    </div>
+
 
 
 {{-- footer section --}}
@@ -260,7 +315,7 @@
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('youtube-online-video-downloader')}}">youtube video downloader</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('short-url')}}">Short URL</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('Paraphrase')}}">Paraphrase</a></li> <li class="mb-0">
-  <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('CV-generator')}}">CV generator</a></li> <li class="mb-0">
+                             <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('CV-generator')}}">CV generator</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('Online-code-editor')}}">Online coding</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-editor')}}">PDF Editor</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-compression')}}">PDF Compression</a></li> <li class="mb-0">
@@ -327,6 +382,18 @@
   </div>
 </footer>
 
+
+
+<style>
+    
+</style>
+
+
+
+
+
+    
+  
 
 
 

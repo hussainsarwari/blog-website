@@ -19,6 +19,8 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
-        "chart.js": "^4.4.3"
+        "chart.js": "^4.4.3",
+        "pdf-lib": "^1.17.1",
+        "pdfjs-dist": "^4.6.82"
     }
 }
