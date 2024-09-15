@@ -93,9 +93,10 @@ const zoom_in=document.querySelector(".zoom-in-btn")
 const zoom_out=document.querySelector(".zoom-out-btn")
 
 zoom_in.addEventListener("click",()=>{
+
   scale+=0.2
   renderpdf(pageNum,scale);
-})
+});
 zoom_out.addEventListener("click",()=>{
   if (scale>0) {
     
@@ -110,7 +111,6 @@ async function renderpdf(pageNum,scale)  {
   
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument(arrayBuffer).promise;
-  const pdfBox = document.querySelector('.show_pdf');
  
   
   // Render each page

@@ -205,16 +205,34 @@
           
           
                
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add New Text">Text</button>
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add New Image">Image</button>
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Highlight">Highlight</button>
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Underline">Underline</button>
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Comment">Comments</button>
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Shape">Shapes</button>
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " >Watermarks</button>
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add link">Links</button>
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 ">Form Fields</button>
-               <button class="zoom-in-btn  hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 ">Delete</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add New Text">Text</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add New Image">Image</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Highlight">Highlight</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Underline">Underline</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Comment">Comments</button>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add Shape">Shapes</button>
+               <div class="">
+                <span class="z-[400]  text-sm p-2 hover:text-blue-600 text-blue-400 cursor-pointer scroll-to-section peer " id="watermark"  style="  border: none; cursor: pointer;"    >Watermark</span>
+                <!-- Dropdown menu -->
+                <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit z-[500]">
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add new WaterMark</button> 
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Remove Watermark </button>
+               </div>
+            </div>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 " title="Add link">Links</button>
+               <div class="">
+                <span class="z-[400]  text-sm p-2 hover:text-blue-600 text-blue-400 cursor-pointer scroll-to-section peer " id="form_feild"  style="  border: none; cursor: pointer;"    >Form feilds</span>
+                <!-- Dropdown menu -->
+                <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit z-[500]">
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Checkbox</button> 
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Radio button </button>
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add List </button>
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Date  </button>
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Number </button>
+                    <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400">Add Textarea </button>
+               </div>
+            </div>
+               <button class=" hover:text-blue-600 w-fit text-sm p-2 h-[2em] text-blue-400 ">Delete</button>
                <button class="zoom-in-btn rounded-[1em]  border-2 border-blue-400 w-[3em] h-[2em] text-blue-400 ">+</button>
                <button class="zoom-out-btn rounded-[1em]  border-2 border-blue-400 w-[3em] h-[2em] text-blue-400">-</button>
          
