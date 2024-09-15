@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Time management</title>
-    @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
     @vite(['resources/css/templatemo-art-factory.css'])
     @vite(['resources/css/style.css'])
+    @vite(['resources/css/app.css'])
 
     
     <script type="module" src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
@@ -20,6 +20,7 @@
     <script type="module" src="{{asset('js/scrollreveal.min.js')}}"></script>
     <script type="module" src="{{asset('js/waypoints.min.js')}}"></script>
     <script type="module" src="{{asset('js/custom.js')}}"></script>
+    <script type="module" src="{{asset('js/pdf_editor.js')}}"></script>
 
 </head>
 <body class="overflow-x-hidden">
@@ -150,33 +151,52 @@
         <div class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-md absolute top-[-18em] right-[-5em] rounded-full"></div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
-            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Shorten  a long link with just one click</h1>
-            <form action="" method="post" class="flex flex-col justify-center mx-5 search">
+            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online PDF editor for free</h1>
+            <form action="" method="post" class="flex flex-col justify-center mx-5 ">
                     @csrf
-                <input class="p-3 shadow-md text-sm lg:text-md  w-[20em] lg:w-[50em] h-[3em] rounded-[30em] text-white bg-blue-400  outline-none focus:outline-none focus:bg-blue-400 placeholder:text-white relative top-[7em] lg:top-[21em] " placeholder="paste long link Example: https://long-url" type="text" name="short-url" required id="short-url">
-                <button type="submit" class=" bg-slate-300 shadow-lg relative top-[14em] lg:top-[24em] p-2 rounded-lg text-black">
-                Shorten URL
-                </button>
+
+                    <label class="relative top-[10em] lg:top-[20em] inline-block cursor-pointer bg-white text-primary font-medium py-2 px-4 border border-blue-500 rounded-lg shadow-sm  transition duration-300 ease-in-out">
+                        <span class="flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                          </svg>
+                          Choose File
+                        </span>
+                        <input type="file" id="pdf" class="absolute inset-0 opacity-0 cursor-pointer">
+                      </label>
+                      <span id="errorMessage" class="text-red-300 absolute top-[12em] lg:top-[23.5em] hidden">Please choose pdf </span>
+                      <span id="successMessage" class="text-green-300 absolute top-[12em] lg:top-[23.5em] hidden">File added succesfully </span>
+                    <button type="button" class=" bg-white shadow-md w-100  relative top-[14em] lg:top-[24em]  p-3 px-5  font-bold rounded-lg text-primary focus:outline-none">
+                        Import PDF
+                    </button>
             </form>
         </div>
-        <div class="result w-[20em]  lg:w-[50em] bg-slate-100 shadow-lg rounded-xl flex justify-center flex-col p-3 relative m-auto top-[35em] lg:top-[40em] ">
-            
-          
-            <p class="flex justify-between w-full">
-                <span class="w-full text-sm font-bold text-center lg:text-3xl">Short URL</span>
-          
-            </p>
-            <hr>
-         
-            <p class="flex justify-between w-full r">
-                <span>it is short url</span>
-                <button class="p-2 text-white bg-blue-500 rounded-md hover:bg-yellow-600 focus:outline-none">Copy</button>
-            </p>
-             
-            
         
-        
-        </div>
+<div class="grid grid-cols-5 grid-rows-12  w-full h-full bg-blue-400 fixed top-0 z-[200]">
+    <div class="col-span-5 row-span-1 bg-[#333] text-center py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-center ">Online code Editor </div>
+    <div class="row-span-12 bg-slate-200">
+        <p class="text-center py-2">PDF Pages <hr>
+        </p>
+    </div>
+    <div class="row-span-12 col-span-4 bg-slate-50 grid grid-cols-1 grid-rows-12">
+        <span class="editor_section  row-span-1 flex justify-center items-center ">
+           editor tools
+        </span>
+
+            <div class="show_pdf col-span-1 row-span-10 bg-black">
+
+
+            </div>
+            
+            <div class="buttons  col-span-1 row-span-12 p-3 flex justify-end " >
+                <button class="border-2  text-blue-400 mr-2 border-blue-400 py-1  px-[6em] rounded-md">Cancel</button>
+                <button class="bg-blue-400 text-white py-2  px-[6em] rounded-md close-editor-btn">Save</button>
+            </div>
+    </div>
+    
+  
+</div>
+    
     </div>
 
 
