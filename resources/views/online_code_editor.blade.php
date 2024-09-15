@@ -62,7 +62,7 @@
                 <form action="" method="post" class="flex flex-row mx-5 search">
                     @csrf
                     <input
-                        class="p-1 mx-2 bg-blue-300 border-b border-blue-500 text3white graye-no focus:bg-blue-100 ne focus:outline-none focus:bg-blue-400 placeholder:text-white"
+                        class="p-1 mx-2 bg-blue-300 border-b border-blue-500 text3white graye-no  ne focus:outline-none focus:bg-blue-400 placeholder:text-white"
                         placeholder="Search" type="search" name="search" required id="search">
                     <button type="submit">
                         <svg class="mx-2 bi bi-search" fill="#fff" height="20" viewbox="0 0 16 16" width="20"
@@ -143,7 +143,7 @@
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('Online-code-editor') }}">Online coding</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-pdf-edito') }}">PDF Editor</a>
+                                        href="{{ url('online-pdf-editor') }}">PDF Editor</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-pdf-compression') }}">PDF Compression</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
@@ -389,7 +389,7 @@
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-edito') }}">PDF Editor</a>
+                                href="{{ url('online-pdf-editor') }}">PDF Editor</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
