@@ -31,7 +31,7 @@
 
 
     <div id="preloader">
-        <div class="loader flex justify-center" style="align-items: center;">
+        <div class="flex justify-center loader" style="align-items: center;">
             <div class="box box0">
                 <div></div>
               </div>
@@ -88,7 +88,7 @@
                 <form action="" method="post" class="flex flex-row mx-5 search">
                     @csrf
                     <input
-                        class="p-1 mx-2 bg-blue-300 border-b border-blue-500 text3white graye-no  ne focus:outline-none focus:bg-blue-400 placeholder:text-white"
+                        class="p-1 mx-2 bg-blue-300 border-b border-blue-500 text3white graye-no ne focus:outline-none focus:bg-blue-400 placeholder:text-white"
                         placeholder="Search" type="search" name="search" required id="search">
                     <button type="submit">
                         <svg class="mx-2 bi bi-search" fill="#fff" height="20" viewbox="0 0 16 16" width="20"
@@ -171,7 +171,7 @@
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-pdf-editor') }}">PDF Editor</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-pdf-compression') }}">PDF Compression</a>
+                                        href="{{ url('online-pdf-compressor') }}">PDF Compression</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-pdf-merging') }}">PDF merging</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
@@ -261,7 +261,7 @@
                 class="text-black overflow-x-hidden flex flex-col justify-center mx-5  bg-slate-50 shadow-2xl shadow-slate-500 rounded-lg py-5 p-4 z-50 w-fit relative top-[10rem] lg:top-[20em] online_code_editor">
                 @csrf
                 <div class="flex flex-col justify-between mb-2 md:flex-row header">
-                    <span class="text-sm my-3  text-center w-full lg:text-md  flex flex-col justify-center">
+                    <span class="flex flex-col justify-center w-full my-3 text-sm text-center lg:text-md">
                       <span class="text-sm lg:text-[1.7em] font-bold ">Code Editro </span>
                     <p class="py-[1em]">
                         Select your programming language:
@@ -277,8 +277,8 @@
                 </span>
                 </div>
                 <hr>
-                <div class="grid grid-cols-6 lg:grid-cols-12 gap-6">
-                    <code class="text-black col-span-6 ">
+                <div class="grid grid-cols-6 gap-6 lg:grid-cols-12">
+                    <code class="col-span-6 text-black ">
                         <textarea name="code_editor" id="code_editor" class="p-2 resize-none focus:outline-none" required placeholder="Write your code here" cols="60" rows="20"></textarea>
                     </code>
                     <div class="result  h-[30em] col-span-6 bg-white ml-2 p-2 flex flex-col justify-center">
@@ -419,7 +419,7 @@
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-compression') }}">PDF Compression</a>
+                                href="{{ url('online-pdf-compressor') }}">PDF Compression</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
