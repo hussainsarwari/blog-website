@@ -23,7 +23,7 @@
     
 
     <div id="preloader">
-        <div class="loader flex justify-center" style="align-items: center;">
+        <div class="flex justify-center loader" style="align-items: center;">
             <div class="box box0">
                 <div></div>
               </div>
@@ -116,7 +116,7 @@
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('CV-generator')}}">CV generator</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('Online-code-editor')}}">Online coding</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-editor')}}">PDF Editor</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-compression')}}">PDF Compression</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-compressor')}}">PDF Compression</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-merging')}}">PDF merging</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-splitting')}}">PDF Splitting</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('add-signature-to-pdf-online')}}">Add Signature to PDF </a>
@@ -263,7 +263,7 @@
   <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('CV-generator')}}">CV generator</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('Online-code-editor')}}">Online coding</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-editor')}}">PDF Editor</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-compression')}}">PDF Compression</a></li> <li class="mb-0">
+                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-compressor')}}">PDF Compression</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-merging')}}">PDF merging</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-splitting')}}">PDF Splitting</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('add-signature-to-pdf-online')}}">Add Signature to PDF </a></li> <li class="mb-0">
