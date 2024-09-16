@@ -189,18 +189,16 @@
                         </span>
                         <input type="file" id="pdf" class="absolute inset-0 opacity-0 cursor-pointer">
                       </label>
-                      <span id="errorMessage" class="text-red-300 absolute top-[12em] lg:top-[23.5em] hidden">Please choose pdf </span>
-                      <span id="successMessage" class="text-green-300 absolute top-[12em] lg:top-[23.5em] hidden">File added succesfully </span>
-                    <button type="button" class=" bg-white shadow-md w-100  relative top-[14em] lg:top-[24em]  p-3 px-5  font-bold rounded-lg text-primary focus:outline-none open_editor_box_btn">
-                        Import PDF
-                    </button>
+                      <span id="errorMessage" class="text-red-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">Please choose pdf </span>
+                      <span id="successMessage" class="text-green-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">File added succesfully </span>
+                
             </form>
         </div>
         
 <div class=" grid-cols-12 grid-rows-12  w-full h-full  fixed top-0 z-[200] editor_box hidden">
     <div class="col-span-12 row-span-1 bg-[#333]  py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-between ">
         
-       <span class="ml- text-sm md:text-lg w-[10em]">
+       <span class="ml-2 text-sm md:text-lg w-[10em]">
            Online code Editor 
         </span>
         <form action="" method="post" class="flex-row hidden mx-5 search_word md:flex">
@@ -222,7 +220,7 @@
           
             <form action="" method="post" class="flex flex-row mx-5 search_word md:hidden">
                 @csrf
-                <input class="p-1 mx-2 text-[#333] border-b text-sm border-blue-500 outline-none bg-white focus:outline-none focus:border-blue-600 placeholder:text-white" placeholder="Search word or page" type="search" name="search" required id="search">
+                <input class="p-1 mx-2 text-[#333] border-b text-[.8em] border-blue-500 outline-none bg-white focus:outline-none focus:border-blue-600 placeholder:text-[#333]" placeholder="Search word or page" type="search" name="search" required id="search">
                 <button type="submit">
                     <svg class="mx-2 bi bi-search" fill="#333" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg>
@@ -230,37 +228,37 @@
             </form>
           
                
-               <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add New Text">Text</button>
-               <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add New Image">Image</button>
-               <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add Highlight">Highlight</button>
-               <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add Underline">Underline</button>
-               <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add Comment">Comments</button>
-               <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add Shape">Shapes</button>
+               <button class =" focus:outline-none hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add New Text">Text</button>
+               <button class =" focus:outline-none hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add New Image">Image</button>
+               <button class =" focus:outline-none hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add Highlight">Highlight</button>
+               <button class =" focus:outline-none hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add Underline">Underline</button>
+               <button class =" focus:outline-none hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add Comment">Comments</button>
+               <button class =" focus:outline-none hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add Shape">Shapes</button>
                <div class="">
                 <span class="z-[400]  text-[.8em] p-1 hover:text-blue-600 text-blue-400 cursor-pointer scroll-to-section peer " id="watermark"  style="  border: none; cursor: pointer;"    >Watermark</span>
                 <!-- Dropdown menu -->
                 <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit z-[500]">
-                    <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add new WaterMark</button> 
-                    <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Remove Watermark </button>
+                    <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add new WaterMark</button> 
+                    <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Remove Watermark </button>
                </div>
             </div>
-               <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add link">Links</button>
+               <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 " title="Add link">Links</button>
                <div class="">
                 <span class="z-[400]  text-[.8em] p-1 hover:text-blue-600 text-blue-400 cursor-pointer scroll-to-section peer " id="form_feild"  style="  border: none; cursor: pointer;"    >Form feilds</span>
                 <!-- Dropdown menu -->
                 <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit z-[500]">
-                    <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Checkbox</button> 
-                    <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Radio button </button>
-                    <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add List </button>
-                    <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Date  </button>
-                    <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Number </button>
-                    <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Textarea </button>
+                    <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Checkbox</button> 
+                    <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Radio button </button>
+                    <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add List </button>
+                    <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Date  </button>
+                    <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Number </button>
+                    <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400">Add Textarea </button>
                </div>
             </div>
-               <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 ">Delete</button>
-               <button class="zoom-in-btn rounded-[1em]  border-2 border-blue-400 w-[2em] h-[2em] text-blue-400 ">+</button>
-               <button class="zoom-out-btn rounded-[1em]  border-2 border-blue-400 w-[2em] h-[2em] text-blue-400">-</button>
-               <button class=" hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 ">Close</button>
+               <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400 ">Delete</button>
+               <button class=" focus:outline-none zoom-in-btn rounded-[1em]  border-2 border-blue-400 w-[2em] h-[2em] text-blue-400 ">+</button>
+               <button class=" focus:outline-none zoom-out-btn rounded-[1em]  border-2 border-blue-400 w-[2em] h-[2em] text-blue-400">-</button>
+               <button class=" focus:outline-none  hover:text-blue-600 w-fit text-[.8em] p-1 h-[2em] text-blue-400  editor-tools-close-btn ">Close</button>
          
         </span>
             
@@ -274,12 +272,11 @@
 
             </div>
             
-            <div class="buttons  col-span-1 row-span-12 p-3 flex justify-evenly bg-white shadow-lg z-[200]" >
-                <button class="border-2  text-blue-400 mr-2 border-blue-400 py-1  px-[6em] rounded-md close-editor-btn">Cancel</button>
-                <button class="previos_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">previos page</button>
-                <button class="next_page bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Next page</button>
-           
-                <button class="bg-blue-400 text-white py-2  px-[6em] rounded-md  ">Save</button>
+            <div class="buttons  col-span-1 row-span-12 p-3 flex items-center justify-evenly bg-white shadow-lg z-[200]" >
+                <button class="focus:outline-none text-[12px] md:text-md border-2  text-blue-400 md:mr-2 border-blue-400 py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md close-editor-btn">Cancel</button>
+                <button class="focus:outline-none text-[12px] md:text-md previos_page bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">previos page</button>
+                <button class="focus:outline-none text-[12px] md:text-md next_page bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">Next page</button>
+                <button class="focus:outline-none text-[12px] md:text-md bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">Save</button>
             </div>
     </div>
     
@@ -293,7 +290,7 @@
 {{-- footer section --}}
 
 
-<footer class="py-4 relative top-[20em] h-[130em] md:h-[70em] w-full ">
+<footer class="py-4 relative top-[60em] h-[130em] md:h-[70em] w-full ">
     <img class="absolute bottom-[58em] lg:bottom-[15em]  left-0 w-full rotate-180 d-none d-sm-inline" src="{{asset('images/banner-bg.svg')}}" alt="footer-background-1">
     <img class="absolute bottom-[55em] left-0 w-full d-sm-none footer-img" src="{{asset('images/banner-bg2.svg')}}" alt="footer-background-2">
     <div class="w-full h-[70em] absolute block bottom-[-4em] lg:hidden" id="xx"  style="background: rgb(16 139 233);"></div>

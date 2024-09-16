@@ -585,7 +585,7 @@ header
 
 
 .editor_triger_menu{
-  height: 43em !important;
+  height: 33em !important;
   display: flex !important;
   flex-direction: column !important;
 }
