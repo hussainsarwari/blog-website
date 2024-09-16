@@ -195,3 +195,14 @@ selectionCanvas.addEventListener('mouseup', (e) => {
 
 
 });
+
+
+
+
+const menu_triger=document.querySelector(".menu-trigger2");
+menu_triger.addEventListener("click",()=>{
+  const editor_section=document.querySelector(".editor_section");
+  editor_section.classList.remove("hidden");
+  editor_section.classList.add("editor_triger_menu");
+  menu_triger.classList.add("hidden");
+})
