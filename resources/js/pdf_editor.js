@@ -8,7 +8,6 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
 const fileInput = document.getElementById("pdf");
 const errorMessage = document.getElementById("errorMessage");
 const close_editor_btn = document.querySelector(".close-editor-btn");
-const open_editor_box_btn = document.querySelector(".open_editor_box_btn");
 const editor_box = document.querySelector(".editor_box");
 const successMessage = document.getElementById("successMessage");
 const nextPageBtn = document.querySelector(".next_page");
@@ -20,8 +19,10 @@ let scale = 1;
 let canvas = document.getElementById("pdf-canvas");
 let context = canvas.getContext("2d");
 let viewport;
-let selectedArea = { x: 0, y: 0, width: 0, height: 0 };
-let flag = false; //this flag checks that user uploaded pdf or not
+let flag = false;
+
+
+//this flag checks that user uploaded pdf or not
 // Listen for the file selection (change event)
 fileInput.addEventListener("change", function () {
     file = fileInput.files[0]; // Get the selected file

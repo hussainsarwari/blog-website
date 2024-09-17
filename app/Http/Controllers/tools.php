@@ -27,4 +27,7 @@ class tools extends Controller
     public function onlinepdfeditor(){
       return view('online_pdf_editor');
     }
+    public function pdfcompressor(){
+      return view('pdf_compressor');
+    }
 }
