@@ -247,7 +247,7 @@
         <div class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-md absolute top-[-18em] right-[-5em] rounded-full"></div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
-            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online PDF merging tool for free</h1>
+            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Convert PDf to image </h1>
             <form action="" method="post" class="flex flex-col justify-center mx-5 ">
                     @csrf
 
@@ -271,16 +271,19 @@
     <div class="col-span-12 row-span-1 bg-[#333]  py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-center ">
         
        <span class="ml-2 text-sm md:text-lg ">
-           Online PDF merging tool 
+           Convert PDF to image 
         </span>
        
         
         </div>
  
     <div class="grid grid-cols-1 col-span-12 row-span-12 bg-slate-100 grid-rows-12">
-        <span class="editor_section font-bold  row-span-1 z-[200] bg-white shadow-lg  justify-center items-center  w-full hidden md:flex ">
-            <button class="focus:outline-none text-[12px] md:text-md bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">Upload new PDF</button>
-         
+        <span class="editor_section font-bold  row-span-1 z-[200] bg-white shadow-lg  justify-evenly items-center  w-full hidden md:flex ">
+           <select name="convert_to_img" id="convert_to_img" class="border-none  p-[1em] bg-slate-100 text-gray-600">
+            <option value="all_pages">Convert All pages to images</option>
+            <option value="all_pages">Choose a page for convert to image</option>
+           </select>
+           <input type="number" name="pdf_img" id="pdf_to_image" placeholder="Enter the page number for convert to image" class="border-none focus:outline-none border border-primary rounded-md p-[1em] hidden">
            
         </span>
             

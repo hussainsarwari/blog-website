@@ -184,3 +184,13 @@ editor_tools_close_btn.addEventListener("click", () => {
     editor_section.classList.remove("editor_triger_menu");
     menu_triger.classList.remove("hidden");
 });
+
+
+
+// pdf to image section
+
+
+const pdf_to_img=document.querySelector("#convert_to_img");
+pdf_to_img.addEventListener("change",()=>{
+    alert(9)
+})
