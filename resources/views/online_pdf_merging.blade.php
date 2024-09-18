@@ -432,10 +432,7 @@
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-pdf-splitting') }}">PDF Splitting</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('add-signature-to-pdf-online') }}">Add Signature to PDF </a>
-                        </li>
+                       
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('pdf-html') }}">PDF to HTML </a>
