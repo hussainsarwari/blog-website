@@ -164,6 +164,10 @@
         </div>
     </header>
 
+
+
+    {{-- main section --}}
+
     <div class="relative w-full h-screen mb-20 " >
         <div class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-md absolute top-[-18em] right-[-5em] rounded-full"></div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
