@@ -124,7 +124,7 @@
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-compressor')}}">PDF Compression</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-merging')}}">PDF merging</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-splitting')}}">PDF Splitting</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('add-signature-to-pdf-online')}}">Add Signature to PDF </a>
+
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('pdf-html')}}">PDF to HTML </a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('html-to-pdf')}}">HTML To PDF </a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('image-to-pdf')}}">Image To  PDF </a>
@@ -345,7 +345,6 @@
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-compressor')}}">PDF Compression</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-merging')}}">PDF merging</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-splitting')}}">PDF Splitting</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('add-signature-to-pdf-online')}}">Add Signature to PDF </a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('pdf-html')}}">PDF to HTML </a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('html-to-pdf')}}">HTML To PDF </a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('image-to-pdf')}}">Image To  PDF </a></li> <li class="mb-0">
