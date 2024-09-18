@@ -20,6 +20,7 @@ Route::get('/online-pdf-compressor', [tools::class, 'pdfcompressor'])->name('onl
 Route::get('/online-pdf-merging', [tools::class, 'online_pdf_merging'])->name('online-pdf-merging');
 Route::get('/online-pdf-splitting', [tools::class, 'online_pdf_splitting'])->name('online-pdf-splitting');
 Route::get('/pdf-to-image', [tools::class, 'pdf_to_image'])->name('pdf_to_image');
+Route::get('/html-to-pdf', [tools::class, 'html_to_pdf'])->name('html_to_pdf');
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');
