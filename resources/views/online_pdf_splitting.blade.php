@@ -249,7 +249,7 @@
         <div class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-md absolute top-[-18em] right-[-5em] rounded-full"></div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
-            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online PDF merging tool for free</h1>
+            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online PDF splitting tool for free</h1>
             <form action="" method="post" class="flex flex-col justify-center mx-5 ">
                     @csrf
 
@@ -273,7 +273,7 @@
     <div class="col-span-12 row-span-1 bg-[#333]  py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-center ">
         
        <span class="ml-2 text-sm md:text-lg ">
-           Online PDF merging tool 
+           Online PDF split tool 
         </span>
        
         
@@ -281,8 +281,13 @@
  
     <div class="grid grid-cols-1 col-span-12 row-span-12 bg-slate-100 grid-rows-12">
         <span class="editor_section font-bold  row-span-1 z-[200] bg-white shadow-lg  justify-center items-center  w-full hidden md:flex ">
-            <button class="focus:outline-none text-[12px] md:text-md bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">Upload new PDF</button>
-         
+         <label for="from">
+            <input type="number" name="from" id="from" required class="border bg-white p-[.5em] rounded-lg" placeholder="From Page">
+         </label>
+         -
+         <label for="to">
+            <input type="number" name="to" id="to" required class="border bg-white p-[.5em] rounded-lg" placeholder="To Page">
+         </label>
            
         </span>
             
@@ -290,7 +295,7 @@
                 <canvas id="pdf-canvas">
 
                 </canvas>
-                <canvas id="selection-canvas" style="width: 100%;height: 100%;position: absolute;top: 0em;">
+                <canvas id="canvas-2" style="width: 100%;height: 100%;position: absolute;top: 0em;">
                     
                 </canvas>
 
@@ -298,7 +303,7 @@
             
             <div class="buttons  col-span-1 row-span-12 p-3 flex items-center justify-evenly bg-white shadow-lg z-[200]" >
                 <button class="focus:outline-none text-[12px] md:text-md border-2  text-blue-400 md:mr-2 border-blue-400 py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md close-editor-btn">Cancel</button>
-                <button class="focus:outline-none text-[12px] md:text-md bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">Save</button>
+                <button class="focus:outline-none text-[12px] md:text-md bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">split</button>
             </div>
     </div>
     
