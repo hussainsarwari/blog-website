@@ -18,6 +18,7 @@ Route::get('/Online-code-editor', [tools::class, 'onlinecodeeditor'])->name('onl
 Route::get('/online-pdf-editor', [tools::class, 'onlinepdfeditor'])->name('onlinepdfeditor');
 Route::get('/online-pdf-compressor', [tools::class, 'pdfcompressor'])->name('online_pdf_merging');
 Route::get('/online-pdf-merging', [tools::class, 'online_pdf_merging'])->name('online-pdf-merging');
+Route::get('/online-pdf-splitting', [tools::class, 'online_pdf_splitting'])->name('online-pdf-splitting');
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');

@@ -33,4 +33,7 @@ class tools extends Controller
     public function online_pdf_merging(){
       return view('online_pdf_merging');
     }
+    public function online_pdf_splitting(){
+      return view('online_pdf_splitting');
+    }
 }
