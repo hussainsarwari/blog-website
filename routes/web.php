@@ -19,7 +19,7 @@ Route::get('/online-pdf-editor', [tools::class, 'onlinepdfeditor'])->name('onlin
 Route::get('/online-pdf-compressor', [tools::class, 'pdfcompressor'])->name('online_pdf_merging');
 Route::get('/online-pdf-merging', [tools::class, 'online_pdf_merging'])->name('online-pdf-merging');
 Route::get('/online-pdf-splitting', [tools::class, 'online_pdf_splitting'])->name('online-pdf-splitting');
-Route::get('/add-signature-to-pdf-online', [tools::class, 'add_signature_to_pdf'])->name('add_signature_to_pdf');
+Route::get('/pdf-to-image', [tools::class, 'pdf_to_image'])->name('pdf_to_image');
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');

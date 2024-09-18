@@ -36,7 +36,7 @@ class tools extends Controller
     public function online_pdf_splitting(){
       return view('online_pdf_splitting');
     }
-    public function add_signature_to_pdf(){
-      return view('add_signature_to_pdf');
+    public function pdf_to_image(){
+      return view('pdf_to_image');
     }
 }
