@@ -9,10 +9,9 @@
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
     @vite(['resources/css/templatemo-art-factory.css'])
-    @vite(['resources/css/app.css'])
     @vite(['resources/css/style.css'])
-    @vite(['resources/css/animations.css'])
-    @vite(['resources/js/cv.js'])
+    @vite(['resources/css/app.css'])
+    @vite(['resources/js/compressor.js'])
 
 
     <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
@@ -29,39 +28,38 @@
 <body class="overflow-x-hidden">
 
 
-
     <div id="preloader">
         <div class="flex justify-center loader" style="align-items: center;">
             <div class="box box0">
                 <div></div>
-              </div>
-              <div class="box box1">
+            </div>
+            <div class="box box1">
                 <div></div>
-              </div>
-              <div class="box box2">
+            </div>
+            <div class="box box2">
                 <div></div>
-              </div>
-              <div class="box box3">
+            </div>
+            <div class="box box3">
                 <div></div>
-              </div>
-              <div class="box box4">
+            </div>
+            <div class="box box4">
                 <div></div>
-              </div>
-              <div class="box box5">
+            </div>
+            <div class="box box5">
                 <div></div>
-              </div>
-              <div class="box box6">
+            </div>
+            <div class="box box6">
                 <div></div>
-              </div>
-              <div class="box box7">
+            </div>
+            <div class="box box7">
                 <div></div>
-              </div>
-              <div class="ground">
+            </div>
+            <div class="ground">
                 <div></div>
-              </div>
             </div>
         </div>
-    
+    </div>
+
 
 
     <header class="header-area header-sticky h-[80px] md:h-[140px]">
@@ -88,7 +86,7 @@
                 <form action="" method="post" class="flex flex-row mx-5 search">
                     @csrf
                     <input
-                        class="p-1 mx-2 bg-blue-300 border-b border-blue-500 text3white graye-no ne focus:outline-none focus:bg-blue-400 placeholder:text-white"
+                        class="p-1 mx-2 text-white bg-blue-300 border-b border-blue-500 outline-none focus:outline-none focus:bg-blue-400 placeholder:text-white"
                         placeholder="Search" type="search" name="search" required id="search">
                     <button type="submit">
                         <svg class="mx-2 bi bi-search" fill="#fff" height="20" viewbox="0 0 16 16" width="20"
@@ -161,7 +159,7 @@
                                         href="{{ url('youtube-online-video-downloader') }}">youtube video
                                         downloader</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('') }}">Short URL</a>
+                                        href="{{ url('short-url') }}">Short URL</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('Paraphrase') }}">Paraphrase</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
@@ -244,60 +242,40 @@
             </div>
         </div>
     </header>
-    <div
-        class="rounded-full w-[8em] h-[8em] md:w-[30em] md:h-[30em] bg-yellow-300 absolute top-[60em] md:top-[50em] left-0 md:left-10 shadow-2xl shadow-yellow-500 box1">
-    </div>
+
 
     {{-- main section --}}
     <div class="relative w-full h-screen mb-20 ">
         <div
-            class="w-[55em] h-[85em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-0 lg:right-[5em] rounded-full ">
+            class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-md absolute top-[-18em] right-[-5em] rounded-full">
         </div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
-
-            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online code editor</h1>
-            <form action="" method="post"
-                class="text-black overflow-x-hidden flex flex-col justify-center mx-5  bg-slate-50 shadow-2xl shadow-slate-500 rounded-lg py-5 p-4 z-50 w-fit relative top-[10rem] lg:top-[20em] online_code_editor">
+            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online
+                PDF Compressor for free</h1>
+            <form action="" method="post" class="flex flex-col justify-center mx-5 ">
                 @csrf
-                <div class="flex flex-col justify-between mb-2 md:flex-row header">
-                    <span class="flex flex-col justify-center w-full my-3 text-sm text-center lg:text-md">
-                      <span class="text-sm lg:text-[1.7em] font-bold ">Code Editro </span>
-                    <p class="py-[1em]">
-                        Select your programming language:
-                        </p>
-                      <select  class="text-center text-black border-2 border-blue-300 rounded-lg  h-[2em]" name="programming_language" id="programming_language">
-                        <option value="java">java</option>
-                        <option value="javascript">javascript</option>
-                        <option value="C++">C++</option>
-                        <option value="python">python</option>
-                        <option value="php">php</option>
-                        <option value="C#">C#</option>
-                    </select>
-                </span>
-                </div>
-                <hr>
-                <div class="grid grid-cols-6 gap-6 lg:grid-cols-12">
-                    <code class="col-span-6 text-black ">
-                        <textarea name="code_editor" id="code_editor" class="p-2 resize-none focus:outline-none" required placeholder="Write your code here" cols="60" rows="20"></textarea>
-                    </code>
-                    <div class="result  h-[30em] col-span-6 bg-white ml-2 p-2 flex flex-col justify-center">
-                        <div class="text-center result-header">Result <hr></div>
-                        <div class="resutl-content h-[25em] w-full">
-                            
 
-                        </div>
-                          <button type="submit"
-                    class="p-2 my-3 text-black border-2 border-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white">
-                    Copy
-                </button>
-                    </div>
-                </div>
-                    
-                <button type="button"
-                    class="p-2 my-3 text-white bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700">
-                    Run
-                </button>
+
+                <label
+                    class="relative top-[10em] lg:top-[20em] inline-block cursor-pointer bg-white text-primary font-medium py-2 px-4 border border-blue-500 rounded-lg shadow-sm  transition duration-300 ease-in-out">
+                    <span class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" class="w-5 h-5 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4v16m8-8H4" />
+                        </svg>
+                        Upload File
+                    </span>
+                    <input type="file" id="compressor" class="absolute inset-0 opacity-0 cursor-pointer">
+                </label>
+                <span id="errorMessage"
+                    class="text-red-300 absolute top-[14em] md:top-[13em] lg:top-[23.5em] hidden">Please choose pdf
+                </span>
+                <span id="successMessage"
+                    class="text-green-300 absolute top-[14em] md:top-[13em] lg:top-[23.5em] hidden">File added
+                    succesfully </span>
+
             </form>
         </div>
 
@@ -305,10 +283,55 @@
 
 
 
+    {{-- pdf compressor section  --}}
+    <section class="absolute w-full p-2 pdf-compressor top-[25em] lg:top-[35em] hidden">
+        <div class="m-auto w-[20em] lg:w-[60em] bg-slate-50 shadow-xl rounded-md h-[30em] flex flex-col justify-center">
+            <p class="w-full p-2 text-sm font-bold text-center pdf-compression-header md:text-md">Free pdf compression
+                <hr>
+            </p>
+            <div class="container p-2 h-[22em]  flex items-center ">
+                <div class="flex items-center w-full border border-primary  rounded-md p-[1em] justify-evenly">
+                    <span>math</span>
+                    <span>24kb</span>
+                    <span><input type="checkbox" name="select" id="select"></span>
+                </div>
+            </div>
+
+
+
+
+            {{-- btn compression --}}
+            <div class="w-full btn-conteiner">
+                <a class="btn-content" href="#">
+                    <span class="text-sm btn-title">Compress</span>
+                    <span class="icon-arrow">
+                        <svg width="60px" height="40px" viewBox="0 0 66 43" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <path id="arrow-icon-one"
+                                    d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                                    fill="#FFFFFF"></path>
+                                <path id="arrow-icon-two"
+                                    d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                                    fill="#FFFFFF"></path>
+                                <path id="arrow-icon-three"
+                                    d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                                    fill="#FFFFFF"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+
+
     {{-- footer section --}}
 
 
-    <footer class="py-4 relative top-[50em] h-[130em] md:h-[70em] w-full  border-none">
+    <footer class="py-4 relative top-[60em] h-[130em] md:h-[70em] w-full ">
         <img class="absolute bottom-[58em] lg:bottom-[15em]  left-0 w-full rotate-180 d-none d-sm-inline"
             src="{{ asset('images/banner-bg.svg') }}" alt="footer-background-1">
         <img class="absolute bottom-[55em] left-0 w-full d-sm-none footer-img"
@@ -399,7 +422,7 @@
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('') }}">Short URL</a>
+                                href="{{ url('short-url') }}">Short URL</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
@@ -485,9 +508,8 @@
                     <div class="pt-4 border-top d-lg-none"></div>
                     <h4 class="text-sm lg:text-md">Subscribe</h4>
                     <div class="mb-2 input-group">
-                        <input class="text-sm form-cont3ol bg-light lg:text-md"
-                            placeholder="Email graydres focus:bg-blue-100  s" type="text"> <button
-                            class="btn btn-primary" type="button">Subscribe</button>
+                        <input class="text-sm form-control bg-light lg:text-md" placeholder="Email address"
+                            type="text"> <button class="btn btn-primary" type="button">Subscribe</button>
                     </div>
                     <p class="mb-0 text-sm text-white small lg:text-md">Sign up for our newsletter to get the latest
                         updates on features and releases.</p>

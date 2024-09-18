@@ -16,6 +16,7 @@ Route::get('/Paraphrase', [tools::class, 'paraphrase'])->name('paraphrase');
 Route::get('/CV-generator', [tools::class, 'CV_generator'])->name('CV-generator');
 Route::get('/Online-code-editor', [tools::class, 'onlinecodeeditor'])->name('online_code_editor');
 Route::get('/online-pdf-editor', [tools::class, 'onlinepdfeditor'])->name('onlinepdfeditor');
+Route::get('/online-pdf-compressor', [tools::class, 'pdfcompressor'])->name('pdfcompressor');
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');
