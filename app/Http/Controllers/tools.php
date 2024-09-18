@@ -39,4 +39,7 @@ class tools extends Controller
     public function pdf_to_image(){
       return view('pdf_to_image');
     }
+    public function html_to_pdf(){
+      return view('html_to_pdf');
+    }
 }
