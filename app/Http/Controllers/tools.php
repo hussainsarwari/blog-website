@@ -30,4 +30,13 @@ class tools extends Controller
     public function pdfcompressor(){
       return view('pdf_compressor');
     }
+    public function online_pdf_merging(){
+      return view('online_pdf_merging');
+    }
+    public function online_pdf_splitting(){
+      return view('online_pdf_splitting');
+    }
+    public function add_signature_to_pdf(){
+      return view('add_signature_to_pdf');
+    }
 }

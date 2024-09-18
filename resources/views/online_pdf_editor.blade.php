@@ -124,7 +124,7 @@
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-compressor')}}">PDF Compression</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-merging')}}">PDF merging</a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-splitting')}}">PDF Splitting</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('add-signature-to-pdf-online')}}">Add Signature to PDF </a>
+
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('pdf-html')}}">PDF to HTML </a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('html-to-pdf')}}">HTML To PDF </a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('image-to-pdf')}}">Image To  PDF </a>
@@ -186,7 +186,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-2">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                           </svg>
-                          Choose File
+                          Select PDF File
                         </span>
                         <input type="file" id="pdf" class="absolute inset-0 opacity-0 cursor-pointer">
                       </label>
@@ -345,7 +345,6 @@
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-compressor')}}">PDF Compression</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-merging')}}">PDF merging</a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-splitting')}}">PDF Splitting</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('add-signature-to-pdf-online')}}">Add Signature to PDF </a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('pdf-html')}}">PDF to HTML </a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('html-to-pdf')}}">HTML To PDF </a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('image-to-pdf')}}">Image To  PDF </a></li> <li class="mb-0">
