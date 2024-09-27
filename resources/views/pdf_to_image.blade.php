@@ -11,7 +11,7 @@
     @vite(['resources/css/templatemo-art-factory.css'])
     @vite(['resources/css/style.css'])
     @vite(['resources/css/app.css'])
-    @vite(['resources/js/pdf_editor.js'])
+    @vite(['resources/js/pdf_to_img.js'])
 
 
     <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
@@ -175,7 +175,7 @@
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-pdf-splitting') }}">PDF Splitting</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('pdf-html') }}">PDF to HTML </a>
+                                        href="{{ url('pdf-to-image') }}">PDF to Image </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('html-to-pdf') }}">HTML To PDF </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
@@ -247,8 +247,8 @@
         <div class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-md absolute top-[-18em] right-[-5em] rounded-full"></div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
-            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Online PDF merging tool for free</h1>
-            <form action="" method="post" class="flex flex-col justify-center mx-5 ">
+            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Convert PDf to image </h1>
+            <form action=""  method="post" class="flex flex-col justify-center mx-5  ">
                     @csrf
 
                     
@@ -259,7 +259,7 @@
                           </svg>
                           Select PDF File
                         </span>
-                        <input type="file" id="pdf" class="absolute inset-0 opacity-0 cursor-pointer">
+                        <input type="file" id="" class="absolute inset-0 opacity-0 cursor-pointer pdf_to_img">
                       </label>
                       <span id="errorMessage" class="text-red-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">Please choose pdf </span>
                       <span id="successMessage" class="text-green-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">File added succesfully </span>
@@ -271,16 +271,19 @@
     <div class="col-span-12 row-span-1 bg-[#333]  py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-center ">
         
        <span class="ml-2 text-sm md:text-lg ">
-           Online PDF merging tool 
+           Convert PDF to image 
         </span>
        
         
         </div>
  
     <div class="grid grid-cols-1 col-span-12 row-span-12 bg-slate-100 grid-rows-12">
-        <span class="editor_section font-bold  row-span-1 z-[200] bg-white shadow-lg  justify-center items-center  w-full hidden md:flex ">
-            <button class="focus:outline-none text-[12px] md:text-md bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">Upload new PDF</button>
-         
+        <span class="editor_section font-bold  row-span-1 z-[200] bg-white shadow-lg  justify-evenly items-center  w-full hidden md:flex ">
+           <select name="convert_to_img" id="convert_to_img" class="border-none  p-[1em] bg-slate-100 text-gray-600">
+            <option value="all_pages">Convert All pages to images</option>
+            <option value="specific_page">Choose a page for convert to image</option>
+           </select>
+           <input type="number" name="pdf_img" id="pdf_to_image_page_number" placeholder="Enter the page number for convert to image" class="border-none focus:outline-none border border-primary rounded-md p-[1em] hidden">
            
         </span>
             
@@ -296,7 +299,7 @@
             
             <div class="buttons  col-span-1 row-span-12 p-3 flex items-center justify-evenly bg-white shadow-lg z-[200]" >
                 <button class="focus:outline-none text-[12px] md:text-md border-2  text-blue-400 md:mr-2 border-blue-400 py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md close-editor-btn">Cancel</button>
-                <button class="focus:outline-none text-[12px] md:text-md bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">Save</button>
+                <button class="focus:outline-none text-[12px] md:text-md bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">Convert</button>
             </div>
     </div>
     
@@ -434,7 +437,7 @@
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('pdf-html') }}">PDF to HTML </a>
+                                href="{{ url('pdf-to-image') }}">PDF to Image </a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"

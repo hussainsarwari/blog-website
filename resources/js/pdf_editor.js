@@ -7,9 +7,9 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
 
 const fileInput = document.getElementById("pdf");
 const errorMessage = document.getElementById("errorMessage");
+const successMessage = document.getElementById("successMessage");
 const close_editor_btn = document.querySelector(".close-editor-btn");
 const editor_box = document.querySelector(".editor_box");
-const successMessage = document.getElementById("successMessage");
 const nextPageBtn = document.querySelector(".next_page");
 const previosPageBtn = document.querySelector(".previos_page");
 let maxpageNumber;
@@ -24,7 +24,7 @@ let flag = false;
 
 //this flag checks that user uploaded pdf or not
 // Listen for the file selection (change event)
-fileInput.addEventListener("change", function () {
+ fileInput.addEventListener("change", function () {
     file = fileInput.files[0]; // Get the selected file
 
     if (file) {
@@ -101,7 +101,7 @@ async function renderpdf(pageNum, scale) {
     };
     await page.render(renderContext).promise;
 
-    let title = document.querySelector(".pdftitle");
+
 }
 
 // select a part of page
@@ -184,3 +184,6 @@ editor_tools_close_btn.addEventListener("click", () => {
     editor_section.classList.remove("editor_triger_menu");
     menu_triger.classList.remove("hidden");
 });
+
+
+
