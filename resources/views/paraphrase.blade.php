@@ -101,6 +101,7 @@
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-page-numbering')}}">PDF page numbering </a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-images-compression')}}">images Compression </a>
                                         <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-video-compression')}}">video  Compression </a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('extract-text-from-image')}}">Extract Text From Image </a>
                                       
                                           
                                      
@@ -236,7 +237,8 @@
                                 <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('image-to-pdf')}}">Image To  PDF </a></li> <li class="mb-0">
                                 <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-page-numbering')}}">PDF page numbering </a></li> <li class="mb-0">
                                 <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-images-compression')}}">images Compression </a></li> <li class="mb-0">
-                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-video-compression')}}">video  Compression </a></li>				
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-video-compression')}}">video  Compression </a></li>	<li class="mb-0">			
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('extract-text-from-image')}}">Extract Text From Image </a></li>				
 				</ul>
 			</div>
 			<div class="mb-4 col-6 col-lg-2 mb-lg-0">
