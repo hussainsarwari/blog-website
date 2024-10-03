@@ -43,6 +43,6 @@ class tools extends Controller
       return view('html_to_pdf');
     }
     public function image_to_pdf(){
-      return view('image-to-pdf');
+      return view('image_to_pdf');
     }
 }

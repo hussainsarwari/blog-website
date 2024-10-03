@@ -275,6 +275,7 @@
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-page-numbering')}}">PDF page numbering </a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-images-compression')}}">images Compression </a></li> <li class="mb-0">
                               <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-video-compression')}}">video  Compression </a></li>				
+                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('extract-text-from-image')}}">Extract Text from Image </a></li>				
               </ul>
           </div>
           <div class="mb-4 col-6 col-lg-2 mb-lg-0">
