@@ -5,13 +5,14 @@ const successMessage = document.getElementById("successMessage");
 const convert_box=document.querySelector(".convert_box");
 let previosfile;
 let f;
-
+let flag=false;//check the file input is a first input or not
 let selectedImages = [];
 fileInput.addEventListener("input",(e)=>{
    
     f =  e.target.files; // Get the selected file
     const container = document.getElementById('imageContainer');
-    container.innerHTML='';
+
+   flag == false ? container.innerHTML='' : '';
     selectedImages = []; 
     toggleDeleteButton(); // Disable delete button initially
     Array.from(f).forEach(file => {
@@ -59,6 +60,7 @@ fileInput.addEventListener("input",(e)=>{
     
 
     })
+    flag=false;
 })
 
 // close box
@@ -90,4 +92,7 @@ function toggleDeleteButton() {
 }
 
 // add new image btn
-
+document.querySelector(".add_new_img_btn").addEventListener("click",()=>{
+    flag= true;
+    fileInput.click();
+})

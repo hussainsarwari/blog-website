@@ -270,7 +270,7 @@
                     <div class="buttons  col-span-1 row-span-12 p-3 flex items-center justify-evenly bg-white shadow-lg z-[200]" >
                         <button class="focus:outline-none text-[12px] md:text-md border-2  text-blue-400 md:mr-2 border-blue-400 py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md close_box_btn">Cancel</button>
                         <button id="deleteBtn" class="focus:outline-none text-[12px] md:text-md border-2  text-red-400 md:mr-2 border-red-400 py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md delete_box_btn" disabled>Delete</button>
-                        <button class="focus:outline-none text-[12px] md:text-md previos_page bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  add_img_btn">Add Image <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        <button class="focus:outline-none text-[12px] md:text-md previos_page bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  add_new_img_btn">Add Image <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" class="inline w-5 h-5 mr-2">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 4v16m8-8H4" />
