@@ -19,7 +19,60 @@
     <script type="module" src="{{asset('js/scrollreveal.min.js')}}"></script>
     <script type="module" src="{{asset('js/waypoints.min.js')}}"></script>
     <script type="module" src="{{asset('js/custom.js')}}"></script>
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
+<style>
+     #imageContainer img.selected {
+            border: 2px solid blue; 
+        }
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        /* Highlight the selected image */
+        .image-wrapper img.selected {
+            border-color: #3498db;
+        }
+
+        /* Select Icon (Hidden by Default) */
+        .select-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 20px;
+            color: #0b9be4;
+            /* background-color: rgba(0, 0, 0, 0.5); */
+            border-radius: 50%;
+            padding: 5px;
+            display: none;
+        }
+
+        /* Show the icon when image is selected */
+        .image-wrapper img.selected + .select-icon {
+            display: block;
+        }
+
+      
+
+        #deleteBtn:disabled {
+            cursor: not-allowed;
+        }
+</style>
 <body class="overflow-x-hidden">
     
 
@@ -190,14 +243,17 @@
                         </svg>
                         Select Image
                     </span>
-                    <input type="file" id="image-to-pdf" class="absolute inset-0 opacity-0 cursor-pointer">
+                    <input type="file" id="image-to-pdf" class="absolute inset-0 opacity-0 cursor-pointer" multiple>
                 </label>
+                <span id="errorMessage" class="text-red-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">Please choose image (jpg, jpeg, png) </span>
+                <span id="successMessage" class="text-green-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">File added succesfully </span>
+          
             </form>
         </div>
 
 
         {{-- open image for generate pdf --}}
-        <div class=" grid-cols-12 grid-rows-12  w-full h-[100vh]  fixed top-0 z-[200] convert_box ">
+        <div class=" grid-cols-12 grid-rows-12  w-full h-[100vh]  fixed top-0 z-[200] convert_box  hidden">
           
          
             <div class="grid grid-cols-1 col-span-12 h-[100%] row-span-12 bg-slate-100 grid-rows-12">
@@ -207,18 +263,13 @@
              
                     </span>
                     
-                    <div class="relative col-span-1 m-auto overflow-hidden show_pdf row-span-10 ">
-                        <canvas id="pdf-canvas">
+                        <div id="imageContainer" style="width: 100%;height: 100%;top: 0em;" class="flex flex-col items-center justify-center overflow-y-scroll align-middle row-span-10">
+                        </div>
         
-                        </canvas>
-                        <canvas id="selection-canvas" style="width: 100%;height: 100%;position: absolute;top: 0em;">
-                            
-                        </canvas>
-        
-                    </div>
                     
                     <div class="buttons  col-span-1 row-span-12 p-3 flex items-center justify-evenly bg-white shadow-lg z-[200]" >
                         <button class="focus:outline-none text-[12px] md:text-md border-2  text-blue-400 md:mr-2 border-blue-400 py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md close_box_btn">Cancel</button>
+                        <button id="deleteBtn" class="focus:outline-none text-[12px] md:text-md border-2  text-red-400 md:mr-2 border-red-400 py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md delete_box_btn" disabled>Delete</button>
                         <button class="focus:outline-none text-[12px] md:text-md previos_page bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  add_img_btn">Add Image <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" class="inline w-5 h-5 mr-2">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
