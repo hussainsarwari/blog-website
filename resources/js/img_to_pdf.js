@@ -24,7 +24,7 @@ fileInput.addEventListener("input",(e)=>{
             convert_box.classList.add("grid");
             
             reader.onload = function(e) {
-            // debugger
+          
            
          
             const imgWrapper = document.createElement('div');
@@ -56,6 +56,10 @@ fileInput.addEventListener("input",(e)=>{
             container.appendChild(imgWrapper);
         };
         reader.readAsDataURL(file); 
+    }else{
+        errorMessage.classList.remove("hidden"); // show error message
+        successMessage.classList.add("hidden"); // hide success message
+
     }
     
 
