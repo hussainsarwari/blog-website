@@ -227,9 +227,9 @@
         <div class=" w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-md absolute top-[-18em] right-[-5em] rounded-full"></div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
-            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">JPG to PDF</h1>
-             <p class="w-full  flex justify-center absolute  text-sm  top-18 lg:top-[17em] text-white">
-                 Convert JPG images to PDF in seconds. Easily adjust orientation and margins.
+            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white"><strong class="inline"> JPG to PDF </strong></h1>
+             <p class="w-full  flex justify-center absolute  text-[0.87rem] md:text-md p-2 text-center top-24 lg:top-[17em] text-white">
+                 Convert  images to PDF in seconds.
                 </p>
             <form action="" method="post" class="flex flex-row mx-5 search">
                     @csrf
