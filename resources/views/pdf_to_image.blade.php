@@ -457,10 +457,7 @@
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-images-compression') }}">images Compression </a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-video-compression') }}">video Compression </a>
-                        </li>
+                        
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('extract-text-from-image') }}">Extract Text From Image </a>
