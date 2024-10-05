@@ -582,10 +582,7 @@
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('image-to-pdf') }}">Image To PDF </a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-page-numbering') }}">PDF page numbering </a>
-                        </li>
+                       
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-images-compression') }}">images Compression </a>
