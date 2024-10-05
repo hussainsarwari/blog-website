@@ -48,4 +48,7 @@ class tools extends Controller
     public function online_Image_converter(){
       return view('online_Image_converter');
     }
+    public function online_images_compression(){
+      return view('online_images_compression');
+    }
 }
