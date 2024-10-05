@@ -154,7 +154,6 @@
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white " href="{{url('business')}}">Business</a>
                                 </div>
                             </div>
-                            <li class="scroll-to-section"><a href="{{url('community')}}">Community</a></li>
                             <li class="scroll-to-section"><a href="{{url('http://localhost:8000/#services')}}">Services</a></li>
                            
                             <li class="scroll-to-section"><a href="{{url('http://localhost:8000/#contacts')}}">Contacts</a></li>

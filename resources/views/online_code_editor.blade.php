@@ -224,7 +224,6 @@
                                         href="{{ url('business') }}">Business</a>
                                 </div>
                             </div>
-                            <li class="scroll-to-section"><a href="{{ url('community') }}">Community</a></li>
                             <li class="scroll-to-section"><a
                                     href="{{ url('http://localhost:8000/#services') }}">Services</a></li>
 
