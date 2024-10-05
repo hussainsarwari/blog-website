@@ -185,8 +185,6 @@
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-images-compression') }}">images Compression </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-video-compression') }}">video Compression </a>
-                                    <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('extract-text-from-image') }}">Extract Text From Image</a>
 
 
