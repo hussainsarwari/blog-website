@@ -45,4 +45,7 @@ class tools extends Controller
     public function image_to_pdf(){
       return view('image_to_pdf');
     }
+    public function online_Image_converter(){
+      return view('online_Image_converter');
+    }
 }
