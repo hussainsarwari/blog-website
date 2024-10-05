@@ -11,7 +11,6 @@
     @vite(['resources/css/style.css'])
     @vite(['resources/css/app.css'])
     @vite(['resources/js/pdf_editor.js'])
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     
     <script type="module" src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
@@ -23,68 +22,7 @@
     <script type="module" src="{{asset('js/waypoints.min.js')}}"></script>
     <script type="module" src="{{asset('js/custom.js')}}"></script>
     <style>
-     
-    .select-container {
-      position: relative;
-      width: 300px;
-      top: 25em;
-      color: #0bace1
-    }
-
-    /* The floating label */
-    label {
-      position: absolute;
-      top: 50%;
-      left: 40px;
-      font-size: 16px;
-      color: #7a9cc6;
-      pointer-events: none;
-      transition: all 0.3s ease;
-      transform: translateY(-50%);
-    }
-
-    /* Select box styling */
-    select {
-      width: 100%;
-      padding: 15px 40px;
-      padding-right: 40px;
-      border: 2px solid #7a9cc6;
-      border-radius: 8px;
-      background-color: #fff;
-      color: #333;
-      font-size: 16px;
-      outline: none;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      transition: 0.3s ease-in-out;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-    }
-
-  
-
-    /* Font Awesome Icon */
-    .fa-caret-down {
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      color: #0bace1;
-      font-size: 18px;
-      transform: translateY(-50%);
-      
-    }
-
-   
-
-    /* Hover and Focus Effect */
-    select:hover {
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    select:focus {
-      box-shadow: 0 0 8px rgba(94, 120, 184, 0.5);
-    }
+        
     </style>
 
 </head>
@@ -251,7 +189,7 @@
                     @csrf
 
                     
-                    <label class="relative top-[10em] lg:top-[20em] left-0 inline-block cursor-pointer bg-white text-primary font-medium py-2 px-4 border border-blue-500 rounded-lg shadow-sm  transition duration-300 ease-in-out">
+                    <label class="relative top-[10em] lg:top-[20em] inline-block cursor-pointer bg-white text-primary font-medium py-2 px-4 border border-blue-500 rounded-lg shadow-sm  transition duration-300 ease-in-out">
                         <span class="flex items-center justify-center">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-2">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -262,24 +200,18 @@
                       </label>
                       <span id="errorMessage" class="text-red-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">Please choose pdf </span>
                       <span id="successMessage" class="text-green-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">File added succesfully </span>
-                      
-                      <div class="select-container ">
-                        <!-- Font Awesome Icon -->
-                        <i class="fas fa-caret-down"></i>
-                        <select name="imageFormat" required>
-                          <option value="" disabled selected>Select Image Format</option>
-                          <option value="jpeg">JPEG (.jpeg, .jpg)</option>
-                          <option value="png">PNG (.png)</option>
-                          <option value="gif">GIF (.gif)</option>
-                          <option value="bmp">BMP (.bmp)</option>
-                          <option value="tiff">TIFF (.tiff)</option>
-                          <option value="svg">SVG (.svg)</option>
-                          <option value="webp">WEBP (.webp)</option>
-                          <option value="ico">ICO (.ico)</option>
-                          <option value="heif">HEIF (.heif, .heic)</option>
-                        </select>
-                      </div>
-
+                      <select name="imageFormat" class="text-blue-400 p-2 relative top-[25em] rounded-md focus:outline-none">
+                        <option value="" disabled selected>Select Image Format</option>
+                        <option value="jpeg">JPEG (.jpeg, .jpg)</option>
+                        <option value="png">PNG (.png)</option>
+                        <option value="gif">GIF (.gif)</option>
+                        <option value="bmp">BMP (.bmp)</option>
+                        <option value="tiff">TIFF (.tiff)</option>
+                        <option value="svg">SVG (.svg)</option>
+                        <option value="webp">WEBP (.webp)</option>
+                        <option value="ico">ICO (.ico)</option>
+                        <option value="heif">HEIF (.heif, .heic)</option>
+                      </select>
                       <div class="w-full btn-conteiner relative top-[29em]">
                         <a class="btn-content" href="#">
                             <span class="text-sm btn-title">Convert</span>
@@ -301,9 +233,6 @@
                             </span>
                         </a>
                     </div>
-                </div>
-
-                      
             </form>
             
         </div>
