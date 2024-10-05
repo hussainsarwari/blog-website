@@ -184,7 +184,7 @@
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('image-to-pdf') }}">Image To PDF </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-image-converter') }}">Image converter </a>
+                                        href="{{ url('online-Image-converter') }}">Image converter </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-images-compression') }}">images Compression </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
