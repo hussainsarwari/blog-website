@@ -23,6 +23,7 @@ Route::get('/pdf-to-image', [tools::class, 'pdf_to_image'])->name('pdf_to_image'
 Route::get('/html-to-pdf', [tools::class, 'html_to_pdf'])->name('html_to_pdf');
 Route::get('/image-to-pdf', [tools::class, 'image_to_pdf'])->name('image-to-pdf');
 Route::get('/online-Image-converter', [tools::class, 'online_Image_converter'])->name('online-Image-converter');
+Route::get('/online-images-compression', [tools::class, 'online_Image_converter'])->name('online-Image-converter');
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');
