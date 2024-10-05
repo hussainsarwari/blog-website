@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\tools;
+use App\Http\Controllers\blogSection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 Route::get('/',function (){return view('index');})->name('home');
@@ -24,6 +25,7 @@ Route::get('/html-to-pdf', [tools::class, 'html_to_pdf'])->name('html_to_pdf');
 Route::get('/image-to-pdf', [tools::class, 'image_to_pdf'])->name('image-to-pdf');
 Route::get('/online-Image-converter', [tools::class, 'online_Image_converter'])->name('online-Image-converter');
 Route::get('/online-images-compression', [tools::class, 'online_images_compression'])->name('online-images-compression');
+Route::get('/blog/business', [blogSection::class, 'business'])->name('business');
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');

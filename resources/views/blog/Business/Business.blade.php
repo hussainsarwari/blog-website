@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Time management</title>
+    @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
     @vite(['resources/css/templatemo-art-factory.css'])
     @vite(['resources/css/style.css'])
-    @vite(['resources/css/app.css'])
-    @vite(['resources/js/pdf_to_img.js'])
+    @vite(['resources/css/animations.css'])
+    @vite(['resources/js/cv.js'])
 
 
     <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
@@ -28,38 +29,39 @@
 <body class="overflow-x-hidden">
 
 
+
     <div id="preloader">
         <div class="flex justify-center loader" style="align-items: center;">
             <div class="box box0">
                 <div></div>
-            </div>
-            <div class="box box1">
+              </div>
+              <div class="box box1">
                 <div></div>
-            </div>
-            <div class="box box2">
+              </div>
+              <div class="box box2">
                 <div></div>
-            </div>
-            <div class="box box3">
+              </div>
+              <div class="box box3">
                 <div></div>
-            </div>
-            <div class="box box4">
+              </div>
+              <div class="box box4">
                 <div></div>
-            </div>
-            <div class="box box5">
+              </div>
+              <div class="box box5">
                 <div></div>
-            </div>
-            <div class="box box6">
+              </div>
+              <div class="box box6">
                 <div></div>
-            </div>
-            <div class="box box7">
+              </div>
+              <div class="box box7">
                 <div></div>
-            </div>
-            <div class="ground">
+              </div>
+              <div class="ground">
                 <div></div>
+              </div>
             </div>
         </div>
-    </div>
-
+    
 
 
     <header class="header-area header-sticky h-[80px] md:h-[140px]">
@@ -86,7 +88,7 @@
                 <form action="" method="post" class="flex flex-row mx-5 search">
                     @csrf
                     <input
-                        class="p-1 mx-2 text-white bg-blue-300 border-b border-blue-500 outline-none focus:outline-none focus:bg-blue-400 placeholder:text-white"
+                        class="p-1 mx-2 bg-blue-300 border-b border-blue-500 text3white graye-no ne focus:outline-none focus:bg-blue-400 placeholder:text-white"
                         placeholder="Search" type="search" name="search" required id="search">
                     <button type="submit">
                         <svg class="mx-2 bi bi-search" fill="#fff" height="20" viewbox="0 0 16 16" width="20"
@@ -159,7 +161,7 @@
                                         href="{{ url('youtube-online-video-downloader') }}">youtube video
                                         downloader</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('short-url') }}">Short URL</a>
+                                        href="{{ url('') }}">Short URL</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('Paraphrase') }}">Paraphrase</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
@@ -174,6 +176,7 @@
                                         href="{{ url('online-pdf-merging') }}">PDF merging</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-pdf-splitting') }}">PDF Splitting</a>
+                                 
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('pdf-to-image') }}">PDF to Image </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
@@ -185,7 +188,9 @@
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-images-compression') }}">images Compression </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('extract-text-from-image') }}">Extract Text From Image</a>
+                                        href="{{ url('online-video-compression') }}">video Compression </a>
+                                    <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                        href="{{ url('extract-text-from-image') }}">Extract Text From image </a>
 
 
 
@@ -201,25 +206,25 @@
                                 <div
                                     class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit">
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/Technology') }}">Technology</a>
+                                        href="{{ url('Technology') }}">Technology</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/sport') }}">Sport</a>
+                                        href="{{ url('sport') }}">Sport</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/lifestyle') }}">Lifestyle</a>
+                                        href="{{ url('lifestyle') }}">Lifestyle</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/information') }}">Information</a>
+                                        href="{{ url('information') }}">Information</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/islamic') }}">Islamic</a>
+                                        href="{{ url('islamic') }}">Islamic</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/fashion') }}">fashion</a>
+                                        href="{{ url('fashion') }}">fashion</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/movie') }}">Movies</a>
+                                        href="{{ url('movie') }}">Movies</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/food') }}">Food</a>
+                                        href="{{ url('food') }}">Food</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/travel') }}">Travel</a>
+                                        href="{{ url('travel') }}">Travel</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('blog/business') }}">Business</a>
+                                        href="{{ url('business') }}">Business</a>
                                 </div>
                             </div>
                             <li class="scroll-to-section"><a
@@ -239,81 +244,212 @@
             </div>
         </div>
     </header>
-
+    <div
+        class="rounded-full w-[8em] h-8em md:w-[30em] md:h-[30em] bg-yellow-300 absolute top-[60em] md:top-[50em] left-0 md:left-10 shadow-2xl shadow-yellow-500 box1">
+    </div>
 
     {{-- main section --}}
-    <div class="relative w-full h-screen mb-20 " >
-        <div class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-md absolute top-[-18em] right-[-5em] rounded-full"></div>
+    <div class="relative w-full h-screen mb-20 ">
+        <div
+            class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
+        </div>
         <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
 
-            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Convert PDf to image </h1>
-            <form action=""  method="post" class="flex flex-col justify-center mx-5  ">
-                    @csrf
+
+            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Create
+                your CV just in one minute</h1>
+            <form action="" method="post"
+                class=" overflow-x-hidden flex flex-col justify-center mx-5 search bg-slate-50 shadow-2xl shadow-slate-500 rounded-lg py-5 p-4 z-50 w-[30em] md:w-[50em] relative top-[20em] cv-generator">
+                @csrf
+                <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">personal
+                    information(Required)
+                    <hr>
+                </p>
+
+                <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="name" type="text" name="name" required id="name"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+
+                <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="Last name" type="text" name="lastname" required id="lastname"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="Email" type="email" name="email" required id="email"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="Phone number" type="number" name="phone_number" required id="phone_number"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="Github" type="text" name="github" id="github">
+                <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="website" type="text" name="website" id="website">
+                <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder=" Title" type="text" name="title" required id="title"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                {{-- education  --}}
+                <div class="education">
+
+                    <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Education
+                        Section(Required)
+                        <hr>
+                    </p>
+                    <input
+                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                        placeholder="educational background" type="text" name="education" required
+                        id="education"><span class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                    <input
+                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                        placeholder="educational background start date" type="date" name="educational_start"
+                        required id="educational_start"><span
+                        class="text-red-400 relative bottom-[2.2em] left-[44.5em]">*</span>
+                    <input
+                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                        placeholder="educational background end date" type="date" name="education_end"
+                        id="education_end">
+                    <label for="education_date" class="text-black">It is going on:
+                        <input class="w-10 border border-blue-300 border-spacing-1" type="checkbox"
+                            name="education_date" id="education_date">
+                    </label>
+                </div>
+                <button type="button"
+                    class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg remove_edu focus:outline-none hover:bg-red-400 hover:text-white">Remove</button>
+                <button type="button"
+                    class="p-2 my-2 bg-blue-400 rounded-lg add_edu focus:outline-none hover:bg-blue-700 hover:text-white">Add
+                    new educational background</button>
+                {{-- Certificates  --}}
+                <div class="certificate">
+
+                    <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Certificates
+                        Section (Optional)
+                        <hr>
+                    </p>
+                    <input
+                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                        placeholder="Certificate Title" type="text" name="certificate" id="certificate">
+                    <input
+                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                        placeholder="More information" type="text" name="certificate_information"
+                        id="certificate_information">
+                </div>
+                <button type="button"
+                    class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg focus:outline-none hover:bg-red-400 hover:text-white btn_remove_certificate">Remove</button>
+
+                <button type="button"
+                    class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white btn_add_certificate">Add
+                    new Certificate</button>
+                {{-- experince  --}}
+                <div class="exeprince">
+                    
+                    <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Experince
+                    Section(Required)
+                    <hr>/p>
+                    <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    required placeholder="work experince" type="text" name="experince" id="experince"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                    <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    required placeholder="Description" type="text" name="experince_description" id="experince_description"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                    <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    required placeholder="work experince start date" type="date" name="experince_start"
+                    id="experince_start"><span class="text-red-400 relative bottom-[2.2em] left-[44.5em]">*</span>
+                    <input
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    required placeholder="work experince end date" type="date" name="experince_end"
+                    id="experince_end">
+                    <label for="experince_date" class="text-black">Or It is going on:
+                        <input class="w-5 " type="checkbox" name="experince date" id="experince_date">
+                    </label>
+                </div>
+                    <button type="button"
+                    class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg focus:outline-none hover:bg-red-400 hover:text-white btn_remove_exeprince">Remove</button>
+                    
+                    <button type="button"
+                    class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white btn_add_exeprince">Add
+                    new Exeprince</button>
+
+                    {{-- languages --}}
+                <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Language
+                    Section(Required)
+                    <hr>
+                </p>
+                <div class="language">
+                    <input type="text"
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="Language" required name="language" id="language"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                    <input type="text"
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="Writting" required name="language_writting" id="language_writing"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                    <input type="text"
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="Speaking" required name="language_speaking" id="language_speaking"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                    <input type="text"
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="Listning" required name="language_listning" id="language_listning"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                </div>
+                  <button type="button"
+                    class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg focus:outline-none hover:bg-red-400 hover:text-white btn_remove_language">Remove</button>
+                    
+                    <button type="button"
+                    class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white btn_add_language">Add
+                    new language</button>
+
+                {{-- skills --}}
+                <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Skill
+                    Section(Required)
+                    <hr>
+                </p>
+                <div class="skill">
+                    <input type="text"
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="write your skill" required name="skill" id="skill"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                    <input type="number"
+                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
+                    placeholder="How many percent do you know? (1-100)" required name="skill_value" id="skill_value"><span
+                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
+                </div>
+                <button type="button"
+                class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg focus:outline-none hover:bg-red-400 hover:text-white btn_remove_skill">Remove</button>
+                
+                <button type="button"
+                class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white btn_add_skill">Add
+                new skill</button>
+
+
+
+
+
 
                     
-                    <label class="relative top-[10em] lg:top-[20em] inline-block cursor-pointer bg-white text-primary font-medium py-2 px-4 border border-blue-500 rounded-lg shadow-sm  transition duration-300 ease-in-out">
-                        <span class="flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-2">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                          </svg>
-                          Select PDF File
-                        </span>
-                        <input type="file" id="" class="absolute inset-0 opacity-0 cursor-pointer pdf_to_img">
-                      </label>
-                      <span id="errorMessage" class="text-red-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">Please choose pdf </span>
-                      <span id="successMessage" class="text-green-300 absolute top-[14em] md:top-[12em] lg:top-[23.5em] hidden">File added succesfully </span>
-                
+                <button type="submit"
+                    class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white">
+                    Create my CV
+                </button>
             </form>
         </div>
-        
-<div class=" grid-cols-12 grid-rows-12  w-full h-full  fixed top-0 z-[200] editor_box hidden">
-    <div class="col-span-12 row-span-1 bg-[#333]  py-3 font-bold text-sm md:text-lg  text-white flex items-center justify-center ">
-        
-       <span class="ml-2 text-sm md:text-lg ">
-           Convert PDF to image 
-        </span>
-       
-        
-        </div>
- 
-    <div class="grid grid-cols-1 col-span-12 row-span-12 bg-slate-100 grid-rows-12">
-        <span class="editor_section font-bold  row-span-1 z-[200] bg-white shadow-lg  justify-evenly items-center  w-full hidden md:flex ">
-           <select name="convert_to_img" id="convert_to_img" class="border-none  p-[1em] bg-slate-100 text-gray-600">
-            <option value="all_pages">Convert All pages to images</option>
-            <option value="specific_page">Choose a page for convert to image</option>
-           </select>
-           <input type="number" name="pdf_img" id="pdf_to_image_page_number" placeholder="Enter the page number for convert to image" class="border-none focus:outline-none border border-primary rounded-md p-[1em] hidden">
-           
-        </span>
-            
-            <div class="relative col-span-1 m-auto overflow-hidden show_pdf row-span-10 ">
-                <canvas id="pdf-canvas">
 
-                </canvas>
-                <canvas id="selection-canvas" style="width: 100%;height: 100%;position: absolute;top: 0em;">
-                    
-                </canvas>
-
-            </div>
-            
-            <div class="buttons  col-span-1 row-span-12 p-3 flex items-center justify-evenly bg-white shadow-lg z-[200]" >
-                <button class="focus:outline-none text-[12px] md:text-md border-2  text-blue-400 md:mr-2 border-blue-400 py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md close-editor-btn">Cancel</button>
-                <button class="focus:outline-none text-[12px] md:text-md bg-blue-400 text-white py-[.8em] h-[3em] md:py-1 px-[.8em]  md:px-[6em] rounded-md  ">Convert</button>
-            </div>
     </div>
-    
-  
-</div>
-    
-    </div>
-
 
 
 
     {{-- footer section --}}
 
 
-    <footer class="py-4 relative top-[60em] h-[130em] md:h-[70em] w-full ">
+    <footer class="py-4 relative top-[250em] h-[130em] md:h-[70em] w-full ">
         <img class="absolute bottom-[58em] lg:bottom-[15em]  left-0 w-full rotate-180 d-none d-sm-inline"
             src="{{ asset('images/banner-bg.svg') }}" alt="footer-background-1">
         <img class="absolute bottom-[55em] left-0 w-full d-sm-none footer-img"
@@ -341,45 +477,44 @@
                     <ul class="list-unstyled">
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/Technology') }}">Technology</a>
+                                href="{{ url('Technology') }}">Technology</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/sport') }}">Sport</a>
+                                href="{{ url('sport') }}">Sport</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/lifestyle') }}">Lifestyle</a>
+                                href="{{ url('lifestyle') }}">Lifestyle</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/information') }}">Information</a>
+                                href="{{ url('information') }}">Information</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/islamic') }}">Islamic</a>
+                                href="{{ url('islamic') }}">Islamic</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/fashion') }}">fashion</a>
+                                href="{{ url('fashion') }}">fashion</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/movie') }}">Movies</a>
+                                href="{{ url('movie') }}">Movies</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/food') }}">Food</a>
+                                href="{{ url('food') }}">Food</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/travel') }}">Travel</a>
+                                href="{{ url('travel') }}">Travel</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/business') }}">Business</a>
+                                href="{{ url('business') }}">Business</a>
                         </li>
-
 
 
 
@@ -405,7 +540,7 @@
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('short-url') }}">Short URL</a>
+                                href="{{ url('') }}">Short URL</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
@@ -435,6 +570,7 @@
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-pdf-splitting') }}">PDF Splitting</a>
                         </li>
+                      
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('pdf-to-image') }}">PDF to Image </a>
@@ -455,10 +591,13 @@
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-images-compression') }}">images Compression </a>
                         </li>
-                        
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('extract-text-from-image') }}">Extract Text From Image </a>
+                                href="{{ url('online-video-compression') }}">video Compression </a>
+                        </li>
+                        <li class="mb-0">
+                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('extract-text-from-image') }}">Extract Text From Image</a>
                         </li>
                     </ul>
                 </div>
@@ -488,8 +627,9 @@
                     <div class="pt-4 border-top d-lg-none"></div>
                     <h4 class="text-sm lg:text-md">Subscribe</h4>
                     <div class="mb-2 input-group">
-                        <input class="text-sm form-control bg-light lg:text-md" placeholder="Email address"
-                            type="text"> <button class="btn btn-primary" type="button">Subscribe</button>
+                        <input class="text-sm form-cont3ol bg-light lg:text-md"
+                            placeholder="Email graydres focus:bg-blue-100  s" type="text"> <button
+                            class="btn btn-primary" type="button">Subscribe</button>
                     </div>
                     <p class="mb-0 text-sm text-white small lg:text-md">Sign up for our newsletter to get the latest
                         updates on features and releases.</p>
@@ -535,6 +675,36 @@
             </div>
         </div>
     </footer>
+
+
+
+    <style>
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const scrollingDiv = document.getElementById('scrollingDiv');
+
+        const scrollAmount = 40;
+
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') {
+                scrollingDiv.scrollLeft -= scrollAmount; // Scroll left
+            } else if (event.key === 'ArrowRight') {
+                scrollingDiv.scrollLeft += scrollAmount; // Scroll right
+            }
+        });
+    </script>
+
 </body>
 
 </html>

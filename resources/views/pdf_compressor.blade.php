@@ -202,25 +202,25 @@
                                 <div
                                     class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit">
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('Technology') }}">Technology</a>
+                                        href="{{ url('blog/Technology') }}">Technology</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('sport') }}">Sport</a>
+                                        href="{{ url('blog/sport') }}">Sport</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('lifestyle') }}">Lifestyle</a>
+                                        href="{{ url('blog/lifestyle') }}">Lifestyle</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('information') }}">Information</a>
+                                        href="{{ url('blog/information') }}">Information</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('islamic') }}">Islamic</a>
+                                        href="{{ url('blog/islamic') }}">Islamic</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('fashion') }}">fashion</a>
+                                        href="{{ url('blog/fashion') }}">fashion</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('movie') }}">Movies</a>
+                                        href="{{ url('blog/movie') }}">Movies</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('food') }}">Food</a>
+                                        href="{{ url('blog/food') }}">Food</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('travel') }}">Travel</a>
+                                        href="{{ url('blog/travel') }}">Travel</a>
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white "
-                                        href="{{ url('business') }}">Business</a>
+                                        href="{{ url('blog/business') }}">Business</a>
                                 </div>
                             </div>
                             <li class="scroll-to-section"><a
@@ -357,44 +357,45 @@
                     <ul class="list-unstyled">
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('Technology') }}">Technology</a>
+                                href="{{ url('blog/Technology') }}">Technology</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('sport') }}">Sport</a>
+                                href="{{ url('blog/sport') }}">Sport</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('lifestyle') }}">Lifestyle</a>
+                                href="{{ url('blog/lifestyle') }}">Lifestyle</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('information') }}">Information</a>
+                                href="{{ url('blog/information') }}">Information</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('islamic') }}">Islamic</a>
+                                href="{{ url('blog/islamic') }}">Islamic</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('fashion') }}">fashion</a>
+                                href="{{ url('blog/fashion') }}">fashion</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('movie') }}">Movies</a>
+                                href="{{ url('blog/movie') }}">Movies</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('food') }}">Food</a>
+                                href="{{ url('blog/food') }}">Food</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('travel') }}">Travel</a>
+                                href="{{ url('blog/travel') }}">Travel</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('business') }}">Business</a>
+                                href="{{ url('blog/business') }}">Business</a>
                         </li>
+
 
 
 
@@ -551,35 +552,6 @@
             </div>
         </div>
     </footer>
-
-
-
-    <style>
-
-    </style>
-
-
-
-
-
-
-
-
-
-
-    <script>
-        const scrollingDiv = document.getElementById('scrollingDiv');
-
-        const scrollAmount = 40;
-
-        window.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowLeft') {
-                scrollingDiv.scrollLeft -= scrollAmount; // Scroll left
-            } else if (event.key === 'ArrowRight') {
-                scrollingDiv.scrollLeft += scrollAmount; // Scroll right
-            }
-        });
-    </script>
 
 </body>
 
