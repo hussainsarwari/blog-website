@@ -12,7 +12,7 @@
     @vite(['resources/css/templatemo-art-factory.css'])
     @vite(['resources/css/style.css'])
     @vite(['resources/css/animations.css'])
-   
+
 
 
     <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
@@ -256,19 +256,17 @@
 
     {{-- main section --}}
     <div class="relative w-full h-screen mb-20 ">
-        <div
-            class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
-        </div>
-        <div class="container bg-none shadow-2xl  p-3 relative top-[20em] m-auto  rounded-xl ">
+        <span class="m-5 text-gray-400">Blog/Business</span>
+        <div class="container   p-3 relative top-[20em] m-auto  z-[200] ">
+
             {{-- search --}}
-            <span class="m-5 text-gray-400">Blog/Business</span>
-            <form action="search_blog" method="post" class="flex flex-row mx-5 search my-3">
+            <form action="search_blog" method="post" class="relative flex flex-row mx-5 my-3 search">
                 @csrf
                 <input
-                    class="w-full p-3 bg-none bg-opacity-10 backdrop-blur-md text-blue-400 rounded-lg shadow-lg focus:bg-opacity-20 focus:ring-2 focus:ring-white focus:outline-none transition duration-300 ease-in-out placeholder:text-blue-300"
+                    class="w-full p-3 text-blue-400 transition duration-300 ease-in-out rounded-lg shadow-lg bg-none bg-opacity-10 backdrop-blur-md focus:bg-opacity-20 focus:ring-2 focus:ring-white focus:outline-none placeholder:text-blue-300"
                     placeholder="Search" type="search" name="search" required id="search">
-                <button type="submit">
-                    <svg class="mx-2 bi bi-search" fill="#fff" height="20" viewbox="0 0 16 16" width="20"
+                <button type="submit ">
+                    <svg class="mx-2 bi bi-search absolute right-[1em] top-[1em]" fill="#333" height="20" viewbox="0 0 16 16" width="20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
@@ -276,25 +274,21 @@
                     </svg>
                 </button>
             </form>
-
-
-            <!-- fillter section -->
-            <div class="text-center">
-                <button onclick="toggleFilterMenu()"
-                    class="bg-none text-blue-300 px-6 py-3 mt-[3em]  focus:outline-none focus:ring-4 focus:ring-none transition-all duration-300">
+              <!-- fillter section -->
+              <div class="relative flex flex-col justify-center px-20 py-0 text-center bottom-[-2em] h-fit ">
+                <button onclick="toggleFilterMenu() "
+                    class="w-full px-6 py-3 text-white transition-all duration-300 bg-blue-400 shadow-md rounded-xl focus:outline-none focus:ring-4 focus:ring-none">
                     Filter
                 </button>
-                <hr class="border-2">
-                <hr class="border-2">
             </div>
 
             <!-- Filter Menu with animation -->
             <div id="filterMenu"
                 class="max-w-4xl absolute z-[200] top-[18em] right-0  mx-auto bg-white p-6 rounded-lg shadow-lg mt-8 hidden opacity-0 transition-opacity duration-300">
-                <div class="flex justify-center items-center mb-6">
+                <div class="flex items-center justify-center mb-6">
 
                     <button onclick="closeFilterMenu()"
-                        class="text-gray-500 hover:text-red-500 transition-all duration-300 focus:outline-none">
+                        class="text-gray-500 transition-all duration-300 hover:text-red-500 focus:outline-none">
                         close
                     </button>
                 </div>
@@ -302,82 +296,82 @@
 
                 <!-- Filter by Tags (as clickable buttons) -->
                 <div class="mb-6 ">
-                    <label class="block text-gray-700 font-medium mb-2">Filter by Tags:</label>
+                    <label class="block mb-2 font-medium text-gray-700">Filter by Tags:</label>
                     <div class="flex flex-wrap gap-2">
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Affiliate Marketing
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Online Businesses
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Marketing
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Degital Marketing
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Finance
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Business
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             E-commerce
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Business Strategy
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Startups
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Sales
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Customer Service
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Human Resources
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Business Development
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Investment
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Market Research
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Branding
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Product Management
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Email Marketing
                         </button>
                         <button onclick="toggleTag(this)"
-                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
                             Social Marketing
                         </button>
                     </div>
@@ -385,15 +379,15 @@
 
                 <!-- Date Range Filter -->
                 <div class="mb-6">
-                    <label class="block text-gray-700 font-medium mb-2">Filter by Date Range:</label>
+                    <label class="block mb-2 font-medium text-gray-700">Filter by Date Range:</label>
                     <div class="flex flex-col ">
                         <div class="flex-1">
-                            <label for="startDate" class="block text-gray-500 mb-1">Start Date:</label>
+                            <label for="startDate" class="block mb-1 text-gray-500">Start Date:</label>
                             <input type="date" id="startDate"
                                 class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
                         <div class="flex-1">
-                            <label for="endDate" class="block text-gray-500 mb-1">End Date:</label>
+                            <label for="endDate" class="block mb-1 text-gray-500">End Date:</label>
                             <input type="date" id="endDate"
                                 class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
@@ -402,16 +396,16 @@
 
                 <!-- Rating Filter (Slider) -->
                 <div class="mb-6">
-                    <label for="rating" class="block text-gray-700 font-medium mb-2">Minimum Rating:</label>
+                    <label for="rating" class="block mb-2 font-medium text-gray-700">Minimum Rating:</label>
                     <input type="range" id="rating" min="1" max="5" step="1"
                         class="w-full focus:ring-2 focus:ring-blue-500">
-                    <div class="text-gray-500 text-sm mt-2">Rating: <span id="ratingValue">3</span> stars or higher
+                    <div class="mt-2 text-sm text-gray-500">Rating: <span id="ratingValue">3</span> stars or higher
                     </div>
                 </div>
 
                 <!-- Sort By Filter -->
                 <div class="mb-6">
-                    <label for="sort" class="block text-gray-700 font-medium mb-2">Sort by:</label>
+                    <label for="sort" class="block mb-2 font-medium text-gray-700">Sort by:</label>
                     <select id="sort"
                         class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="latest">Latest</option>
@@ -424,16 +418,25 @@
                 <!-- Filter Button -->
                 <div class="flex justify-end">
                     <button
-                        class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300">
+                        class="px-6 py-3 text-white transition-all duration-300 bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
                         Apply Filters
                     </button>
                 </div>
             </div>
             {{-- end of fillter section --}}
-            <h3 class="text-center font-sans font-bold italic text-yellow-200">New Blogs Post </h3>
-           
-           
-           
+        </div>
+        <div
+            class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
+        </div>
+        <div class="container bg-white shadow-2xl  p-3 relative top-[50em] m-auto  rounded-xl ">
+
+
+
+
+            <h3 class="font-sans italic font-bold text-center text-yellow-200">New Blogs Post </h3>
+
+
+
             {{-- show 3 blog post --}}
 
 
@@ -443,27 +446,30 @@
                 <div class="md:row-span-2">
                     <div class="relative  h-[30em] w-[32em] flex justify-around flex-col rounded-lg shadow ">
                         <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                            class="w-full h-full object-cover rounded-md  absolute">
-                        <div class="absolute top-0 flex  h-full  flex-col 
+                            class="absolute object-cover w-full h-full rounded-md">
+                        <div
+                            class="absolute top-0 flex  h-full  flex-col 
                         bg-gradient-to-t from-[#2867a3] to-none   justify-between rounded-lg p-3
                         ">
 
-                            <h3 class="text-xl font-semibold mb-2 text-white">Large Blog Post Title</h3>
+                            <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
                             <section>
 
-                                <p class="text-slate-300 ">This is a brief description of the large blog post. It should
-                                    provide an overview of the content, enticing readers to click through and read more.</p>
-                                    <div class="flex items-center mb-2">
-                                        <!-- Star Ratings -->
+                                <p class="text-slate-300 ">This is a brief description of the large blog post. It
+                                    should
+                                    provide an overview of the content, enticing readers to click through and read more.
+                                </p>
+                                <div class="flex items-center mb-2">
+                                    <!-- Star Ratings -->
                                     <span class="text-yellow-500">★★★★★</span>
                                 </div>
                                 <div class="mt-2">
                                     <span
-                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Business</span>
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
                                     <span
-                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Technology</span>
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
                                 </div>
-                                <a href="#" class="mt-4 inline-block text-white  hover:underline">Read more</a>
+                                <a href="#" class="inline-block mt-4 text-white hover:underline">Read more</a>
                             </section>
                         </div>
                     </div>
@@ -472,58 +478,64 @@
                 <div class="">
                     <div class="relative  h-[15em] w-[32em] flex justify-around flex-col rounded-lg shadow ">
                         <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                            class="w-full h-full object-cover rounded-md  absolute">
-                        <div class="absolute top-0 flex  h-full  flex-col 
+                            class="absolute object-cover w-full h-full rounded-md">
+                        <div
+                            class="absolute top-0 flex  h-full  flex-col 
                         bg-gradient-to-t from-[#2867a3] to-none   justify-between rounded-lg p-3
                         ">
 
-                            <h3 class="text-xl font-semibold mb-2 text-white">Large Blog Post Title</h3>
+                            <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
                             <section>
 
-                                <p class="text-slate-300 ">This is a brief description of the large blog post. It should
-                                    provide an overview of the content, enticing readers to click through and read more.</p>
-                                    <div class="flex items-center mb-2">
-                                        <!-- Star Ratings -->
+                                <p class="text-slate-300 ">This is a brief description of the large blog post. It
+                                    should
+                                    provide an overview of the content, enticing readers to click through and read more.
+                                </p>
+                                <div class="flex items-center mb-2">
+                                    <!-- Star Ratings -->
                                     <span class="text-yellow-500">★★★★★</span>
                                 </div>
                                 <div class="mt-2">
                                     <span
-                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Business</span>
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
                                     <span
-                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Technology</span>
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
                                 </div>
-                                <a href="#" class="mt-4 inline-block text-white  hover:underline">Read more</a>
+                                <a href="#" class="inline-block mt-4 text-white hover:underline">Read more</a>
                             </section>
                         </div>
                     </div>
                 </div>
 
                 {{-- box 3 --}}
-                
+
                 <div class="col-start-2">
                     <div class="relative  h-[15em] w-[32em] flex justify-around flex-col rounded-lg shadow ">
                         <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                            class="w-full h-full object-cover rounded-md  absolute">
-                        <div class="absolute top-0 flex  h-full  flex-col 
+                            class="absolute object-cover w-full h-full rounded-md">
+                        <div
+                            class="absolute top-0 flex  h-full  flex-col 
                         bg-gradient-to-t from-[#2867a3] to-none   justify-between rounded-lg p-3
                         ">
 
-                            <h3 class="text-xl font-semibold mb-2 text-white">Large Blog Post Title</h3>
+                            <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
                             <section>
 
-                                <p class="text-slate-300 ">This is a brief description of the large blog post. It should
-                                    provide an overview of the content, enticing readers to click through and read more.</p>
-                                    <div class="flex items-center mb-2">
-                                        <!-- Star Ratings -->
+                                <p class="text-slate-300 ">This is a brief description of the large blog post. It
+                                    should
+                                    provide an overview of the content, enticing readers to click through and read more.
+                                </p>
+                                <div class="flex items-center mb-2">
+                                    <!-- Star Ratings -->
                                     <span class="text-yellow-500">★★★★★</span>
                                 </div>
                                 <div class="mt-2">
                                     <span
-                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Business</span>
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
                                     <span
-                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Technology</span>
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
                                 </div>
-                                <a href="#" class="mt-4 inline-block text-white  hover:underline">Read more</a>
+                                <a href="#" class="inline-block mt-4 text-white hover:underline">Read more</a>
                             </section>
                         </div>
                     </div>
@@ -531,10 +543,10 @@
             </div>
 
 
-            {{-- <div class="col-span-1  row-span-2 h-full">
+            {{-- <div class="h-full col-span-1 row-span-2">
                         <img src="{{url('images/about-us.png')}}" alt="Blog Post"
-                            class="w-full h-full object-cover rounded-md mb-2">
-                        <h3 class="text-xl font-semibold mb-2">Large Blog Post Title</h3>
+                            class="object-cover w-full h-full mb-2 rounded-md">
+                        <h3 class="mb-2 text-xl font-semibold">Large Blog Post Title</h3>
                         <div class="flex items-center mb-2">
                             <!-- Star Ratings -->
                             <span class="text-yellow-500">★★★★★</span>
@@ -543,79 +555,79 @@
                             an overview of the content, enticing readers to click through and read more.</p>
                         <div class="mt-2">
                             <span
-                                class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Business</span>
+                                class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
                             <span
-                                class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Technology</span>
+                                class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
                         </div>
-                        <a href="#" class="mt-4 inline-block text-blue-500 hover:underline">Read more</a>
+                        <a href="#" class="inline-block mt-4 text-blue-500 hover:underline">Read more</a>
                 
                 </div>
 
                 <!-- Small Post 1 -->
                 <div class="col-start-2">
-                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <div class="p-4 bg-white rounded-lg shadow-lg">
                         <img src="https://via.placeholder.com/300x200" alt="Blog Post"
-                            class="w-full h-32 object-cover rounded-md mb-2">
-                        <h3 class="text-lg font-semibold mb-2">Small Blog Post Title 1</h3>
+                            class="object-cover w-full h-32 mb-2 rounded-md">
+                        <h3 class="mb-2 text-lg font-semibold">Small Blog Post Title 1</h3>
                         <div class="flex items-center mb-2">
                             <span class="text-yellow-500">★★★★☆</span>
                         </div>
                         <p class="text-gray-700">Description for the first small blog post.</p>
                         <div class="mt-2">
                             <span
-                                class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Finance</span>
+                                class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Finance</span>
                         </div>
-                        <a href="#" class="mt-2 inline-block text-blue-500 hover:underline">Read more</a>
+                        <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Read more</a>
                     </div>
                 </div>
 
                 <!-- Small Post 2 -->
                 <div class="col-start-2">
-                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <div class="p-4 bg-white rounded-lg shadow-lg">
                         <img src="https://via.placeholder.com/300x200" alt="Blog Post"
-                            class="w-full h-32 object-cover rounded-md mb-2">
-                        <h3 class="text-lg font-semibold mb-2">Small Blog Post Title 2</h3>
+                            class="object-cover w-full h-32 mb-2 rounded-md">
+                        <h3 class="mb-2 text-lg font-semibold">Small Blog Post Title 2</h3>
                         <div class="flex items-center mb-2">
                             <span class="text-yellow-500">★★★☆☆</span>
                         </div>
                         <p class="text-gray-700">Description for the second small blog post.</p>
                         <div class="mt-2">
                             <span
-                                class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Marketing</span>
+                                class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Marketing</span>
                         </div>
-                        <a href="#" class="mt-2 inline-block text-blue-500 hover:underline">Read more</a>
+                        <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Read more</a>
                     </div>
                 </div>
 
             </div> --}}
 
             {{-- 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 row-auto md:row-2">
+            <div class="grid grid-cols-1 row-auto gap-4 md:grid-cols-2 md:row-2">
                 <!-- Large Post -->
 
                 <div class="col-span-1 md:col-span-1 md:row-2 ">
-                    <div class="bg-gray-200 p-4 rounded-lg shadow ">
-                        <h3 class="text-xl font-semibold mb-2">Large Blog Post Title</h3>
+                    <div class="p-4 bg-gray-200 rounded-lg shadow ">
+                        <h3 class="mb-2 text-xl font-semibold">Large Blog Post Title</h3>
                         <p class="text-gray-700">This is a brief description of the large blog post. It should provide an overview of the content, enticing readers to click through and read more.</p>
-                        <a href="#" class="mt-4 inline-block text-blue-500 hover:underline">Read more</a>
+                        <a href="#" class="inline-block mt-4 text-blue-500 hover:underline">Read more</a>
                     </div>
                 </div>
     
                 <!-- Small Post 1 -->
                 <div class="col-span-1">
-                    <div class="bg-gray-200 p-4 rounded-lg shadow">
-                        <h3 class="text-lg font-semibold mb-2">Small Blog Post Title 1</h3>
+                    <div class="p-4 bg-gray-200 rounded-lg shadow">
+                        <h3 class="mb-2 text-lg font-semibold">Small Blog Post Title 1</h3>
                         <p class="text-gray-700">Description for the first small blog post.</p>
-                        <a href="#" class="mt-2 inline-block text-blue-500 hover:underline">Read more</a>
+                        <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Read more</a>
                     </div>
                 </div>
     
                 <!-- Small Post 2 -->
                 <div class="col-span-1">
-                    <div class="bg-gray-200 p-4 rounded-lg shadow">
-                        <h3 class="text-lg font-semibold mb-2">Small Blog Post Title 2</h3>
+                    <div class="p-4 bg-gray-200 rounded-lg shadow">
+                        <h3 class="mb-2 text-lg font-semibold">Small Blog Post Title 2</h3>
                         <p class="text-gray-700">Description for the second small blog post.</p>
-                        <a href="#" class="mt-2 inline-block text-blue-500 hover:underline">Read more</a>
+                        <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Read more</a>
                     </div>
                 </div>
             </div> --}}
