@@ -284,11 +284,11 @@
 
             <!-- Filter Menu with animation -->
             <div id="filterMenu"
-                class="max-w-4xl absolute z-[200] top-[18em] right-0  mx-auto bg-white p-6 rounded-lg shadow-lg mt-8 hidden opacity-0 transition-opacity duration-300">
+                class="max-w-4xl relative z-[200] top-[1em]   mx-auto bg-white p-6  rounded-lg shadow-lg mt-8 hidden opacity-0 transition-opacity duration-300">
                 <div class="flex items-center justify-center mb-6">
 
                     <button onclick="closeFilterMenu()"
-                        class="text-gray-500 transition-all duration-300 hover:text-red-500 focus:outline-none">
+                        class="px-3 py-2 text-blue-500 transition-all duration-300 border-2 border-blue-500 rounded-md hover:text-red-500 focus:outline-none hover:border-red-500">
                         close
                     </button>
                 </div>
@@ -425,6 +425,8 @@
             </div>
             {{-- end of fillter section --}}
         </div>
+       
+
         <div
             class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
         </div>
@@ -433,23 +435,23 @@
 
 
 
-            <h3 class="font-sans italic font-bold text-center text-yellow-200">New Blogs Post </h3>
+            <h3 class="font-sans italic font-bold text-center text-blue-500">New Blogs Post </h3>
 
 
 
             {{-- show 3 blog post --}}
 
 
-            <div class="grid grid-cols-2 md:grid-rows-2 gap-2 mt-[3em]">
+            <div class="grid grid-cols-2 md:grid-rows-2 gap-2 mt-[3em] justify-center">
 
                 {{-- box 1 biggest --}}
                 <div class="md:row-span-2">
-                    <div class="relative  h-[30em] w-[32em] flex justify-around flex-col rounded-lg shadow ">
+                    <div class="relative  h-[40em] w-[48em] flex justify-around flex-col rounded-lg shadow ">
                         <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
                             class="absolute object-cover w-full h-full rounded-md">
                         <div
                             class="absolute top-0 flex  h-full  flex-col 
-                        bg-gradient-to-t from-[#2867a3] to-none   justify-between rounded-lg p-3
+                        bg-gradient-to-t from-[#2867a3] to-none  backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
                             <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
@@ -468,6 +470,14 @@
                                         class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
                                     <span
                                         class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
+                                </div>
+                                <div class="py-1 text-sm text-white author-text">
+                                    
+                                        mohammad hussain sarvari
+                                        
+                                </div>
+                                <div class="py-1 text-sm text-white date ">
+                                    04-2-2024
                                 </div>
                                 <a href="#" class="inline-block mt-4 text-white hover:underline">Read more</a>
                             </section>
@@ -476,12 +486,12 @@
                 </div>
                 {{-- box 2 --}}
                 <div class="">
-                    <div class="relative  h-[15em] w-[32em] flex justify-around flex-col rounded-lg shadow ">
+                    <div class="absolute  h-[20em] w-[20em] right-[1em] flex justify-around flex-col rounded-lg shadow ">
                         <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
                             class="absolute object-cover w-full h-full rounded-md">
                         <div
                             class="absolute top-0 flex  h-full  flex-col 
-                        bg-gradient-to-t from-[#2867a3] to-none   justify-between rounded-lg p-3
+                        bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
                             <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
@@ -501,6 +511,14 @@
                                     <span
                                         class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
                                 </div>
+                                <div class="py-1 text-sm text-white author-text">
+                                    
+                                    mohammad hussain sarvari
+                                    
+                            </div>
+                            <div class="py-1 text-sm text-white date ">
+                                04-2-2024
+                            </div>
                                 <a href="#" class="inline-block mt-4 text-white hover:underline">Read more</a>
                             </section>
                         </div>
@@ -510,12 +528,12 @@
                 {{-- box 3 --}}
 
                 <div class="col-start-2">
-                    <div class="relative  h-[15em] w-[32em] flex justify-around flex-col rounded-lg shadow ">
+                    <div class="absolute  h-[20em] w-[20em] right-[1em] flex justify-around flex-col rounded-lg shadow ">
                         <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
                             class="absolute object-cover w-full h-full rounded-md">
                         <div
                             class="absolute top-0 flex  h-full  flex-col 
-                        bg-gradient-to-t from-[#2867a3] to-none   justify-between rounded-lg p-3
+                        bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
                             <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
@@ -535,6 +553,14 @@
                                     <span
                                         class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
                                 </div>
+                                <div class="py-1 text-sm text-white author-text">
+                                    
+                                    mohammad hussain sarvari
+                                    
+                            </div>
+                            <div class="py-1 text-sm text-white date ">
+                                04-2-2024
+                            </div>
                                 <a href="#" class="inline-block mt-4 text-white hover:underline">Read more</a>
                             </section>
                         </div>
