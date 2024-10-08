@@ -12,7 +12,7 @@
     @vite(['resources/css/templatemo-art-factory.css'])
     @vite(['resources/css/style.css'])
     @vite(['resources/css/animations.css'])
-    @vite(['resources/js/cv.js'])
+   
 
 
     <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
@@ -34,34 +34,34 @@
         <div class="flex justify-center loader" style="align-items: center;">
             <div class="box box0">
                 <div></div>
-              </div>
-              <div class="box box1">
+            </div>
+            <div class="box box1">
                 <div></div>
-              </div>
-              <div class="box box2">
+            </div>
+            <div class="box box2">
                 <div></div>
-              </div>
-              <div class="box box3">
+            </div>
+            <div class="box box3">
                 <div></div>
-              </div>
-              <div class="box box4">
+            </div>
+            <div class="box box4">
                 <div></div>
-              </div>
-              <div class="box box5">
+            </div>
+            <div class="box box5">
                 <div></div>
-              </div>
-              <div class="box box6">
+            </div>
+            <div class="box box6">
                 <div></div>
-              </div>
-              <div class="box box7">
+            </div>
+            <div class="box box7">
                 <div></div>
-              </div>
-              <div class="ground">
+            </div>
+            <div class="ground">
                 <div></div>
-              </div>
             </div>
         </div>
-    
+    </div>
+
 
 
     <header class="header-area header-sticky h-[80px] md:h-[140px]">
@@ -105,23 +105,25 @@
                 <div class="d-flex justify-content-end">
                     {{-- facebook --}}
                     <a class="text-light" href="{{ url('https://facebook.com/') }}"><svg class="bi bi-facebook-f"
-                            fill="currentColor" height="16" viewbox="0 0 24 24" width="16"
+                            fill="#fff" height="16" viewbox="0 0 24 24" width="16"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
                             </path>
                         </svg></a>
                     {{-- twitter --}}
-                    <a class="text-light ms-3" href="{{ url('https://twitter.com/') }}"><svg class="bi bi-twitter"
-                            fill="currentColor" height="16" viewbox="0 0 16 16" width="16"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
-                            </path>
-                        </svg></a>
+                    <a class="ml-2 me-2" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="16" width="16"
+                            shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                            image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                            viewBox="0 0 512 462.799">
+                            <path fill-rule="nonzero"
+                                d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z" />
+                        </svg>
+                    </a>
                     {{-- instagram --}}
                     <a class="text-light ms-3" href="{{ url('https://instagram.com/') }}"><svg class="bi bi-instagram"
-                            fill="currentColor" height="16" viewbox="0 0 16 16" width="16"
+                            fill="#fff" height="16" viewbox="0 0 16 16" width="16"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
@@ -148,7 +150,8 @@
 
                                 <li class="px-3 py-2 text-white cursor-pointer scroll-to-section peer new-ite active"
                                     id="blog"
-                                    style="padding: 10px 20px;  color: white; border: none; cursor: pointer;">Tools</li>
+                                    style="padding: 10px 20px;  color: white; border: none; cursor: pointer;">Tools
+                                </li>
 
                                 <div
                                     class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg download rounded-xl peer-hover:flex hover:flex h-fit">
@@ -176,7 +179,7 @@
                                         href="{{ url('online-pdf-merging') }}">PDF merging</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('online-pdf-splitting') }}">PDF Splitting</a>
-                                 
+
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
                                         href="{{ url('pdf-to-image') }}">PDF to Image </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
@@ -248,198 +251,374 @@
         class="rounded-full w-[8em] h-8em md:w-[30em] md:h-[30em] bg-yellow-300 absolute top-[60em] md:top-[50em] left-0 md:left-10 shadow-2xl shadow-yellow-500 box1">
     </div>
 
+
+
+
     {{-- main section --}}
     <div class="relative w-full h-screen mb-20 ">
         <div
             class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
         </div>
-        <div class="w-full flex-row  flex justify-center absolute  top-[6em] text-white">
-
-
-            <h1 class="w-full  flex justify-center absolute  text-sm lg:text-3xl top-16 lg:top-[6em] text-white">Create
-                your CV just in one minute</h1>
-            <form action="" method="post"
-                class=" overflow-x-hidden flex flex-col justify-center mx-5 search bg-slate-50 shadow-2xl shadow-slate-500 rounded-lg py-5 p-4 z-50 w-[30em] md:w-[50em] relative top-[20em] cv-generator">
+        <div class="container bg-none shadow-2xl  p-3 relative top-[20em] m-auto  rounded-xl ">
+            {{-- search --}}
+            <span class="m-5 text-gray-400">Blog/Business</span>
+            <form action="search_blog" method="post" class="flex flex-row mx-5 search my-3">
                 @csrf
-                <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">personal
-                    information(Required)
-                    <hr>
-                </p>
-
                 <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="name" type="text" name="name" required id="name"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-
-                <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="Last name" type="text" name="lastname" required id="lastname"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="Email" type="email" name="email" required id="email"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="Phone number" type="number" name="phone_number" required id="phone_number"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="Github" type="text" name="github" id="github">
-                <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="website" type="text" name="website" id="website">
-                <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder=" Title" type="text" name="title" required id="title"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                {{-- education  --}}
-                <div class="education">
-
-                    <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Education
-                        Section(Required)
-                        <hr>
-                    </p>
-                    <input
-                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                        placeholder="educational background" type="text" name="education" required
-                        id="education"><span class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                    <input
-                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                        placeholder="educational background start date" type="date" name="educational_start"
-                        required id="educational_start"><span
-                        class="text-red-400 relative bottom-[2.2em] left-[44.5em]">*</span>
-                    <input
-                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                        placeholder="educational background end date" type="date" name="education_end"
-                        id="education_end">
-                    <label for="education_date" class="text-black">It is going on:
-                        <input class="w-10 border border-blue-300 border-spacing-1" type="checkbox"
-                            name="education_date" id="education_date">
-                    </label>
-                </div>
-                <button type="button"
-                    class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg remove_edu focus:outline-none hover:bg-red-400 hover:text-white">Remove</button>
-                <button type="button"
-                    class="p-2 my-2 bg-blue-400 rounded-lg add_edu focus:outline-none hover:bg-blue-700 hover:text-white">Add
-                    new educational background</button>
-                {{-- Certificates  --}}
-                <div class="certificate">
-
-                    <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Certificates
-                        Section (Optional)
-                        <hr>
-                    </p>
-                    <input
-                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                        placeholder="Certificate Title" type="text" name="certificate" id="certificate">
-                    <input
-                        class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                        placeholder="More information" type="text" name="certificate_information"
-                        id="certificate_information">
-                </div>
-                <button type="button"
-                    class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg focus:outline-none hover:bg-red-400 hover:text-white btn_remove_certificate">Remove</button>
-
-                <button type="button"
-                    class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white btn_add_certificate">Add
-                    new Certificate</button>
-                {{-- experince  --}}
-                <div class="exeprince">
-                    
-                    <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Experince
-                    Section(Required)
-                    <hr>/p>
-                    <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    required placeholder="work experince" type="text" name="experince" id="experince"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                    <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    required placeholder="Description" type="text" name="experince_description" id="experince_description"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                    <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    required placeholder="work experince start date" type="date" name="experince_start"
-                    id="experince_start"><span class="text-red-400 relative bottom-[2.2em] left-[44.5em]">*</span>
-                    <input
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    required placeholder="work experince end date" type="date" name="experince_end"
-                    id="experince_end">
-                    <label for="experince_date" class="text-black">Or It is going on:
-                        <input class="w-5 " type="checkbox" name="experince date" id="experince_date">
-                    </label>
-                </div>
-                    <button type="button"
-                    class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg focus:outline-none hover:bg-red-400 hover:text-white btn_remove_exeprince">Remove</button>
-                    
-                    <button type="button"
-                    class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white btn_add_exeprince">Add
-                    new Exeprince</button>
-
-                    {{-- languages --}}
-                <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Language
-                    Section(Required)
-                    <hr>
-                </p>
-                <div class="language">
-                    <input type="text"
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="Language" required name="language" id="language"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                    <input type="text"
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="Writting" required name="language_writting" id="language_writing"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                    <input type="text"
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="Speaking" required name="language_speaking" id="language_speaking"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                    <input type="text"
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="Listning" required name="language_listning" id="language_listning"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                </div>
-                  <button type="button"
-                    class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg focus:outline-none hover:bg-red-400 hover:text-white btn_remove_language">Remove</button>
-                    
-                    <button type="button"
-                    class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white btn_add_language">Add
-                    new language</button>
-
-                {{-- skills --}}
-                <p class="my-3 font-sans text-sm font-bold text-center text-gray-400 md:text-lg">Skill
-                    Section(Required)
-                    <hr>
-                </p>
-                <div class="skill">
-                    <input type="text"
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="write your skill" required name="skill" id="skill"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                    <input type="number"
-                    class=" my-2 w-full h-[3em] text-sm md:text-md border-b-2 border-b-gray-500 focus:bg-blue-100   p-2 focus:outline-none text-black"
-                    placeholder="How many percent do you know? (1-100)" required name="skill_value" id="skill_value"><span
-                    class="text-red-400 relative bottom-[2.2em] left-[46em]">*</span>
-                </div>
-                <button type="button"
-                class="hidden p-2 my-2 text-black border-2 border-red-400 rounded-lg focus:outline-none hover:bg-red-400 hover:text-white btn_remove_skill">Remove</button>
-                
-                <button type="button"
-                class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white btn_add_skill">Add
-                new skill</button>
-
-
-
-
-
-
-                    
-                <button type="submit"
-                    class="p-2 my-2 bg-blue-400 rounded-lg focus:outline-none hover:bg-blue-700 hover:text-white">
-                    Create my CV
+                    class="w-full p-3 bg-none bg-opacity-10 backdrop-blur-md text-blue-400 rounded-lg shadow-lg focus:bg-opacity-20 focus:ring-2 focus:ring-white focus:outline-none transition duration-300 ease-in-out placeholder:text-blue-300"
+                    placeholder="Search" type="search" name="search" required id="search">
+                <button type="submit">
+                    <svg class="mx-2 bi bi-search" fill="#fff" height="20" viewbox="0 0 16 16" width="20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                        </path>
+                    </svg>
                 </button>
             </form>
+
+
+            <!-- fillter section -->
+            <div class="text-center">
+                <button onclick="toggleFilterMenu()"
+                    class="bg-none text-blue-300 px-6 py-3 mt-[3em]  focus:outline-none focus:ring-4 focus:ring-none transition-all duration-300">
+                    Filter
+                </button>
+                <hr class="border-2">
+                <hr class="border-2">
+            </div>
+
+            <!-- Filter Menu with animation -->
+            <div id="filterMenu"
+                class="max-w-4xl absolute z-[200] top-[18em] right-0  mx-auto bg-white p-6 rounded-lg shadow-lg mt-8 hidden opacity-0 transition-opacity duration-300">
+                <div class="flex justify-center items-center mb-6">
+
+                    <button onclick="closeFilterMenu()"
+                        class="text-gray-500 hover:text-red-500 transition-all duration-300 focus:outline-none">
+                        close
+                    </button>
+                </div>
+
+
+                <!-- Filter by Tags (as clickable buttons) -->
+                <div class="mb-6 ">
+                    <label class="block text-gray-700 font-medium mb-2">Filter by Tags:</label>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Affiliate Marketing
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Online Businesses
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Marketing
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Degital Marketing
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Finance
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Business
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            E-commerce
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Business Strategy
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Startups
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Sales
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Customer Service
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Human Resources
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Business Development
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Investment
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Market Research
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Branding
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Product Management
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Email Marketing
+                        </button>
+                        <button onclick="toggleTag(this)"
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Social Marketing
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Date Range Filter -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Filter by Date Range:</label>
+                    <div class="flex flex-col ">
+                        <div class="flex-1">
+                            <label for="startDate" class="block text-gray-500 mb-1">Start Date:</label>
+                            <input type="date" id="startDate"
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="flex-1">
+                            <label for="endDate" class="block text-gray-500 mb-1">End Date:</label>
+                            <input type="date" id="endDate"
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating Filter (Slider) -->
+                <div class="mb-6">
+                    <label for="rating" class="block text-gray-700 font-medium mb-2">Minimum Rating:</label>
+                    <input type="range" id="rating" min="1" max="5" step="1"
+                        class="w-full focus:ring-2 focus:ring-blue-500">
+                    <div class="text-gray-500 text-sm mt-2">Rating: <span id="ratingValue">3</span> stars or higher
+                    </div>
+                </div>
+
+                <!-- Sort By Filter -->
+                <div class="mb-6">
+                    <label for="sort" class="block text-gray-700 font-medium mb-2">Sort by:</label>
+                    <select id="sort"
+                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="latest">Latest</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="trending">Trending</option>
+                        <option value="highestRated">Highest Rated</option>
+                    </select>
+                </div>
+
+                <!-- Filter Button -->
+                <div class="flex justify-end">
+                    <button
+                        class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300">
+                        Apply Filters
+                    </button>
+                </div>
+            </div>
+            {{-- end of fillter section --}}
+            <h3 class="text-center font-sans font-bold italic text-yellow-200">New Blogs Post </h3>
+           
+           
+           
+            {{-- show 3 blog post --}}
+
+
+            <div class="grid grid-cols-2 md:grid-rows-2 gap-2 mt-[3em]">
+
+                {{-- box 1 biggest --}}
+                <div class="md:row-span-2">
+                    <div class="relative  h-[30em] w-[32em] flex justify-around flex-col rounded-lg shadow ">
+                        <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
+                            class="w-full h-full object-cover rounded-md  absolute">
+                        <div class="absolute top-0 flex  h-full  flex-col 
+                        bg-gradient-to-t from-[#2867a3] to-none   justify-between rounded-lg p-3
+                        ">
+
+                            <h3 class="text-xl font-semibold mb-2 text-white">Large Blog Post Title</h3>
+                            <section>
+
+                                <p class="text-slate-300 ">This is a brief description of the large blog post. It should
+                                    provide an overview of the content, enticing readers to click through and read more.</p>
+                                    <div class="flex items-center mb-2">
+                                        <!-- Star Ratings -->
+                                    <span class="text-yellow-500">★★★★★</span>
+                                </div>
+                                <div class="mt-2">
+                                    <span
+                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Business</span>
+                                    <span
+                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Technology</span>
+                                </div>
+                                <a href="#" class="mt-4 inline-block text-white  hover:underline">Read more</a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                {{-- box 2 --}}
+                <div class="">
+                    <div class="relative  h-[15em] w-[32em] flex justify-around flex-col rounded-lg shadow ">
+                        <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
+                            class="w-full h-full object-cover rounded-md  absolute">
+                        <div class="absolute top-0 flex  h-full  flex-col 
+                        bg-gradient-to-t from-[#2867a3] to-none   justify-between rounded-lg p-3
+                        ">
+
+                            <h3 class="text-xl font-semibold mb-2 text-white">Large Blog Post Title</h3>
+                            <section>
+
+                                <p class="text-slate-300 ">This is a brief description of the large blog post. It should
+                                    provide an overview of the content, enticing readers to click through and read more.</p>
+                                    <div class="flex items-center mb-2">
+                                        <!-- Star Ratings -->
+                                    <span class="text-yellow-500">★★★★★</span>
+                                </div>
+                                <div class="mt-2">
+                                    <span
+                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Business</span>
+                                    <span
+                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Technology</span>
+                                </div>
+                                <a href="#" class="mt-4 inline-block text-white  hover:underline">Read more</a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- box 3 --}}
+                
+                <div class="col-start-2">
+                    <div class="relative  h-[15em] w-[32em] flex justify-around flex-col rounded-lg shadow ">
+                        <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
+                            class="w-full h-full object-cover rounded-md  absolute">
+                        <div class="absolute top-0 flex  h-full  flex-col 
+                        bg-gradient-to-t from-[#2867a3] to-none   justify-between rounded-lg p-3
+                        ">
+
+                            <h3 class="text-xl font-semibold mb-2 text-white">Large Blog Post Title</h3>
+                            <section>
+
+                                <p class="text-slate-300 ">This is a brief description of the large blog post. It should
+                                    provide an overview of the content, enticing readers to click through and read more.</p>
+                                    <div class="flex items-center mb-2">
+                                        <!-- Star Ratings -->
+                                    <span class="text-yellow-500">★★★★★</span>
+                                </div>
+                                <div class="mt-2">
+                                    <span
+                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Business</span>
+                                    <span
+                                    class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Technology</span>
+                                </div>
+                                <a href="#" class="mt-4 inline-block text-white  hover:underline">Read more</a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {{-- <div class="col-span-1  row-span-2 h-full">
+                        <img src="{{url('images/about-us.png')}}" alt="Blog Post"
+                            class="w-full h-full object-cover rounded-md mb-2">
+                        <h3 class="text-xl font-semibold mb-2">Large Blog Post Title</h3>
+                        <div class="flex items-center mb-2">
+                            <!-- Star Ratings -->
+                            <span class="text-yellow-500">★★★★★</span>
+                        </div>
+                        <p class="text-gray-700">This is a brief description of the large blog post. It should provide
+                            an overview of the content, enticing readers to click through and read more.</p>
+                        <div class="mt-2">
+                            <span
+                                class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Business</span>
+                            <span
+                                class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Technology</span>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-blue-500 hover:underline">Read more</a>
+                
+                </div>
+
+                <!-- Small Post 1 -->
+                <div class="col-start-2">
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="https://via.placeholder.com/300x200" alt="Blog Post"
+                            class="w-full h-32 object-cover rounded-md mb-2">
+                        <h3 class="text-lg font-semibold mb-2">Small Blog Post Title 1</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-500">★★★★☆</span>
+                        </div>
+                        <p class="text-gray-700">Description for the first small blog post.</p>
+                        <div class="mt-2">
+                            <span
+                                class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Finance</span>
+                        </div>
+                        <a href="#" class="mt-2 inline-block text-blue-500 hover:underline">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Small Post 2 -->
+                <div class="col-start-2">
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="https://via.placeholder.com/300x200" alt="Blog Post"
+                            class="w-full h-32 object-cover rounded-md mb-2">
+                        <h3 class="text-lg font-semibold mb-2">Small Blog Post Title 2</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-500">★★★☆☆</span>
+                        </div>
+                        <p class="text-gray-700">Description for the second small blog post.</p>
+                        <div class="mt-2">
+                            <span
+                                class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Marketing</span>
+                        </div>
+                        <a href="#" class="mt-2 inline-block text-blue-500 hover:underline">Read more</a>
+                    </div>
+                </div>
+
+            </div> --}}
+
+            {{-- 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 row-auto md:row-2">
+                <!-- Large Post -->
+
+                <div class="col-span-1 md:col-span-1 md:row-2 ">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow ">
+                        <h3 class="text-xl font-semibold mb-2">Large Blog Post Title</h3>
+                        <p class="text-gray-700">This is a brief description of the large blog post. It should provide an overview of the content, enticing readers to click through and read more.</p>
+                        <a href="#" class="mt-4 inline-block text-blue-500 hover:underline">Read more</a>
+                    </div>
+                </div>
+    
+                <!-- Small Post 1 -->
+                <div class="col-span-1">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-2">Small Blog Post Title 1</h3>
+                        <p class="text-gray-700">Description for the first small blog post.</p>
+                        <a href="#" class="mt-2 inline-block text-blue-500 hover:underline">Read more</a>
+                    </div>
+                </div>
+    
+                <!-- Small Post 2 -->
+                <div class="col-span-1">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold mb-2">Small Blog Post Title 2</h3>
+                        <p class="text-gray-700">Description for the second small blog post.</p>
+                        <a href="#" class="mt-2 inline-block text-blue-500 hover:underline">Read more</a>
+                    </div>
+                </div>
+            </div> --}}
         </div>
 
     </div>
@@ -570,7 +749,7 @@
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-pdf-splitting') }}">PDF Splitting</a>
                         </li>
-                      
+
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('pdf-to-image') }}">PDF to Image </a>
@@ -650,20 +829,26 @@
                 </div>
 
                 <div class="flex">
+                    {{-- instagram --}}
                     <a class="ml-2 me-2" href="">
-                        <svg class="bi bi-pinterest text-primary" fill="#fff" height="16" viewbox="0 0 16 16"
+                        <svg class="bi bi-instagram" fill="#fff" height="16" viewbox="0 0 16 16"
                             width="16" xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z">
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
                             </path>
-                        </svg></a>
+                        </svg>
+                    </a>
+                    {{-- x --}}
                     <a class="ml-2 me-2" href="">
-                        <svg class="bi bi-twitter text-primary" fill="#fff" height="16" viewbox="0 0 16 16"
-                            width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
-                            </path>
-                        </svg></a>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="16" width="16"
+                            shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                            image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                            viewBox="0 0 512 462.799">
+                            <path fill-rule="nonzero"
+                                d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z" />
+                        </svg>
+                    </a>
+                    {{-- facebook --}}
                     <a class="ml-2 me-2" href="">
                         <svg class="bi bi-facebook text-primary" fill="#fff" height="16" viewbox="0 0 16 16"
                             width="16" xmlns="http://www.w3.org/2000/svg">
@@ -676,35 +861,37 @@
         </div>
     </footer>
 
-
-
-    <style>
-
-    </style>
-
-
-
-
-
-
-
-
-
-
     <script>
-        const scrollingDiv = document.getElementById('scrollingDiv');
+        function toggleFilterMenu() {
+            const filterMenu = document.getElementById('filterMenu');
+            filterMenu.classList.toggle('hidden');
+            filterMenu.classList.toggle('opacity-0');
+            filterMenu.classList.toggle('opacity-100');
+        }
 
-        const scrollAmount = 40;
+        // Function to toggle tag active state
+        function toggleTag(tag) {
+            tag.classList.toggle('bg-blue-500');
+            tag.classList.toggle('text-white');
+            tag.classList.toggle('bg-gray-200');
+            tag.classList.toggle('text-gray-700');
+        }
 
-        window.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowLeft') {
-                scrollingDiv.scrollLeft -= scrollAmount; // Scroll left
-            } else if (event.key === 'ArrowRight') {
-                scrollingDiv.scrollLeft += scrollAmount; // Scroll right
-            }
+        // Function to close the filter menu
+        function closeFilterMenu() {
+            const filterMenu = document.getElementById('filterMenu');
+            filterMenu.classList.remove('opacity-100');
+            filterMenu.classList.add('opacity-0');
+            setTimeout(() => {
+                filterMenu.classList.add('hidden');
+            }, 300); // Timeout matches the animation duration
+        }
+        const ratingInput = document.getElementById('rating');
+        const ratingValueDisplay = document.getElementById('ratingValue');
+        ratingInput.addEventListener('input', function() {
+            ratingValueDisplay.textContent = this.value;
         });
     </script>
-
 </body>
 
 </html>

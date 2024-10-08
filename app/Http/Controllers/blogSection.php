@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class blogSection extends Controller
 {
     public function business(){
-        return view('insta-video-downloader');
+        return view('blog.Business.Business');
            }
 }
