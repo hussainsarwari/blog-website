@@ -24,6 +24,57 @@
     <script type="module" src="{{ asset('js/waypoints.min.js') }}"></script>
     <script type="module" src="{{ asset('js/custom.js') }}"></script>
 
+    <style>
+        .business_title::before {
+            content: '';
+            width: 10em;
+            display: block;
+            height: 5px;
+            background: #FFC107;
+            margin: auto;
+            border-radius: 100px;
+            top: 65px;
+            position: relative;
+        }
+
+        .business_title::after {
+            content: '';
+            width: 5em;
+            display: block;
+            height: 5px;
+            background: #FFC107;
+            margin: auto;
+            border-radius: 100px;
+            top: 30px;
+            position: relative;
+        }
+
+        @media screen and (max-width:900px) {
+            .business_title::before {
+                content: '';
+                width: 4em;
+                display: block;
+                height: 5px;
+                background: #FFC107;
+                margin: auto;
+                border-radius: 100px;
+                top: 100px;
+                position: relative;
+            }
+
+            .business_title::after {
+                content: '';
+                width: 2em;
+                display: block;
+                height: 5px;
+                background: #FFC107;
+                margin: auto;
+                border-radius: 100px;
+                top: 20px;
+                position: relative;
+            }
+        }
+    </style>
 </head>
 
 <body class="overflow-x-hidden">
@@ -64,7 +115,7 @@
 
 
 
-    <header class="header-area header-sticky h-[80px] md:h-[140px]">
+    <header class="header-area header-sticky h-[80px] md:h-[140px] " style="z-index: 210;">
         <div class="flex justify-between p-3 bg-blue-300 col d-none d-md-flex">
             <div class="d-flex">
                 <a class="text-[.5em] d-flex align-items-center text-decoration-none text-light md:text-xl"
@@ -85,20 +136,7 @@
                     <span class="ms-2">S@Solution.com</span></a>
             </div>
             <div class="flex flex-row ">
-                <form action="" method="post" class="flex flex-row mx-5 search">
-                    @csrf
-                    <input
-                        class="p-1 mx-2 bg-blue-300 border-b border-blue-500 text3white graye-no ne focus:outline-none focus:bg-blue-400 placeholder:text-white"
-                        placeholder="Search" type="search" name="search" required id="search">
-                    <button type="submit">
-                        <svg class="mx-2 bi bi-search" fill="#fff" height="20" viewbox="0 0 16 16" width="20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
-                            </path>
-                        </svg>
-                    </button>
-                </form>
+
 
 
 
@@ -255,9 +293,18 @@
 
 
     {{-- main section --}}
-    <div class="relative w-full h-screen mb-20 ">
-        <span class="m-5 text-gray-400">Blog/Business</span>
-        <div class="container   p-3 relative top-[20em] m-auto  z-[200] ">
+    <div class="relative w-full h-screen mb-20 z-[200]">
+        <div class="container   p-3 relative top-[20em] m-auto  z-[180] ">
+            <h1 class="m-5 font-bold text-center text-blue-800 business_title">Welcome to Our Business <span
+                    class="text-yellow-300">
+
+                    Blog
+                </span>
+            </h1>
+            <p class="p-3 m-auto text-center text-blue-900">Our blog is designed to provide valuable insights,
+                strategic advice, and up-to-date knowledge to help you succeed in today’s fast-paced business
+                environment. Each post is backed by thorough research, drawing from trusted sources such as leading
+                blogs, articles, books, and more.</p>
 
             {{-- search --}}
             <form action="search_blog" method="post" class="relative flex flex-row mx-5 my-3 search">
@@ -266,16 +313,16 @@
                     class="w-full p-3 text-blue-400 transition duration-300 ease-in-out rounded-lg shadow-lg bg-none bg-opacity-10 backdrop-blur-md focus:bg-opacity-20 focus:ring-2 focus:ring-white focus:outline-none placeholder:text-blue-300"
                     placeholder="Search" type="search" name="search" required id="search">
                 <button type="submit ">
-                    <svg class="mx-2 bi bi-search absolute right-[1em] top-[1em]" fill="#333" height="20" viewbox="0 0 16 16" width="20"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg class="mx-2 bi bi-search absolute right-[1em] top-[1em]" fill="#333" height="20"
+                        viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
                         </path>
                     </svg>
                 </button>
             </form>
-              <!-- fillter section -->
-              <div class="relative flex flex-col justify-center px-20 py-0 text-center bottom-[-2em] h-fit ">
+            <!-- fillter section -->
+            <div class="relative flex flex-col justify-center px-20 py-0 text-center bottom-[-2em] h-fit ">
                 <button onclick="toggleFilterMenu() "
                     class="w-full px-6 py-3 text-white transition-all duration-300 bg-blue-400 shadow-md rounded-xl focus:outline-none focus:ring-4 focus:ring-none">
                     Filter
@@ -425,36 +472,53 @@
             </div>
             {{-- end of fillter section --}}
         </div>
-       
+
 
         <div
             class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full ">
         </div>
-        <div class="container bg-white shadow-2xl  p-3 relative top-[50em] m-auto  rounded-xl ">
+        <div class="container bg-white shadow-2xl  p-3 relative top-[50em] m-auto   rounded-xl ">
 
 
 
 
-            <h3 class="font-sans italic font-bold text-center text-blue-500">New Blogs Post </h3>
+            <span class=" italic font-bold text-center text-blue-500  h-[2em] block w-full" style='font-size:2em;'>
+                Latest Articles </span>
+
+            <p class="text-center text-slate-400">
+                Discover our three most recent posts, featuring expert analyses, industry updates, and actionable
+                strategies to help you grow your business and enhance your leadership.
+            </p>
+
+
+
+            <hr>
+            <hr>
+
 
 
 
             {{-- show 3 blog post --}}
 
 
-            <div class="grid grid-cols-2 md:grid-rows-2 gap-2 mt-[3em] justify-center">
+
+            <div class="flex flex-col xl:flex-row">
 
                 {{-- box 1 biggest --}}
-                <div class="md:row-span-2">
-                    <div class="relative  h-[40em] w-[48em] flex justify-around flex-col rounded-lg shadow ">
+                <div
+                    class="flex flex-col items-center justify-center row-span-1 xl:items-baseline xl:row-span-2 xl:col-start-1">
+                    <a href="#"
+                        class="relative w-[80%] h-[20em]  xl:h-[40em] xl:w-[40em] flex justify-around flex-col rounded-lg shadow
+                     mt-4 text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
+                    ">
                         <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                            class="absolute object-cover w-full h-full rounded-md">
+                            class="absolute object-cover w-full h-full rounded-md ">
                         <div
                             class="absolute top-0 flex  h-full  flex-col 
                         bg-gradient-to-t from-[#2867a3] to-none  backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
-                            <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
+                            <h3 class="mb-2 text-xl font-semibold text-white ">Large Blog Post Title</h3>
                             <section>
 
                                 <p class="text-slate-300 ">This is a brief description of the large blog post. It
@@ -463,7 +527,15 @@
                                 </p>
                                 <div class="flex items-center mb-2">
                                     <!-- Star Ratings -->
-                                    <span class="text-yellow-500">★★★★★</span>
+
+
+                                    <span class="pr-1 text-yellow-300">241 </span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                            fill="none" stroke="yellow" stroke-width="1" />
+                                    </svg>
                                 </div>
                                 <div class="mt-2">
                                     <span
@@ -472,191 +544,201 @@
                                         class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
                                 </div>
                                 <div class="py-1 text-sm text-white author-text">
-                                    
-                                        mohammad hussain sarvari
-                                        
+
+                                    mohammad hussain sarvari
+
                                 </div>
                                 <div class="py-1 text-sm text-white date ">
                                     04-2-2024
                                 </div>
-                                <a href="#" class="inline-block mt-4 text-white hover:underline">Read more</a>
                             </section>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 {{-- box 2 --}}
-                <div class="">
-                    <div class="absolute  h-[20em] w-[20em] right-[1em] flex justify-around flex-col rounded-lg shadow ">
-                        <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                            class="absolute object-cover w-full h-full rounded-md">
-                        <div
-                            class="absolute top-0 flex  h-full  flex-col 
+                <div class="flex flex-col  h-[42em]  w-full mt-5 xl:mt-0">
+                    <div class="flex flex-col items-center justify-center xl:items-end xl:justify-normal">
+
+                        <a href="#"
+                            class="relative m-auto  w-[80%] h-[19em] xl:w-[20em]  flex justify-around flex-col rounded-lg shadow
+                     mt-[5em] text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
+                    ">
+                            <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
+                                class="absolute object-cover w-full h-full rounded-md">
+                            <div
+                                class="absolute top-0 flex  h-full  flex-col 
                         bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
-                            <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
-                            <section>
+                                <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
+                                <section>
 
-                                <p class="text-slate-300 ">This is a brief description of the large blog post. It
-                                    should
-                                    provide an overview of the content, enticing readers to click through and read more.
-                                </p>
-                                <div class="flex items-center mb-2">
-                                    <!-- Star Ratings -->
-                                    <span class="text-yellow-500">★★★★★</span>
-                                </div>
-                                <div class="mt-2">
-                                    <span
-                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
-                                    <span
-                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
-                                </div>
-                                <div class="py-1 text-sm text-white author-text">
-                                    
-                                    mohammad hussain sarvari
-                                    
+                                    <p class="text-slate-300 ">This is a brief description of the large blog post. It
+                                        should
+                                        provide an overview of the content, enticing readers to click through and read
+                                        more.
+                                    </p>
+                                    <div class="flex items-center mb-2">
+                                        <!-- Star Ratings -->
+
+
+                                        <span class="pr-1 text-yellow-300">241 </span>
+                                        <svg width="20" height="20" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                                fill="none" stroke="yellow" stroke-width="1" />
+                                        </svg>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span
+                                            class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
+                                        <span
+                                            class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
+                                    </div>
+                                    <div class="py-1 text-sm text-white author-text">
+
+                                        mohammad hussain sarvari
+
+                                    </div>
+                                    <div class="py-1 text-sm text-white date ">
+                                        04-2-2024
+                                    </div>
+                                </section>
                             </div>
-                            <div class="py-1 text-sm text-white date ">
-                                04-2-2024
-                            </div>
-                                <a href="#" class="inline-block mt-4 text-white hover:underline">Read more</a>
-                            </section>
-                        </div>
+                        </a>
+
                     </div>
-                </div>
 
-                {{-- box 3 --}}
+                    {{-- box 3 --}}
 
-                <div class="col-start-2">
-                    <div class="absolute  h-[20em] w-[20em] right-[1em] flex justify-around flex-col rounded-lg shadow ">
-                        <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                            class="absolute object-cover w-full h-full rounded-md">
-                        <div
-                            class="absolute top-0 flex  h-full  flex-col 
+                    <div class="flex flex-col items-center ">
+                        <a href="#"
+                            class="absolute  w-[78%] h-[19em] xl:w-[20em]   flex justify-around flex-col rounded-lg shadow
+                    mt-4 text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
+                    ">
+                            <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
+                                class="absolute object-cover w-full h-full rounded-md">
+                            <div
+                                class="absolute top-0 flex  h-full  flex-col 
                         bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
-                            <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
-                            <section>
+                                <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
+                                <section>
 
-                                <p class="text-slate-300 ">This is a brief description of the large blog post. It
-                                    should
-                                    provide an overview of the content, enticing readers to click through and read more.
-                                </p>
-                                <div class="flex items-center mb-2">
-                                    <!-- Star Ratings -->
-                                    <span class="text-yellow-500">★★★★★</span>
-                                </div>
-                                <div class="mt-2">
-                                    <span
-                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
-                                    <span
-                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
-                                </div>
-                                <div class="py-1 text-sm text-white author-text">
-                                    
-                                    mohammad hussain sarvari
-                                    
+                                    <p class="text-slate-300 ">This is a brief description of the large blog post. It
+                                        should
+                                        provide an overview of the content, enticing readers to click through and read
+                                        more.
+                                    </p>
+                                    <div class="flex items-center mb-2">
+                                        <!-- Star Ratings -->
+
+                                        <span class="pr-1 text-yellow-300">241 </span>
+                                        <svg width="20" height="20" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                                fill="none" stroke="yellow" stroke-width="1" />
+                                        </svg>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span
+                                            class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
+                                        <span
+                                            class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
+                                    </div>
+                                    <div class="py-1 text-sm text-white author-text">
+
+                                        mohammad hussain sarvari
+
+                                    </div>
+                                    <div class="py-1 text-sm text-white date ">
+                                        04-2-2024
+                                    </div>
+
+                                </section>
                             </div>
-                            <div class="py-1 text-sm text-white date ">
-                                04-2-2024
-                            </div>
-                                <a href="#" class="inline-block mt-4 text-white hover:underline">Read more</a>
-                            </section>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
+            <hr>
+            <hr>
+            <div class="">
+                {{-- advertise --}}
+            </div>
+            {{-- show all blog post(business) --}}
+            <div class="relative flex flex-col justify-center max-h-[100em]  overflow-y-auto mt-[20em]">
+                <hr>
+                <hr>
+
+                <span class=" italic font-bold text-center text-blue-500  h-[2em] block w-full text-xl">All Business
+                    Posts</span>
+                <p class="text-center text-slate-400">
+                    Browse our full archive of business content, covering a wide range of topics from leadership and
+                    innovation to marketing and financial strategies. Our posts are designed to offer practical
+                    solutions and expert knowledge that drive real-world results.
+                </p>
+                <hr>
+                <hr>
 
 
-            {{-- <div class="h-full col-span-1 row-span-2">
-                        <img src="{{url('images/about-us.png')}}" alt="Blog Post"
-                            class="object-cover w-full h-full mb-2 rounded-md">
-                        <h3 class="mb-2 text-xl font-semibold">Large Blog Post Title</h3>
-                        <div class="flex items-center mb-2">
-                            <!-- Star Ratings -->
-                            <span class="text-yellow-500">★★★★★</span>
+                <div class="p-3 my-3 rounded-md shadow-xl bg-slate-100">
+                    {{-- contant --}}
+                    <a href="#"
+                        class="flex flex-row justify-around p-2 mt-4 transition-all duration-100 hover:underline hover:bg-slate-300 hover:scale-y-105">
+
+                        <div class="w-[80%] h-[18em] flex flex-col justify-between px-4">
+                            <h3 class="mb-2 text-xl font-semibold text-blue-400">Large Blog Post Title
+
+                                <hr>
+                            </h3>
+                            <section>
+
+                                <p class="text-slate-400 ">This is a brief description of the large blog post. It
+                                    should
+                                    provide an overview of the content, enticing readers to click through and read more.
+                                </p>
+                                <div class="flex items-center mb-2">
+                                    <!-- Star Ratings -->
+
+                                    <span class="pr-1 text-yellow-600">241 </span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                            fill="none" stroke="#ca8a04" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="mt-2">
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
+                                </div>
+                                <div class="py-1 text-sm text-blue-400 author-text">
+
+                                    mohammad hussain sarvari
+
+                                </div>
+                                <div class="py-1 text-sm text-blue-400 date ">
+                                    04-2-2024
+                                </div>
+                            </section>
+
                         </div>
-                        <p class="text-gray-700">This is a brief description of the large blog post. It should provide
-                            an overview of the content, enticing readers to click through and read more.</p>
-                        <div class="mt-2">
-                            <span
-                                class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
-                            <span
-                                class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
+                        {{-- image --}}
+                        <div class="image relative w-[18em] h-[18em]">
+                            <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
+                                class="absolute object-cover w-full h-full rounded-md">
                         </div>
-                        <a href="#" class="inline-block mt-4 text-blue-500 hover:underline">Read more</a>
-                
+                    </a>
                 </div>
 
-                <!-- Small Post 1 -->
-                <div class="col-start-2">
-                    <div class="p-4 bg-white rounded-lg shadow-lg">
-                        <img src="https://via.placeholder.com/300x200" alt="Blog Post"
-                            class="object-cover w-full h-32 mb-2 rounded-md">
-                        <h3 class="mb-2 text-lg font-semibold">Small Blog Post Title 1</h3>
-                        <div class="flex items-center mb-2">
-                            <span class="text-yellow-500">★★★★☆</span>
-                        </div>
-                        <p class="text-gray-700">Description for the first small blog post.</p>
-                        <div class="mt-2">
-                            <span
-                                class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Finance</span>
-                        </div>
-                        <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Read more</a>
-                    </div>
-                </div>
 
-                <!-- Small Post 2 -->
-                <div class="col-start-2">
-                    <div class="p-4 bg-white rounded-lg shadow-lg">
-                        <img src="https://via.placeholder.com/300x200" alt="Blog Post"
-                            class="object-cover w-full h-32 mb-2 rounded-md">
-                        <h3 class="mb-2 text-lg font-semibold">Small Blog Post Title 2</h3>
-                        <div class="flex items-center mb-2">
-                            <span class="text-yellow-500">★★★☆☆</span>
-                        </div>
-                        <p class="text-gray-700">Description for the second small blog post.</p>
-                        <div class="mt-2">
-                            <span
-                                class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Marketing</span>
-                        </div>
-                        <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Read more</a>
-                    </div>
-                </div>
-
-            </div> --}}
-
-            {{-- 
-            <div class="grid grid-cols-1 row-auto gap-4 md:grid-cols-2 md:row-2">
-                <!-- Large Post -->
-
-                <div class="col-span-1 md:col-span-1 md:row-2 ">
-                    <div class="p-4 bg-gray-200 rounded-lg shadow ">
-                        <h3 class="mb-2 text-xl font-semibold">Large Blog Post Title</h3>
-                        <p class="text-gray-700">This is a brief description of the large blog post. It should provide an overview of the content, enticing readers to click through and read more.</p>
-                        <a href="#" class="inline-block mt-4 text-blue-500 hover:underline">Read more</a>
-                    </div>
-                </div>
-    
-                <!-- Small Post 1 -->
-                <div class="col-span-1">
-                    <div class="p-4 bg-gray-200 rounded-lg shadow">
-                        <h3 class="mb-2 text-lg font-semibold">Small Blog Post Title 1</h3>
-                        <p class="text-gray-700">Description for the first small blog post.</p>
-                        <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Read more</a>
-                    </div>
-                </div>
-    
-                <!-- Small Post 2 -->
-                <div class="col-span-1">
-                    <div class="p-4 bg-gray-200 rounded-lg shadow">
-                        <h3 class="mb-2 text-lg font-semibold">Small Blog Post Title 2</h3>
-                        <p class="text-gray-700">Description for the second small blog post.</p>
-                        <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Read more</a>
-                    </div>
-                </div>
-            </div> --}}
+            </div>
         </div>
 
     </div>
