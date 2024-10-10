@@ -295,7 +295,10 @@
     {{-- main section --}}
     <div class="relative w-full h-screen mb-20 z-[200]">
         <div class="container   p-3 relative top-[20em] m-auto  z-[180] ">
-            <h1 class="m-5 font-bold text-center text-blue-800 business_title">Welcome to Our Business <span
+            <h1 class="m-5 font-bold text-center text-blue-800 business_title">Welcome to Our hussain 
+                
+                {{$title}}
+                <span
                     class="text-yellow-300">
 
                     Blog
@@ -507,7 +510,7 @@
                 {{-- box 1 biggest --}}
                 <div
                     class="flex flex-col items-center justify-center row-span-1 xl:items-baseline xl:row-span-2 xl:col-start-1">
-                    <a href="{{url('/blog/business/' . 'title')}}"
+                    <a href="#"
                         class="relative w-[80%] h-[20em]  xl:h-[40em] xl:w-[40em] flex justify-around flex-col rounded-lg shadow
                      mt-4 text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
                     ">
