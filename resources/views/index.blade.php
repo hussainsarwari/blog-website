@@ -136,7 +136,7 @@
                           
                             <div class="">
                               
-                                <li class="px-3 py-2 text-white cursor-pointer scroll-to-section peer new-ite" id="blog"  style="padding: 10px 20px;  color: white; border: none; cursor: pointer;" >Tools</li>
+                                <li class="scroll-to-section peer new-ite" id="blog" >Tools</li>
                                     
                                     <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg download rounded-xl peer-hover:flex hover:flex h-fit">
                                             
@@ -165,7 +165,7 @@
                             </div>
                           
                             <div class="">
-                                <li class="px-3 py-2 text-white cursor-pointer scroll-to-section peer new-ite" id="blog"  style="padding: 10px 20px;  color: white; border: none; cursor: pointer;" >Blog</li>
+                                <li class="scroll-to-section peer new-ite" id="blog" >Blog</li>
                                 <!-- Dropdown menu -->
                                 <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit">
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white " href="{{url('blog/Technology')}}">Technology</a> 
@@ -180,7 +180,7 @@
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white " href="{{url('blog/business')}}">Business</a>
                                 </div>
                             </div>
-                            <li class="scroll-to-section"><a href="#services">Services</a></li>
+                            <li class="scroll-to-section"><a href="#services" class="text-slate-900">Services</a></li>
                            
                             <li class="scroll-to-section"><a href="#contacts">Contacts</a></li>
                             <li class="scroll-to-section"><a href="#about-us">About Us</a></li>
