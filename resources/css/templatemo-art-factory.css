@@ -374,11 +374,11 @@ header
   padding-right: 0px;
 }
 
-.header-area .main-nav .nav li a {
+.header-area .main-nav .nav li a , .header-area .main-nav .nav div li {
   display: block;
   font-weight: 500;
   font-size: 13px;
-  color: #fff;
+  color: #0f172a !important;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -1189,6 +1189,40 @@ services
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088e8', endColorstr='#0088e8', GradientType=1 );
 }
+
+
+/* Hide scrollbar by default */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease; /* Animation for showing scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background:  #1e293b; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4299e1; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Round edges */
+}
+
+/* Show scrollbar on hover */
+.scroll-container:hover::-webkit-scrollbar {
+  opacity: 1; /* Show scrollbar on hover */
+}
+
+/* For Firefox */
+.scroll-container {
+  scrollbar-width: thin; /* Use 'thin' scrollbar */
+  scrollbar-color: #4299e1 #f0f0f0; /* Thumb color and background */
+}
+
+.scroll-container:hover {
+  scrollbar-color: #4299e1 #f0f0f0; /* Show thumb on hover */
+}
+
+
 
 .service-item {
   cursor: pointer;

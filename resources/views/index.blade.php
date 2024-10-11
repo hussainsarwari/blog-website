@@ -3,8 +3,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>Time management</title>
+   
+
+
+   <!-- Basic SEO Meta Tags -->
+   <meta name="description" content="">
+   <title>Time management</title>
+   <meta name="keywords" content="Laravel, Blog ">
+   <meta name="author" content="">
+
+   <!-- Favicon Meta Tag -->
+   <link rel="icon" href="{{ asset('images/logo2.png') }}" type="image/x-icon"> <!-- Path to your favicon file -->
+   <link rel="shortcut icon" href="{{ asset('images/logo2.png') }}" type="image/x-icon"> <!-- Optional for older browsers -->
+
+   <!-- Open Graph Meta Tags (for social media sharing: Facebook, LinkedIn) -->
+   <meta property="og:title" content="">
+   <meta property="og:description" content="">
+   <meta property="og:type" content="article">
+   <meta property="og:url" content="">
+   <meta property="og:image" content="">
+   <meta property="og:site_name" content="website name">
+
+   <!-- Twitter Card Meta Tags (for Twitter sharing) -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="">
+   <meta name="twitter:description" content="">
+   <meta name="twitter:image" content="">
+
+
+
     @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
@@ -109,7 +136,7 @@
                           
                             <div class="">
                               
-                                <li class="px-3 py-2 text-white cursor-pointer scroll-to-section peer new-ite" id="blog"  style="padding: 10px 20px;  color: white; border: none; cursor: pointer;" >Tools</li>
+                                <li class="scroll-to-section peer new-ite" id="blog" >Tools</li>
                                     
                                     <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg download rounded-xl peer-hover:flex hover:flex h-fit">
                                             
@@ -138,7 +165,7 @@
                             </div>
                           
                             <div class="">
-                                <li class="px-3 py-2 text-white cursor-pointer scroll-to-section peer new-ite" id="blog"  style="padding: 10px 20px;  color: white; border: none; cursor: pointer;" >Blog</li>
+                                <li class="scroll-to-section peer new-ite" id="blog" >Blog</li>
                                 <!-- Dropdown menu -->
                                 <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit">
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white " href="{{url('blog/Technology')}}">Technology</a> 
@@ -153,7 +180,7 @@
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white " href="{{url('blog/business')}}">Business</a>
                                 </div>
                             </div>
-                            <li class="scroll-to-section"><a href="#services">Services</a></li>
+                            <li class="scroll-to-section"><a href="#services" class="text-slate-900">Services</a></li>
                            
                             <li class="scroll-to-section"><a href="#contacts">Contacts</a></li>
                             <li class="scroll-to-section"><a href="#about-us">About Us</a></li>

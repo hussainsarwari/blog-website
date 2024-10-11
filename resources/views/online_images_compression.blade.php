@@ -3,8 +3,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>Time management</title>
+ 
+
+
+   <!-- Basic SEO Meta Tags -->
+   <meta name="description" content="">
+   <title>Time management</title>
+   <meta name="keywords" content="Laravel, Blog ">
+   <meta name="author" content="">
+
+   <!-- Favicon Meta Tag -->
+   <link rel="icon" href="{{ asset('images/logo2.png') }}" type="image/x-icon"> <!-- Path to your favicon file -->
+   <link rel="shortcut icon" href="{{ asset('images/logo2.png') }}" type="image/x-icon"> <!-- Optional for older browsers -->
+
+   <!-- Open Graph Meta Tags (for social media sharing: Facebook, LinkedIn) -->
+   <meta property="og:title" content="">
+   <meta property="og:description" content="">
+   <meta property="og:type" content="article">
+   <meta property="og:url" content="">
+   <meta property="og:image" content="">
+   <meta property="og:site_name" content="website name">
+
+   <!-- Twitter Card Meta Tags (for Twitter sharing) -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="">
+   <meta name="twitter:description" content="">
+   <meta name="twitter:image" content="">
+
+
+
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
     @vite(['resources/css/templatemo-art-factory.css'])
@@ -61,8 +88,6 @@
         </div>
     </div>
 
-
-    
     <header class="header-area header-sticky h-[80px] md:h-[140px]">
         <div class="flex justify-between p-3 bg-blue-300 col d-none d-md-flex">
             <div class="d-flex">
@@ -75,9 +100,9 @@
             </div>
             <div class="flex flex-row ">
                 <form action="" method="post" class="flex flex-row mx-5 search">
-                    @csrf
-                    <input class="p-1 mx-2 text-white bg-blue-300 border-b border-blue-500 outline-none focus:outline-none focus:bg-blue-400 placeholder:text-white" placeholder="Search" type="search" name="search" required id="search">
-                    <button type="submit">
+                    
+                    <input class="p-1 mx-2 text-white bg-blue-300 border-b border-blue-500 outline-none focus:outline-none focus:bg-blue-400 placeholder:text-white" placeholder="Search"  type="search" name="search" required id="search">
+                    <button type="submit" name="search">
                         <svg class="mx-2 bi bi-search" fill="#fff" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg>
                         </button>
@@ -97,7 +122,7 @@
                 </a> 
                   {{-- instagram --}}
                     <a class="text-light ms-3" href="{{url('https://instagram.com/')}}"><svg class="bi bi-instagram" fill="#fff" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path></svg></a>  
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path></svg></a> 
                 </div>
             </div>
         </div>
@@ -106,37 +131,35 @@
                 
                 <div class="col-12">
                     <nav class="flex justify-around w-full main-nav">
-                        <p style="align-items:center;" class="flex align-middle title logo">
-                            <a href="{{url('http://localhost:8000/')}}"><img class="w-[13em]" src="{{asset('images/logo.png')}}"  alt="logo" srcset=""></a></p>
+                        <p  class="flex title logo"><a href="{{url('localhost:8000')}}"><img class="w-[13em]" src="{{asset('images/logo.png')}}"  alt="logo" srcset=""></a></p>
                         <ul class="nav">
                         
-                            <li class="scroll-to-section "><a href="{{url('http://localhost:8000/')}}" >Home</a></li>
+                            <li class="scroll-to-section "><a href="#welcome" class="active ">Home</a></li>
                            
                           
                             <div class="">
-                             
-                                <li class="px-3 py-2 text-white cursor-pointer scroll-to-section peer new-ite active" id="blog"  style="padding: 10px 20px;  color: white; border: none; cursor: pointer;" >Tools</li>
+                              
+                                <li class="scroll-to-section peer new-ite" id="blog" >Tools</li>
                                     
                                     <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg download rounded-xl peer-hover:flex hover:flex h-fit">
                                             
-                                            
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('instagram-online-video-downloader')}}">Instagram video downloader</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('youtube-online-video-downloader')}}">youtube video downloader</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('short-url')}}">Short URL</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('Paraphrase')}}">Paraphrase</a>
-                                       <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('CV-generator')}}">CV generator</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('Online-code-editor')}}">Online coding</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-editor')}}">PDF Editor</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-compressor')}}">PDF Compression</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-merging')}}">PDF merging</a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-splitting')}}">PDF Splitting</a>
-
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('pdf-to-image')}}">PDF to Image </a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('html-to-pdf')}}">HTML To PDF </a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('image-to-pdf')}}">Image To  PDF </a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-Image-converter')}}">Image converter </a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-images-compression')}}">images Compression </a>
-                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('extract-text-from-image')}}">Extract Text From Image </a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('instagram-online-video-downloader')}}">Instagram video downloader</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('youtube-online-video-downloader')}}">youtube video downloader</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('short-url')}}">Short URL</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('Paraphrase')}}">Paraphrase</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('CV-generator')}}">CV generator</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('Online-code-editor')}}">Online coding</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-editor')}}">PDF Editor</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-compressor')}}">PDF Compression</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-merging')}}">PDF merging</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-splitting')}}">PDF Splitting</a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('pdf-to-image')}}">PDF to Image </a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('pdf-to-image')}}">PDF to Image </a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('html-to-pdf')}}">HTML To PDF </a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('image-to-pdf')}}">Image To  PDF </a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-Image-converter')}}">Image converter </a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-images-compression')}}">images Compression </a>
+                                              <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('extract-text-from-image')}}">Extract Text From Image</a>
                                       
                                           
                                      
@@ -145,7 +168,7 @@
                             </div>
                           
                             <div class="">
-                                <li class="px-3 py-2 text-white cursor-pointer scroll-to-section peer new-ite" id="blog"  style="padding: 10px 20px;  color: white; border: none; cursor: pointer;" >Blog</li>
+                                <li class="scroll-to-section peer new-ite" id="blog" >Blog</li>
                                 <!-- Dropdown menu -->
                                 <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg blog rounded-xl peer-hover:flex hover:flex h-fit">
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white " href="{{url('blog/Technology')}}">Technology</a> 
@@ -160,10 +183,10 @@
                                     <a class="px-1 w-[10em] text-center py-2 text-black hover:bg-gray-300 hover:text-white " href="{{url('blog/business')}}">Business</a>
                                 </div>
                             </div>
-                            <li class="scroll-to-section"><a href="{{url('http://localhost:8000/#services')}}">Services</a></li>
+                            <li class="scroll-to-section"><a href="#services" class="text-slate-900">Services</a></li>
                            
-                            <li class="scroll-to-section"><a href="{{url('http://localhost:8000/#contacts')}}">Contacts</a></li>
-                            <li class="scroll-to-section"><a href="{{url('http://localhost:8000/#about-us')}}">About Us</a></li>
+                            <li class="scroll-to-section"><a href="#contacts">Contacts</a></li>
+                            <li class="scroll-to-section"><a href="#about-us">About Us</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>

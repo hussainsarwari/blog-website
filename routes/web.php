@@ -26,6 +26,7 @@ Route::get('/image-to-pdf', [tools::class, 'image_to_pdf'])->name('image-to-pdf'
 Route::get('/online-Image-converter', [tools::class, 'online_Image_converter'])->name('online-Image-converter');
 Route::get('/online-images-compression', [tools::class, 'online_images_compression'])->name('online-images-compression');
 Route::get('/blog/business', [blogSection::class, 'business'])->name('business');
+Route::get('/blog/business/{blog_title}', [blogSection::class, 'show_blog'])->name('business');
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');
