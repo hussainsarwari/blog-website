@@ -289,6 +289,54 @@
 
 
     {{-- main section --}}
+
+
+    {{-- btn download blog as pdf --}}
+    <div class="fixed bottom-20 right-4 z-50">
+        <button
+            class="bg-blue-500 text-white px-4 py-3 rounded-full shadow-lg flex items-center space-x-2 transform transition-transform duration-300 hover:scale-105 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            aria-label="Download blog as PDF" id="downloadBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-download">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span class="hidden sm:inline">Download as PDF</span>
+        </button>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-[500] ">
+        <!-- Modal Content -->
+        <div
+            class="bg-white w-full max-w-md z-[310] m-auto rounded-lg p-6 text-center shadow-lg transform scale-95  transition-transform duration-300 ease-in-out">
+            <button id="closeModal" class="text-gray-500 hover:text-gray-700 absolute top-4 right-4 text-2xl">
+                &times;
+            </button>
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Download as PDF</h2>
+            <p class="text-gray-600 mb-6">Please enter your email to start the download.</p>
+            <form id="emailForm">
+                <input type="email" placeholder="Your Email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+                    required />
+                <button type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-5 h-5 mr-2" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download PDF
+                </button>
+            </form>
+        </div>
+    </div>
+
+
     {{-- advertise --}}
     <div class="w-[80%] m-auto ad bg-black  h-[20em] relative top-[10em]">
 
@@ -390,9 +438,9 @@
                         </li>
                     </ol>
                 </nav>
-                <hr class="bg-slate-600 f-[80%] m-auto my-3">
+                <hr class="bg-slate-600 f-[80%] m-auto my-1">
                 {{-- blog  image --}}
-                <div class="blog_img w-full h-[40em] my-4">
+                <div class="blog_img w-full h-[40em] mb-[5em] ">
                     <figure>
                         <picture>
                             <source srcset="{{ url('images/2.jpg') }}" media="(min-width: 1280px)">
@@ -407,11 +455,9 @@
                         </figcaption>
                     </figure>
                 </div>
-                <br>
-                <br>
-               
-                <br>
-                <section class="article_information text-sm text-slate-600 flex items-center justify-between">
+
+
+                <section class="article_information text-sm text-slate-600 flex items-center justify-between  ">
                     <div class="text-slate-600">
 
                         <p style="color:#475569;"> created by <span><a href="#" class="text-yellow-700">
@@ -419,15 +465,13 @@
                             at: <span>04-12-2023</span> </p>
                         <p style="color:#475569;">Updated at: <span>05-02-2024</span>
                         </p>
-                        {{-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
-                        <path d="M 15.990234 1.9902344 A 1.0001 1.0001 0 0 0 15.292969 3.7070312 L 17.585938 6 L 17 6 C 10.936593 6 6 10.936593 6 17 A 1.0001 1.0001 0 1 0 8 17 C 8 12.017407 12.017407 8 17 8 L 17.585938 8 L 15.292969 10.292969 A 1.0001 1.0001 0 1 0 16.707031 11.707031 L 20.707031 7.7070312 A 1.0001 1.0001 0 0 0 20.707031 6.2929688 L 16.707031 2.2929688 A 1.0001 1.0001 0 0 0 15.990234 1.9902344 z M 2.984375 7.9863281 A 1.0001 1.0001 0 0 0 2 9 L 2 19 C 2 20.64497 3.3550302 22 5 22 L 19 22 C 20.64497 22 22 20.64497 22 19 L 22 18 A 1.0001 1.0001 0 1 0 20 18 L 20 19 C 20 19.56503 19.56503 20 19 20 L 5 20 C 4.4349698 20 4 19.56503 4 19 L 4 9 A 1.0001 1.0001 0 0 0 2.984375 7.9863281 z"></path>
-                        </svg> --}}
+                       
 
 
 
                     </div>
                     <div class=" w-[20em] text-end">
-                        <p style="color:#475569;"> Downloaded by : <span>201</span></p>
+                        <p style="color:#475569;"> Downloaded : <span>201</span></p>
                         <p style="color:#475569;"> Read by : <span class="mx-1">200</span> People </p>
                         <p class=" text-yellow-700  flex justify-end ">241
                             <svg width="20" height="20" viewBox="0 0 24 24"
@@ -438,50 +482,199 @@
                             </svg>
                         </p>
                     </div>
-               
-                    
+
+
                 </section>
                 <hr class="bg-slate-600">
-                <main>
+                <main class="h-[310em] overflow-y-auto">
                     {{-- title of blog --}}
                     <h1 class="title_of_blog break-words p-2 w-full">it is
                         jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggtitle
                         of blog post</h1>
-                        {{-- introduction --}}
-                        <p class="introduction">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloremque enim ad dolorum? Beatae officia, culpa quia iste natus, cum accusantium eum explicabo vero ad numquam delectus perferendis deleniti assumenda!
-                        </p>
-                        {{-- table of content for mobile--}}
-                <div class="block lg:hidden ">
-                    <span class="w-full block text-center text-2xl p-5 font-semibold table_of_content">Table Of
-                        Content</span>
-                    <div class="body_of_table">
-                        <ul class="text-center list-decimal list-inside space-y-2 text-lg">
-                            <li class=""><a href="#"
-                                    class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em]">how
-                                    to learn programming fast?</a></li>
-                         
+                    {{-- introduction --}}
+                    <p class="introduction">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloremque enim ad dolorum?
+                        Beatae officia, culpa quia iste natus, cum accusantium eum explicabo vero ad numquam delectus
+                        perferendis deleniti assumenda!
+                    </p>
+                    {{-- table of content for mobile --}}
+                    <div class="block lg:hidden ">
+                        <span class="w-full block text-center text-2xl p-5 font-semibold table_of_content">Table Of
+                            Content</span>
+                        <div class="body_of_table">
+                            <ul class="text-center list-decimal list-inside space-y-2 text-lg">
+                                <li class=""><a href="#"
+                                        class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em]">how
+                                        to learn programming fast?</a></li>
+
+
+                            </ul>
+
+                        </div>
+                        <hr class="bg-yellow-400 w-[80%] my-[3em] mx-auto">
+                    </div>
+                    {{-- body of content --}}
+                    <div class="content h-[300em]">
+
+                    </div>
+                    <hr class="bg-slate-500">
+                    {{-- ads --}}
+                    <div class="bg-white h-[20em] ">
+                        ads
+                    </div>
+
+                    {{-- FAG --}}
+                    <div class="fag">
+                        <div class="container rounded-lg">
+                            <!-- ***** Section Title Start ***** -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="section-heading">
+                                        <h2 class="text-white my-3">Frequently Asked Questions</h2>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- ***** Section Title End ***** -->
+
+                            <div class="row">
+
+
+                                <div class="col-12 ">
+                                    <div class="accordions is-first-expanded ">
+                                        <article class="accordion">
+                                            <div class="accordion-head">
+                                                <span class="text-blue-500">What are your services?</span>
+
+                                            </div>
+                                            <div class="accordion-body">
+                                                <div class="content">
+                                                    <p class="text-blue-400">
+                                                        1. <strong>
+                                                            Website & Development Services:
+                                                        </strong>
+
+                                                        Custom website design and development tailored to your brand and
+                                                        business goals.
+                                                        Responsive, user-friendly interfaces that work seamlessly across
+                                                        devices.
+                                                        E-commerce solutions, portfolio sites, and more. <br>
+                                                        2.
+                                                        <strong>
+                                                            SEO Optimization:
+                                                        </strong>
+
+                                                        Boost your online visibility with effective search engine
+                                                        optimization.
+                                                        Keyword research, on-page optimization, and link building
+                                                        strategies.
+                                                        Improve your website’s ranking on search engine results pages
+                                                        (SERPs). <br>
+                                                        3. <strong>
+                                                            Mobile App Development:
+                                                        </strong>
+
+                                                        Native and cross-platform app development for iOS and Android.
+                                                        User-centric design, smooth performance, and intuitive
+                                                        interfaces.
+                                                        From concept to deployment, we’ve got you covered. <br>
+                                                        4.
+                                                        <strong>
+                                                            Content Creation for Blog:
+                                                        </strong>
+
+                                                        Engaging blog posts that resonate with your target audience.
+                                                        Well-researched articles on technology, lifestyle, travel, and
+                                                        more.
+                                                        Shareable content that drives traffic and builds your brand.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="accordion">
+                                            <div class="text-blue-500 accordion-head">
+                                                <span>What kind of content can I find on S_solutions?</span>
+
+                                            </div>
+                                            <div class="accordion-body">
+                                                <div class="content">
+                                                    <p class="text-blue-400">
+                                                        S_solutions is a hub for diverse content! You’ll find technology
+                                                        articles, fashion tips, sports updates, food recipes, travel
+                                                        guides, lifestyle advice, and more. Whether you’re interested in
+                                                        the latest tech trends or planning your next adventure, we’ve
+                                                        got you covered.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    {{-- tags --}}
+                    <section aria-label="Tags related to this blog post"
+                        class="tags bg-slate-800 m-3 p-3 rounded-md shadow-md text-slate-500">
+
+                        <h3 class="text-xl font-semibold text-slate-600 mb-4">Tags:</h3>
+                        <ul class="flex flex-wrap gap-3">
+                            <li>
+                                <a href="{{ url('/blog/business/tag/tag_url') }}"
+                                    class="inline-block bg-blue-700 text-slate-100 px-4 py-2 rounded-full text-sm font-semibold transition-transform duration-200 hover:scale-105 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+                                    Business Strategy
+                                </a>
+                            </li>
 
                         </ul>
 
-                    </div>
-                    <hr class="bg-yellow-400 w-[80%] my-[3em] mx-auto">
-                </div>
-                {{-- body of content --}}
-                <div class="content">
 
-                </div>
-                {{-- ads --}}
-                <div class="bg-white h-[20em] ">
-                    ads
-                </div>
-
-                {{-- FAG --}}
-                <div class="fag">
-                    
-
-                </div>
+                    </section>
                 </main>
+                {{-- like and share section --}}
+                <div class="share_like  rounded-b-xl  bg-slate-700 p-3 h-[4em] flex justify-end items-center">
+                    <button class="share active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                            <g fill="#fcc419" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M18,2c-1.64501,0 -3,1.35499 -3,3c0,0.19095 0.02179,0.37712 0.05664,0.55859l-7.13477,4.16211c-0.52334,-0.44285 -1.1898,-0.7207 -1.92187,-0.7207c-1.64501,0 -3,1.35499 -3,3c0,1.64501 1.35499,3 3,3c0.73208,0 1.39854,-0.27785 1.92188,-0.7207l7.13477,4.16016c-0.03509,0.18206 -0.05664,0.36893 -0.05664,0.56055c0,1.64501 1.35499,3 3,3c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3c-0.73252,0 -1.39841,0.27933 -1.92187,0.72266l-7.13477,-4.16406c0.03485,-0.18147 0.05664,-0.36764 0.05664,-0.55859c0,-0.19095 -0.02179,-0.37712 -0.05664,-0.55859l7.13477,-4.16211c0.52333,0.44285 1.1898,0.7207 1.92188,0.7207c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3zM18,4c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM6,11c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM18,18c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1z"></path></g></g>
+                        </svg>
+                    </button>
+                   
+                    <button class="like active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
+                        <svg width="30" height="30" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                    fill="none" stroke="#fcc419" stroke-width="2" />
+                            </svg>
+                    </button>
+                </div>
+                {{-- add comment --}}
+                <div class="add_comment bg-slate-800 p3 h-[23em] my-5 rounded-md">
+                    
+                        <h3 class="text-2xl font-semibold py-4  text-center">
+                           
+                            Comment and see them in Morse Code!
+                        </h2>
+                        <form class="space-y-4 flex flex-col  p-3" action="/submit-comment" method="POST" >
+                            @csrf <!-- Add CSRF token for security -->
+                          
+                               <input type="email" id="email" name="email" required class="m-2 p-2 mx-auto w-full bg-slate-700 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200" placeholder="Enter your email">
+                          
+                                <textarea id="comment" name="comment" required rows="4" class="mt-1 p-2  outline-none resize-none bg-slate-700 rounded-md w-full focus:ring-nonr focus:border-blue-500 transition duration-200" placeholder="Write your comment..."></textarea>
+                          
+                            <button type="submit" class="flex items-center active:bg-slate-900 focus:outline-none justify-center px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200">
+                                <svg class="w-4 h-4 mr-2 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5-5h10l-5 5z" />
+                                </svg>
+                                Submit
+                            </button>
+                        </form>
+                    
+                    
+                </div>
             </div>
         </div>
         {{-- footer of blog --}}
@@ -742,6 +935,29 @@
             </div>
         </div>
     </footer>
+    <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const closeModal = document.getElementById('closeModal');
+
+        downloadBtn.addEventListener('click', () => {
+            modalOverlay.classList.remove('hidden');
+            modalOverlay.querySelector('.scale-95').classList.add('scale-100');
+        });
+
+        closeModal.addEventListener('click', () => {
+            modalOverlay.classList.add('hidden');
+            modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
+        });
+
+        // Close modal if clicked outside the form
+        window.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.add('hidden');
+                modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
+            }
+        });
+    </script>
 
 </body>
 
