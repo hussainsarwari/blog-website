@@ -233,9 +233,9 @@
 </div>
     <div class="w-[80%] m-auto p-0 rounded-xl shadow-2xl  relative top-[15em] h-[600em]">
         {{-- body --}}
-        <div class="flex h-[400em] bg-slate-950 text-blue-500">
+        <div class="flex h-[400em]  text-blue-500">
             {{-- left side --}}
-            <div class="bg-slate-900 h-full p-2 w-[30em] ">
+            <div class="bg-slate-800 h-full p-2 w-[30%]  rounded-ss-2xl">
                 {{-- table of content --}}
                 <div class=" ">
                     <span class="w-full block text-center text-2xl p-5 font-semibold table_of_content">Table Of Content</span>
@@ -276,7 +276,8 @@
 
             </div>
             {{-- right side --}}
-            <div class=" p-4">
+            <div class=" p-4 bg-slate-900 rounded-se-xl w-[70%]">
+                {{-- breadcrumb --}}
                 <nav class="p-2" aria-label="Breadcrumb">
                     <ol class="flex items-center space-x-4">
                         <li>
@@ -288,7 +289,7 @@
                             </svg>
                         </li>
                         <li>
-                            <a href="/blog" class="text-blue-600 hover:text-blue-800">Blog</a>
+                            <a href="{{url('/blog/business')}}" class="text-blue-600 hover:text-blue-800">Business Blog</a>
                         </li>
                         <li>
                             <svg class="h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -296,11 +297,12 @@
                             </svg>
                         </li>
                         <li>
-                            <a href="/blog/post" class="text-blue-600 hover:text-blue-800">Post Title</a>
+                            <a href="{{url('/blog/business/title')}}t" class="text-blue-600 hover:text-blue-800">Post Title</a>
                         </li>
                     </ol>
                 </nav>
-                <h1 class="title_of_blog">it is title of blog post</h1>
+                <hr class="bg-slate-600 f-[80%] m-auto my-3">
+                {{-- blog  image --}}
                 <div class="blog_img w-full h-[40em] my-4">
                     <figure>
                     <picture>
@@ -315,6 +317,38 @@
                     </figcaption>
                     </figure>
                 </div>
+                <br>
+                <br>
+                <h1 class="title_of_blog break-words p-2 w-full">it is jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggtitle of blog post</h1>
+                <br>
+                <section class="article_information text-sm text-slate-600 flex items-center justify-between">
+                  <div class="text-slate-600">
+
+                    <p style="color:#475569;">  created by <span><a href="#" class="text-yellow-700"> Mohammad hussain </a></span>
+                       at: <span>04-12-2023</span> </p>
+                    <p style="color:#475569;">Updated at: <span>05-02-2024</span>
+                    </p>
+                      {{-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+                        <path d="M 15.990234 1.9902344 A 1.0001 1.0001 0 0 0 15.292969 3.7070312 L 17.585938 6 L 17 6 C 10.936593 6 6 10.936593 6 17 A 1.0001 1.0001 0 1 0 8 17 C 8 12.017407 12.017407 8 17 8 L 17.585938 8 L 15.292969 10.292969 A 1.0001 1.0001 0 1 0 16.707031 11.707031 L 20.707031 7.7070312 A 1.0001 1.0001 0 0 0 20.707031 6.2929688 L 16.707031 2.2929688 A 1.0001 1.0001 0 0 0 15.990234 1.9902344 z M 2.984375 7.9863281 A 1.0001 1.0001 0 0 0 2 9 L 2 19 C 2 20.64497 3.3550302 22 5 22 L 19 22 C 20.64497 22 22 20.64497 22 19 L 22 18 A 1.0001 1.0001 0 1 0 20 18 L 20 19 C 20 19.56503 19.56503 20 19 20 L 5 20 C 4.4349698 20 4 19.56503 4 19 L 4 9 A 1.0001 1.0001 0 0 0 2.984375 7.9863281 z"></path>
+                        </svg> --}}
+
+                  
+                     
+                    </div>
+                    <div class=" w-[20em] text-end">
+                       <p style="color:#475569;"> Downloaded by : <span>201</span></p>
+                      <p style="color:#475569;">  Read by : <span class="mx-1">200</span> People </p>
+                        <p class=" text-yellow-700  flex justify-end ">241  
+                        <svg width="20" height="20" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                fill="none" stroke="yellow" stroke-width="1" />
+                        </svg>
+                    </p>
+                    </div>
+                    
+                </section>
             </div>
         </div>
         {{-- footer --}}
