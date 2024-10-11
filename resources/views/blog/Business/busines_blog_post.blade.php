@@ -42,6 +42,7 @@
     @vite(['resources/css/templatemo-art-factory.css'])
     @vite(['resources/css/style.css'])
     @vite(['resources/css/animations.css'])
+    @vite(['resources/js/shows_blog_post.js'])
 
 
 
@@ -65,6 +66,24 @@
             border-radius: 100px;
             top: 45px;
             position: relative;
+        }
+
+        .heart-pop {
+            animation: pop 0.3s ease-in-out;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.4);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
@@ -348,8 +367,8 @@
             <div class="bg-slate-800 h-full p-2 hidden lg:inline w-[30%]  rounded-ss-2xl">
                 {{-- table of content --}}
                 <div class=" ">
-                    <span class="w-full block text-center text-2xl p-5 font-semibold table_of_content">Table Of
-                        Content</span>
+                    <h3 class="w-full block text-center text-2xl p-5 font-semibold table_of_content">Table Of
+                        Content</h3>
                     <div class="body_of_table">
                         <ul class="text-center list-decimal list-inside space-y-2 text-lg">
                             <li class=""><a href="#"
@@ -383,8 +402,8 @@
 
                 {{-- top blog post --}}
                 <div class=" ">
-                    <span class="w-full block text-center text-2xl p-5 font-semibold table_of_content">Top Business's
-                        blog post</span>
+                    <h3 class="w-full block text-center text-2xl p-5 font-semibold table_of_content">Top Business's
+                        blog post</h3>
                     <div class="body_of_table">
                         <ol class="flex justify-center flex-col list-decimal list-inside space-y-2 text-lg text-gray-700 w-[100%] p-5"
                             style="list-style-type: decimal;">
@@ -465,7 +484,7 @@
                             at: <span>04-12-2023</span> </p>
                         <p style="color:#475569;">Updated at: <span>05-02-2024</span>
                         </p>
-                       
+
 
 
 
@@ -635,54 +654,316 @@
                 </main>
                 {{-- like and share section --}}
                 <div class="share_like  rounded-b-xl  bg-slate-700 p-3 h-[4em] flex justify-end items-center">
-                    <button class="share active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
-                            <g fill="#fcc419" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M18,2c-1.64501,0 -3,1.35499 -3,3c0,0.19095 0.02179,0.37712 0.05664,0.55859l-7.13477,4.16211c-0.52334,-0.44285 -1.1898,-0.7207 -1.92187,-0.7207c-1.64501,0 -3,1.35499 -3,3c0,1.64501 1.35499,3 3,3c0.73208,0 1.39854,-0.27785 1.92188,-0.7207l7.13477,4.16016c-0.03509,0.18206 -0.05664,0.36893 -0.05664,0.56055c0,1.64501 1.35499,3 3,3c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3c-0.73252,0 -1.39841,0.27933 -1.92187,0.72266l-7.13477,-4.16406c0.03485,-0.18147 0.05664,-0.36764 0.05664,-0.55859c0,-0.19095 -0.02179,-0.37712 -0.05664,-0.55859l7.13477,-4.16211c0.52333,0.44285 1.1898,0.7207 1.92188,0.7207c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3zM18,4c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM6,11c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM18,18c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1z"></path></g></g>
+                    <button
+                        class="dislike active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
+                        <svg width="39" height="30" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_15_129)">
+                                <rect width="30" height="30" fill="none" />
+                                <path stroke-width="2"
+                                    d="M22 11.5C22 12.6046 21.1046 13.5 20 13.5L19 13.5C17.8954 13.5 17 12.6046 17 11.5L17 5.5C17 4.39543 17.8954 3.5 19 3.5L20 3.5C21.1046 3.5 22 4.39543 22 5.5L22 11.5Z"
+                                    stroke="#fcc419" stroke-linecap="round" stroke-linejoin="round" />
+                                <path stroke-width="2"
+                                    d="M17 11.5C16 11.5 12 14 12 19C12 21 9 21 9 19C9 17 9 16 10 13.5L4 13.5C3.44772 13.5 3 13.0523 3 12.5L3 9.26039C3 8.77056 3.17976 8.29776 3.50518 7.93166L6.40331 4.67126C6.78285 4.24428 7.32686 3.99998 7.89813 3.99998L14.6667 3.99998C14.883 3.99998 15.0936 4.07016 15.2667 4.19998L17 5.49998"
+                                    stroke="#fcc419" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_15_129">
+                                    <rect width="30" height="30" fill="none" />
+                                </clipPath>
+                            </defs>
                         </svg>
                     </button>
-                   
-                    <button class="like active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
-                        <svg width="30" height="30" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                                    fill="none" stroke="#fcc419" stroke-width="2" />
-                            </svg>
+
+                    <button
+                        class="share active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0,0,256,256">
+                            <g fill="#fcc419" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                <g transform="scale(10.66667,10.66667)">
+                                    <path
+                                        d="M18,2c-1.64501,0 -3,1.35499 -3,3c0,0.19095 0.02179,0.37712 0.05664,0.55859l-7.13477,4.16211c-0.52334,-0.44285 -1.1898,-0.7207 -1.92187,-0.7207c-1.64501,0 -3,1.35499 -3,3c0,1.64501 1.35499,3 3,3c0.73208,0 1.39854,-0.27785 1.92188,-0.7207l7.13477,4.16016c-0.03509,0.18206 -0.05664,0.36893 -0.05664,0.56055c0,1.64501 1.35499,3 3,3c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3c-0.73252,0 -1.39841,0.27933 -1.92187,0.72266l-7.13477,-4.16406c0.03485,-0.18147 0.05664,-0.36764 0.05664,-0.55859c0,-0.19095 -0.02179,-0.37712 -0.05664,-0.55859l7.13477,-4.16211c0.52333,0.44285 1.1898,0.7207 1.92188,0.7207c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3zM18,4c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM6,11c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM18,18c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
                     </button>
+
+                    <button
+                        class="like active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
+                        <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                fill="none" stroke="#fcc419" stroke-width="2" />
+                        </svg>
+                    </button>
+
                 </div>
                 {{-- add comment --}}
-                <div class="add_comment bg-slate-800 p3 h-[23em] my-5 rounded-md">
-                    
-                        <h3 class="text-2xl font-semibold py-4  text-center">
-                           
-                            Comment and see them in Morse Code!
+                <div class="add_comment bg-slate-800 p3 h-[27em] my-5 rounded-md">
+
+                    <h3 class="text-2xl font-semibold py-4  text-center">
+
+                        Comment and see them in Morse Code!
                         </h2>
-                        <form class="space-y-4 flex flex-col  p-3" action="/submit-comment" method="POST" >
+                        <form class="space-y-4 flex flex-col  p-3" action="/submit-comment" method="POST">
                             @csrf <!-- Add CSRF token for security -->
-                          
-                               <input type="email" id="email" name="email" required class="m-2 p-2 mx-auto w-full bg-slate-700 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200" placeholder="Enter your email">
-                          
-                                <textarea id="comment" name="comment" required rows="4" class="mt-1 p-2  outline-none resize-none bg-slate-700 rounded-md w-full focus:ring-nonr focus:border-blue-500 transition duration-200" placeholder="Write your comment..."></textarea>
-                          
-                            <button type="submit" class="flex items-center active:bg-slate-900 focus:outline-none justify-center px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200">
+
+                            <input type="Name" id="Name" name="Name" required
+                                class="m-2 p-2 mx-auto w-full bg-slate-700 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200"
+                                placeholder="Enter your Name">
+                            <input type="email" id="email" name="email" required
+                                class="m-2 p-2 mx-auto w-full bg-slate-700 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200"
+                                placeholder="Enter your email">
+
+                            <textarea id="comment" name="comment" required rows="4"
+                                class="mt-1 p-2  outline-none resize-none bg-slate-700 rounded-md w-full focus:ring-nonr focus:border-blue-500 transition duration-200"
+                                placeholder="Write your comment..."></textarea>
+
+                            <button type="submit"
+                                class="flex items-center active:bg-slate-900 focus:outline-none justify-center px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200">
                                 <svg class="w-4 h-4 mr-2 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 15l-5-5h10l-5 5z" />
                                 </svg>
                                 Submit
                             </button>
                         </form>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
         {{-- footer of blog --}}
-        <div class="">
+        <div class="bg-slate-900 flex flex-col rounded-b-lg">
+            {{-- relat post --}}
+            <div class="h-[40em]  bg-slate-800 p-3 m-3">
+                <h3 class="w-full block text-center text-blue-600 text-2xl p-5 font-semibold table_of_content">Related
+                    Business's
+                    blog post</h3>
+                <div class="body_of_table h-[25em] p-2 overflow-y-auto">
+                    <ol class="flex h-fit justify-center flex-col list-decimal list-inside space-y-2 text-lg text-gray-700 w-[100%] p-5"
+                        style="list-style-type: decimal;">
+                        <li class="w-[100%] text-start m-auto"><a href="#"
+                                class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
+                                to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
+                                <hr class="bg-slate-700">
+                            </a></li>
+                        <li class="w-[100%] text-start m-auto"><a href="#"
+                                class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
+                                to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
+                                <hr class="bg-slate-700">
+                            </a></li>
+                        <li class="w-[100%] text-start m-auto"><a href="#"
+                                class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
+                                to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
+                                <hr class="bg-slate-700">
+                            </a></li>
+                        <li class="w-[100%] text-start m-auto"><a href="#"
+                                class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
+                                to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
+                                <hr class="bg-slate-700">
+                            </a></li>
+                        <li class="w-[100%] text-start m-auto"><a href="#"
+                                class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
+                                to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
+                                <hr class="bg-slate-700">
+                            </a></li>
+                        <li class="w-[100%] text-start m-auto"><a href="#"
+                                class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
+                                to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
+                                <hr class="bg-slate-700">
+                            </a></li>
 
+                    </ol>
+
+                </div>
+                <hr class="bg-yellow-400 w-[80%] my-[3em] mx-auto">
+
+            </div>
+            {{-- comments --}}
+            <div class="comment  flex flex-col h-[158em] rounded-b-lg p-3 justify-center">
+                <div class=" bg-slate-800 h-[150em] justify-center flex flex-col">
+                    <h3 class="w-full block text-center text-blue-600 text-2xl p-5 font-semibold table_of_content">
+                        Comments</h3>
+                    <button
+                        class="p-2  active:bg-slate-900 focus:outline-none bg-blue-600 text-slate-100 m-auto w-[50%] transition-all duration-150 ease-in rounded-md">
+                        Change to Normal Text
+                    </button>
+                    <hr class="bg-slate-600">
+                    <div class="h-[140em] overflow-y-auto">
+                        <!-- Comment Section -->
+
+                        <div
+                            class="bg-white max-h-[50em] overflow-y-auto p-6 rounded-lg shadow-md m-3 transform transition-transform duration-300 ">
+                            <div class="flex items-start space-x-4">
+                                <!-- User Icon -->
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 12c2.485 0 4.5-1.995 4.5-4.5S14.485 3 12 3 7.5 4.995 7.5 7.5 9.515 12 12 12zM16.5 15h-9c-.622 0-1.125.503-1.125 1.125v.75c0 .622.503 1.125 1.125 1.125h9c.622 0 1.125-.503 1.125-1.125v-.75c0-.622-.503-1.125-1.125-1.125z" />
+                                    </svg>
+                                </div>
+
+                                <div class="flex-1">
+                                    <div class="text-gray-700">
+                                        <span class="font-semibold">mohammad <span class="text-slate-500"> commented
+                                                to <span>post</span></span></span>
+
+                                        <span class="text-sm text-gray-500 ml-2">2 hours ago</span>
+                                    </div>
+                                    <p class="mt-2 text-gray-600">
+                                        This is a great post! I really enjoyed reading it. Looking forward to more
+                                        content like this.
+                                    </p>
+
+                                    <!-- Reaction Buttons -->
+                                    <div class="flex items-center mt-4  text-gray-500">
+                                        <button 
+                                            class="likeBtn flex active:text-slate-900 focus:outline-none items-center hover:text-blue-500 ease-in transition duration-300">
+                                            <svg  class="w-5 h-5 mr-1 likeIcon"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 15l7-7 7 7" />
+                                            </svg>
+                                            Like
+                                        </button>
+                                        <button data-userid="01"
+                                            class="replyBtn flex items-center hover:text-blue-500 transition duration-300">
+                                            <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 10h8M8 14h5" />
+                                            </svg>
+                                            Reply 
+                                        </button>
+                                    </div>
+
+
+
+
+                                    <div
+                                        class="reply_and_registe hidden  shadow-lg rounded-lg z-[100] p-3 h-full mt-[2em] translate-y-5">
+                                        <span> Reply to name of person</span>
+                                        <form action="">
+                                            @csrf
+                                            <!-- Reply Input -->
+                                            <input required type="name" id="name" name="name"
+                                                class="w-full p-2 mt-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                                placeholder="Write your name">
+                                            <input required type="email" id="email" name="email"
+                                                class="w-full p-2 mt-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                                placeholder="Write your email">
+                                            <textarea id="comment" name="comment" required rows="4"
+                                                class="mt-1 p-2  outline-none resize-none border border-gray-300 rounded-md w-full focus:ring-nonr focus:border-blue-500 transition duration-200"
+                                                placeholder="Write your comment..."></textarea>
+                                            <button
+                                                class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg flex items-center hover:bg-blue-600 transition duration-300">
+                                                <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 12h14m-7-7v14" />
+                                                </svg>
+                                                Submit
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white max-h-[50em] overflow-y-auto p-6 rounded-lg shadow-md m-3 transform transition-transform duration-300 ">
+                            <div class="flex items-start space-x-4">
+                                <!-- User Icon -->
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 12c2.485 0 4.5-1.995 4.5-4.5S14.485 3 12 3 7.5 4.995 7.5 7.5 9.515 12 12 12zM16.5 15h-9c-.622 0-1.125.503-1.125 1.125v.75c0 .622.503 1.125 1.125 1.125h9c.622 0 1.125-.503 1.125-1.125v-.75c0-.622-.503-1.125-1.125-1.125z" />
+                                    </svg>
+                                </div>
+
+                                <div class="flex-1">
+                                    <div class="text-gray-700">
+                                        <span class="font-semibold">John Doe <span class="text-slate-500"> commented
+                                                to <span>mohammad</span></span></span>
+
+                                        <span class="text-sm text-gray-500 ml-2">2 hours ago</span>
+                                    </div>
+                                    <p class="mt-2 text-gray-600">
+                                        This is a great post! I really enjoyed reading it. Looking forward to more
+                                        content like this.
+                                    </p>
+
+                                    <!-- Reaction Buttons -->
+                                    <div class="flex items-center mt-4 space-x-4 text-gray-500">
+                                        <button 
+                                            class="likeBtn flex active:text-slate-900 focus:outline-none items-center hover:text-blue-500 ease-in transition duration-300">
+                                            <svg  class="w-5 h-5 mr-1 likeIcon"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 15l7-7 7 7" />
+                                            </svg>
+                                            Like
+                                        </button>
+                                        <button  data-userid="01"
+                                            class="flex replyBtn items-center hover:text-blue-500 transition duration-300">
+                                            <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 10h8M8 14h5" />
+                                            </svg>
+                                            Reply  <!-- Number of replies -->
+                                        </button>
+                                    </div>
+
+
+
+
+                                    <div
+                                        class="reply_and_registe hidden  shadow-lg rounded-lg z-[100] p-3 h-[25em] mt-[2em] translate-y-5">
+                                        <span> Reply to name of person</span>
+                                        <form action="">
+                                            @csrf
+                                            <!-- Reply Input -->
+                                            <input required type="name" id="name" name="name"
+                                                class="w-full p-2 mt-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                                placeholder="Write your name">
+                                            <input required type="email" id="email" name="email"
+                                                class="w-full p-2 mt-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                                placeholder="Write your email">
+                                            <textarea id="comment" name="comment" required rows="4"
+                                                class="mt-1 p-2  outline-none resize-none border border-gray-300 rounded-md w-full focus:ring-nonr focus:border-blue-500 transition duration-200"
+                                                placeholder="Write your comment..."></textarea>
+                                            <button
+                                                class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg flex items-center hover:bg-blue-600 transition duration-300">
+                                                <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 12h14m-7-7v14" />
+                                                </svg>
+                                                Submit
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
+
+
 
 
 
@@ -935,29 +1216,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        const downloadBtn = document.getElementById('downloadBtn');
-        const modalOverlay = document.getElementById('modalOverlay');
-        const closeModal = document.getElementById('closeModal');
-
-        downloadBtn.addEventListener('click', () => {
-            modalOverlay.classList.remove('hidden');
-            modalOverlay.querySelector('.scale-95').classList.add('scale-100');
-        });
-
-        closeModal.addEventListener('click', () => {
-            modalOverlay.classList.add('hidden');
-            modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
-        });
-
-        // Close modal if clicked outside the form
-        window.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) {
-                modalOverlay.classList.add('hidden');
-                modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
-            }
-        });
-    </script>
 
 </body>
 
