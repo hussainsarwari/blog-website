@@ -48,9 +48,8 @@
     <script type="module" src="{{asset('js/custom.js')}}"></script>
 
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-</head>
-<style>
+       <meta name="robots" content="index, follow">
+       <style>
      #imageContainer img.selected {
             border: 2px solid blue; 
         }
@@ -100,6 +99,7 @@
             cursor: not-allowed;
         }
 </style>
+</head>
 <body class="overflow-x-hidden">
     
 
@@ -192,25 +192,44 @@
                                         
                                         <div class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg download rounded-xl peer-hover:flex hover:flex h-fit">
                                                 
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('instagram-online-video-downloader')}}">Instagram video downloader</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('youtube-online-video-downloader')}}">youtube video downloader</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('short-url')}}">Short URL</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('Paraphrase')}}">Paraphrase</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('CV-generator')}}">CV generator</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('Online-code-editor')}}">Online coding</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-editor')}}">PDF Editor</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-compressor')}}">PDF Compression</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-merging')}}">PDF merging</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-pdf-splitting')}}">PDF Splitting</a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('pdf-to-image')}}">PDF to Image </a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('pdf-to-image')}}">PDF to Image </a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('html-to-pdf')}}">HTML To PDF </a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('image-to-pdf')}}">Image To  PDF </a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-Image-converter')}}">Image converter </a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('online-images-compression')}}">images Compression </a>
-                                                  <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white" href="{{url('extract-text-from-image')}}">Extract Text From Image</a>
-                                          
-                                              
+                                            <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/online-tools/instagram-online-video-downloader') }}">Instagram video
+                                            downloader</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/youtube-online-video-downloader') }}">youtube video
+                                            downloader</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/short-url') }}">Short URL</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/Paraphrase') }}">Paraphrase</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/CV-generator') }}">CV generator</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/Online-code-editor') }}">Online coding</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/online-pdf-editor') }}">PDF Editor</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/online-pdf-compressor') }}">PDF Compression</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/online-pdf-merging') }}">PDF merging</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/online-pdf-splitting') }}">PDF Splitting</a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/pdf-to-image') }}">PDF to Image </a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/pdf-to-image') }}">PDF to Image </a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/html-to-pdf') }}">HTML To PDF </a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/image-to-pdf') }}">Image To PDF </a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/online-Image-converter') }}">Image converter </a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/online-images-compression') }}">images Compression </a>
+                                        <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
+                                            href="{{ url('online-tools/extract-text-from-image') }}">Extract Text From Image</a>
+    
+    
                                          
                                     </div>
                                  

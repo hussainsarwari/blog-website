@@ -8,7 +8,7 @@
       <title>Time management</title>
       <meta name="keywords" content="Laravel, Blog ">
       <meta name="author" content="">
-   
+      <meta name="robots" content="index, follow">
       <!-- Favicon Meta Tag -->
       <link rel="icon" href="{{ asset('images/logo2.png') }}" type="image/x-icon"> <!-- Path to your favicon file -->
       <link rel="shortcut icon" href="{{ asset('images/logo2.png') }}" type="image/x-icon"> <!-- Optional for older browsers -->

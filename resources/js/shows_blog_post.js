@@ -79,3 +79,54 @@ likeBtns[i].addEventListener("click",(r)=>{
     }
 })
 };
+
+
+
+const scrollBox = document.querySelector('.scrollBox');
+let isInScrollBox = false;
+
+document.addEventListener('keydown', function (event) {
+    const boxTop = scrollBox.getBoundingClientRect().top;
+    const boxBottom = scrollBox.getBoundingClientRect().bottom;
+
+    // Arrow Down key
+    if (event.key === 'ArrowDown') {
+    
+        if (!isInScrollBox) {
+            if (boxTop <= 0 && boxBottom > window.innerHeight) {
+                isInScrollBox = true;
+                document.body.style.overflow = 'hidden'; 
+                scrollBox.style.overflowY = 'auto'; 
+            }
+        }
+
+        if (isInScrollBox) {
+            if (scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight) {
+                isInScrollBox = false;
+                document.body.style.overflow = ''; 
+                scrollBox.style.overflowY = 'hidden'; 
+            } else {
+                scrollBox.scrollTop += 20; //
+                event.preventDefault(); //
+            }
+        }
+    }
+
+    // Arrow Up key
+    if (event.key === 'ArrowUp') {
+        if (isInScrollBox) {
+            if (scrollBox.scrollTop <= 0) {
+                isInScrollBox = false;
+                document.body.style.overflow = ''; 
+                scrollBox.style.overflowY = 'hidden'; 
+            } else {
+                scrollBox.scrollTop -= 20; 
+                event.preventDefault(); 
+            }
+        } else if (boxTop <= window.innerHeight && boxTop > 0) {
+            isInScrollBox = true;
+            document.body.style.overflow = 'hidden'; 
+            scrollBox.style.overflowY = 'auto'; 
+        }
+    }
+});

@@ -31,6 +31,7 @@
     <meta name="twitter:title" content="">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
+    <meta name="robots" content="index, follow">
 
 
 
@@ -220,41 +221,41 @@
                                     class="fixed flex-col hidden p-4 mt-0 bg-white shadow-lg download rounded-xl peer-hover:flex hover:flex h-fit">
 
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('instagram-online-video-downloader') }}">Instagram video
+                                        href="{{ url('online-tools/online-tools/instagram-online-video-downloader') }}">Instagram video
                                         downloader</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('youtube-online-video-downloader') }}">youtube video
+                                        href="{{ url('online-tools/youtube-online-video-downloader') }}">youtube video
                                         downloader</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('short-url') }}">Short URL</a>
+                                        href="{{ url('online-tools/short-url') }}">Short URL</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('Paraphrase') }}">Paraphrase</a>
+                                        href="{{ url('online-tools/Paraphrase') }}">Paraphrase</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('CV-generator') }}">CV generator</a>
+                                        href="{{ url('online-tools/CV-generator') }}">CV generator</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('Online-code-editor') }}">Online coding</a>
+                                        href="{{ url('online-tools/Online-code-editor') }}">Online coding</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-pdf-editor') }}">PDF Editor</a>
+                                        href="{{ url('online-tools/online-pdf-editor') }}">PDF Editor</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-pdf-compressor') }}">PDF Compression</a>
+                                        href="{{ url('online-tools/online-pdf-compressor') }}">PDF Compression</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-pdf-merging') }}">PDF merging</a>
+                                        href="{{ url('online-tools/online-pdf-merging') }}">PDF merging</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-pdf-splitting') }}">PDF Splitting</a>
+                                        href="{{ url('online-tools/online-pdf-splitting') }}">PDF Splitting</a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('pdf-to-image') }}">PDF to Image </a>
+                                        href="{{ url('online-tools/pdf-to-image') }}">PDF to Image </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('pdf-to-image') }}">PDF to Image </a>
+                                        href="{{ url('online-tools/pdf-to-image') }}">PDF to Image </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('html-to-pdf') }}">HTML To PDF </a>
+                                        href="{{ url('online-tools/html-to-pdf') }}">HTML To PDF </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('image-to-pdf') }}">Image To PDF </a>
+                                        href="{{ url('online-tools/image-to-pdf') }}">Image To PDF </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-Image-converter') }}">Image converter </a>
+                                        href="{{ url('online-tools/online-Image-converter') }}">Image converter </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('online-images-compression') }}">images Compression </a>
+                                        href="{{ url('online-tools/online-images-compression') }}">images Compression </a>
                                     <a class="px-1 w-[15em] text-center py-2 text-black hover:bg-gray-300 hover:text-white"
-                                        href="{{ url('extract-text-from-image') }}">Extract Text From Image</a>
+                                        href="{{ url('online-tools/extract-text-from-image') }}">Extract Text From Image</a>
 
 
 
@@ -357,14 +358,14 @@
 
 
     {{-- advertise --}}
-    <div class="w-[80%] m-auto ad bg-black  h-[20em] relative top-[10em]">
-
+    <div class="w-[80%] m-auto ad bg-white  h-[20em] relative top-[10em]">
+ads
     </div>
-    <div class="w-[80%] m-auto p-0 rounded-xl shadow-2xl  relative top-[15em] h-[600em]">
+    <div class="w-[80%] m-auto p-0 rounded-xl bg-slate-50 shadow-2xl    relative top-[15em] h-[600em]">
         {{-- body --}}
         <div class="flex h-[400em]  text-blue-500">
             {{-- left side --}}
-            <div class="bg-slate-800 h-full p-2 hidden lg:inline w-[30%]  rounded-ss-2xl">
+            <div class="bg-slate-100 h-full p-2 hidden lg:inline w-[30%]  rounded-ss-2xl">
                 {{-- table of content --}}
                 <div class=" ">
                     <h3 class="w-full block text-center text-2xl p-5 font-semibold table_of_content">Table Of
@@ -426,7 +427,7 @@
 
             </div>
             {{-- right side --}}
-            <div class=" p-4 bg-slate-900 rounded-t-xl lg:rounded-ss-none lg:rounded-se-xl w-[100%] lg:w-[70%]">
+            <div class=" p-4 bg-white rounded-t-xl lg:rounded-ss-none lg:rounded-se-xl w-[100%] lg:w-[70%]">
                 {{-- breadcrumb --}}
                 <nav class="p-2" aria-label="Breadcrumb">
                     <ol class="flex items-center space-x-4">
@@ -459,7 +460,7 @@
                 </nav>
                 <hr class="bg-slate-600 f-[80%] m-auto my-1">
                 {{-- blog  image --}}
-                <div class="blog_img w-full h-[40em] mb-[5em] ">
+                <div class="blog_img w-full h-[50em] mb-[5em] ">
                     <figure>
                         <picture>
                             <source srcset="{{ url('images/2.jpg') }}" media="(min-width: 1280px)">
@@ -474,6 +475,7 @@
                         </figcaption>
                     </figure>
                 </div>
+                <br>
 
 
                 <section class="article_information text-sm text-slate-600 flex items-center justify-between  ">
@@ -492,12 +494,12 @@
                     <div class=" w-[20em] text-end">
                         <p style="color:#475569;"> Downloaded : <span>201</span></p>
                         <p style="color:#475569;"> Read by : <span class="mx-1">200</span> People </p>
-                        <p class=" text-yellow-700  flex justify-end ">241
+                        <p class=" text-yellow-600  flex justify-end ">241
                             <svg width="20" height="20" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                                    fill="none" stroke="yellow" stroke-width="1" />
+                                    fill="none" stroke="#ca8a04" stroke-width="1" />
                             </svg>
                         </p>
                     </div>
@@ -505,7 +507,7 @@
 
                 </section>
                 <hr class="bg-slate-600">
-                <main class="h-[310em] overflow-y-auto">
+                <main class="h-[310em] overflow-y-auto scrollBox">
                     {{-- title of blog --}}
                     <h1 class="title_of_blog break-words p-2 w-full">it is
                         jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggtitle
@@ -536,7 +538,7 @@
                     <div class="content h-[300em]">
 
                     </div>
-                    <hr class="bg-slate-500">
+                    <hr class="bg-slate-600">
                     {{-- ads --}}
                     <div class="bg-white h-[20em] ">
                         ads
@@ -636,7 +638,7 @@
                     </div>
                     {{-- tags --}}
                     <section aria-label="Tags related to this blog post"
-                        class="tags bg-slate-800 m-3 p-3 rounded-md shadow-md text-slate-500">
+                        class="tags bg-slate-100 m-3 p-3 rounded-md shadow-md text-slate-500">
 
                         <h3 class="text-xl font-semibold text-slate-600 mb-4">Tags:</h3>
                         <ul class="flex flex-wrap gap-3">
@@ -653,20 +655,20 @@
                     </section>
                 </main>
                 {{-- like and share section --}}
-                <div class="share_like  rounded-b-xl  bg-slate-700 p-3 h-[4em] flex justify-end items-center">
+                <div class="share_like  rounded-b-xl  bg-slate-100 p-3 h-[4em] flex justify-end items-center">
 
                     <button
-                        class="dislike active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
+                        class="dislike active:bg-blue-700 focus:outline-none bg-blue-500 p-2 rounded-md hover:bg-blue-400 mx-1 transition-all duration-150 ease-in">
                         <svg width="39" height="30" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_15_129)">
                                 <rect width="30" height="30" fill="none" />
                                 <path stroke-width="2"
                                     d="M22 11.5C22 12.6046 21.1046 13.5 20 13.5L19 13.5C17.8954 13.5 17 12.6046 17 11.5L17 5.5C17 4.39543 17.8954 3.5 19 3.5L20 3.5C21.1046 3.5 22 4.39543 22 5.5L22 11.5Z"
-                                    stroke="#fcc419" stroke-linecap="round" stroke-linejoin="round" />
+                                    stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
                                 <path stroke-width="2"
                                     d="M17 11.5C16 11.5 12 14 12 19C12 21 9 21 9 19C9 17 9 16 10 13.5L4 13.5C3.44772 13.5 3 13.0523 3 12.5L3 9.26039C3 8.77056 3.17976 8.29776 3.50518 7.93166L6.40331 4.67126C6.78285 4.24428 7.32686 3.99998 7.89813 3.99998L14.6667 3.99998C14.883 3.99998 15.0936 4.07016 15.2667 4.19998L17 5.49998"
-                                    stroke="#fcc419" stroke-linecap="round" stroke-linejoin="round" />
+                                    stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
                             </g>
                             <defs>
                                 <clipPath id="clip0_15_129">
@@ -677,11 +679,11 @@
                     </button>
 
                     <button
-                        class="share active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
+                        class="share active:bg-blue-700 focus:outline-none bg-blue-500 p-2 rounded-md hover:bg-blue-400 mx-1 transition-all duration-150 ease-in">
 
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
                             viewBox="0,0,256,256">
-                            <g fill="#fcc419" fill-rule="nonzero" stroke="none" stroke-width="1"
+                            <g fill="#fff" fill-rule="nonzero" stroke="none" stroke-width="1"
                                 stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                 stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
                                 font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -695,17 +697,17 @@
                     </button>
 
                     <button
-                        class="like active:bg-slate-900 focus:outline-none bg-slate-600 p-2 rounded-md hover:bg-slate-500 mx-1">
+                        class="like active:bg-blue-700 focus:outline-none bg-blue-500 p-2 rounded-md hover:bg-blue-400 mx-1 transition-all duration-150 ease-in">
                         <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                                fill="none" stroke="#fcc419" stroke-width="2" />
+                                fill="none" stroke="#fff" stroke-width="2" />
                         </svg>
                     </button>
 
                 </div>
                 {{-- add comment --}}
-                <div class="add_comment bg-slate-800 p3 h-[27em] my-5 rounded-md">
+                <div class="add_comment bg-slate-100 p3 h-[27em] my-5 rounded-md">
 
                     <h3 class="text-2xl font-semibold py-4  text-center">
 
@@ -715,14 +717,14 @@
                             @csrf <!-- Add CSRF token for security -->
 
                             <input type="Name" id="Name" name="Name" required
-                                class="m-2 p-2 mx-auto w-full bg-slate-700 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200"
+                                class="m-2 p-2 mx-auto w-full bg-slate-300 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200"
                                 placeholder="Enter your Name">
                             <input type="email" id="email" name="email" required
-                                class="m-2 p-2 mx-auto w-full bg-slate-700 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200"
+                                class="m-2 p-2 mx-auto w-full bg-slate-300 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200"
                                 placeholder="Enter your email">
 
                             <textarea id="comment" name="comment" required rows="4"
-                                class="mt-1 p-2  outline-none resize-none bg-slate-700 rounded-md w-full focus:ring-nonr focus:border-blue-500 transition duration-200"
+                                class="mt-1 p-2  outline-none resize-none bg-slate-300 rounded-md w-full focus:ring-nonr focus:border-blue-500 transition duration-200"
                                 placeholder="Write your comment..."></textarea>
 
                             <button type="submit"
@@ -738,10 +740,11 @@
                 </div>
             </div>
         </div>
+        <br>
         {{-- footer of blog --}}
-        <div class="bg-slate-900 flex flex-col rounded-b-lg">
-            {{-- relat post --}}
-            <div class="h-[40em]  bg-slate-800 p-3 m-3">
+        <div class="bg-white flex flex-col rounded-b-lg">
+            <div class="h-[40em]  bg-slate-100 p-3 pt-0">
+            {{-- related post --}}
                 <h3 class="w-full block text-center text-blue-600 text-2xl p-5 font-semibold table_of_content">Related
                     Business's
                     blog post</h3>
@@ -751,47 +754,47 @@
                         <li class="w-[100%] text-start m-auto"><a href="#"
                                 class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
                                 to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
-                                <hr class="bg-slate-700">
+                                <hr class="bg-slate-400">
                             </a></li>
                         <li class="w-[100%] text-start m-auto"><a href="#"
                                 class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
                                 to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
-                                <hr class="bg-slate-700">
+                                <hr class="bg-slate-400">
                             </a></li>
                         <li class="w-[100%] text-start m-auto"><a href="#"
                                 class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
                                 to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
-                                <hr class="bg-slate-700">
+                                <hr class="bg-slate-400">
                             </a></li>
                         <li class="w-[100%] text-start m-auto"><a href="#"
                                 class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
                                 to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
-                                <hr class="bg-slate-700">
+                                <hr class="bg-slate-400">
                             </a></li>
                         <li class="w-[100%] text-start m-auto"><a href="#"
                                 class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
                                 to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
-                                <hr class="bg-slate-700">
+                                <hr class="bg-slate-400">
                             </a></li>
                         <li class="w-[100%] text-start m-auto"><a href="#"
                                 class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em] break-words">how
                                 to learn kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkprogramming fast?
-                                <hr class="bg-slate-700">
+                                <hr class="bg-slate-400">
                             </a></li>
 
                     </ol>
 
                 </div>
-                <hr class="bg-yellow-400 w-[80%] my-[3em] mx-auto">
+                <hr class="bg-slate-400 w-[80%] my-[3em] mx-auto">
 
             </div>
             {{-- comments --}}
-            <div class="comment  flex flex-col h-[158em] rounded-b-lg p-3 justify-center">
-                <div class=" bg-slate-800 h-[150em] justify-center flex flex-col">
+            <div class="comment  flex flex-col h-[158em] rounded-b-lg  justify-center">
+                <div class=" bg-slate-100 h-[150em] justify-center flex flex-col">
                     <h3 class="w-full block text-center text-blue-600 text-2xl p-5 font-semibold table_of_content">
                         Comments</h3>
                     <button
-                        class="p-2  active:bg-slate-900 focus:outline-none bg-blue-600 text-slate-100 m-auto w-[50%] transition-all duration-150 ease-in rounded-md">
+                        class="p-2  active:bg-blue-700 focus:outline-none bg-blue-600 text-slate-100 m-auto w-[50%] transition-all duration-150 ease-in rounded-md">
                         Change to Normal Text
                     </button>
                     <hr class="bg-slate-600">
@@ -825,7 +828,7 @@
                                     <!-- Reaction Buttons -->
                                     <div class="flex items-center mt-4  text-gray-500">
                                         <button 
-                                            class="likeBtn flex active:text-slate-900 focus:outline-none items-center hover:text-blue-500 ease-in transition duration-300">
+                                            class="likeBtn flex active:text-blue-900 focus:outline-none items-center hover:text-blue-500 ease-in transition duration-300">
                                             <svg  class="w-5 h-5 mr-1 likeIcon"
                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke="currentColor">
@@ -835,7 +838,7 @@
                                             Like
                                         </button>
                                         <button data-userid="01"
-                                            class="replyBtn flex items-center hover:text-blue-500 transition duration-300">
+                                            class="replyBtn active:text-blue-900 focus:outline-none  flex items-center hover:text-blue-500 transition duration-300">
                                             <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -850,7 +853,7 @@
 
                                     <div
                                         class="reply_and_registe hidden  shadow-lg rounded-lg z-[100] p-3 h-full mt-[2em] translate-y-5">
-                                        <span> Reply to name of person</span>
+                                        
                                         <form action="">
                                             @csrf
                                             <!-- Reply Input -->
@@ -865,12 +868,8 @@
                                                 placeholder="Write your comment..."></textarea>
                                             <button
                                                 class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg flex items-center hover:bg-blue-600 transition duration-300">
-                                                <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 12h14m-7-7v14" />
-                                                </svg>
-                                                Submit
+                                                
+                                                Comment
                                             </button>
                                         </form>
                                     </div>
@@ -905,7 +904,7 @@
                                     <!-- Reaction Buttons -->
                                     <div class="flex items-center mt-4 space-x-4 text-gray-500">
                                         <button 
-                                            class="likeBtn flex active:text-slate-900 focus:outline-none items-center hover:text-blue-500 ease-in transition duration-300">
+                                            class="likeBtn flex active:text-blue-900 focus:outline-none items-center hover:text-blue-500 ease-in transition duration-300">
                                             <svg  class="w-5 h-5 mr-1 likeIcon"
                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke="currentColor">
@@ -915,7 +914,7 @@
                                             Like
                                         </button>
                                         <button  data-userid="01"
-                                            class="flex replyBtn items-center hover:text-blue-500 transition duration-300">
+                                            class="flex replyBtn  active:text-blue-900 focus:outline-none items-center hover:text-blue-500 transition duration-300">
                                             <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -930,7 +929,7 @@
 
                                     <div
                                         class="reply_and_registe hidden  shadow-lg rounded-lg z-[100] p-3 h-[25em] mt-[2em] translate-y-5">
-                                        <span> Reply to name of person</span>
+                                       
                                         <form action="">
                                             @csrf
                                             <!-- Reply Input -->
@@ -945,12 +944,8 @@
                                                 placeholder="Write your comment..."></textarea>
                                             <button
                                                 class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg flex items-center hover:bg-blue-600 transition duration-300">
-                                                <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 12h14m-7-7v14" />
-                                                </svg>
-                                                Submit
+                                                
+                                                Comment
                                             </button>
                                         </form>
                                     </div>
@@ -1010,47 +1005,48 @@
                     <h4 class="text-sm lg:text-md">blogs</h4>
                     <hr>
                     <ul class="list-unstyled">
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('Technology') }}">Technology</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('sport') }}">Sport</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('lifestyle') }}">Lifestyle</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('information') }}">Information</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('islamic') }}">Islamic</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('fashion') }}">fashion</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('movie') }}">Movies</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('food') }}">Food</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('travel') }}">Travel</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('business') }}">Business</a>
-                        </li>
-
+                        <ul class="list-unstyled">
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/Technology') }}">Technology</a>
+                            </li>
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/sport') }}">Sport</a>
+                            </li>
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/lifestyle') }}">Lifestyle</a>
+                            </li>
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/information') }}">Information</a>
+                            </li>
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/islamic') }}">Islamic</a>
+                            </li>
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/fashion') }}">fashion</a>
+                            </li>
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/movie') }}">Movies</a>
+                            </li>
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/food') }}">Food</a>
+                            </li>
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/travel') }}">Travel</a>
+                            </li>
+                            <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none"
+                                    href="{{ url('blog/business') }}">Business</a>
+                            </li>
+    
 
 
 
@@ -1067,72 +1063,72 @@
 
 
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('instagram-online-video-downloader') }}">Instagram video downloader</a>
+                                href="{{ url('online-tools/instagram-online-video-downloader') }}">Instagram video downloader</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('youtube-online-video-downloader') }}">youtube video downloader</a>
+                                href="{{ url('online-tools/youtube-online-video-downloader') }}">youtube video downloader</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('') }}">Short URL</a>
+                                href="{{ url('online-tools/short-url') }}">Short URL</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('Paraphrase') }}">Paraphrase</a>
+                                href="{{ url('online-tools/Paraphrase') }}">Paraphrase</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('CV-generator') }}">CV generator</a>
+                                href="{{ url('online-tools/CV-generator') }}">CV generator</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('Online-code-editor') }}">Online coding</a>
+                                href="{{ url('online-tools/Online-code-editor') }}">Online coding</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-editor') }}">PDF Editor</a>
+                                href="{{ url('online-tools/online-pdf-editor') }}">PDF Editor</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-compressor') }}">PDF Compression</a>
+                                href="{{ url('online-tools/online-pdf-compressor') }}">PDF Compression</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-merging') }}">PDF merging</a>
+                                href="{{ url('online-tools/online-pdf-merging') }}">PDF merging</a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-splitting') }}">PDF Splitting</a>
+                                href="{{ url('online-tools/online-pdf-splitting') }}">PDF Splitting</a>
                         </li>
 
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('pdf-to-image') }}">PDF to Image </a>
+                                href="{{ url('online-tools/pdf-to-image') }}">PDF to Image </a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('html-to-pdf') }}">HTML To PDF </a>
+                                href="{{ url('online-tools/html-to-pdf') }}">HTML To PDF </a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('image-to-pdf') }}">Image To PDF </a>
+                                href="{{ url('online-tools/image-to-pdf') }}">Image To PDF </a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-Image-converter') }}">Image converter </a>
+                                href="{{ url('online-tools/online-Image-converter') }}">Image converter </a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-images-compression') }}">images Compression </a>
+                                href="{{ url('online-tools/online-images-compression') }}">images Compression </a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-video-compression') }}">video Compression </a>
+                                href="{{ url('online-tools/online-video-compression') }}">video Compression </a>
                         </li>
                         <li class="mb-0">
                             <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('extract-text-from-image') }}">Extract Text From Image</a>
+                                href="{{ url('online-tools/extract-text-from-image') }}">Extract Text From Image</a>
                         </li>
                     </ul>
                 </div>
