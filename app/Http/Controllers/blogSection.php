@@ -11,6 +11,6 @@ class blogSection extends Controller
            }
     public function show_blog($title){
         
-        return view('blog.Business.busines_blog_post',  compact('title'));
+        return view('blog.Business.show_busines_blog_post',  compact('title'));
            }
 }
