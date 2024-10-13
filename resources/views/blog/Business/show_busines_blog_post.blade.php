@@ -520,15 +520,15 @@
                 <hr class="bg-slate-600 f-[80%] m-auto my-1">
                 <br>
                 {{-- blog  image --}}
-                <div aria-label="image" class="blog_img w-full max-h[20em] md:max-h-[40em] mb-[5em] ">
-                    <figure>
-                        <picture>
+                <div aria-label="image" class="blog_img w-full  overflow-hidden md:max-h-[40em]   mb-[5em] ">
+                    <figure class="w-full flex justify-center items-center flex-col ">
+                        <picture class="m-auto">
                             <source aria-label="blog's image for large divces" srcset="{{ url('images/2.jpg') }}"
                                 media="(min-width: 1280px)">
                             <source aria-label="blog's image for small divces " srcset="{{ url('images/2.jpg') }}"
                                 media="(min-width: 768px)">
                             <img aria-label="blog's image deafult" src="{{ url('images/2.jpg') }}" alt="logo"
-                                class="object-cover w-full h-full rounded-md">
+                                class=" rounded-md  md:max-h-[30em]">
                         </picture>
 
 
@@ -1142,7 +1142,7 @@
 
                 <div class="flex">
                     {{-- instagram --}}
-                    <a title="follow us on instagram" class="ml-2 me-2" title="follow us on instagram"
+                    <a  class="ml-2 me-2" title="follow us on instagram"
                         aria-label="follow us on instagram" href="">
                         <svg class="bi bi-instagram" fill="#fff" height="16" viewbox="0 0 16 16"
                             width="16" xmlns="http://www.w3.org/2000/svg">

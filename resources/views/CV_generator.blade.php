@@ -568,15 +568,23 @@
     </div>
 
 
-
     {{-- footer section --}}
 
 
-    <footer class="py-4 relative top-[250em] h-[130em] md:h-[70em] w-full ">
-        <img class="absolute bottom-[58em] lg:bottom-[15em]  left-0 w-full rotate-180 d-none d-sm-inline"
-            src="{{ asset('images/banner-bg.svg') }}" alt="footer-background-1">
-        <img class="absolute bottom-[55em] left-0 w-full d-sm-none footer-img"
-            src="{{ asset('images/banner-bg2.svg') }}" alt="footer-background-2">
+    <footer class="py-4 relative top-[100em] h-[130em] md:h-[70em] w-full ">
+        <picture>
+            <source srcset="{{ asset('images/banner-bg.svg') }}" media="(min-width: 1280px)">
+            <source srcset="{{ asset('images/banner-bg.svg') }}" media="(min-width: 768px)">
+            <img src="{{ asset('images/banner-bg.svg') }}" alt="footer-background-1"
+                class="absolute bottom-[58em] lg:bottom-[15em]  left-0 w-full rotate-180 d-none d-sm-inline"
+                width="300">
+        </picture>
+        <picture>
+            <source srcset="{{ asset('images/banner-bg2.svg') }}" media="(min-width: 1280px)">
+            <source srcset="{{ asset('images/banner-bg2.svg') }}" media="(min-width: 768px)">
+            <img src="{{ asset('images/banner-bg2.svg') }}" alt="footer-background-2"
+                class="absolute bottom-[55em] left-0 w-full d-sm-none footer-img" width="300">
+        </picture>
         <div class="w-full h-[70em] absolute block bottom-[-4em] lg:hidden" id="xx"
             style="background: rgb(16 139 233);"></div>
         <div class="w-full h-[30em] absolute  bottom-[-4em] hidden lg:block" id="xx"
@@ -584,58 +592,68 @@
         <div class="absolute bottom-[-4em] left-0  w-[99%] px-5 text-white">
             <div class="py-4 row">
                 <div class="mb-4 col-12 col-lg-3 mb-lg-0">
-                    <img alt="Free Frontend Logo" class="mb-3 img-fluid" height=""
-                        src="{{ asset('images/logo.png') }}" width="300">
+                    <picture>
+                        <source aria-label="logo image for large devices" srcset="{{ asset('images/logo.png') }}"
+                            media="(min-width: 1280px)">
+                        <source aria-label="logo image for small devices" srcset="{{ asset('images/logo.png') }}"
+                            media="(min-width: 768px)">
+                        <img aria-label="logo image for as defualt" src="{{ asset('images/logo.png') }}"
+                            alt="logo" class="mb-3 img-fluid" width="300">
+                    </picture>
 
-                    <p class="mb-1 text-sm text-white small lg:text-md">Mazar-e-sharif, Afghanistan</p>
 
-                    <p class="mb-1 text-sm text-white small lg:text-md">Tel:<a href="tel:+93766805049"> +93
+                    <address aria-label="address" class="mb-1 text-sm text-white small lg:text-md">Mazar-e-sharif,
+                        Afghanistan</address>
+
+                    <p aria-label="phone number" class="mb-1 text-sm text-white small lg:text-md">Tel:<a
+                            title="phone number" href="tel:+93766805049"> +93
                             766805049</a></p>
-                    <p class="mb-0 small"><a class="text-sm text-white text-decoration-none lg:text-md"
+                    <p aria-label="email address" class="mb-0 small"><a title="email address"
+                            class="text-sm text-white text-decoration-none lg:text-md"
                             href="{{ url('company-email') }}">s@solution.com</a></p>
                 </div>
                 <div class="mb-4 col-6 col-lg-2 mb-lg-0">
-                    <h4 class="text-sm lg:text-md">blogs</h4>
+                    <h2 aria-label="blogs" class="text-sm lg:text-md">blogs</h2>
                     <hr>
-                    <ul class="list-unstyled">
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                    <ul role="menu" class="list-unstyled">
+                        <li role='menuitem' class="mb-0">
+                            <a title='technology blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/Technology') }}">Technology</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='sport blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/sport') }}">Sport</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='lifestyle blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/lifestyle') }}">Lifestyle</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='information blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/information') }}">Information</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='islamic blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/islamic') }}">Islamic</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='fashion blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/fashion') }}">fashion</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='movies blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/movie') }}">Movies</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='food blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/food') }}">Food</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='travel blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/travel') }}">Travel</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='business blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/business') }}">Business</a>
                         </li>
 
@@ -646,108 +664,139 @@
                     </ul>
                 </div>
                 <div class="mb-4 col-6 col-lg-2 mb-lg-0">
-                    <h4 class="text-sm lg:text-md">Tools</h4>
+                    <h2 aria-label="online tools" class="text-sm lg:text-md">Tools</h2>
                     <hr>
-                    <ul class="list-unstyled">
-                        <li class="mb-0">
+                    <ul role="menu" class="list-unstyled">
+                        <li role='menuitem' class="mb-0">
 
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                            <a title='instagram downloader' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/instagram-online-video-downloader') }}">Instagram video
                                 downloader</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='youtube downloader' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/youtube-online-video-downloader') }}">youtube video
                                 downloader</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='short url generator' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/short-url') }}">Short URL</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='paraphrasor' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/Paraphrase') }}">Paraphrase</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='cv generator' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/CV-generator') }}">CV generator</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='online coding tool' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/Online-code-editor') }}">Online coding</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='pdf editor' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/online-pdf-editor') }}">PDF Editor</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='pdf compression' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/online-pdf-compressor') }}">PDF Compression</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='pdf merging' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/online-pdf-merging') }}">PDF merging</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='pdf splitting' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/online-pdf-splitting') }}">PDF Splitting</a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='pdf to image' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/pdf-to-image') }}">PDF to Image </a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='hmtl to pdf' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/html-to-pdf') }}">HTML To PDF </a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='image to pdf' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/image-to-pdf') }}">Image To PDF </a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='iamge convertor' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/online-Image-converter') }}">Image converter </a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='image compression' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/online-images-compression') }}">images Compression </a>
                         </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
+                        <li role='menuitem' class="mb-0">
+                            <a title='extract text from image'
+                                class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('online-tools/extract-text-from-image') }}">Extract Text From Image</a>
                         </li>
 
                     </ul>
                 </div>
+                <div class="mb-4 col-6 col-lg-2 mb-lg-0">
+                    <h2 class="text-sm lg:text-md">Quick Links</h2>
+                    <hr>
+                    <ul aria-label="queic links" role='menu' class="list-unstyled">
+                        <li role='menuitem' class="mb-1">
+                            <a title='aboute us' class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('https://localhost:8000/#about-us') }}">About us</a>
+                        </li>
+                        <li role="menuitem" class="mb-1">
+                            <a title='contact us' class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('https://localhost:8000/#contacts') }}">Contacts</a>
+                        </li>
+                        <li role="menuitem" class="mb-1">
+                            <a title='quest post' class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('Guest-post') }}">Guest post</a>
+                        </li>
+                        <li role="menuitem" class="mb-1">
+                            <a title='our privacy policy' class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('privacy-policy') }}">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col-12 col-lg-3">
                     <div class="pt-4 border-top d-lg-none"></div>
-                    <h4 class="text-sm lg:text-md">Subscribe</h4>
+                    <h2 class="text-sm lg:text-md">Subscribe</h2>
                     <div class="mb-2 input-group">
-                        <input class="text-sm form-cont3ol bg-light lg:text-md"
-                            placeholder="Email graydres focus:bg-blue-100  s" type="text"> <button
-                            class="btn btn-primary" type="button">Subscribe</button>
+                        <form action="" aria-label="subscribe form">
+                            @csrf
+                            <input class="text-sm form-cont3ol bg-light lg:text-md" required name="email"
+                                aria-label="email address" placeholder="Email " type="email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </form>
                     </div>
                     <p class="mb-0 text-sm text-white small lg:text-md">Sign up for our newsletter to get the latest
                         updates on features and releases.</p>
-                    <p class="mb-0 text-sm text-white small lg:text-md">Created by: <a href="http://">Mohammad Hussain
+                    <p class="mb-0 text-sm text-white small lg:text-md">Created by: <a title="know more about me"
+                            href="http://">Mohammad Hussain
                             "Sarvari"</a></p>
                 </div>
             </div>
             <div class="py-3 d-lg-flex align-item-ceneter justify-content-between border-top py-lg-2 mt-lg-5">
                 <div class="mb-2 text-sm text-white small mb-lg-0 lg:text-md">
                     © Copyright 2024 Mohammad hussain "sarvari".
-                    <p class="text-sm text-white lg:text-md">thank <a href="https://icons8.com/illustrations"
-                            class="text-white">icons8</a>'s designer for there beautifull Illustrations.</p>
+                    <p class="text-sm text-white lg:text-md">thank <a title="icons8 website"
+                            href="https://icons8.com/illustrations" class="text-white">icons8</a>'s designer for there
+                        beautifull Illustrations.</p>
 
-                    <a class="mb-2 text-sm text-white lg:text-md d-block d-lg-inline ms-lg-3 mb-lg-0"
+                    <a title="privacy policy"
+                        class="mb-2 text-sm text-white lg:text-md d-block d-lg-inline ms-lg-3 mb-lg-0"
                         href="">Privacy Policy</a>
-                    <a class="mb-2 text-sm text-white lg:text-md d-block d-lg-inline ms-lg-3 mb-lg-0"
+                    <a title="term of services"
+                        class="mb-2 text-sm text-white lg:text-md d-block d-lg-inline ms-lg-3 mb-lg-0"
                         href="">Terms of Service</a>
                 </div>
 
                 <div class="flex">
                     {{-- instagram --}}
-                    <a class="ml-2 me-2" href="">
+                    <a  class="ml-2 me-2" title="follow us on instagram"
+                        aria-label="follow us on instagram" href="">
                         <svg class="bi bi-instagram" fill="#fff" height="16" viewbox="0 0 16 16"
                             width="16" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -756,7 +805,8 @@
                         </svg>
                     </a>
                     {{-- x --}}
-                    <a class="ml-2 me-2" href="">
+                    <a title="follow us on twitter" aria-label="follow us on twitter" class="ml-2 me-2"
+                        href="">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="16" width="16"
                             shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
                             image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
@@ -766,7 +816,8 @@
                         </svg>
                     </a>
                     {{-- facebook --}}
-                    <a class="ml-2 me-2" href="">
+                    <a class="ml-2 me-2" title="follow us on facebook" aria-label="follow us on facebook"
+                        href="">
                         <svg class="bi bi-facebook text-primary" fill="#fff" height="16" viewbox="0 0 16 16"
                             width="16" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -777,7 +828,6 @@
             </div>
         </div>
     </footer>
-
     <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
     <script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
     <script type="module" src="{{ asset('js/custom.js') }}"></script>
