@@ -51,5 +51,11 @@ class tools extends Controller
     public function online_images_compression(){
       return view('online_images_compression');
     }
+    public function extract_text_from_image(){
+      return view('extract_text_from_image');
+    }
+    public function online_tools(){
+      return view('Online_tools');
+    }
    
 }

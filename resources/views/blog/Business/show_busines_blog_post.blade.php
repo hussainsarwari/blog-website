@@ -308,7 +308,7 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Moview') }}"
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Movie') }}"
                                             role="menuitem" title="Movies blog">Movies</a>
                                     </li>
 
@@ -376,29 +376,12 @@
     <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-[500] ">
         <!-- Modal Content -->
         <div
-            class="bg-white w-full max-w-md z-[310] m-auto rounded-lg p-6 text-center shadow-lg transform scale-95  transition-transform duration-300 ease-in-out">
-            <button aria-label="button for close the download pdf box" id="closeModal"
-                class="text-gray-500 hover:text-gray-700 absolute top-4 right-4 text-2xl">
-                &times;
-            </button>
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Download as PDF</h2>
-            <p class="text-gray-600 mb-6">Please enter your email to start the download.</p>
-            <form id="emailForm" role="save user email and start download ">
-                <input type="email" placeholder="Your Email" aria-label="user email address" aria-required="true"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
-                    required />
-                <button type="submit" aria-label="submite the form" aria-controls="emailForm"
-                    class="bg-blue-500 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform transform hover:scale-105">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-5 h-5 mr-2" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                        <polyline points="7 10 12 15 17 10" />
-                        <line x1="12" y1="15" x2="12" y2="3" />
-                    </svg>
-                    Download PDF
-                </button>
-            </form>
+            class="bg-white w-[50%] relative top-[10em]  z-[310] m-auto rounded-lg  text-center shadow-lg transform scale-95  transition-transform duration-300 ease-in-out">
+           <p class="text-md text-white font-semibold text-center p-4 bg-blue-400" style="font-size: 24px;">Download will start after <span class="seconde"></span>  secondes</p>
+            <div aria-label="show advertice" class="w-[100%] h-[20em] bg-white " class>
+  show advertice
+            </div>
+            
         </div>
     </div>
 
@@ -557,8 +540,8 @@
 
                     </div>
                     <div class=" w-[20em] text-end">
-                        <p style="color:#475569;"> Downloaded : <span>201</span></p>
-                        <p style="color:#475569;"> Read by : <span class="mx-1">200</span> People </p>
+                        <p style="color:#475569;">Downloaded: <span>201</span></p>
+                        <p style="color:#475569;"> Visited: <span class="mx-1">200</span>  </p>
                         <p class=" text-yellow-600  flex justify-end ">241
                             <svg width="20" height="20" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -977,32 +960,33 @@
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='information blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/information') }}">Information</a>
+                                href="{{ url('blog/Information') }}">Information</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='islamic blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/islamic') }}">Islamic</a>
+                                href="{{ url('blog/Islamic') }}">Islamic</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='fashion blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/fashion') }}">fashion</a>
+                                href="{{ url('blog/Fashion') }}">fashion</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='movies blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/movie') }}">Movies</a>
+                                href="{{ url('blog/Movie') }}">Movies</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='food blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/food') }}">Food</a>
+                                href="{{ url('blog/Food') }}">Food</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='travel blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/travel') }}">Travel</a>
+                                href="{{ url('blog/Travel') }}">Travel</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='business blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/business') }}">Business</a>
+                                href="{{ url('blog/Business') }}">Business</a>
                         </li>
+
 
 
 

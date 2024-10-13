@@ -1,25 +1,32 @@
 const downloadBtn = document.getElementById('downloadBtn');
 const modalOverlay = document.getElementById('modalOverlay');
 const closeModal = document.getElementById('closeModal');
+const secondes = document.querySelector('.seconde');
 
 downloadBtn.addEventListener('click', () => {
+    let timer =5;
+    secondes.innerHTML=timer;
     modalOverlay.classList.remove('hidden');
     modalOverlay.querySelector('.scale-95').classList.add('scale-100');
+    let interval=setInterval(()=>{  
+        if (timer<=0) {
+            
+            modalOverlay.classList.add('hidden');
+            modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
+           
+            clearInterval(interval);
+        }else{
+
+            secondes.innerHTML=timer;
+            timer--
+        } 
+      
+      
+    },1000)
+    
 });
 
-closeModal.addEventListener('click', () => {
-    modalOverlay.classList.add('hidden');
-    modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
-});
-
-// Close modal if clicked outside the form
-window.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-        modalOverlay.classList.add('hidden');
-        modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
-    }
-});
-
+// comment section 
 // reply section
 const replyBtns = document.querySelectorAll(".replyBtn");
 const reply_and_registe = document.querySelectorAll(".reply_and_registe"); //register and replay

@@ -315,7 +315,7 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Moview') }}"
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Movie') }}"
                                             role="menuitem" title="Movies blog">Movies</a>
                                     </li>
 
@@ -483,35 +483,32 @@
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='information blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/information') }}">Information</a>
+                                href="{{ url('blog/Information') }}">Information</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='islamic blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/islamic') }}">Islamic</a>
+                                href="{{ url('blog/Islamic') }}">Islamic</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='fashion blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/fashion') }}">fashion</a>
+                                href="{{ url('blog/Fashion') }}">fashion</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='movies blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/movie') }}">Movies</a>
+                                href="{{ url('blog/Movie') }}">Movies</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='food blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/food') }}">Food</a>
+                                href="{{ url('blog/Food') }}">Food</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='travel blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/travel') }}">Travel</a>
+                                href="{{ url('blog/Travel') }}">Travel</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='business blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/business') }}">Business</a>
+                                href="{{ url('blog/Business') }}">Business</a>
                         </li>
-
-
-
 
 
                     </ul>
