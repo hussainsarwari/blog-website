@@ -25,6 +25,8 @@ Route::get('/online-tools/html-to-pdf', [tools::class, 'html_to_pdf'])->name('ht
 Route::get('/online-tools/image-to-pdf', [tools::class, 'image_to_pdf'])->name('image-to-pdf');
 Route::get('/online-tools/online-Image-converter', [tools::class, 'online_Image_converter'])->name('online-Image-converter');
 Route::get('/online-tools/online-images-compression', [tools::class, 'online_images_compression'])->name('online-images-compression');
+// create a view for online-tools/extract-text-from-image
+Route::get('/online-tools/extract-text-from-image', [tools::class, 'online_images_compression'])->name('online-images-compression');
 Route::get('/blog/business', [blogSection::class, 'business'])->name('business');
 Route::get('/blog/business/{blog_title}', [blogSection::class, 'show_blog'])->name('business');
 Auth::routes();

@@ -37,7 +37,7 @@
 
 
 
-    <div id="preloader">
+    <div aria-hidden="true" id="preloader">
         <div class="flex justify-center loader" style="align-items: center;">
             <div class="box box0">
                 <div></div>
@@ -207,21 +207,21 @@
                                     <!-- Fourth Tool Item -->
                                     <li class="hover:bg-blue-100">
                                         <a class="px-1 w-full text-center"
-                                            href="{{ url('online-tools/paraphrase') }}" role="menuitem"
+                                            href="{{ url('online-tools/Paraphrase') }}" role="menuitem"
                                             title="Paraphrase Tool">Paraphrase Tool</a>
                                     </li>
 
                                     <!-- Fifth Tool Item -->
                                     <li class="hover:bg-blue-100">
                                         <a class="px-1 w-full text-center"
-                                            href="{{ url('online-tools/cv-generator') }}" role="menuitem"
+                                            href="{{ url('online-tools/CV-generator') }}" role="menuitem"
                                             title="CV Generator Tool">CV Generator</a>
                                     </li>
 
                                     <!-- Sixth Tool Item -->
                                     <li class="hover:bg-blue-100">
                                         <a class="px-1 w-full text-center"
-                                            href="{{ url('online-tools/online-code-editor') }}" role="menuitem"
+                                            href="{{ url('online-tools/Online-code-editor') }}" role="menuitem"
                                             title="Online Code Editor">Online Code Editor</a>
                                     </li>
 
