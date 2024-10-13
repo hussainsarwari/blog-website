@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -459,7 +461,7 @@
 
 
         <div
-            class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[5em] rounded-full z-[-1]">
+            class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[-5em] rounded-full z-[-1]">
         </div>
         <div class="container bg-white shadow-2xl  p-3 relative top-[40em] m-auto   rounded-xl ">
 
@@ -825,79 +827,26 @@
                     <h4 class="text-sm lg:text-md">Tools</h4>
                     <hr>
                     <ul class="list-unstyled">
-
                         <li class="mb-0">
 
+                            <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/instagram-online-video-downloader')}}">Instagram video downloader</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/youtube-online-video-downloader')}}">youtube video downloader</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/short-url')}}">Short URL</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/Paraphrase')}}">Paraphrase</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/CV-generator')}}">CV generator</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/Online-code-editor')}}">Online coding</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-pdf-editor')}}">PDF Editor</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-pdf-compressor')}}">PDF Compression</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-pdf-merging')}}">PDF merging</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-pdf-splitting')}}">PDF Splitting</a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/pdf-to-image')}}">PDF to Image </a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/html-to-pdf')}}">HTML To PDF </a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/image-to-pdf')}}">Image To  PDF </a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-Image-converter')}}">Image converter </a></li> <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-images-compression')}}">images Compression </a></li>
+                              <li class="mb-0">
+                                <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/extract-text-from-image')}}">Extract Text From Image</a></li>				
 
-
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('instagram-online-video-downloader') }}">Instagram video downloader</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('youtube-online-video-downloader') }}">youtube video downloader</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('') }}">Short URL</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('Paraphrase') }}">Paraphrase</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('CV-generator') }}">CV generator</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('Online-code-editor') }}">Online coding</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-editor') }}">PDF Editor</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-compressor') }}">PDF Compression</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-merging') }}">PDF merging</a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-pdf-splitting') }}">PDF Splitting</a>
-                        </li>
-
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('pdf-to-image') }}">PDF to Image </a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('html-to-pdf') }}">HTML To PDF </a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('image-to-pdf') }}">Image To PDF </a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-Image-converter') }}">Image converter </a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-images-compression') }}">images Compression </a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('online-video-compression') }}">video Compression </a>
-                        </li>
-                        <li class="mb-0">
-                            <a class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('extract-text-from-image') }}">Extract Text From Image</a>
-                        </li>
                     </ul>
                 </div>
                 <div class="mb-4 col-6 col-lg-2 mb-lg-0">

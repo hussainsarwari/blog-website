@@ -37,7 +37,7 @@
     @vite(['resources/css/owl-carousel.css'])
     @vite(['resources/css/templatemo-art-factory.css'])
     @vite(['resources/css/style.css'])
-    @vite(['resources/js/img_to_pdf.js'])
+
     <script type="module" src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
     <script type="module" src="{{asset('js/jquery.counterup.min.js')}}"></script>
     <script type="module" src="{{asset('js/popper.js')}}"></script>
@@ -46,6 +46,8 @@
     <script type="module" src="{{asset('js/scrollreveal.min.js')}}"></script>
     <script type="module" src="{{asset('js/waypoints.min.js')}}"></script>
     <script type="module" src="{{asset('js/custom.js')}}"></script>
+    
+    <script type="module" src="{{asset('js/img_to_pdf.js')}}"></script>
 
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <meta name="robots" content="index, follow">
@@ -405,30 +407,26 @@
           <div class="mb-4 col-6 col-lg-2 mb-lg-0">
               <h4 class="text-sm lg:text-md">Tools</h4><hr>
               <ul class="list-unstyled">
-                  
-                             <li class="mb-0">
+                <li class="mb-0">
 
-
-
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('instagram-online-video-downloader')}}">Instagram video downloader</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('youtube-online-video-downloader')}}">youtube video downloader</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('short-url')}}">Short URL</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('Paraphrase')}}">Paraphrase</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('CV-generator')}}">CV generator</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('Online-code-editor')}}">Online coding</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-editor')}}">PDF Editor</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-compressor')}}">PDF Compression</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-merging')}}">PDF merging</a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-pdf-splitting')}}">PDF Splitting</a></li>  <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('pdf-to-image')}}">PDF to Image </a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('html-to-pdf')}}">HTML To PDF </a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('image-to-pdf')}}">Image To  PDF </a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-Image-converter')}}">Image converter </a></li> <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-images-compression')}}">images Compression </a></li>
-                               			
-                               <li class="mb-0">
-                              <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('extract-text-from-image')}}">Extract Text From Image</a></li>				
-              </ul>
+                    <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/instagram-online-video-downloader')}}">Instagram video downloader</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/youtube-online-video-downloader')}}">youtube video downloader</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/short-url')}}">Short URL</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/Paraphrase')}}">Paraphrase</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/CV-generator')}}">CV generator</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/Online-code-editor')}}">Online coding</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-pdf-editor')}}">PDF Editor</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-pdf-compressor')}}">PDF Compression</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-pdf-merging')}}">PDF merging</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-pdf-splitting')}}">PDF Splitting</a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/pdf-to-image')}}">PDF to Image </a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/html-to-pdf')}}">HTML To PDF </a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/image-to-pdf')}}">Image To  PDF </a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-Image-converter')}}">Image converter </a></li> <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/online-images-compression')}}">images Compression </a></li>
+                      <li class="mb-0">
+                        <a class="text-sm text-white lg:text-md text-decoration-none" href="{{url('online-tools/extract-text-from-image')}}">Extract Text From Image</a></li>				
+</ul>
           </div>
           <div class="mb-4 col-6 col-lg-2 mb-lg-0">
               <h4 class="text-sm lg:text-md">Quick Links</h4>
