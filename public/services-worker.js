@@ -1,7 +1,7 @@
 self.addEventListener("install", (event) => {
     event.waitUntil(
       caches
-        .open("offline")
+        .open("ttt")
         .then((cache) =>
           cache.addAll([
             "/images/about_US.git",
@@ -35,10 +35,23 @@ self.addEventListener("install", (event) => {
             "/js/popper.js",
             "/js/scrollreveal.min.js",
             "/js/waypoints.min.js",
-            "/js/shows_blog_post.js",
             
           ]),
         ),
+    );
+  });
+  self.addEventListener('activate', event => {
+    event.waitUntil(
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            if (cacheName !== 'ttt') {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
     );
   });
   
@@ -57,7 +70,7 @@ self.addEventListener("install", (event) => {
               // and serve second one
               let responseClone = response.clone();
   
-              caches.open("offline").then((cache) => {
+              caches.open("ttt").then((cache) => {
                 cache.put(event.request, responseClone);
               });
               return response;

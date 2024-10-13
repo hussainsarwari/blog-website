@@ -39,72 +39,10 @@
     @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
-    @vite(['resources/css/templatemo-art-factory.css'])
-    @vite(['resources/css/style.css'])
-    @vite(['resources/css/animations.css'])
+    {{-- @vite(['resources/css/templatemo-art-factory.css']) --}}
+    {{-- @vite(['resources/css/style.css']) --}}
 
 
-
-    <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
-    <script type="module" src="{{ asset('js/jquery.counterup.min.js') }}"></script>
-    <script type="module" src="{{ asset('js/popper.js') }}"></script>
-    <script type="module" src="{{ asset('js/imgfix.min.js') }}"></script>
-    <script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
-    <script type="module" src="{{ asset('js/scrollreveal.min.js') }}"></script>
-    <script type="module" src="{{ asset('js/waypoints.min.js') }}"></script>
-    <script type="module" src="{{ asset('js/custom.js') }}"></script>
-
-    <style>
-        .business_title::before {
-            content: '';
-            width: 10em;
-            display: block;
-            height: 5px;
-            background: #FFC107;
-            margin: auto;
-            border-radius: 100px;
-            top: 65px;
-            position: relative;
-        }
-
-        .business_title::after {
-            content: '';
-            width: 5em;
-            display: block;
-            height: 5px;
-            background: #FFC107;
-            margin: auto;
-            border-radius: 100px;
-            top: 30px;
-            position: relative;
-        }
-
-        @media screen and (max-width:900px) {
-            .business_title::before {
-                content: '';
-                width: 4em;
-                display: block;
-                height: 5px;
-                background: #FFC107;
-                margin: auto;
-                border-radius: 100px;
-                top: 100px;
-                position: relative;
-            }
-
-            .business_title::after {
-                content: '';
-                width: 2em;
-                display: block;
-                height: 5px;
-                background: #FFC107;
-                margin: auto;
-                border-radius: 100px;
-                top: 20px;
-                position: relative;
-            }
-        }
-    </style>
 </head>
 
 <body class="overflow-x-hidden">
@@ -228,7 +166,7 @@
 
 
 
-        <div class="2xl:overflow-x-hidden">
+        <div aria-hidden="true" class="2xl:overflow-x-hidden">
             <div class="row">
 
                 <div class="col-12">
@@ -288,7 +226,7 @@
                                     <!-- Fifth Tool Item -->
                                     <li class="hover:bg-blue-100">
                                         <a class="px-1 w-full text-center"
-                                            href="{{ url('online-tools/cv-generator') }}" role="menuitem"
+                                            href="{{ url('online-tools/CV-generator') }}" role="menuitem"
                                             title="CV Generator Tool">CV Generator</a>
                                     </li>
 
@@ -1163,6 +1101,12 @@
             ratingValueDisplay.textContent = this.value;
         });
     </script>
+
+    
+
+<script  type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
+<script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
+<script type="module" src="{{ asset('js/custom.js') }}"></script>
 </body>
 
 </html>

@@ -28,9 +28,8 @@
     @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
-    @vite(['resources/css/templatemo-art-factory.css'])
-    @vite(['resources/css/style.css'])
-    @vite(['resources/css/animations.css'])
+    {{-- @vite(['resources/css/templatemo-art-factory.css']) --}}
+    {{-- @vite(['resources/css/style.css']) --}}
 </head>
 
 <body class="overflow-x-hidden">
@@ -489,8 +488,8 @@
                             </svg>
                         </li>
                         <li aria-label="breadcrumb item">
-                            <a title="business blogs" href="{{ url('/blog/business') }}"
-                                class="text-blue-600 hover:text-blue-800">Business
+                            <a title="business blogs" href="{{ url('blog') }}"
+                                class="text-blue-600 hover:text-blue-800">
                                 Blog</a>
                         </li>
                         <li aria-label="breadcrumb line">
@@ -501,8 +500,20 @@
                             </svg>
                         </li>
                         <li aria-label="breadcrumb item">
-                            <a title="this post" href="{{ url('/blog/business/title') }}t"
-                                class="text-blue-600 hover:text-blue-800">Post Title</a>
+                            <a title="business blogs" href="{{ url('blog/Business') }}"
+                                class="text-blue-600 hover:text-blue-800">Business
+                                Blog</a>
+                        </li>
+                        <li aria-label="breadcrumb line">
+                            <svg class="h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </li>
+                        <li aria-label="breadcrumb item " class="text-blue-600 hover:text-blue-800">
+                            
+                                Post Title
                         </li>
                     </ol>
                 </nav>
@@ -1203,15 +1214,10 @@
             }
         }
     </style>
-    <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
-    {{-- <script type="module" src="{{ asset('js/jquery.counterup.min.js') }}"></script> --}}
-    <script type="module" src="{{ asset('js/popper.js') }}"></script>
-    {{-- <script type="module" src="{{ asset('js/imgfix.min.js') }}"></script> --}}
-    <script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
-    <script type="module" src="{{ asset('js/scrollreveal.min.js') }}"></script>
-    {{-- <script type="module" src="{{ asset('js/waypoints.min.js') }}"></script> --}}
-    <script type="module" src="{{ asset('js/custom.js') }}"></script>
-    <script type="module" src="{{ asset('js/shows_blog_post.js') }}"></script>
+   <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
+   <script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
+   <script type="module" src="{{ asset('js/custom.js') }}"></script>
+   <script type="module" src="{{ asset('js/shows_blog_post.js') }}"></script>
 
 </body>
 

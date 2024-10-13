@@ -35,16 +35,9 @@
     @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
-    @vite(['resources/css/templatemo-art-factory.css'])
-    @vite(['resources/css/style.css'])
-    <script type="module" src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
-    <script type="module" src="{{asset('js/jquery.counterup.min.js')}}"></script>
-    <script type="module" src="{{asset('js/popper.js')}}"></script>
-    <script type="module" src="{{asset('js/imgfix.min.js')}}"></script>
-    <script type="module" src="{{asset('js/owl-carousel.js')}}"></script>
-    <script type="module" src="{{asset('js/scrollreveal.min.js')}}"></script>
-    <script type="module" src="{{asset('js/waypoints.min.js')}}"></script>
-    <script type="module" src="{{asset('js/custom.js')}}"></script>
+    {{-- @vite(['resources/css/templatemo-art-factory.css']) --}}
+    {{-- @vite(['resources/css/style.css']) --}}
+
 </head>
 <body class="overflow-x-hidden">
     
@@ -568,5 +561,8 @@
 
 
 
+<script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
+<script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
+<script type="module" src="{{ asset('js/custom.js') }}"></script>
 </body>
 </html>
