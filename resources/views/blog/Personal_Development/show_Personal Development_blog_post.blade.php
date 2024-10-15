@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-
     <!-- Basic SEO Meta Tags -->
     <meta name="description" content="">
     <title>Time management</title>
     <meta name="keywords" content="Laravel, Blog ">
     <meta name="author" content="">
-
     <!-- Favicon Meta Tag -->
     <link rel="icon" href="{{ asset('images/logo2.png') }}" type="image/x-icon"> <!-- Path to your favicon file -->
     <link rel="shortcut icon" href="{{ asset('images/logo2.png') }}" type="image/x-icon">
-    <!-- Optional for older browsers -->
-
     <!-- Open Graph Meta Tags (for social media sharing: Facebook, LinkedIn) -->
     <meta property="og:title" content="">
     <meta property="og:description" content="">
@@ -27,22 +18,18 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
     <meta property="og:site_name" content="website name">
-
     <!-- Twitter Card Meta Tags (for Twitter sharing) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
     <meta name="robots" content="index, follow">
-
-
+    {{-- css --}}
     @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
     {{-- @vite(['resources/css/templatemo-art-factory.css']) --}}
     {{-- @vite(['resources/css/style.css']) --}}
-
-
 </head>
 
 <body class="overflow-x-hidden">
@@ -81,8 +68,8 @@
         </div>
     </div>
 
-    <header class="header-area header-sticky h-[80px] md:h-[140px] " style="z-index: 300;">
-        <div class="flex justify-between p-3 bg-blue-300 col d-none d-md-flex">
+    <header class="header-area header-sticky h-[80px] md:h-[140px]">
+     <div class="flex justify-between p-3 bg-blue-300 col d-none d-md-flex">
             <div class="d-flex">
                 <a title="my phone number"
                     class="text-[.5em] d-flex align-items-center text-decoration-none text-light md:text-xl"
@@ -166,7 +153,7 @@
 
 
 
-        <div aria-hidden="true" class="2xl:overflow-x-hidden">
+        <div class="2xl:overflow-x-hidden">
             <div class="row">
 
                 <div class="col-12">
@@ -306,8 +293,8 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Information') }}"
-                                            role="menuitem" title="Information blog">Information</a>
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Personal-Development') }}"
+                                            role="menuitem" title="Personal Development blog">Personal Development</a>
                                     </li>
 
                                     <li class="hover:bg-blue-100">
@@ -316,7 +303,7 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fasion') }}"
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fashion') }}"
                                             role="menuitem" title="Fashion blog">Fashion</a>
                                     </li>
 
@@ -363,482 +350,554 @@
             </div>
         </div>
     </header>
-    <div
-        class="rounded-full w-[8em] h-8em md:w-[30em] md:h-[30em] bg-yellow-300 absolute top-[60em] md:top-[50em] left-0 md:left-10 shadow-2xl shadow-yellow-500 box1">
-    </div>
-
 
 
 
     {{-- main section --}}
-    <div class="relative w-full h-screen mb-20 z-[200]">
-        <div class="container   p-3 relative top-[20em] m-auto  z-[180] ">
-            <h1 class="m-5 font-bold text-center text-blue-800 business_title">Welcome to Our Business <span
-                    class="text-yellow-300">
-
-                    Blog
-                </span>
-            </h1>
-            <p class="p-3 m-auto text-center text-blue-900">Our blog is designed to provide valuable insights,
-                strategic advice, and up-to-date knowledge to help you succeed in today’s fast-paced business
-                environment. Each post is backed by thorough research, drawing from trusted sources such as leading
-                blogs, articles, books, and more.</p>
-
-            {{-- search --}}
-            <form action="search_blog" method="post" class="relative flex flex-row mx-5 my-3 search">
-                @csrf
-                <input
-                    class="w-full p-3 text-blue-400 transition duration-300 ease-in-out rounded-lg shadow-lg bg-none bg-opacity-10 backdrop-blur-md focus:bg-opacity-20 focus:ring-2 focus:ring-white focus:outline-none placeholder:text-blue-300"
-                    placeholder="Search" type="search" name="search" required id="search">
-                <button type="submit ">
-                    <svg class="mx-2 bi bi-search absolute right-[1em] top-[1em]" fill="#333" height="20"
-                        viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
-                        </path>
-                    </svg>
-                </button>
-            </form>
-            <!-- fillter section -->
-            <div class="relative flex flex-col justify-center px-20 py-0 text-center bottom-[-2em] h-fit ">
-                <button onclick="toggleFilterMenu() "
-                    class="w-full px-6 py-3 text-white transition-all duration-300 bg-blue-400 shadow-md rounded-xl focus:outline-none focus:ring-4 focus:ring-none">
-                    Filter
-                </button>
-            </div>
-
-            <!-- Filter Menu with animation -->
-            <div id="filterMenu"
-                class="max-w-4xl relative z-[200] top-[1em]   mx-auto bg-white p-6  rounded-lg shadow-lg mt-8 hidden opacity-0 transition-opacity duration-300">
-                <div class="flex items-center justify-center mb-6">
-
-                    <button onclick="closeFilterMenu()"
-                        class="px-3 py-2 text-blue-500 transition-all duration-300 border-2 border-blue-500 rounded-md hover:text-red-500 focus:outline-none hover:border-red-500">
-                        close
-                    </button>
-                </div>
 
 
-                <!-- Filter by Tags (as clickable buttons) -->
-                <div class="mb-6 ">
-                    <label class="block mb-2 font-medium text-gray-700">Filter by Tags:</label>
-                    <div class="flex flex-wrap gap-2">
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Affiliate Marketing
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Online Businesses
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Marketing
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Degital Marketing
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Finance
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Business
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            E-commerce
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Business Strategy
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Startups
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Sales
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Customer Service
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Human Resources
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Business Development
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Investment
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Market Research
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Branding
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Product Management
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Email Marketing
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Social Marketing
-                        </button>
-                    </div>
-                </div>
+    {{-- btn download blog as pdf --}}
+    <div class="fixed bottom-20 right-4 z-50">
+        <button
+            class="bg-blue-500 text-white px-4 py-3 rounded-full shadow-lg flex items-center space-x-2 transform transition-transform duration-300 hover:scale-105 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            aria-label="Download blog as PDF" id="downloadBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-download">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span class="hidden sm:inline">Download as PDF</span>
+        </button>
+    </div>
 
-                <!-- Date Range Filter -->
-                <div class="mb-6">
-                    <label class="block mb-2 font-medium text-gray-700">Filter by Date Range:</label>
-                    <div class="flex flex-col ">
-                        <div class="flex-1">
-                            <label for="startDate" class="block mb-1 text-gray-500">Start Date:</label>
-                            <input type="date" id="startDate"
-                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div class="flex-1">
-                            <label for="endDate" class="block mb-1 text-gray-500">End Date:</label>
-                            <input type="date" id="endDate"
-                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rating Filter (Slider) -->
-                <div class="mb-6">
-                    <label for="rating" class="block mb-2 font-medium text-gray-700">Minimum Rating:</label>
-                    <input type="range" id="rating" min="1" max="5" step="1"
-                        class="w-full focus:ring-2 focus:ring-blue-500">
-                    <div class="mt-2 text-sm text-gray-500">Rating: <span id="ratingValue">3</span> stars or higher
-                    </div>
-                </div>
-
-                <!-- Sort By Filter -->
-                <div class="mb-6">
-                    <label for="sort" class="block mb-2 font-medium text-gray-700">Sort by:</label>
-                    <select id="sort"
-                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="latest">Latest</option>
-                        <option value="popular">Most Popular</option>
-                        <option value="trending">Trending</option>
-                        <option value="highestRated">Highest Rated</option>
-                    </select>
-                </div>
-
-                <!-- Filter Button -->
-                <div class="flex justify-end">
-                    <button
-                        class="px-6 py-3 text-white transition-all duration-300 bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
-                        Apply Filters
-                    </button>
-                </div>
-            </div>
-            {{-- end of fillter section --}}
-        </div>
-
-
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-[500] ">
+        <!-- Modal Content -->
         <div
-            class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[-5em] md:right-4 rounded-full z-[-1]">
+            class="bg-white w-[50%] relative top-[10em]  z-[310] m-auto rounded-lg  text-center shadow-lg transform scale-95  transition-transform duration-300 ease-in-out">
+           <p class="text-md text-white font-semibold text-center p-4 bg-blue-400" style="font-size: 24px;">Download will start after <span class="seconde"></span>  secondes</p>
+            <div aria-label="show advertice" class="w-[100%] h-[20em] bg-white " class>
+  show advertice
+            </div>
+            
         </div>
-        <div class="container bg-white shadow-2xl  p-3 relative top-[40em] m-auto   rounded-xl ">
-
-
-
-
-            <span class=" italic font-bold text-center text-blue-500  h-[2em] block w-full" style='font-size:2em;'>
-                Latest Articles </span>
-
-            <p class="text-center text-slate-400">
-                Discover our three most recent posts, featuring expert analyses, industry updates, and actionable
-                strategies to help you grow your business and enhance your leadership.
-            </p>
-
-
-
-            <hr>
-            <hr>
-
-
-
-
-            {{-- show 3 blog post --}}
-
-
-
-            <div class="flex flex-col xl:flex-row">
-
-                {{-- box 1 biggest --}}
-                <div
-                    class="flex flex-col items-center justify-center row-span-1 xl:items-baseline xl:row-span-2 xl:col-start-1">
-                    <a href="{{ url('/blog/business/' . 'title') }}"
-                        class="relative w-[80%] h-[20em]  xl:h-[40em] xl:w-[40em] flex justify-around flex-col rounded-lg shadow
-                     mt-4 text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
-                    ">
-                        <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                            class="absolute object-cover w-full h-full rounded-md ">
-                        <div
-                            class="absolute top-0 flex  h-full  flex-col 
-                        bg-gradient-to-t from-[#2867a3] to-none  backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
-                        ">
-
-                            <h3 class="mb-2 text-xl font-semibold text-white ">Large Blog Post Title</h3>
-                            <section>
-
-                                <p class="text-slate-300 ">This is a brief description of the large blog post. It
-                                    should
-                                    provide an overview of the content, enticing readers to click through and read more.
-                                </p>
-                                <div class="flex items-center mb-2">
-                                    <!-- Star Ratings -->
-
-
-                                    <span class="pr-1 text-yellow-300">241 </span>
-                                    <svg width="20" height="20" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                                            fill="none" stroke="yellow" stroke-width="1" />
-                                    </svg>
-                                </div>
-                                <div class="mt-2">
-                                    <span
-                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
-                                    <span
-                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
-                                </div>
-                                <div class="py-1 text-sm text-white author-text">
-
-                                    mohammad hussain sarvari
-
-                                </div>
-                                <div class="py-1 text-sm text-white date ">
-                                    04-2-2024
-                                </div>
-                            </section>
-                        </div>
-                    </a>
-                </div>
-                {{-- box 2 --}}
-                <div class="flex flex-col  h-[42em]  w-full mt-5 xl:mt-0">
-                    <div class="flex flex-col items-center justify-center xl:items-end xl:justify-normal">
-
-                        <a href="{{ url('/blog/business/' . 'title') }}"
-                            class="relative m-auto  w-[80%] h-[19em] xl:w-[20em]  flex justify-around flex-col rounded-lg shadow
-                     mt-[5em] text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
-                    ">
-                            <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                                class="absolute object-cover w-full h-full rounded-md">
-                            <div
-                                class="absolute top-0 flex  h-full  flex-col 
-                        bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
-                        ">
-
-                                <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
-                                <section>
-
-                                    <p class="text-slate-300 ">This is a brief description of the large blog post. It
-                                        should
-                                        provide an overview of the content, enticing readers to click through and read
-                                        more.
-                                    </p>
-                                    <div class="flex items-center mb-2">
-                                        <!-- Star Ratings -->
-
-
-                                        <span class="pr-1 text-yellow-300">241 </span>
-                                        <svg width="20" height="20" viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                                                fill="none" stroke="yellow" stroke-width="1" />
-                                        </svg>
-                                    </div>
-                                    <div class="mt-2">
-                                        <span
-                                            class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
-                                        <span
-                                            class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
-                                    </div>
-                                    <div class="py-1 text-sm text-white author-text">
-
-                                        mohammad hussain sarvari
-
-                                    </div>
-                                    <div class="py-1 text-sm text-white date ">
-                                        04-2-2024
-                                    </div>
-                                </section>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    {{-- box 3 --}}
-
-                    <div class="flex flex-col items-center ">
-                        <a href="{{ url('/blog/business/' . 'title') }}"
-                            class="absolute  w-[78%] h-[19em] xl:w-[20em]   flex justify-around flex-col rounded-lg shadow
-                    mt-4 text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
-                    ">
-                            <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                                class="absolute object-cover w-full h-full rounded-md">
-                            <div
-                                class="absolute top-0 flex  h-full  flex-col 
-                        bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
-                        ">
-
-                                <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
-                                <section>
-
-                                    <p class="text-slate-300 ">This is a brief description of the large blog post. It
-                                        should
-                                        provide an overview of the content, enticing readers to click through and read
-                                        more.
-                                    </p>
-                                    <div class="flex items-center mb-2">
-                                        <!-- Star Ratings -->
-
-                                        <span class="pr-1 text-yellow-300">241 </span>
-                                        <svg width="20" height="20" viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                                                fill="none" stroke="yellow" stroke-width="1" />
-                                        </svg>
-                                    </div>
-                                    <div class="mt-2">
-                                        <span
-                                            class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
-                                        <span
-                                            class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
-                                    </div>
-                                    <div class="py-1 text-sm text-white author-text">
-
-                                        mohammad hussain sarvari
-
-                                    </div>
-                                    <div class="py-1 text-sm text-white date ">
-                                        04-2-2024
-                                    </div>
-
-                                </section>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <hr>
-            <div class="">
-                {{-- advertise --}}
-            </div>
-            {{-- show all blog post(business) --}}
-
-
-
-
-
-
-
-
-            <div class="p-3 flex flex-col  min-h-[50em] sm:min-h-[40em] max-h-[150em]  overflow-y-auto mt-[20em]">
-                <hr>
-                <hr>
-                {{-- header --}}
-                <span class=" italic font-bold text-center text-blue-500  h-[2em] block w-full text-xl">All Business
-                    Posts</span>
-                <p class="text-center text-slate-400">
-                    Browse our full archive of business content, covering a wide range of topics from leadership and
-                    innovation to marketing and financial strategies. Our posts are designed to offer practical
-                    solutions and expert knowledge that drive real-world results.
-                </p>
-                <hr>
-                <hr>
-
-
-
-
-                <div class="p-3  w-full h-fit z-[101] mt-[10em]">
-
-
-                    <a href="{{ url('/blog/business/' . 'my name is hussain hahah') }}"
-                        class="flex flex-row w-[100%] justify-around p-0 my-3  transition-all duration-100 rounded-md  hover:underline  bg-slate-50 sm:shadow-xl hover:shadow-2xl ">
-
-                        {{-- contant --}}
-                        <div
-                            class="w-full h-[20em] flex flex-col justify-between p-4   z-[100]  bg-slate-900 backdrop-blur-0 hover:backdrop-blur-sm  rounded-md">
-                            <p class="mb-2 text-sm font-semibold text-blue-400 md:text-xl  p-2 rounded-md w-fi">Post
-                                Title
-
-                                <hr>
-                            </p>
-                            <section>
-
-                                <p class="text-sm text-blue-400">This is a brief description of the large blog post.
-                                    It
-                                    should
-                                    provide an overview of the content, enticing readers to click through and read more.
-                                </p>
-                                <div class="flex items-center mb-2">
-                                    <!-- Star Ratings -->
-
-                                    <span class="pr-1 text-yellow-600">241 </span>
-                                    <svg width="20" height="20" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                                            fill="none" stroke="#ca8a04" stroke-width="2" />
-                                    </svg>
-                                </div>
-                                <div class="mt-2">
-                                    <span
-                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Business</span>
-                                    <span
-                                        class="inline-block px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">Technology</span>
-                                </div>
-                                <div class="py-1 text-sm text-blue-400 author-text">
-
-                                    mohammad hussain sarvari
-
-                                </div>
-                                <div class="py-1 text-sm text-blue-400 date ">
-                                    04-2-2024
-                                </div>
-                            </section>
-
-                        </div>
-                        {{-- image --}}
-                        <div class="image hidden sm:block  m-auto w-full h-[20em] ">
-                            <img src="{{ url('images/2.jpg') }}" alt="Blog Post"
-                                class=" object-cover w-full h-full rounded-md">
-                        </div>
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-
     </div>
 
 
 
-  
+    {{-- advertise --}}
+    <div class="w-[80%] m-auto ad bg-white  h-[20em] relative top-[10em] z-[1]" aria-label="show advertise">
+        ads
+    </div>
+    <div aria-label="a circle shep for background image"
+        class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[-3em] md:right-[3em] rounded-full ">
+    </div>
+
+
+
+
+
+    <div aria-label="main part of website"
+        class="w-[80%] m-auto p-0 rounded-xl bg-slate-50 shadow-2xl    relative top-[15em] h-[600em]">
+        {{-- body --}}
+        <div class="flex h-[400em]  text-blue-500">
+            {{-- left side --}}
+            <div aria-label="left side bar" class="bg-slate-100 h-full p-2 hidden lg:inline w-[30%]  rounded-ss-2xl">
+                {{-- table of content --}}
+                <div class=" ">
+                    <h2 aria-label="table of content for large screen"
+                        class="w-full block text-center text-sm xl:text-2xl p-5 font-semibold table_of_content">Table
+                        Of
+                        Content</h2>
+                    <div class="body_of_table">
+                        <ul role="menu" aria-label="item of table of content"
+                            style="list-style-type: decimal; display: list-item;"
+                            class="flex justify-center flex-col list-decimal list-outside  w-[10em] xl:w-[90%] py-2 px-3 m-auto">
+                            <li aria-label="item of table of content" role="menuitem" class="break-words "><a
+                                    title="how to learn programming" href="#" class="relative ">how
+                                    to learn programming fast?</a></li>
+                        </ul>
+
+
+                    </div>
+                    <hr class="bg-yellow-400 w-[80%]  my-[3em] mx-auto">
+                </div>
+
+
+                {{-- top blog post --}}
+                <div aria-label="top business blog posts">
+                    <h3 class="w-full block text-center text-sm xl:text-2xl p-2 py-5 font-semibold table_of_content">
+                        Top Business's
+                        blog post</h3>
+                    <div class="body_of_table">
+                        <ol role="menu"
+                            class="flex justify-center flex-col list-decimal list-outside    w-[10em] xl:w-[90%] py-2 px-3 m-auto "
+                            style="list-style-type: decimal; display: list-item;">
+                            <li role="menuitem" class="  break-words"><a title="blog title" href="#"
+                                    class="relative ">how
+                                    to learn rogramming fast?
+                                    <hr class="bg-slate-700">
+                                </a></li>
+
+                        </ol>
+
+                    </div>
+                    <hr class="bg-yellow-400 w-[80%] my-[3em] mx-auto">
+                </div>
+
+                {{-- ads --}}
+                <div aria-label="show adversite" class="bg-white w-[90%] m-auto h-[60em]">
+                    <p>show ads here</p>
+                </div>
+
+            </div>
+            {{-- right side --}}
+            <div aria-label="right side bar"
+                class=" p-4 bg-white rounded-t-xl lg:rounded-ss-none lg:rounded-se-xl w-[100%] lg:w-[70%] start">
+                {{-- breadcrumb --}}
+                <nav aria-label="breadcrumb" class="p-2" aria-label="Breadcrumb">
+                    <ol aria-label="breadcrumb list" class="flex items-center space-x-4">
+                        <li aria-label="breadcrumb item">
+                            <a title="home" href="{{ url('/') }}"
+                                class="text-blue-600 hover:text-blue-800">Home</a>
+                        </li>
+                        <li aria-label="breadcrumb line">
+                            <svg class="h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </li>
+                        <li aria-label="breadcrumb item">
+                            <a title="business blogs" href="{{ url('blog') }}"
+                                class="text-blue-600 hover:text-blue-800">
+                                Blog</a>
+                        </li>
+                        <li aria-label="breadcrumb line">
+                            <svg class="h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </li>
+                        <li aria-label="breadcrumb item">
+                            <a title="Personal_development blogs" href="{{ url('blog/Personal-Development') }}"
+                                class="text-blue-600 hover:text-blue-800">Personal Development
+                                Blog</a>
+                        </li>
+                        <li aria-label="breadcrumb line">
+                            <svg class="h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </li>
+                        <li aria-label="breadcrumb item " class="text-blue-600 hover:text-blue-800">
+                            
+                                Post Title
+                        </li>
+                    </ol>
+                </nav>
+                <hr class="bg-slate-600 f-[80%] m-auto my-1">
+                <br>
+                {{-- blog  image --}}
+                <div aria-label="image" class="blog_img w-full  overflow-hidden md:max-h-[40em]   mb-[5em] ">
+                    <figure class="w-full flex justify-center items-center flex-col ">
+                        <picture class="m-auto">
+                            <source aria-label="blog's image for large divces" srcset="{{ url('images/2.jpg') }}"
+                                media="(min-width: 1280px)">
+                            <source aria-label="blog's image for small divces " srcset="{{ url('images/2.jpg') }}"
+                                media="(min-width: 768px)">
+                            <img aria-label="blog's image deafult" src="{{ url('images/2.jpg') }}" alt="logo"
+                                class=" rounded-md  md:max-h-[30em]">
+                        </picture>
+
+
+                        <figcaption aria-label="blog image information"
+                            class="w-full text-slate-600 text-center my-3">
+                            Image by from Example.com
+                        </figcaption>
+                    </figure>
+                </div>
+                <br>
+
+
+                <div aria-label="blog post details"
+                    class="article_information text-sm text-slate-600 flex items-center justify-between  ">
+                    <div class="text-slate-600">
+
+                        <p style="color:#475569;"> created by <span><a title="author" aria-label="author"
+                                    href="#" class="text-yellow-700">
+                                    Mohammad hussain </a></span>
+                            at: <span aria-label="date of write">04-12-2023</span> </p>
+                        <p style="color:#475569;">Updated at: <span aria-label="date of update">05-02-2024</span>
+                        </p>
+
+
+
+
+                    </div>
+                    <div class=" w-[20em] text-end">
+                        <p style="color:#475569;">Downloaded: <span>201</span></p>
+                        <p style="color:#475569;"> Visited: <span class="mx-1">200</span>  </p>
+                        <p class=" text-yellow-600  flex justify-end ">241
+                            <svg width="20" height="20" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                    fill="none" stroke="#ca8a04" stroke-width="1" />
+                            </svg>
+                        </p>
+                    </div>
+
+
+                </div>
+                <hr class="bg-slate-600">
+                <main class="h-[310em] overflow-y-auto scrollBox">
+                    {{-- title of blog --}}
+                    <h1 class="title_of_blog break-words text-md font-bold p-2 w-full" id="title"
+                        aria-label="title">it is
+                        jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggtitle
+                        of blog post</h1>
+                    {{-- introduction --}}
+                    <p class="introduction" aria-label="blog post introduction" aria-labelledby="title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloremque enim ad dolorum?
+                        Beatae officia, culpa quia iste natus, cum accusantium eum explicabo vero ad numquam delectus
+                        perferendis deleniti assumenda!
+                    </p>
+                    {{-- table of content for mobile --}}
+                    <div class="block lg:hidden ">
+                        <h3 aria-label="table of content for small screen"
+                            class="w-full block text-center text-2xl p-5 font-semibold table_of_content">Table Of
+                            Content</h3>
+                        <div class="body_of_table">
+                            <ul role="menu" class="text-center list-decimal list-inside space-y-2 text-lg">
+                                <li role="menuitem" class=""><a href="#" title="blog title"
+                                        class="relative pl-4 before:content-['•'] before:absolute before:-left-1 before:text-blue-500 before:text-[2em]">how
+                                        to learn programming fast?</a></li>
+
+
+                            </ul>
+
+                        </div>
+                        <hr class="bg-yellow-400 w-[80%] my-[3em] mx-auto">
+                    </div>
+                    {{-- body of content --}}
+                    <section aria-label="content of blog post" class="content h-[300em]">
+
+                    </section>
+                    <hr class="bg-slate-600">
+                    {{-- ads --}}
+                    <section aria-label="advertise" class=" h-[20em] w-[100%] m-auto shadow-md rounded-md">
+                        ads
+                    </section>
+
+                    {{-- FAG --}}
+                    <section aria-label="FAQ of this post"
+                        class="fag bg-slate-100 my-[3em] px-0 py-2 md:p-[2em] shadow-md rounded-md">
+                        <div class="container rounded-lg">
+                            <!-- ***** Section Title Start ***** -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="section-heading">
+                                        <h2 aria-label="Frequently asked questions title" class=" my-3 font-semibold "
+                                            style="color: rgb(14, 103, 236);">Frequently
+                                            Asked Questions</h2>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- ***** Section Title End ***** -->
+
+                            <div class="row">
+
+
+                                <div class="col-12 ">
+                                    <div class="accordions is-first-expanded ">
+                                        <article class="accordion">
+                                            <div class="accordion-head ">
+                                                <h3 id="question1" aria-label="FAQ question"
+                                                    class="text-blue-500 text-sm md:text-md">quesition </h3>
+
+
+
+
+                                            </div>
+                                            <div class="accordion-body">
+                                                <div class="content">
+                                                    <p aria-labelledby="question1" aria-label="answer of question"
+                                                        class="text-blue-400 bg-slate-100 p-1 md:p-2">
+                                                        ansower
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="accordion">
+                                            <div class="text-blue-500 accordion-head">
+                                                <h3 id="question2" class="text-blue-500 text-sm md:text-md">quesition
+                                                </h3>
+
+                                            </div>
+                                            <div class="accordion-body">
+                                                <div class="content">
+                                                    <p aria-labelledby="question2"
+                                                        class="text-blue-400 bg-slate-100 p-1 md:p-2">
+                                                        ansower
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                    {{-- tags --}}
+                    <section aria-label="Tags related to this blog post"
+                        class="tags bg-slate-100 p-3 my-5 rounded-md shadow-md text-slate-500">
+
+                        <h3 aria-label="tag header" class="text-xl font-semibold text-slate-600 mb-4">Tags:</h3>
+                        <ul role="menu" class="flex flex-wrap">
+                            <li role="menuitem" class="m-2">
+                                <a href="{{ url('/blog/business/tag/tag_url') }}" title="tags" rel="tag"
+                                    class="inline-block bg-blue-700 text-slate-100 px-4 py-2 rounded-full text-sm font-semibold transition-transform duration-200 hover:scale-105 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+                                    Business Strategy
+                                </a>
+                            </li>
+
+                            <!-- Add more tags here -->
+                        </ul>
+
+                    </section>
+
+                </main>
+                {{-- like and share section --}}
+                <div aria-label="like,share and dislike buttons"
+                    class="share_like  rounded-b-xl  bg-slate-100 p-3 h-[4em] flex justify-end items-center">
+
+                    <button aria-label="dislike button" title="dislike "
+                        class="dislike active:bg-blue-700 focus:outline-none bg-blue-500 p-2 rounded-md hover:bg-blue-400 mx-1 transition-all duration-150 ease-in">
+                        <svg width="39" height="30" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_15_129)">
+                                <rect width="30" height="30" fill="none" />
+                                <path stroke-width="2"
+                                    d="M22 11.5C22 12.6046 21.1046 13.5 20 13.5L19 13.5C17.8954 13.5 17 12.6046 17 11.5L17 5.5C17 4.39543 17.8954 3.5 19 3.5L20 3.5C21.1046 3.5 22 4.39543 22 5.5L22 11.5Z"
+                                    stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
+                                <path stroke-width="2"
+                                    d="M17 11.5C16 11.5 12 14 12 19C12 21 9 21 9 19C9 17 9 16 10 13.5L4 13.5C3.44772 13.5 3 13.0523 3 12.5L3 9.26039C3 8.77056 3.17976 8.29776 3.50518 7.93166L6.40331 4.67126C6.78285 4.24428 7.32686 3.99998 7.89813 3.99998L14.6667 3.99998C14.883 3.99998 15.0936 4.07016 15.2667 4.19998L17 5.49998"
+                                    stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_15_129">
+                                    <rect width="30" height="30" fill="none" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+
+                    <button aria-label="share button" title="share "
+                        class="share active:bg-blue-700 focus:outline-none bg-blue-500 p-2 rounded-md hover:bg-blue-400 mx-1 transition-all duration-150 ease-in">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0,0,256,256">
+                            <g fill="#fff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                <g transform="scale(10.66667,10.66667)">
+                                    <path
+                                        d="M18,2c-1.64501,0 -3,1.35499 -3,3c0,0.19095 0.02179,0.37712 0.05664,0.55859l-7.13477,4.16211c-0.52334,-0.44285 -1.1898,-0.7207 -1.92187,-0.7207c-1.64501,0 -3,1.35499 -3,3c0,1.64501 1.35499,3 3,3c0.73208,0 1.39854,-0.27785 1.92188,-0.7207l7.13477,4.16016c-0.03509,0.18206 -0.05664,0.36893 -0.05664,0.56055c0,1.64501 1.35499,3 3,3c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3c-0.73252,0 -1.39841,0.27933 -1.92187,0.72266l-7.13477,-4.16406c0.03485,-0.18147 0.05664,-0.36764 0.05664,-0.55859c0,-0.19095 -0.02179,-0.37712 -0.05664,-0.55859l7.13477,-4.16211c0.52333,0.44285 1.1898,0.7207 1.92188,0.7207c1.64501,0 3,-1.35499 3,-3c0,-1.64501 -1.35499,-3 -3,-3zM18,4c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM6,11c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1zM18,18c0.56413,0 1,0.43587 1,1c0,0.56413 -0.43587,1 -1,1c-0.56413,0 -1,-0.43587 -1,-1c0,-0.56413 0.43587,-1 1,-1z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+
+                    <button aria-label="like buttn" name="like_btn"
+                        class="like active:bg-blue-700 focus:outline-none bg-blue-500 p-2 rounded-md hover:bg-blue-400 mx-1 transition-all duration-150 ease-in">
+                        <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                fill="none" stroke="#fff" stroke-width="2" />
+                        </svg>
+                    </button>
+
+                </div>
+                {{-- add comment --}}
+                <div aria-label="leave a comment section"
+                    class="add_comment bg-slate-100 p3 h-[27em] my-5 rounded-md">
+
+                    <h2 aria-label="leave a comment header" class="text-2xl font-semibold py-4  text-center">
+
+                        Comment and see them in Morse Code!</h2>
+                    <form id="leave_comment" aria-label="leave a comment form" class="space-y-4 flex flex-col  p-3"
+                        action="/submit-comment" method="POST">
+                        @csrf <!-- Add CSRF token for security -->
+
+                        <input type="Name" id="Name" name="Name" required aria-label="name"
+                            aria-required="true"
+                            class="m-2 p-2 mx-auto w-full bg-slate-300 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200"
+                            placeholder="Enter your Name" aria-placeholder="enter your name">
+                        <input type="email" id="email" name="email" required aria-label="email"
+                            aria-required="true"
+                            class="m-2 p-2 mx-auto w-full bg-slate-300 outline-none border-none rounded-md focus:ring-none focus:border-blue-500 transition duration-200"
+                            placeholder="Enter your email" aria-placeholder="enter your email">
+
+                        <textarea id="comment" name="comment" required rows="4" aria-label="comment text" aria-required="true"
+                            class="mt-1 p-2  outline-none resize-none bg-slate-300 rounded-md w-full focus:ring-nonr focus:border-blue-500 transition duration-200"
+                            placeholder="Write your comment..." aria-placeholder="write your comment"></textarea>
+
+                        <button aria-labelledby="leave_comment" type="submit"
+                            class="flex items-center active:bg-slate-900 focus:outline-none justify-center px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200">
+                            <svg class="w-4 h-4 mr-2 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 15l-5-5h10l-5 5z" />
+                            </svg>
+                            Submit
+                        </button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+        <br>
+        {{-- footer of blog --}}
+        <div aria-label="footer of blog post" class="bg-white flex flex-col rounded-b-lg">
+            <div class="h-[40em]  bg-slate-100 p-3 pt-0">
+                {{-- related post --}}
+                <h3 aria-label="Related business's blog psot"
+                    class="w-full block text-center text-blue-600 md:text-2xl py-5 p-2 text-sm font-semibold table_of_content">
+                    Related
+                    Business's
+                    blog post</h3>
+                <div class="body_of_table h-[25em] p-2 overflow-y-auto">
+                    <ol role="menu"
+                        class="flex justify-center flex-col list-decimal list-outside  text-blue-500   w-[90%] py-2 px-3 m-auto"
+                        style="list-style-type: decimal; display: list-item; ">
+                        <li role="menuitem" class="w-[100%] text-start m-auto"><a title="blog title" href="#"
+                                class="relative   break-words">how
+                                to learn fast?
+                                <hr class="bg-slate-400">
+                            </a></li>
+
+
+                    </ol>
+
+                </div>
+                <hr class="bg-slate-400 w-[80%] my-[3em] mx-auto">
+
+            </div>
+            {{-- comments --}}
+            <section aria-label="User comments section"
+                class="comment flex flex-col h-[158em] rounded-b-lg justify-center">
+                <div class="bg-slate-100 h-[150em] justify-center flex flex-col">
+                    <h2 aria-label="comments"
+                        class="w-full block text-center text-blue-600 text-2xl p-5 font-semibold">Comments</h2>
+                    <button aria-label="change the text from morse code to normal text" aria-label=""
+                        class="p-2 active:bg-blue-700 focus:outline-none bg-blue-600 text-slate-100 m-auto w-[50%] transition-all duration-150 ease-in rounded-md">
+                        Toggle Normal Text
+                    </button>
+                    <hr class="bg-slate-600">
+                    <div class="h-[140em] overflow-y-auto">
+                        <!-- Comment Section -->
+
+                        <div
+                            class="bg-white max-h-[50em] overflow-y-auto p-6 rounded-lg shadow-md m-3 transform transition-transform duration-300">
+                            <div class="flex items-start space-x-4">
+                                <!-- User Icon -->
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center"
+                                    aria-hidden="true">
+                                    <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 12c2.485 0 4.5-1.995 4.5-4.5S14.485 3 12 3 7.5 4.995 7.5 7.5 9.515 12 12 12zM16.5 15h-9c-.622 0-1.125.503-1.125 1.125v.75c0 .622.503 1.125 1.125 1.125h9c.622 0 1.125-.503 1.125-1.125v-.75c0-.622-.503-1.125-1.125-1.125z" />
+                                    </svg>
+                                </div>
+
+                                <div class="flex-1 ">
+                                    <div class="text-gray-700">
+                                        <span aria-label="this persion " class="font-semibold">mohammad <span
+                                                aria-label="commented to" class="text-slate-500"> commented
+                                                to <span>post</span></span></span>
+                                        <span class="text-sm text-gray-500 ml-2">2 hours ago</span>
+                                    </div>
+                                    <p class="mt-2 text-gray-600 break-words ">
+                                        - .... .. ... / .. ... / .- / --. .-. . .- - / .--. --- ... - -.-. .... .-.-.- /
+                                        .. / .-. . .-.. .-.. -.-- / . -. .--- --- -. .-.. .- - . -.. / .-. . .- -.. ..
+                                        -. --. / .. - .-.-.- / .-.. --- --- -.- .. -. --. / ..-. --- .-. / -- --- .-. .
+                                        / -.-. --- -. - . -. - / .-.. .. -.- . / - .... .. ... .
+                                    </p>
+
+                                    <!-- Reaction Buttons -->
+                                    <div class="flex items-center mt-4 text-gray-500">
+                                        <button
+                                            class="likeBtn flex active:text-blue-900 focus:outline-none items-center hover:text-blue-500 ease-in transition duration-300">
+                                            <svg class="w-5 h-5 mr-1 likeIcon" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 15l7-7 7 7" />
+                                            </svg>
+                                            Like
+                                        </button>
+                                        <button data-userid="01"
+                                            class="replyBtn active:text-blue-900 focus:outline-none flex items-center hover:text-blue-500 transition duration-300">
+                                            <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 10h8M8 14h5" />
+                                            </svg>
+                                            Reply
+                                        </button>
+                                    </div>
+
+                                    <div
+                                        class="reply_and_registe hidden shadow-lg rounded-lg z-[100] p-3 h-full w-full relative left-0 mt-[2em] translate-y-5">
+                                        <form aria-label="reply form" action="">
+                                            @csrf
+                                            <label for="name" class="sr-only">Name</label>
+                                            <input required type="text" id="name" name="name"
+                                                aria-required="true"
+                                                class="w-full p-2 mt-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                                placeholder="Write your name">
+
+                                            <label for="email" class="sr-only">Email</label>
+                                            <input required type="email" id="email" name="email"
+                                                aria-required="true"
+                                                class="w-full p-2 mt-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                                placeholder="Write your email">
+
+                                            <label for="comment" class="sr-only">Comment</label>
+                                            <textarea id="comment" name="comment" required rows="4" aria-required="true"
+                                                class="mt-1 p-2 outline-none resize-none border border-gray-300 rounded-md w-full focus:ring-none focus:border-blue-500 transition duration-200"
+                                                placeholder="Write your comment..."></textarea>
+
+                                            <button aria-label="comment button"
+                                                class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg flex items-center hover:bg-blue-600 transition duration-300">
+                                                Comment
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repeat the above block for additional comments -->
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+
+
+
     {{-- footer section --}}
 
 
@@ -900,8 +959,8 @@
                                 href="{{ url('blog/lifestyle') }}">Lifestyle</a>
                         </li>
                         <li role='menuitem' class="mb-0">
-                            <a title='information blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/Information') }}">Information</a>
+                            <a title='Personal Development blog' class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('blog/Personal-Development') }}">Personal Development</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='islamic blog' class="text-sm text-white lg:text-md text-decoration-none"
@@ -927,7 +986,6 @@
                             <a title='business blog' class="text-sm text-white lg:text-md text-decoration-none"
                                 href="{{ url('blog/Business') }}">Business</a>
                         </li>
-
 
 
 
@@ -1099,43 +1157,50 @@
             </div>
         </div>
     </footer>
-    <script>
-        function toggleFilterMenu() {
-            const filterMenu = document.getElementById('filterMenu');
-            filterMenu.classList.toggle('hidden');
-            filterMenu.classList.toggle('opacity-0');
-            filterMenu.classList.toggle('opacity-100');
+    <style>
+        .table_of_content::before {
+            content: '';
+            width: 10em;
+            display: block;
+            height: 2px;
+            background: #FFC107;
+            margin: auto;
+            border-radius: 100px;
+            top: 50px;
+            position: relative;
         }
 
-        // Function to toggle tag active state
-        function toggleTag(tag) {
-            tag.classList.toggle('bg-blue-500');
-            tag.classList.toggle('text-white');
-            tag.classList.toggle('bg-gray-200');
-            tag.classList.toggle('text-gray-700');
+        .heart-pop {
+            animation: pop 0.3s ease-in-out;
         }
 
-        // Function to close the filter menu
-        function closeFilterMenu() {
-            const filterMenu = document.getElementById('filterMenu');
-            filterMenu.classList.remove('opacity-100');
-            filterMenu.classList.add('opacity-0');
-            setTimeout(() => {
-                filterMenu.classList.add('hidden');
-            }, 300); // Timeout matches the animation duration
+        @keyframes pop {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.4);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
-        const ratingInput = document.getElementById('rating');
-        const ratingValueDisplay = document.getElementById('ratingValue');
-        ratingInput.addEventListener('input', function() {
-            ratingValueDisplay.textContent = this.value;
-        });
-    </script>
 
-    
+        @media screen and (max-width:1280px) {
+            .table_of_content::before {
 
-<script  type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
-<script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
-<script type="module" src="{{ asset('js/custom.js') }}"></script>
+                width: 10em;
+                top: 48px;
+            }
+        }
+    </style>
+   <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
+   <script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
+   <script type="module" src="{{ asset('js/custom.js') }}"></script>
+   <script type="module" src="{{ asset('js/shows_blog_post.js') }}"></script>
+
 </body>
 
 </html>

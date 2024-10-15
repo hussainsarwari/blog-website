@@ -293,8 +293,8 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Information') }}"
-                                            role="menuitem" title="Information blog">Information</a>
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Personal-Development') }}"
+                                            role="menuitem" title="Personal Development blog">Personal Development</a>
                                     </li>
 
                                     <li class="hover:bg-blue-100">
@@ -303,7 +303,7 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fasion') }}"
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fashion') }}"
                                             role="menuitem" title="Fashion blog">Fashion</a>
                                     </li>
 
@@ -483,8 +483,8 @@
                             </svg>
                         </li>
                         <li aria-label="breadcrumb item">
-                            <a title="business blogs" href="{{ url('blog/Business') }}"
-                                class="text-blue-600 hover:text-blue-800">Business
+                            <a title="Travel blogs" href="{{ url('blog/Travel') }}"
+                                class="text-blue-600 hover:text-blue-800">Travel
                                 Blog</a>
                         </li>
                         <li aria-label="breadcrumb line">
@@ -959,8 +959,8 @@
                                 href="{{ url('blog/lifestyle') }}">Lifestyle</a>
                         </li>
                         <li role='menuitem' class="mb-0">
-                            <a title='information blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/Information') }}">Information</a>
+                            <a title='Personal Development blog' class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('blog/Personal-Development') }}">Personal Development</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='islamic blog' class="text-sm text-white lg:text-md text-decoration-none"

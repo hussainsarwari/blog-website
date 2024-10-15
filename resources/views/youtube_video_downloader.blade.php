@@ -292,8 +292,8 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Information') }}"
-                                            role="menuitem" title="Information blog">Information</a>
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Personal-Development') }}"
+                                            role="menuitem" title="Personal Development blog">Personal Development</a>
                                     </li>
 
                                     <li class="hover:bg-blue-100">
@@ -302,7 +302,7 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fasion') }}"
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fashion') }}"
                                             role="menuitem" title="Fashion blog">Fashion</a>
                                     </li>
 
@@ -452,8 +452,8 @@
                                 href="{{ url('blog/lifestyle') }}">Lifestyle</a>
                         </li>
                         <li role='menuitem' class="mb-0">
-                            <a title='information blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/Information') }}">Information</a>
+                            <a title='Personal Development blog' class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('blog/Personal-Development') }}">Personal Development</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='islamic blog' class="text-sm text-white lg:text-md text-decoration-none"
@@ -567,11 +567,11 @@
                     <ul aria-label="queic links" role='menu' class="list-unstyled">
                         <li role='menuitem' class="mb-1">
                             <a title='aboute us' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('https://localhost:8000/#about-us') }}">About us</a>
+                                href="{{ route('home') }}#about-us">About us</a>
                         </li>
                         <li role="menuitem" class="mb-1">
                             <a title='contact us' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('https://localhost:8000/#contacts') }}">Contacts</a>
+                                href="{{ route('home') }}#contacts">Contacts</a>
                         </li>
                         <li role="menuitem" class="mb-1">
                             <a title='quest post' class="text-sm text-white lg:text-md text-decoration-none"
@@ -597,7 +597,7 @@
                     <p class="mb-0 text-sm text-white small lg:text-md">Sign up for our newsletter to get the latest
                         updates on features and releases.</p>
                     <p class="mb-0 text-sm text-white small lg:text-md">Created by: <a title="know more about me"
-                            href="http://">Mohammad Hussain
+                            href="{{url('Mohammad-Hussain-Sarvari')}}">Mohammad Hussain
                             "Sarvari"</a></p>
                 </div>
             </div>
@@ -607,13 +607,6 @@
                     <p class="text-sm text-white lg:text-md">thank <a title="icons8 website"
                             href="https://icons8.com/illustrations" class="text-white">icons8</a>'s designer for there
                         beautifull Illustrations.</p>
-
-                    <a title="privacy policy"
-                        class="mb-2 text-sm text-white lg:text-md d-block d-lg-inline ms-lg-3 mb-lg-0"
-                        href="">Privacy Policy</a>
-                    <a title="term of services"
-                        class="mb-2 text-sm text-white lg:text-md d-block d-lg-inline ms-lg-3 mb-lg-0"
-                        href="">Terms of Service</a>
                 </div>
 
                 <div class="flex">

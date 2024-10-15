@@ -306,8 +306,8 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Information') }}"
-                                            role="menuitem" title="Information blog">Information</a>
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Personal-Development') }}"
+                                            role="menuitem" title="Personal Development blog">Personal Development</a>
                                     </li>
 
                                     <li class="hover:bg-blue-100">
@@ -316,7 +316,7 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fasion') }}"
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fashion') }}"
                                             role="menuitem" title="Fashion blog">Fashion</a>
                                     </li>
 
@@ -379,7 +379,7 @@
                     Blog
                 </span>
             </h1>
-            <p class="p-3 m-auto text-center text-blue-900">Our blog is designed to provide valuable insights,
+            <p class="p-3 m-auto text-center text-blue-950 " style="font-size: 16px;">Our blog is designed to provide valuable insights,
                 strategic advice, and up-to-date knowledge to help you succeed in today’s fast-paced business
                 environment. Each post is backed by thorough research, drawing from trusted sources such as leading
                 blogs, articles, books, and more.</p>
@@ -596,7 +596,7 @@
                         bg-gradient-to-t from-[#2867a3] to-none  backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
-                            <h3 class="mb-2 text-xl font-semibold text-white ">Large Blog Post Title</h3>
+                            <h3 class="mb-2 text-blue-400 text-sm p-2 rounded-md bg-slate-900 font-semibold ">Large Blog Post Title</h3>
                             <section>
 
                                 <p class="text-slate-300 ">This is a brief description of the large blog post. It
@@ -648,7 +648,7 @@
                         bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
-                                <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
+                                <h3 class="mb-2 text-blue-400 text-sm p-2 rounded-md bg-slate-900 font-semibold">Large Blog Post Title</h3>
                                 <section>
 
                                     <p class="text-slate-300 ">This is a brief description of the large blog post. It
@@ -702,7 +702,7 @@
                         bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
-                                <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
+                                <h3 class="mb-2 text-blue-400 text-sm p-2 rounded-md bg-slate-900 font-semibold">Large Blog Post Title</h3>
                                 <section>
 
                                     <p class="text-slate-300 ">This is a brief description of the large blog post. It
@@ -828,7 +828,7 @@
                                 class=" object-cover w-full h-full rounded-md">
                         </div>
                     </a>
-
+                    
                 </div>
 
             </div>
@@ -842,7 +842,7 @@
     {{-- footer section --}}
 
 
-    <footer class="py-4 relative top-[100em] h-[130em] md:h-[70em] w-full ">
+    <footer class="py-4 relative top-[250em] h-[130em] md:h-[70em] w-full ">
         <picture>
             <source srcset="{{ asset('images/banner-bg.svg') }}" media="(min-width: 1280px)">
             <source srcset="{{ asset('images/banner-bg.svg') }}" media="(min-width: 768px)">
@@ -900,8 +900,8 @@
                                 href="{{ url('blog/lifestyle') }}">Lifestyle</a>
                         </li>
                         <li role='menuitem' class="mb-0">
-                            <a title='information blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/Information') }}">Information</a>
+                            <a title='Personal Development blog' class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('blog/Personal-Development') }}">Personal Development</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='islamic blog' class="text-sm text-white lg:text-md text-decoration-none"

@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 Route::get('/',function (){return view('index');})->name('home');
 Route::get('/login',[LoginController::class , 'showLoginForm'])->name('login');
+Route::get('/Mohammad-Hussain-Sarvari',function(){
+return view("Mohammad_Hussain_Sarvari");
+})->name('login');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register-post');
 // online tools
@@ -38,8 +41,8 @@ Route::get('/blog/sport', [blogSection::class, 'sport'])->name('sport');
 Route::get('/blog/sport/{blog_title}', [blogSection::class, 'show_blog'])->name('show-sport-blog');
 Route::get('/blog/lifestyle', [blogSection::class, 'lifestyle'])->name('lifestyle');
 Route::get('/blog/lifestyle/{blog_title}', [blogSection::class, 'show_blog'])->name('show-lifestyle-blog');
-Route::get('/blog/Information', [blogSection::class, 'Information'])->name('Information');
-Route::get('/blog/Information/{blog_title}', [blogSection::class, 'show_blog'])->name('show-information-blog');
+Route::get('/blog/Personal-Development', [blogSection::class, 'Personal_Development'])->name('Personal-Development');
+Route::get('/blog/Personal-Development/{blog_title}', [blogSection::class, 'show_blog'])->name('show-Personal-Development-blog');
 Route::get('/blog/Islamic', [blogSection::class, 'Islamic'])->name('Islamic');
 Route::get('/blog/Islamic/{blog_title}', [blogSection::class, 'show_blog'])->name('show-islamic-blog');
 Route::get('/blog/Fashion', [blogSection::class, 'Fashion'])->name('Fashion');

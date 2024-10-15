@@ -306,8 +306,8 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Information') }}"
-                                            role="menuitem" title="Information blog">Information</a>
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Personal-Development') }}"
+                                            role="menuitem" title="Personal Development blog">Personal Development</a>
                                     </li>
 
                                     <li class="hover:bg-blue-100">
@@ -316,7 +316,7 @@
                                     </li>
 
                                     <li class="hover:bg-blue-100">
-                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fasion') }}"
+                                        <a class="px-1 w-full text-center" href="{{ url('blog/Fashion') }}"
                                             role="menuitem" title="Fashion blog">Fashion</a>
                                     </li>
 
@@ -373,16 +373,15 @@
     {{-- main section --}}
     <div class="relative w-full h-screen mb-20 z-[200]">
         <div class="container   p-3 relative top-[20em] m-auto  z-[180] ">
-            <h1 class="m-5 font-bold text-center text-blue-800 business_title">Welcome to Our Business <span
+            <h1 class="m-5 font-bold text-center text-blue-800 fashion_title">Welcome to Our Fashion <span
                     class="text-yellow-300">
 
                     Blog
                 </span>
             </h1>
-            <p class="p-3 m-auto text-center text-blue-900">Our blog is designed to provide valuable insights,
-                strategic advice, and up-to-date knowledge to help you succeed in today’s fast-paced business
-                environment. Each post is backed by thorough research, drawing from trusted sources such as leading
-                blogs, articles, books, and more.</p>
+            <p class="p-3 m-auto text-center text-blue-950">
+                Welcome to our fashion blog, where style meets inspiration! Dive into the latest trends, timeless classics, and expert tips to help you express your unique personality through fashion. Join us as we explore everything from casual looks to high-end fashion, making style accessible for everyone!
+            </p>
 
             {{-- search --}}
             <form action="search_blog" method="post" class="relative flex flex-row mx-5 my-3 search">
@@ -564,8 +563,7 @@
                 Latest Articles </span>
 
             <p class="text-center text-slate-400">
-                Discover our three most recent posts, featuring expert analyses, industry updates, and actionable
-                strategies to help you grow your business and enhance your leadership.
+                Check out our latest fashion blog post, where we highlight this season’s must-have trends, from bold prints to sustainable fabrics. Discover how to effortlessly elevate your wardrobe with versatile pieces that blend style and comfort. Stay ahead of the curve and refresh your look with our expert fashion tips!
             </p>
 
 
@@ -585,7 +583,7 @@
                 {{-- box 1 biggest --}}
                 <div
                     class="flex flex-col items-center justify-center row-span-1 xl:items-baseline xl:row-span-2 xl:col-start-1">
-                    <a href="{{ url('/blog/business/' . 'title') }}"
+                    <a href="{{ url('/blog/Fashion/' . 'title') }}"
                         class="relative w-[80%] h-[20em]  xl:h-[40em] xl:w-[40em] flex justify-around flex-col rounded-lg shadow
                      mt-4 text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
                     ">
@@ -596,7 +594,7 @@
                         bg-gradient-to-t from-[#2867a3] to-none  backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
-                            <h3 class="mb-2 text-xl font-semibold text-white ">Large Blog Post Title</h3>
+                            <h3 class="mb-2 text-blue-400 text-sm p-2 rounded-md bg-slate-900 font-semibold ">Large Blog Post Title</h3>
                             <section>
 
                                 <p class="text-slate-300 ">This is a brief description of the large blog post. It
@@ -637,7 +635,7 @@
                 <div class="flex flex-col  h-[42em]  w-full mt-5 xl:mt-0">
                     <div class="flex flex-col items-center justify-center xl:items-end xl:justify-normal">
 
-                        <a href="{{ url('/blog/business/' . 'title') }}"
+                        <a href="{{ url('/blog/Fashion/' . 'title') }}"
                             class="relative m-auto  w-[80%] h-[19em] xl:w-[20em]  flex justify-around flex-col rounded-lg shadow
                      mt-[5em] text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
                     ">
@@ -648,7 +646,7 @@
                         bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
-                                <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
+                                <h3 class="mb-2 text-blue-400 text-sm p-2 rounded-md bg-slate-900 font-semibold">Large Blog Post Title</h3>
                                 <section>
 
                                     <p class="text-slate-300 ">This is a brief description of the large blog post. It
@@ -691,7 +689,7 @@
                     {{-- box 3 --}}
 
                     <div class="flex flex-col items-center ">
-                        <a href="{{ url('/blog/business/' . 'title') }}"
+                        <a href="{{ url('/blog/Fashion/' . 'title') }}"
                             class="absolute  w-[78%] h-[19em] xl:w-[20em]   flex justify-around flex-col rounded-lg shadow
                     mt-4 text-white hover:underline  hover:scale-95 transition-all duration-100 ease-in-out
                     ">
@@ -702,7 +700,7 @@
                         bg-gradient-to-t from-[#2867a3] to-none backdrop-blur-0 hover:backdrop-blur-sm  justify-between rounded-lg p-3 transition-all duration-75
                         ">
 
-                                <h3 class="mb-2 text-xl font-semibold text-white">Large Blog Post Title</h3>
+                                <h3 class="mb-2 text-blue-400 text-sm p-2 rounded-md bg-slate-900 font-semibold">Large Blog Post Title</h3>
                                 <section>
 
                                     <p class="text-slate-300 ">This is a brief description of the large blog post. It
@@ -760,12 +758,10 @@
                 <hr>
                 <hr>
                 {{-- header --}}
-                <span class=" italic font-bold text-center text-blue-500  h-[2em] block w-full text-xl">All Business
+                <span class=" italic font-bold text-center text-blue-500  h-[2em] block w-full text-xl">All Fashion
                     Posts</span>
                 <p class="text-center text-slate-400">
-                    Browse our full archive of business content, covering a wide range of topics from leadership and
-                    innovation to marketing and financial strategies. Our posts are designed to offer practical
-                    solutions and expert knowledge that drive real-world results.
+                    Explore our collection of fashion blog posts, where we cover everything from the latest runway trends to practical styling tips for everyday wear. Whether you're looking for seasonal inspiration, advice on sustainable fashion, or timeless wardrobe essentials, our posts offer insights to help you enhance your personal style. Dive into the world of fashion and stay updated with our expert guides and recommendations!
                 </p>
                 <hr>
                 <hr>
@@ -776,7 +772,7 @@
                 <div class="p-3  w-full h-fit z-[101] mt-[10em]">
 
 
-                    <a href="{{ url('/blog/business/' . 'my name is hussain hahah') }}"
+                    <a href="{{ url('/blog/Fashion/' . 'my name is hussain hahah') }}"
                         class="flex flex-row w-[100%] justify-around p-0 my-3  transition-all duration-100 rounded-md  hover:underline  bg-slate-50 sm:shadow-xl hover:shadow-2xl ">
 
                         {{-- contant --}}
@@ -842,7 +838,7 @@
     {{-- footer section --}}
 
 
-    <footer class="py-4 relative top-[100em] h-[130em] md:h-[70em] w-full ">
+    <footer class="py-4 relative top-[250em] h-[130em] md:h-[70em] w-full ">
         <picture>
             <source srcset="{{ asset('images/banner-bg.svg') }}" media="(min-width: 1280px)">
             <source srcset="{{ asset('images/banner-bg.svg') }}" media="(min-width: 768px)">
@@ -900,8 +896,8 @@
                                 href="{{ url('blog/lifestyle') }}">Lifestyle</a>
                         </li>
                         <li role='menuitem' class="mb-0">
-                            <a title='information blog' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('blog/Information') }}">Information</a>
+                            <a title='Personal Development blog' class="text-sm text-white lg:text-md text-decoration-none"
+                                href="{{ url('blog/Personal-Development') }}">Personal Development</a>
                         </li>
                         <li role='menuitem' class="mb-0">
                             <a title='islamic blog' class="text-sm text-white lg:text-md text-decoration-none"

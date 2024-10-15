@@ -24,13 +24,14 @@ class blogSection extends Controller
         else if(str_contains($url,"blog/lifestyle")){
             return view('blog.Lifestyle.show_lifestyle_blog_post',  compact('title'));
         }
-        else if(str_contains($url,"blog/Information")){
-            return view('blog.Information.show_information_blog_post',  compact('title'));
+        else if(str_contains($url,"blog/Personal-Development")){
+           
+            return view('blog.Personal_Development.show_Personal Development_blog_post',  compact('title'));
         }
         else if(str_contains($url,"blog/Islamic")){
             return view('blog.Islamic.show_islamic_blog_post',  compact('title'));
         }
-        else if(str_contains($url,"blog/Fasion")){
+        else if(str_contains($url,"blog/Fashion")){
             return view('blog.fashion.show_fashion_blog_post',  compact('title'));
         }
         else if(str_contains($url,"blog/Movie")){
@@ -57,8 +58,8 @@ class blogSection extends Controller
     public function lifestyle(){
         return view('blog.Lifestyle.Lifestyle');
            }
-    public function Information(){
-        return view('blog.Information.Information');
+    public function Personal_Development(){
+        return view('blog.Personal_Development.Personal_development');
            }
     public function Islamic(){
         return view('blog.Islamic.Islamic');
