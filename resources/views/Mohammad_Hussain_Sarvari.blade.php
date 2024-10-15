@@ -922,11 +922,11 @@
                     <ul aria-label="queic links" role='menu' class="list-unstyled">
                         <li role='menuitem' class="mb-1">
                             <a title='aboute us' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('https://localhost:8000/#about-us') }}">About us</a>
+                                href="{{ route('home') }}#about-us">About us</a>
                         </li>
                         <li role="menuitem" class="mb-1">
                             <a title='contact us' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('https://localhost:8000/#contacts') }}">Contacts</a>
+                                href="{{ route('home') }}#contacts">Contacts</a>
                         </li>
                         <li role="menuitem" class="mb-1">
                             <a title='quest post' class="text-sm text-white lg:text-md text-decoration-none"
@@ -934,7 +934,7 @@
                         </li>
                         <li role="menuitem" class="mb-1">
                             <a title='our privacy policy' class="text-sm text-white lg:text-md text-decoration-none"
-                                href="{{ url('privacy-policy') }}">Privacy Policy</a>
+                                href="{{ url('Privacy-Policy') }}">Privacy Policy</a>
                         </li>
                     </ul>
                 </div>
@@ -944,15 +944,16 @@
                     <div class="mb-2 input-group">
                         <form action="" aria-label="subscribe form">
                             @csrf
-                            <input class="text-sm form-cont3ol bg-light lg:text-md" required name="email"
+                            <input class="text-sm form-cont3ol bg-blue-300 p-2 placeholder:text-white lg:text-md focus:outline-none " required name="email"
                                 aria-label="email address" placeholder="Email " type="email">
                             <button class="btn btn-primary" type="button">Subscribe</button>
                         </form>
                     </div>
                     <p class="mb-0 text-sm text-white small lg:text-md">Sign up for our newsletter to get the latest
                         updates on features and releases.</p>
-                    <p class="mb-0 text-sm text-white small lg:text-md">Created by: <a title="know more about me"
-                            href="http://">Mohammad Hussain
+                    <p class="mb-0 text-sm  text-white small lg:text-md">Created by: <a title="know more about me"
+                           class=" text-white"
+                        href="{{url('Mohammad-Hussain-Sarvari')}}">Mohammad Hussain
                             "Sarvari"</a></p>
                 </div>
             </div>
@@ -963,12 +964,6 @@
                             href="https://icons8.com/illustrations" class="text-white">icons8</a>'s designer for there
                         beautifull Illustrations.</p>
 
-                    <a title="privacy policy"
-                        class="mb-2 text-sm text-white lg:text-md d-block d-lg-inline ms-lg-3 mb-lg-0"
-                        href="">Privacy Policy</a>
-                    <a title="term of services"
-                        class="mb-2 text-sm text-white lg:text-md d-block d-lg-inline ms-lg-3 mb-lg-0"
-                        href="">Terms of Service</a>
                 </div>
 
                 <div class="flex">
