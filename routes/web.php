@@ -55,7 +55,7 @@ Route::get('/blog/Travel', [blogSection::class, 'Travel'])->name('Travel');
 Route::get('/blog/Travel/{blog_title}', [blogSection::class, 'show_blog'])->name('show-travel-blog');
 
 // another route
-Route::get('/blog/Guest-post', function (){
+Route::get('/Guest-post', function (){
 return view('Guest_post');
 })->name('Guest-post');
 
