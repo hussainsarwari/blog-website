@@ -58,6 +58,9 @@ Route::get('/blog/Travel/{blog_title}', [blogSection::class, 'show_blog'])->name
 Route::get('/Guest-post', function (){
 return view('Guest_post');
 })->name('Guest-post');
+Route::get('/Privacy-Policy', function (){
+return view('Privacy_policy');
+})->name('Privacy-Policy');
 
 
 
