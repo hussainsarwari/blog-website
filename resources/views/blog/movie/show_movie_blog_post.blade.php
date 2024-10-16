@@ -372,6 +372,64 @@
                         </div>
 
                     </section>
+                       {{-- CTA --}}
+                       <section class="bg-gradient-to-r from-indigo-600 to-purple-500 py-12 px-6 rounded-md ">
+                        <div class="container mx-auto text-center">
+                            <h2 class="text-4xl font-bold text-white mb-4 animate-bounce">
+                                Join Us Now!
+                            </h2>
+                            <p class="text-lg text-white mb-8">
+                                Be part of our amazing community and get exclusive updates.
+                            </p>
+                            <div class="flex flex-col sm:flex-row justify-center sm:space-x-4">
+                                <!-- Button 1: Sign Up -->
+                                <button 
+                                   class="signup-modal-btn flex items-center px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 ">
+                                    <i class="fas fa-user-plus mr-2"></i> Sign Up Now
+                                </button>
+                    
+                                <!-- Button 2: Contact Us -->
+                                <button
+                                   class="contact-modal-btn flex my-[2em] sm:my-0 items-center px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 ">
+                                    <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                      <!-- Sign Up Modal -->
+                      <div id="signup-modal" class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
+                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4 animate-fadeIn">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold">Sign Up</h3>
+                                <i class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-signup-modal-btn" ></i>
+                            </div>
+                            <form id="registerForm">
+                                @csrf
+                                <input aria-label="name for register" type="text" placeholder="Name" id="name_rgs" class="w-full px-4 py-2 mb-4 border rounded">
+                                <input aria-label="email address for register" type="email" id="email_rgs" placeholder="Email" class="w-full px-4 py-2 mb-4 border rounded">
+                               <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Modal -->
+                    <div id="contact-modal" class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
+                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4 animate-fadeIn">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold">Contact Us</h3>
+                                <i class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-contact-modal-btn" ></i>
+                            </div>
+                            <form id="contactForm" method="post">
+                                @csrf
+                                <input type="text" id="name_msg" placeholder="Name" class="w-full px-4 py-2 mb-4 border rounded">
+                                <input type="email" id="email_msg" placeholder="Email" class="w-full px-4 py-2 mb-4 border rounded">
+                              
+                                <textarea placeholder="Message" id="msg" class="w-full px-4 py-2 mb-4 border rounded"></textarea>
+                               
+                                <button  type="submit" class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
                     {{-- tags --}}
                     <section aria-label="Tags related to this blog post"
                         class="tags bg-slate-100 p-3 my-5 rounded-md shadow-md text-slate-500">

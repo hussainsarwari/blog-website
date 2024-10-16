@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -68,7 +69,7 @@
         </div>
     </div>
 
-    <x-header/>
+    <x-header />
 
 
 
@@ -80,9 +81,9 @@
         <button
             class="bg-blue-500 text-white px-4 py-3 rounded-full shadow-lg flex items-center space-x-2 transform transition-transform duration-300 hover:scale-105 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
             aria-label="Download blog as PDF" id="downloadBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" class="feather feather-download">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-download">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
@@ -96,11 +97,12 @@
         <!-- Modal Content -->
         <div
             class="bg-white w-[50%] relative top-[10em]  z-[310] m-auto rounded-lg  text-center shadow-lg transform scale-95  transition-transform duration-300 ease-in-out">
-           <p class="text-md text-white font-semibold text-center p-4 bg-blue-400" style="font-size: 24px;">Download will start after <span class="seconde"></span>  secondes</p>
+            <p class="text-md text-white font-semibold text-center p-4 bg-blue-400" style="font-size: 24px;">Download
+                will start after <span class="seconde"></span> secondes</p>
             <div aria-label="show advertice" class="w-[100%] h-[20em] bg-white " class>
-  show advertice
+                show advertice
             </div>
-            
+
         </div>
     </div>
 
@@ -214,8 +216,8 @@
                             </svg>
                         </li>
                         <li aria-label="breadcrumb item " class="text-blue-600 hover:text-blue-800">
-                            
-                                Post Title
+
+                            Post Title
                         </li>
                     </ol>
                 </nav>
@@ -260,7 +262,7 @@
                     </div>
                     <div class=" w-[20em] text-end">
                         <p style="color:#475569;">Downloaded: <span>201</span></p>
-                        <p style="color:#475569;"> Visited: <span class="mx-1">200</span>  </p>
+                        <p style="color:#475569;"> Visited: <span class="mx-1">200</span> </p>
                         <p class=" text-yellow-600  flex justify-end ">241
                             <svg width="20" height="20" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -375,6 +377,64 @@
                         </div>
 
                     </section>
+                    {{-- CTA --}}
+                    <section class="bg-gradient-to-r from-indigo-600 to-purple-500 py-12 px-6 rounded-md ">
+                        <div class="container mx-auto text-center">
+                            <h2 class="text-4xl font-bold text-white mb-4 animate-bounce">
+                                Join Us Now!
+                            </h2>
+                            <p class="text-lg text-white mb-8">
+                                Be part of our amazing community and get exclusive updates.
+                            </p>
+                            <div class="flex flex-col sm:flex-row justify-center sm:space-x-4">
+                                <!-- Button 1: Sign Up -->
+                                <button
+                                    class="signup-modal-btn flex items-center px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 ">
+                                    <i class="fas fa-user-plus mr-2"></i> Sign Up Now
+                                </button>
+
+                                <!-- Button 2: Contact Us -->
+                                <button
+                                    class="contact-modal-btn flex my-[2em] sm:my-0 items-center px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 ">
+                                    <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                      <!-- Sign Up Modal -->
+                      <div id="signup-modal" class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
+                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4 animate-fadeIn">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold">Sign Up</h3>
+                                <i class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-signup-modal-btn" ></i>
+                            </div>
+                            <form id="registerForm">
+                                @csrf
+                                <input aria-label="name for register" type="text" placeholder="Name" id="name_rgs" class="w-full px-4 py-2 mb-4 border rounded">
+                                <input aria-label="email address for register" type="email" id="email_rgs" placeholder="Email" class="w-full px-4 py-2 mb-4 border rounded">
+                               <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Modal -->
+                    <div id="contact-modal" class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
+                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4 animate-fadeIn">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold">Contact Us</h3>
+                                <i class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-contact-modal-btn" ></i>
+                            </div>
+                            <form id="contactForm" method="post">
+                                @csrf
+                                <input type="text" id="name_msg" placeholder="Name" class="w-full px-4 py-2 mb-4 border rounded">
+                                <input type="email" id="email_msg" placeholder="Email" class="w-full px-4 py-2 mb-4 border rounded">
+                              
+                                <textarea placeholder="Message" id="msg" class="w-full px-4 py-2 mb-4 border rounded"></textarea>
+                               
+                                <button  type="submit" class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
                     {{-- tags --}}
                     <section aria-label="Tags related to this blog post"
                         class="tags bg-slate-100 p-3 my-5 rounded-md shadow-md text-slate-500">
@@ -621,7 +681,7 @@
 
 
     <footer class="py-4 relative top-[100em] h-[130em] md:h-[70em] w-full ">
-        <x-footer/> 
+        <x-footer />
     </footer>
     <style>
         .table_of_content::before {
@@ -662,10 +722,10 @@
             }
         }
     </style>
-   <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
-   <script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
-   <script type="module" src="{{ asset('js/custom.js') }}"></script>
-   <script type="module" src="{{ asset('js/shows_blog_post.js') }}"></script>
+    <script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
+    <script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
+    <script type="module" src="{{ asset('js/custom.js') }}"></script>
+    <script type="module" src="{{ asset('js/shows_blog_post.js') }}"></script>
 
 </body>
 
