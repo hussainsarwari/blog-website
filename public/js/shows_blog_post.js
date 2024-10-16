@@ -1,25 +1,32 @@
 const downloadBtn = document.getElementById('downloadBtn');
 const modalOverlay = document.getElementById('modalOverlay');
 const closeModal = document.getElementById('closeModal');
+const secondes = document.querySelector('.seconde');
 
 downloadBtn.addEventListener('click', () => {
+    let timer =5;
+    secondes.innerHTML=timer;
     modalOverlay.classList.remove('hidden');
     modalOverlay.querySelector('.scale-95').classList.add('scale-100');
+    let interval=setInterval(()=>{  
+        if (timer<=0) {
+            
+            modalOverlay.classList.add('hidden');
+            modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
+           
+            clearInterval(interval);
+        }else{
+
+            secondes.innerHTML=timer;
+            timer--
+        } 
+      
+      
+    },1000)
+    
 });
 
-closeModal.addEventListener('click', () => {
-    modalOverlay.classList.add('hidden');
-    modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
-});
-
-// Close modal if clicked outside the form
-window.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-        modalOverlay.classList.add('hidden');
-        modalOverlay.querySelector('.scale-100').classList.remove('scale-100');
-    }
-});
-
+// comment section 
 // reply section
 const replyBtns = document.querySelectorAll(".replyBtn");
 const reply_and_registe = document.querySelectorAll(".reply_and_registe"); //register and replay
@@ -132,3 +139,108 @@ document.addEventListener('keydown', function (event) {
 });
 
 
+// CTA section
+// function openModal(modalId) {
+//     document.getElementById(modalId).classList.remove('hidden');
+//     document.getElementById(modalId).classList.add('flex');
+// }
+
+// function closeModal(modalId) {
+//     document.getElementById(modalId).classList.remove('flex');
+//     document.getElementById(modalId).classList.add('hidden');
+// }
+// Sign Up Form Submission
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let name=document.querySelector("#name_rgs")
+    let email=document.querySelector("#email_rgs")
+    let formData = {name:name,email:email}
+console.log(formData);
+    fetch('/register', {
+        method: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        },
+
+        body: formData
+    }).then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            closebox('signup-modal');
+        }
+    }).catch((e)=>{
+        alert('something wrong')
+        closeModal("signup-modal")
+        console.log(e);
+    });
+});
+
+// Contact Form Submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // let formData =
+    let name=document.querySelector("#name_msg").value;
+    let email=document.querySelector("#email_msg").value;
+    let msg=document.querySelector("#msg").value;
+    
+    
+    fetch('/contact', {
+        method: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        },
+        body: {
+            name: name,
+            email: email,
+            msg:msg
+        }
+    }).then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            closebox('contact-modal');
+        }
+    }).catch( (e) =>{
+        console.log(e)
+        closebox('contact-modal');
+        alert('data not store')
+        
+        });
+});
+
+let signupmodalbtn=document.querySelector(".signup-modal-btn");
+let contactmodalbtn=document.querySelector(".contact-modal-btn");
+let closesignupmodalbtn=document.querySelector(".close-signup-modal-btn");
+let closecontactmodalbtn=document.querySelector(".close-contact-modal-btn");
+
+signupmodalbtn.addEventListener("click",()=>{
+    
+    document.getElementById('signup-modal').classList.remove('hidden');
+    document.getElementById('signup-modal').classList.add('flex');
+})
+contactmodalbtn.addEventListener("click",()=>{
+
+    document.getElementById('contact-modal').classList.remove('hidden');
+    document.getElementById('contact-modal').classList.add('flex');
+})
+closesignupmodalbtn.addEventListener("click",()=>{
+    
+    document.getElementById('signup-modal').classList.add('hidden');
+    document.getElementById('signup-modal').classList.remove('flex');
+})
+closecontactmodalbtn.addEventListener("click",()=>{
+
+    document.getElementById('contact-modal').classList.add('hidden');
+    document.getElementById('contact-modal').classList.remove('flex');
+})
+
+
+
+// Close Modal Function
+function closebox(modalId) {
+    document.getElementById(modalId).classList.remove('flex');
+    document.getElementById(modalId).classList.add('hidden');
+}
