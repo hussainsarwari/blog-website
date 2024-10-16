@@ -434,7 +434,6 @@
 
 
 
-
                     {{-- tags --}}
                     <section aria-label="Tags related to this blog post"
                         class="tags bg-slate-100 p-3 my-5 rounded-md shadow-md text-slate-500">
