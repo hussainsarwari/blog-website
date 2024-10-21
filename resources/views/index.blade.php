@@ -84,11 +84,11 @@
    <x-header/>
 
     <!-- ***** Welcome Area Start ***** -->
-    <div class="welcome-area" id="welcome">
+    <div class="welcome-area  parallax" id="welcome">
 
         <!-- ***** Header Text Start ***** -->
-        <div class="header-text">
-            <div class="container">
+        <div class="header-text ">
+            <div class="container ">
                 <div class="row">
                     <div class=" welcome-section left-text col-lg-6 col-md-6 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
@@ -117,8 +117,7 @@
     </div>
 
 
-
-    <section class="py-[10em] my-10">
+    <section class="py-[10em] my-10  ">
         <div class="container">
             <div class="mb-3 text-center row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
@@ -228,8 +227,9 @@
 
 
 
+
    
-    <section class="section  sm:py-[10em] " id="">
+    <section class="section   px-[2em] py-[10em]  ">
 
         <div class="container">
             <div class="row">
@@ -293,6 +293,7 @@
 
 
 
+<div  class="parallax" style="background-image: url('{{ asset('images/img3.jpg') }}');" ></div>
 
 
 
@@ -405,13 +406,9 @@
 
 
 
-    <hr>
-    <hr>
-    <hr>
-    <hr>
 
-    <section class="section py-[10em]" id="about-us">
-        <div class="container">
+    <section class="section py-[10em] parallax" style="background-image: url('{{ asset('images/natural.jpg') }}');" id="about-us">
+        <div class="container bg-slate-900 rounded-xl shadow-xl">
             <h2 class="text-center py-[1em] text-blue-500 font-bold" data-scroll-reveal="enter top move 30px over 0.6s after 0.4s">About S_solution</h2>
             <p class="text-[17px] mb-[3em] text-center text-blue-400" data-scroll-reveal="enter top move 30px over 0.6s after 0.8s">
                 Welcome to S_Solution—a digital haven where curiosity meets creativity!
@@ -495,9 +492,10 @@
     {{-- footer section --}}
 
 
-    <footer class="py-4 relative top-[70em] h-[130em] md:h-[70em] w-full ">
+    <footer class="py-4 relative top-[10em] md:top-[70em] h-[130em] md:h-[70em] w-full ">
         <x-footer/>    
     </footer>
+
 
 
 

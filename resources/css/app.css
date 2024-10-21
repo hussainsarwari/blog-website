@@ -8,3 +8,50 @@
     color: #e2e8f0;
     background: #6e8192;
 }
+
+
+
+@keyframes scrollAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(20px) ; /* Start smaller */
+    }
+    25% {
+        transform: translateY(0) ; /* Slightly enlarge */
+    }
+    55% {
+        transform: translateY(25px) ; /* Slightly enlarge */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(20px) ; /* Normal size */
+    }
+}
+
+.scroll-down {
+    animation: scrollAnimation 2.5s ease-in-out infinite;
+    animation-delay: 1s; /* Delay before the animation starts */
+   background: #62626253;
+   width: 10em;
+   height: 10em;
+   border-radius: 100% ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+  .parallax {
+    height: 100vh; /* Height for parallax effect */
+    background-attachment: fixed; /* Create parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (min-width:400px){
+    .parallax {
+    height: 100vh; /* Height for parallax effect */
+    background-attachment: fixed; /* Create parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+}
