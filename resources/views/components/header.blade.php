@@ -255,7 +255,7 @@
                                 </li>
 
                                 <li class="hover:bg-blue-100">
-                                    <a class="px-1 w-full text-center" href="{{ url('blog/Business') }}"
+                                    <a class="px-1  text-center w-[14em]" href="{{ url('blog/Business') }}"
                                         role="menuitem" title="Business blog">Business</a>
                                 </li>
 

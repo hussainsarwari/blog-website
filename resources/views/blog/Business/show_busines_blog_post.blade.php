@@ -73,6 +73,16 @@
     <x-header />
 
     {{-- main section --}}
+    <div class="parallax"  style="background-image: url('{{ asset('images/welcome1.png') }}');">
+        <div class="absolute inset-0 "></div>
+        <div class="flex items-center justify-center h-full">
+            <div class="scroll-down text-white flex flex-col items-center mt-[10em]">
+                <i class="fas fa-arrow-down text-4xl mb-2"></i>
+                <span class="text-xl text-white">Scroll Down</span>
+            </div>
+        </div>
+    </div>
+
 
 
     {{-- btn download blog as pdf --}}
@@ -111,10 +121,6 @@
     <div class="w-[80%] m-auto ad bg-white  h-[20em] relative top-[10em] z-[1]" aria-label="show advertise">
         ads
     </div>
-    <div aria-label="a circle shep for background image"
-        class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[-3em] md:right-[3em] rounded-full ">
-    </div>
-
 
 
 
@@ -747,6 +753,7 @@
     <script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
     <script type="module" src="{{ asset('js/custom.js') }}"></script>
     <script type="module" src="{{ asset('js/shows_blog_post.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </body>
 

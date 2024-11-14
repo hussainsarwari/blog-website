@@ -30,6 +30,9 @@
     @vite(['resources/css/owl-carousel.css'])
     {{-- @vite(['resources/css/templatemo-art-factory.css']) --}}
     {{-- @vite(['resources/css/style.css']) --}}
+    <style>
+      
+    </style>
 </head>
 
 <body class="overflow-x-hidden">
@@ -69,8 +72,17 @@
     </div>
 
     <x-header/>
+  {{-- main section --}}
 
-    {{-- main section --}}
+    <div class="parallax"  style="background-image: url('{{ asset('images/welcome1.png') }}');">
+        <div class="absolute inset-0 "></div>
+        <div class="flex items-center justify-center h-full">
+            <div class="scroll-down text-white flex flex-col items-center mt-[10em]">
+                <i class="fas fa-arrow-down text-4xl mb-2"></i>
+                <span class="text-xl text-white">Scroll Down</span>
+            </div>
+        </div>
+    </div>
 
 
     {{-- btn download blog as pdf --}}
@@ -108,11 +120,11 @@
     <div class="w-[80%] m-auto ad bg-white  h-[20em] relative top-[10em] z-[1]" aria-label="show advertise">
         ads
     </div>
-    <div aria-label="a circle shep for background image"
+    {{-- <div aria-label="a circle shep for background image"
         class="w-[55em] h-[55em] lg:w-[80em] lg:h-[80em] bg-blue-500 shadow-2xl shadow-blue-600 absolute top-[-18em] right-[-3em] md:right-[3em] rounded-full ">
-    </div>
+    </div> --}}
 
-
+   
 
 
 
@@ -373,6 +385,66 @@
                         </div>
 
                     </section>
+                       {{-- CTA --}}
+                       <section class="bg-gradient-to-r from-indigo-600 to-purple-500 py-12 px-6 rounded-md ">
+                        <div class="container mx-auto text-center">
+                            <h2 class="text-4xl font-bold text-white mb-4 animate-bounce">
+                                Join Us Now!
+                            </h2>
+                            <p class="text-lg text-white mb-8">
+                                Be part of our amazing community and get exclusive updates.
+                            </p>
+                            <div class="flex flex-col sm:flex-row justify-center sm:space-x-4">
+                                <!-- Button 1: Sign Up -->
+                                <button 
+                                   class="signup-modal-btn flex items-center px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 ">
+                                    <i class="fas fa-user-plus mr-2"></i> Sign Up Now
+                                </button>
+                    
+                                <!-- Button 2: Contact Us -->
+                                <button
+                                   class="contact-modal-btn flex my-[2em] sm:my-0 items-center px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 ">
+                                    <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                      <!-- Sign Up Modal -->
+                      <div id="signup-modal" class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
+                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4 animate-fadeIn">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold">Sign Up</h3>
+                                <i class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-signup-modal-btn" ></i>
+                            </div>
+                            <form id="registerForm">
+                                @csrf
+                                <input aria-label="name for register" type="text" placeholder="Name" id="name_rgs" class="w-full px-4 py-2 mb-4 border rounded">
+                                <input aria-label="email address for register" type="email" id="email_rgs" placeholder="Email" class="w-full px-4 py-2 mb-4 border rounded">
+                               <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Modal -->
+                    <div id="contact-modal" class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
+                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4 animate-fadeIn">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold">Contact Us</h3>
+                                <i class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-contact-modal-btn" ></i>
+                            </div>
+                            <form id="contactForm" method="post">
+                                @csrf
+                                <input type="text" id="name_msg" placeholder="Name" class="w-full px-4 py-2 mb-4 border rounded">
+                                <input type="email" id="email_msg" placeholder="Email" class="w-full px-4 py-2 mb-4 border rounded">
+                              
+                                <textarea placeholder="Message" id="msg" class="w-full px-4 py-2 mb-4 border rounded"></textarea>
+                               
+                                <button  type="submit" class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+
+
                     {{-- tags --}}
                     <section aria-label="Tags related to this blog post"
                         class="tags bg-slate-100 p-3 my-5 rounded-md shadow-md text-slate-500">
@@ -390,6 +462,8 @@
                         </ul>
 
                     </section>
+                   
+                   <p class="text-center w-full"></p> Image by <a href="https://pixabay.com/users/tyradosa-43140145/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8684920">Tyradosa</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8684920">Pixabay</a>
 
                 </main>
                 {{-- like and share section --}}
@@ -482,6 +556,7 @@
                 </div>
             </div>
         </div>
+        
         <br>
         {{-- footer of blog --}}
         <div aria-label="footer of blog post" class="bg-white flex flex-col rounded-b-lg">
@@ -603,6 +678,86 @@
                             </div>
                         </div>
 
+                        <div
+                            class="bg-white max-h-[50em] overflow-y-auto p-6 rounded-lg shadow-md m-3 transform transition-transform duration-300">
+                            <div class="flex items-start space-x-4">
+                                <!-- User Icon -->
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center"
+                                    aria-hidden="true">
+                                    <svg class="w-8 h-8 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 12c2.485 0 4.5-1.995 4.5-4.5S14.485 3 12 3 7.5 4.995 7.5 7.5 9.515 12 12 12zM16.5 15h-9c-.622 0-1.125.503-1.125 1.125v.75c0 .622.503 1.125 1.125 1.125h9c.622 0 1.125-.503 1.125-1.125v-.75c0-.622-.503-1.125-1.125-1.125z" />
+                                    </svg>
+                                </div>
+
+                                <div class="flex-1 ">
+                                    <div class="text-gray-700">
+                                        <span aria-label="this persion " class="font-semibold">mohammad <span
+                                                aria-label="commented to" class="text-slate-500"> commented
+                                                to <span>post</span></span></span>
+                                        <span class="text-sm text-gray-500 ml-2">2 hours ago</span>
+                                    </div>
+                                    <p class="mt-2 text-gray-600 break-words ">
+                                        - .... .. ... / .. ... / .- / --. .-. . .- - / .--. --- ... - -.-. .... .-.-.- /
+                                        .. / .-. . .-.. .-.. -.-- / . -. .--- --- -. .-.. .- - . -.. / .-. . .- -.. ..
+                                        -. --. / .. - .-.-.- / .-.. --- --- -.- .. -. --. / ..-. --- .-. / -- --- .-. .
+                                        / -.-. --- -. - . -. - / .-.. .. -.- . / - .... .. ... .
+                                    </p>
+
+                                    <!-- Reaction Buttons -->
+                                    <div class="flex items-center mt-4 text-gray-500">
+                                        <button
+                                            class="likeBtn flex active:text-blue-900 focus:outline-none items-center hover:text-blue-500 ease-in transition duration-300">
+                                            <svg class="w-5 h-5 mr-1 likeIcon" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 15l7-7 7 7" />
+                                            </svg>
+                                            Like
+                                        </button>
+                                        <button data-userid="01"
+                                            class="replyBtn active:text-blue-900 focus:outline-none flex items-center hover:text-blue-500 transition duration-300">
+                                            <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 10h8M8 14h5" />
+                                            </svg>
+                                            Reply
+                                        </button>
+                                    </div>
+
+                                    <div
+                                        class="reply_and_registe hidden shadow-lg rounded-lg z-[100] p-3 h-full w-full relative left-0 mt-[2em] translate-y-5">
+                                        <form aria-label="reply form" action="">
+                                            @csrf
+                                            <label for="name" class="sr-only">Name</label>
+                                            <input required type="text" id="name" name="name"
+                                                aria-required="true"
+                                                class="w-full p-2 mt-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                                placeholder="Write your name">
+
+                                            <label for="email" class="sr-only">Email</label>
+                                            <input required type="email" id="email" name="email"
+                                                aria-required="true"
+                                                class="w-full p-2 mt-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                                placeholder="Write your email">
+
+                                            <label for="comment" class="sr-only">Comment</label>
+                                            <textarea id="comment" name="comment" required rows="4" aria-required="true"
+                                                class="mt-1 p-2 outline-none resize-none border border-gray-300 rounded-md w-full focus:ring-none focus:border-blue-500 transition duration-200"
+                                                placeholder="Write your comment..."></textarea>
+
+                                            <button aria-label="comment button"
+                                                class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg flex items-center hover:bg-blue-600 transition duration-300">
+                                                Comment
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Repeat the above block for additional comments -->
                     </div>
                 </div>
@@ -613,7 +768,9 @@
 
 
 
+    <div class="parallax"  style="background-image: url('{{ asset('images/thanks.png') }}');">
 
+    </div>
 
     {{-- footer section --}}
 
@@ -663,6 +820,7 @@
    <script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
    <script type="module" src="{{ asset('js/custom.js') }}"></script>
    <script type="module" src="{{ asset('js/shows_blog_post.js') }}"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </body>
 
