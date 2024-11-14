@@ -679,7 +679,9 @@
 
 
     {{-- footer section --}}
+    <div class="parallax"  style="background-image: url('{{ asset('images/thanks.png') }}');">
 
+    </div>
 
     <footer class="py-4 relative top-[100em] h-[130em] md:h-[70em] w-full ">
         <x-footer/> 
