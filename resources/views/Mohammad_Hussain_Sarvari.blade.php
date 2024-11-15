@@ -342,12 +342,12 @@
 
     <section class="section  bg-slate-900" id="frequently-question" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
         <div class="container">
-            <h2 class="text-blue-500 font-bold text-center">MY project</h2>
+            <h2 class="text-blue-500 font-bold text-center">My Project</h2>
            <div class="projects">
             <div class="container mx-auto py-12 px-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     <!-- Weather Application Card -->
-                    <div class="project-card p-6 bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out" data-aos="fade-up">
+                    <div class="project-card p-6 flex justify-center flex-col bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out" data-aos="fade-up">
                         <div class="icon mb-4 text-center">
                             <i class="fas fa-cloud-sun text-blue-500 text-5xl"></i>
                         </div>
@@ -357,23 +357,23 @@
                     </div>
             
                     <!-- Chat Application Card -->
-                    <div class="project-card p-6 bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out" data-aos="fade-up">
+                    <div class="project-card p-6 flex justify-center flex-col bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out" data-aos="fade-up">
                         <div class="icon mb-4 text-center">
                             <i class="fas fa-comments text-green-500 text-5xl"></i>
                         </div>
                         <h2 class="text-2xl font-semibold mb-2 text-center">Chat Application</h2>
                         <p class="text-gray-600 text-center">An interactive chat application to connect users in real-time.</p>
-                        <a href="https://github.com/your-github-repo-chat" class="text-blue-500 mt-4 inline-block text-center">View on GitHub</a>
+                        <a href="https://github.com/hussainsarwari/vue_chat_application/tree/master" class="text-blue-500 mt-4 inline-block text-center">View on GitHub</a>
                     </div>
             
                     <!-- Your Website Card -->
-                    <div class="project-card p-6 bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out" data-aos="fade-up">
+                    <div class="project-card p-6 flex justify-center flex-col bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out" data-aos="fade-up">
                         <div class="icon mb-4 text-center">
                             <i class="fas fa-laptop-code text-red-500 text-5xl"></i>
                         </div>
                         <h2 class="text-2xl font-semibold mb-2 text-center">My Website</h2>
                         <p class="text-gray-600 text-center">Showcasing my portfolio and projects.</p>
-                        <a href="https://github.com/your-github-repo-website" class="text-blue-500 mt-4 inline-block text-center">View on GitHub</a>
+                        <a href="https://github.com/hussainsarwari/blog-website" class="text-blue-500 mt-4 inline-block text-center">View on GitHub</a>
                     </div>
                 </div>
             </div>

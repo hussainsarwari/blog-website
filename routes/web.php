@@ -8,9 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 Route::get('/',function (){return view('index');})->name('home');
 Route::get('/login',[LoginController::class , 'showLoginForm'])->name('login');
-Route::get('/Mohammad-Hussain-Sarvari',function(){
-return view("Mohammad_Hussain_Sarvari");
-})->name('login');
+
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register-post');
 // online tools
@@ -62,7 +60,9 @@ Route::get('/Privacy-Policy', function (){
 return view('Privacy_policy');
 })->name('Privacy-Policy');
 
-
+Route::get('/Mohammad-Hussain-Sarvari',function(){
+    return view("Mohammad_Hussain_Sarvari");
+    })->name('myprofile');
 
 
 

@@ -3,171 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Title - My Blog</title>
-    <style>
-        /* Basic styles for the page */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        /* Parallax section */
-        .parallax {
-            height: 50vh; /* Height for parallax effect */
-            background-attachment: fixed; /* Create parallax effect */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        /* Content styling */
-        .content {
-            padding: 20px;
-            color: #333;
-            max-width: 800px; /* Limit width of the content */
-            margin: 0 auto; /* Center the content */
-        }
-
-        h1, h2, h3 {
-            color: #333;
-        }
-
-        /* Sidebar styling */
-        .sidebar {
-            width: 300px; /* Fixed width for sidebar */
-            padding: 20px;
-            background-color: #f4f4f4;
-            border-left: 1px solid #ddd; /* Separator between content and sidebar */
-            float: right; /* Float to the right */
-            margin-top: -20px; /* Overlap with content */
-        }
-
-        /* Clearfix for floated elements */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* Comments section styling */
-        .comments {
-            margin-top: 40px;
-            border-top: 1px solid #ddd;
-            padding-top: 20px;
-        }
-
-        /* Button styling */
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #ff4081;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #e91e63; /* Darker shade on hover */
-        }
-
-        /* Scroll-to-top button styling */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none; /* Initially hidden */
-            padding: 10px;
-            background-color: #ff4081;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .scroll-to-top:hover {
-            background-color: #e91e63; /* Darker shade on hover */
-        }
-    </style>
-</head>
-<body>
-
-<!-- First Parallax Section -->
-<div class="parallax" style="background-image: url('{{ asset('images/welcome.jpg') }}');"></div>
-
-<!-- Blog Content -->
-<div class="content clearfix">
-    <h1>Blog Post Title</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel egestas nisi, eu pulvinar erat.</p>
-    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed sodales, nulla eget laoreet suscipit, nisi libero viverra erat, ut finibus lacus nulla ac justo.</p>
-    <h2>Subheading</h2>
-    <p>Donec at diam vel augue tincidunt vehicula. Suspendisse potenti. Nunc a diam eu nulla hendrerit laoreet vel id sem.</p>
+    <title>Online Tools - [Your Website Name]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <div class="comments">
-        <h3>Comments</h3>
-        <p>No comments yet. Be the first to comment!</p>
-        <!-- You can add a comment form here -->
+    @vite(['resources/css/app.css'])
+    @vite(['resources/css/bootstrap.min.css'])
+    @vite(['resources/css/owl-carousel.css'])
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <div aria-hidden="true" id="preloader">
+        <div class="flex justify-center loader" style="align-items: center;">
+            <div class="box box0">
+                <div></div>
+            </div>
+            <div class="box box1">
+                <div></div>
+            </div>
+            <div class="box box2">
+                <div></div>
+            </div>
+            <div class="box box3">
+                <div></div>
+            </div>
+            <div class="box box4">
+                <div></div>
+            </div>
+            <div class="box box5">
+                <div></div>
+            </div>
+            <div class="box box6">
+                <div></div>
+            </div>
+            <div class="box box7">
+                <div></div>
+            </div>
+            <div class="ground">
+                <div></div>
+            </div>
+        </div>
     </div>
-</div>
 
-<!-- Sidebar -->
-<div class="sidebar">
-    <h3>Table of Contents</h3>
-    <ul>
-        <li><a href="#subheading">Subheading</a></li>
-        <li><a href="#related-posts">Related Posts</a></li>
-        <li><a href="#comments">Comments</a></li>
-    </ul>
 
-    <h3>Related Posts</h3>
-    <ul id="related-posts">
-        <li><a href="#">Related Post 1</a></li>
-        <li><a href="#">Related Post 2</a></li>
-        <li><a href="#">Related Post 3</a></li>
-    </ul>
-</div>
+    <x-header/>
+    <!-- Tools Section -->
+    <div class="container mx-auto p-6 mt-[9em]">
+        <h1 class="text-3xl text-center font-bold text-teal-600 mb-8">Our Online Tools</h1>
+<h2  class=" text-center  text-teal-600 mb-8">
+    At [Your Website Name], we offer a variety of user-friendly online tools to simplify your tasks. From downloading videos and editing PDFs to generating CVs and creating short URLs, our tools are designed for efficiency and ease of use. Access them directly from your browser and complete your tasks quickly and effortlessly.
+</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-<!-- Second Parallax Section -->
-<div class="parallax" style="background-image: url('{{ asset('images/test.jpg') }}');"></div>
+            <!-- Instagram Video Downloader -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fab fa-instagram text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Instagram Video Downloader</h3>
+                <p class="text-gray-600 text-center mb-4">Download your favorite Instagram videos and reels with a single click. Our tool supports high-quality downloads, ensuring you can keep your favorite content without compromising quality.</p>
+                <p class="text-gray-600 text-center">You can easily save Instagram videos in various formats and enjoy them offline anytime, anywhere.</p>
+                <a href="/tools/instagram-video-downloader" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
 
-<!-- Scroll-to-Top Button -->
-<button id="scrollToTop" class="scroll-to-top">↑</button>
+            <!-- YouTube Video Downloader -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fab fa-youtube text-4xl text-red-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">YouTube Video Downloader</h3>
+                <p class="text-gray-600 text-center mb-4">Our YouTube Video Downloader allows you to download high-quality YouTube videos in multiple resolutions. Save videos for offline viewing and enjoy them whenever you want.</p>
+                <p class="text-gray-600 text-center">With this tool, you can quickly grab videos, playlists, and even entire channels in your preferred format.</p>
+                <a href="/tools/youtube-video-downloader" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
 
-<script>
-    // Smooth scrolling to anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+            <!-- Short URL Generator -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-link text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Short URL Generator</h3>
+                <p class="text-gray-600 text-center mb-4">Create clean, concise, and shareable short URLs for your website, blog, or any online resource. Shorten long URLs, making them easy to share via social media, email, or messaging apps.</p>
+                <p class="text-gray-600 text-center">Our tool ensures your short URLs are easy to remember, look professional, and are optimized for better user engagement.</p>
+                <a href="/tools/short-url-generator" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+            <!-- Paraphrase Tool -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-pen text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Paraphrase Tool</h3>
+                <p class="text-gray-600 text-center mb-4">Need to rephrase a sentence or paragraph? Our Paraphrase Tool can help you rewrite any text, keeping its meaning intact while using different words and structures.</p>
+                <p class="text-gray-600 text-center">Whether you’re a student, content writer, or blogger, this tool makes it easier to create unique, original content that suits your needs.</p>
+                <a href="/tools/paraphrase-tool" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
 
-    // Scroll-to-Top Button Functionality
-    const scrollToTopButton = document.getElementById('scrollToTop');
+            <!-- CV Generator -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-id-card text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">CV Generator</h3>
+                <p class="text-gray-600 text-center mb-4">Create a professional CV quickly and easily. Our tool allows you to generate a polished CV with pre-designed templates that highlight your skills and experience.</p>
+                <p class="text-gray-600 text-center">Perfect for job seekers, our CV Generator will help you make a lasting impression with a visually appealing and well-structured CV.</p>
+                <a href="/tools/cv-generator" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
 
-    window.onscroll = function() {
-        // Show button when scrolled down 200px
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            scrollToTopButton.style.display = 'block';
-        } else {
-            scrollToTopButton.style.display = 'none';
-        }
-    };
+            <!-- Online Code Editor -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-code text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Online Code Editor</h3>
+                <p class="text-gray-600 text-center mb-4">Write, test, and debug your code online without needing to set up any software. Our Online Code Editor supports multiple programming languages and provides real-time error checking.</p>
+                <p class="text-gray-600 text-center">Ideal for developers and students alike, our editor helps you streamline your coding process with instant feedback and the ability to run code directly from your browser.</p>
+                <a href="/tools/online-code-editor" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
 
-    // Scroll to top function
-    scrollToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Smooth scroll to top
-        });
-    });
-</script>
+            <!-- PDF Editor -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-file-pdf text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">PDF Editor</h3>
+                <p class="text-gray-600 text-center mb-4">Edit, merge, split, and annotate PDF documents with our easy-to-use PDF editor. No need for expensive software – everything you need is available online.</p>
+                <p class="text-gray-600 text-center">Whether you want to highlight important sections or add notes to your PDFs, our tool makes it simple to edit PDFs on the go.</p>
+                <a href="/tools/pdf-editor" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
+
+            <!-- PDF Compression -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-compress text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">PDF Compression</h3>
+                <p class="text-gray-600 text-center mb-4">Reduce the size of your PDF files while maintaining quality. Our PDF compression tool is perfect for compressing large PDF documents for easier sharing and storage.</p>
+                <p class="text-gray-600 text-center">Save space and time with optimized PDF files that are quicker to upload and download.</p>
+                <a href="/tools/pdf-compression" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
+
+            <!-- PDF to Image -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-image text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">PDF to Image</h3>
+                <p class="text-gray-600 text-center mb-4">Convert PDF pages into high-quality images. Ideal for presentations, social media, or sharing content as individual images.</p>
+                <p class="text-gray-600 text-center">Our PDF to Image tool lets you convert your documents into easy-to-share visuals, all while maintaining excellent image resolution.</p>
+                <a href="/tools/pdf-to-image" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
+
+            <!-- HTML To PDF -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-file-alt text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">HTML to PDF</h3>
+                <p class="text-gray-600 text-center mb-4">Convert any HTML webpage into a PDF document that’s easy to share and print. Whether it’s a blog, report, or article, this tool gives you a clean and professional-looking PDF version of any webpage.</p>
+                <p class="text-gray-600 text-center">Save content from the web as a PDF, preserving all formatting, images, and text in an easily portable format.</p>
+                <a href="/tools/html-to-pdf" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
+
+            <!-- Image To PDF -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-file-image text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Image to PDF</h3>
+                <p class="text-gray-600 text-center mb-4">Turn your images into PDF documents for easier sharing and printing. Whether you have a series of images or just one, this tool quickly converts them into a portable PDF.</p>
+                <p class="text-gray-600 text-center">Perfect for converting image portfolios, scans, and any collection of photos into one easy-to-share document.</p>
+                <a href="/tools/image-to-pdf" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
+
+            <!-- Image Compression -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-image text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Image Compression</h3>
+                <p class="text-gray-600 text-center mb-4">Reduce the file size of your images while keeping their resolution intact. Perfect for web usage, sending by email, or uploading to social media.</p>
+                <p class="text-gray-600 text-center">Compress multiple image files quickly and efficiently without losing quality, ensuring faster uploads and smoother web performance.</p>
+                <a href="/tools/image-compression" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
+
+            <!-- Extract Text From Image -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-camera text-4xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Extract Text From Image</h3>
+                <p class="text-gray-600 text-center mb-4">Convert text within images into editable text using optical character recognition (OCR). Whether it’s a scanned document or a photo with text, this tool extracts the text for you.</p>
+                <p class="text-gray-600 text-center">Perfect for digitizing printed text from images or photos to make it easier to edit, store, or share.</p>
+                <a href="/tools/extract-text-from-image" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="py-4 relative top-[90em] h-[110em] md:h-[20em] w-full ">
+        <x-footer/> </footer>
+<script type="module" src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
+<script type="module" src="{{ asset('js/owl-carousel.js') }}"></script>
+<script type="module" src="{{ asset('js/custom.js') }}"></script>
 
 </body>
 </html>
