@@ -47,7 +47,7 @@
     <x-header/>
 
     <!-- Blog Categories Section -->
-    <div class="container mx-auto p-6 mt-[9em]">
+    <div class="container mx-auto p-6 pt-[13em]">
         <h1 class="text-3xl text-center font-bold text-teal-600 mb-8">Explore Our Blog Categories</h1>
         <h2 class="text-center text-teal-600 mb-8">
             At [Your Website Name], we cover a wide range of topics to help you stay informed and inspired. Explore our categories below and dive into the latest posts.
@@ -61,7 +61,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Technology</h3>
                 <p class="text-gray-600 text-center mb-4">Stay up-to-date with the latest advancements in the world of technology. From software updates to gadget reviews, we cover it all.</p>
-                <a href="/category/technology" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
+                <a title='technology' href="{{ url('blog/Technology') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
             </div>
 
             <!-- Sport Category -->
@@ -71,7 +71,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Sport</h3>
                 <p class="text-gray-600 text-center mb-4">Catch all the latest updates, scores, and analyses on your favorite sports. From football to basketball, we cover everything.</p>
-                <a href="/category/sport" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
+                <a title='sport' href="{{ url('blog/sport') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
             </div>
 
             <!-- Lifestyle Category -->
@@ -81,7 +81,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Lifestyle</h3>
                 <p class="text-gray-600 text-center mb-4">Learn about healthy living, fitness routines, and general wellness tips to improve your lifestyle.</p>
-                <a href="/category/lifestyle" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
+                <a title='lifestyle' href="{{ url('blog/lifestyle') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
             </div>
 
             <!-- Personal Development Category -->
@@ -91,7 +91,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Personal Development</h3>
                 <p class="text-gray-600 text-center mb-4">Discover self-improvement tips, productivity hacks, and life coaching advice to reach your full potential.</p>
-                <a href="/category/personal-development" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
+                <a title='personal development' href="{{ url('blog/Personal-Development') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
             </div>
 
             <!-- Islamic Category -->
@@ -101,7 +101,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Islamic</h3>
                 <p class="text-gray-600 text-center mb-4">Read insightful articles on Islamic teachings, history, and contemporary issues within the Muslim world.</p>
-                <a href="/category/islamic" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
+                <a title='islamic' href="{{ url('blog/Islamic') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
             </div>
 
             <!-- Fashion Category -->
@@ -111,7 +111,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Fashion</h3>
                 <p class="text-gray-600 text-center mb-4">Stay ahead in the fashion world with the latest trends, style guides, and wardrobe inspiration.</p>
-                <a href="/category/fashion" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
+                <a title='fashion' href="{{ url('blog/Fashion') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
             </div>
 
             <!-- Movies Category -->
@@ -121,7 +121,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Movies</h3>
                 <p class="text-gray-600 text-center mb-4">Get movie reviews, release updates, and behind-the-scenes content about your favorite films and actors.</p>
-                <a href="/category/movies" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
+                <a title='movie' href="{{ url('blog/Movie') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
             </div>
 
             <!-- Food Category -->
@@ -131,7 +131,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Food</h3>
                 <p class="text-gray-600 text-center mb-4">Explore delicious recipes, food trends, and nutrition tips to elevate your culinary experiences.</p>
-                <a href="/category/food" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
+                <a title='food' href="{{ url('blog/Food') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
             </div>
 
             <!-- Travel Category -->
@@ -141,7 +141,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Travel</h3>
                 <p class="text-gray-600 text-center mb-4">Get travel guides, tips, and destination reviews to help you plan your next adventure.</p>
-                <a href="/category/travel" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
+                <a title='travel' href="{{ url('blog/Travel') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Explore Category</a>
             </div>
         </div>
     </div>
