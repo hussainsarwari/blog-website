@@ -201,7 +201,7 @@
                         </li>
                         {{-- blog --}}
                         <li class="flex justify-center">
-                            <a class="scroll-to-section peer new-ite mt-0" href="#" title="blog"
+                            <a class="scroll-to-section peer new-ite mt-0" href="{{url('blog')}}" title="blog"
                                 aria-haspopup="true" aria-expanded="false" role="menuitem">Blog</a>
 
                             <ul class="fixed flex-col hidden top-[7em] p-2 w-fit bg-white shadow-lg rounded-xl peer-hover:flex hover:flex h-fit"
