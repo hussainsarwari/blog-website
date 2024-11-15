@@ -62,7 +62,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Instagram Video Downloader</h3>
                 <p class="text-gray-600 text-center mb-4">Download your favorite Instagram videos and reels with a single click. Our tool supports high-quality downloads, ensuring you can keep your favorite content without compromising quality.</p>
                 <p class="text-gray-600 text-center">You can easily save Instagram videos in various formats and enjoy them offline anytime, anywhere.</p>
-                <a href="/tools/instagram-video-downloader" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+                <a      href="{{ url('online-tools/instagram-online-video-downloader') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
             </div>
 
             <!-- YouTube Video Downloader -->
@@ -73,7 +73,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">YouTube Video Downloader</h3>
                 <p class="text-gray-600 text-center mb-4">Our YouTube Video Downloader allows you to download high-quality YouTube videos in multiple resolutions. Save videos for offline viewing and enjoy them whenever you want.</p>
                 <p class="text-gray-600 text-center">With this tool, you can quickly grab videos, playlists, and even entire channels in your preferred format.</p>
-                <a href="/tools/youtube-video-downloader" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+                <a     href="{{ url('online-tools/youtube-online-video-downloader') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
             </div>
 
             <!-- Short URL Generator -->
@@ -84,7 +84,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Short URL Generator</h3>
                 <p class="text-gray-600 text-center mb-4">Create clean, concise, and shareable short URLs for your website, blog, or any online resource. Shorten long URLs, making them easy to share via social media, email, or messaging apps.</p>
                 <p class="text-gray-600 text-center">Our tool ensures your short URLs are easy to remember, look professional, and are optimized for better user engagement.</p>
-                <a href="/tools/short-url-generator" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+                <a href="{{ url('online-tools/short-url') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
             </div>
 
             <!-- Paraphrase Tool -->
@@ -95,7 +95,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Paraphrase Tool</h3>
                 <p class="text-gray-600 text-center mb-4">Need to rephrase a sentence or paragraph? Our Paraphrase Tool can help you rewrite any text, keeping its meaning intact while using different words and structures.</p>
                 <p class="text-gray-600 text-center">Whether you’re a student, content writer, or blogger, this tool makes it easier to create unique, original content that suits your needs.</p>
-                <a href="/tools/paraphrase-tool" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+                <a  href="{{ url('online-tools/Paraphrase') }}"  class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
             </div>
 
             <!-- CV Generator -->
@@ -106,7 +106,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">CV Generator</h3>
                 <p class="text-gray-600 text-center mb-4">Create a professional CV quickly and easily. Our tool allows you to generate a polished CV with pre-designed templates that highlight your skills and experience.</p>
                 <p class="text-gray-600 text-center">Perfect for job seekers, our CV Generator will help you make a lasting impression with a visually appealing and well-structured CV.</p>
-                <a href="/tools/cv-generator" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+                <a   href="{{ url('online-tools/CV-generator') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
             </div>
 
             <!-- Online Code Editor -->
@@ -117,7 +117,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">Online Code Editor</h3>
                 <p class="text-gray-600 text-center mb-4">Write, test, and debug your code online without needing to set up any software. Our Online Code Editor supports multiple programming languages and provides real-time error checking.</p>
                 <p class="text-gray-600 text-center">Ideal for developers and students alike, our editor helps you streamline your coding process with instant feedback and the ability to run code directly from your browser.</p>
-                <a href="/tools/online-code-editor" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+                <a href="{{ url('online-tools/Online-code-editor') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
             </div>
 
             <!-- PDF Editor -->
@@ -128,7 +128,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">PDF Editor</h3>
                 <p class="text-gray-600 text-center mb-4">Edit, merge, split, and annotate PDF documents with our easy-to-use PDF editor. No need for expensive software – everything you need is available online.</p>
                 <p class="text-gray-600 text-center">Whether you want to highlight important sections or add notes to your PDFs, our tool makes it simple to edit PDFs on the go.</p>
-                <a href="/tools/pdf-editor" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+                <a  href="{{ url('online-tools/online-pdf-editor') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
             </div>
 
             <!-- PDF Compression -->
