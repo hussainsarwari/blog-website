@@ -139,7 +139,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">PDF Compression</h3>
                 <p class="text-gray-600 text-center mb-4">Reduce the size of your PDF files while maintaining quality. Our PDF compression tool is perfect for compressing large PDF documents for easier sharing and storage.</p>
                 <p class="text-gray-600 text-center">Save space and time with optimized PDF files that are quicker to upload and download.</p>
-                <a href="/tools/pdf-compression" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+                <a    href="{{ url('online-tools/online-pdf-compressor') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
             </div>
 
             <!-- PDF to Image -->
@@ -150,7 +150,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 text-center mb-4">PDF to Image</h3>
                 <p class="text-gray-600 text-center mb-4">Convert PDF pages into high-quality images. Ideal for presentations, social media, or sharing content as individual images.</p>
                 <p class="text-gray-600 text-center">Our PDF to Image tool lets you convert your documents into easy-to-share visuals, all while maintaining excellent image resolution.</p>
-                <a href="/tools/pdf-to-image" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
+                <a    href="{{ url('online-tools/pdf-to-image') }}" class="block mt-4 text-center text-teal-600 font-semibold hover:underline transition">Use Tool</a>
             </div>
 
             <!-- HTML To PDF -->
