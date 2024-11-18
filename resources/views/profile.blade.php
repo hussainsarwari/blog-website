@@ -94,57 +94,11 @@
             <div class="mt-4 h-64 overflow-auto border-t border-gray-300 w-full text-center" role="list">
               <!-- List of 10 Blog Post Items -->
               <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">How to Build a RESTful API with Node.js</a>
+                <a href="{{url('blog')}}" class="text-blue-500 hover:text-blue-700 font-semibold">How to Build a RESTful API with Node.js</a>
                 <p class="text-gray-600 text-sm">Published on Oct 20, 2024</p>
               </article>
               <hr>
-              <hr>
-              
-              <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">CSS Grid vs. Flexbox: When to Use Each</a>
-                <p class="text-gray-600 text-sm">Published on Sep 15, 2024</p>
-              </article>
-              <hr>
-              <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">Understanding Promises in JavaScript</a>
-                <p class="text-gray-600 text-sm">Published on Aug 5, 2024</p>
-              </article>
-              <hr>
-              <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">Best Practices for Writing Clean Code</a>
-                <p class="text-gray-600 text-sm">Published on Jul 25, 2024</p>
-              </article>
-              <hr>
-              <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">Deploying Applications with Docker</a>
-                <p class="text-gray-600 text-sm">Published on Jun 15, 2024</p>
-              </article>
-              <hr>
-              <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">React Hooks: A Comprehensive Guide</a>
-                <p class="text-gray-600 text-sm">Published on May 10, 2024</p>
-              </article>
-              <hr>
-              <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">Building a Chat App with WebSockets</a>
-                <p class="text-gray-600 text-sm">Published on Apr 22, 2024</p>
-              </article>
-              <hr>
-              <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">The Basics of TypeScript</a>
-                <p class="text-gray-600 text-sm">Published on Mar 30, 2024</p>
-              </article>
-              <hr>
-              <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">Node.js Event Loop Explained</a>
-                <p class="text-gray-600 text-sm">Published on Feb 18, 2024</p>
-              </article>
-              <hr>
-              <article class="py-3 border-b border-gray-200">
-                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">Creating Animations with CSS</a>
-                <p class="text-gray-600 text-sm">Published on Jan 5, 2024</p>
-              </article>
-              <hr>
+            
             </div>
           </div>
         </div>
