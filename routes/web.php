@@ -64,7 +64,9 @@ Route::get('/Mohammad-Hussain-Sarvari',function(){
     return view("Mohammad_Hussain_Sarvari");
     })->name('myprofile');
 
-
+Route::get('profile', function () {
+    return view("profile");
+})->name("profile");
 
 
 Auth::routes();
