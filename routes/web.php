@@ -2,6 +2,7 @@
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\tools;
 use App\Http\Controllers\blogSection;
 use Illuminate\Support\Facades\Auth;
@@ -72,4 +73,5 @@ Route::get('profile', function () {
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');
+Route::get('/dashboard', [dashboardController::class, 'index'])->name('dashboard');
 
