@@ -69,6 +69,9 @@ Route::get('profile', function () {
     return view("profile");
 })->name("profile");
 
+Route::get('dashboard/General_visit', [dashboardController::class, 'general_visit'] )->name("general_visit");
+Route::get('dashboard/command', [dashboardController::class, 'command'] )->name("command");
+
 
 Auth::routes();
 

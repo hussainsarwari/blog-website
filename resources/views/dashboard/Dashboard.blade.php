@@ -17,28 +17,24 @@
     <div class="container mx-auto p-4">
         <h1 class="text-3xl font-bold mb-6">Enhanced Blog Dashboard</h1>
 
-        <!-- Settings Button -->
-        <div class="mb-6">
-            <a href="/settings"
-                class="inline-block bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-md text-sm">Settings</a>
-        </div>
+     
 
         <!-- Chart Section -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 bg-slate-50 p-3 shadow-xl">
             <!-- General Visits -->
             <div class="bg-white p-4 rounded shadow">
                 <h2 class="text-xl font-semibold mb-2">General Visits</h2>
                 <div id="visitsChart"></div>
-                <a href="/dashboard/visits/details"
+                <a href="{{url('dashboard/General_visit')}}"
                     class="inline-block mt-4 text-sm bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">More
                     Information</a>
             </div>
 
-            <!-- Comments -->
+            <!-- command -->
             <div class="bg-white p-4 rounded shadow">
-                <h2 class="text-xl font-semibold mb-2">Comments</h2>
+                <h2 class="text-xl font-semibold mb-2">Commands</h2>
                 <div id="commentsChart"></div>
-                <a href="/dashboard/comments/details"
+                <a href="{{url('dashboard/command')}}"
                     class="inline-block mt-4 text-sm bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">More
                     Information</a>
             </div>
@@ -72,17 +68,10 @@
                 Information</a>
             </div>
 
-            <!-- Number of Likes -->
-            <div class="bg-white p-4 rounded shadow">
-                <h2 class="text-xl font-semibold mb-2">Number of Likes</h2>
-                <div id="likesChart"></div>
-                <a href="/dashboard/comments/details"
-                class="inline-block mt-4 text-sm bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">More
-                Information</a>
-            </div>
+         
 
             <!-- Number of Blogs -->
-            <div class="bg-white p-4 rounded shadow">
+            <div class="bg-white p-4 rounded shadow ">
                 <h2 class="text-xl font-semibold mb-2">Number of Blogs</h2>
                 <div id="blogsChart"></div>
                 <a href="/dashboard/comments/details"
@@ -90,8 +79,14 @@
                 Information</a>
             </div>
         </div>
+
+
+
+
         <!-- Blog List Table -->
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto shadow-xl  my-5 bg-white p-4">
+            <h2 class="text-center font-bold text-xl my-3">Blogs Details</h2>
+            
             <table class="min-w-full bg-white border">
                 <thead>
                     <tr>
@@ -135,6 +130,9 @@
                 </tbody>
             </table>
         </div>
+        <a href="/dashboard/edit/1"
+        class="bg-blue-500 hover:bg-blue-600 text-white px-3  py-2 rounded text-md sm:text-sm ">add new blog post</a>
+
 
     </div>
 
@@ -144,10 +142,10 @@
 
         var commentsOptions = {
             chart: {
-                type: 'bar',
-                height: 150,
+                type: 'area',
+                height: 250,
                 zoom: {
-                    enabled: false
+                    enabled: true
                 }
             },
             series: [{
@@ -165,7 +163,10 @@
         var messagesOptions = {
             chart: {
                 type: 'donut',
-                height: 150,
+                height: 250,
+                zoom: {
+                    enabled: true
+                }
             },
             series: [60, 40],
             labels: ['Read', 'Unread'],
@@ -177,14 +178,17 @@
         var newUsersOptions = {
             chart: {
                 type: 'area',
-                height: 150
+                height: 250,
+                zoom: {
+                    enabled: true
+                }
             },
             series: [{
                 name: 'New Users',
-                data: [5, 10, 12, 8, 7]
+                data: [5, 10, 12, 8, 7,2,13,42,22,12,22,11]
             }],
             xaxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+                categories: [1,2,3,4,5,6,7,8,9,10,11,12]
             },
             colors: ['#007bff']
         };
@@ -192,21 +196,21 @@
         newUsersChart.render();
         var visitsOptions = {
             chart: {
-                type: 'line',
-                height: 150,
+                type: 'area',
+                height: 250,
                 zoom: {
-                    enabled: false
+                    enabled: true
                 }
             },
             series: [{
                 name: 'Visits',
-                data: [40, 50, 60, 70, 80]
+                data: [40, 50, 60, 70, 80,1,2,42,12,11,44,22]
             }],
             xaxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+                categories: [1,2,3,4,5,6,7,8,9,10,11,12]
             },
             stroke: {
-                width: 2
+                width: 1
             },
             colors: ['#007bff']
         };
@@ -216,46 +220,36 @@
         var sharesOptions = {
             chart: {
                 type: 'bar',
-                height: 150,
+                height: 250,
                 zoom: {
-                    enabled: false
+                    enabled: true
                 }
             },
             series: [{
                 name: 'Shares',
-                data: [20, 30, 40, 50, 60]
+                data: [20, 30, 40, 50, 60,11,23,12,42,12,22,12]
             }],
             xaxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+                categories: [1,2,3,4,5,6,7,8,9,10,11,12]
             },
             colors: ['#007bff']
         };
         var sharesChart = new ApexCharts(document.querySelector("#sharesChart"), sharesOptions);
         sharesChart.render();
 
-        var likesOptions = {
-            chart: {
-                type: 'donut',
-                height: 150,
-            },
-            series: [60, 40],
-            labels: ['Likes', 'Dislikes'],
-            colors: ['#007bff', '#001bff']
-        };
-        var likesChart = new ApexCharts(document.querySelector("#likesChart"), likesOptions);
-        likesChart.render();
+       
 
         var blogsOptions = {
             chart: {
                 type: 'area',
-                height: 150
+                height: 250
             },
             series: [{
                 name: 'Blogs',
-                data: [5, 8, 10, 6, 7]
+                data: [5, 8, 10, 6, 7,12,42,12,22,34,22,11]
             }],
             xaxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+                categories: [1,2,3,4,5,6,7,8,9,10,11,12]
             },
             colors: ['#007bff']
         };
