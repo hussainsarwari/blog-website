@@ -71,6 +71,7 @@ Route::get('profile', function () {
 
 Route::get('dashboard/General_visit', [dashboardController::class, 'general_visit'] )->name("general_visit");
 Route::get('dashboard/command', [dashboardController::class, 'command'] )->name("command");
+Route::get('dashboard/messages', [dashboardController::class, 'messages'] )->name("messages");
 
 
 Auth::routes();

@@ -41,4 +41,7 @@ class dashboardController extends Controller
     public function command(){
         return view('dashboard.command');
     }
+    public function messages(){
+        return view('dashboard.message');
+    }
 }

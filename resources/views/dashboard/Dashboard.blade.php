@@ -43,7 +43,7 @@
             <div class="bg-white p-4 rounded shadow">
                 <h2 class="text-xl font-semibold mb-2">Messages</h2>
                 <div id="messagesChart"></div>
-                <a href="/dashboard/messages/details"
+                <a href="{{url('/dashboard/messages')}}"
                     class="inline-block mt-4 text-sm bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">More
                     Information</a>
             </div>
