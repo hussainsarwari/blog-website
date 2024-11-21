@@ -11,17 +11,10 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id('id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('img')->nullable();
-            $table->string('bio')->nullable();
-            $table->integer('phone')->nullable();
-            $table->integer('rate')->nullable();
-            $table->integer('today_rating')->nullable();
-            $table->integer('completed_session')->nullable();
-            $table->integer('today_completed_session')->nullable();
-            $table->integer('total_hours_study')->nullable();
-            $table->integer('average_working_hours')->nullable();
-            $table->string('password');
+            $table->string('email');
+            $table->string('category');
+            $table->date('createAtdate');
+           $table->Integer("visit_counter");
             $table->rememberToken();
             $table->timestamps();
            

@@ -14,6 +14,7 @@ export default defineConfig({
                 'resources/css/templatemo-art-factory.css',
                 'resources/js/pdf_editor.js',
                 'resources/js/app.js',
+                'resources/js/text_editor.js',
             ],
             refresh: true,
         }),

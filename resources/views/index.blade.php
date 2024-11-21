@@ -117,11 +117,11 @@
     </div>
 
 
-    <section class="py-[10em] my-10  ">
+    <section class="py-[10em] my-10  " id="service">
         <div class="container">
             <div class="mb-3 text-center row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
-                    <h2 class="display-5  text-blue-500 font-bold py-[3em]" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">Our Features</h2>
+                    <h2 class="display-5  text-blue-500 font-bold py-[3em]" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">Our services</h2>
                 </div>
             </div>
             <div class="row align-items-center">
@@ -408,8 +408,8 @@
 
 
     <section class="section py-[10em] parallax" style="background-image: url('{{ asset('images/natural.jpg') }}');" id="about-us">
-        <div class="container bg-slate-900 rounded-xl shadow-xl">
-            <h2 class="text-center py-[1em] text-blue-500 font-bold" data-scroll-reveal="enter top move 30px over 0.6s after 0.4s">About S_solution</h2>
+        <div class="container bg-slate-900 rounded-xl shadow-xl md:h-[35em] h-fit">
+            <h2 class="text-center py-[1em] text-blue-500 font-bold" data-scroll-reveal="enter top move 30px over 0.6s after 0.4s">About Us</h2>
             <p class="text-[17px] mb-[3em] text-center text-blue-400" data-scroll-reveal="enter top move 30px over 0.6s after 0.8s">
                 Welcome to S_Solution—a digital haven where curiosity meets creativity!
 
@@ -417,7 +417,7 @@
             <div class="row">
                 <div class="col-lg-7 col-md-12 col-sm-12"
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <img src="{{ url('images/about_US.gif') }}" class="w-full mx-auto rounded img-fluid d-block"
+                    <img src="{{ url('images/about_US.gif') }}" class=" mx-auto rounded img-fluid d-block w-[25em]"
                         alt="App">
                 </div>
                 <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
@@ -452,7 +452,7 @@
     <hr>
     <hr>
     <hr>
-    <section class="py-5 " id='contacts'>
+    <section class="py-5 " id='contact'>
         <div class="container flex-col flex justify-center">
 
             <h2 data-scroll-reveal="enter top move 30px over 0.6s after 0.4s" class="text-center text-blue-500 font-bold ">Contact <span class="text-yellow-400">Us</span></h2>

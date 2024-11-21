@@ -42,7 +42,7 @@
             </form>
 
             <div class="d-flex justify-content-end">
-                <a title="follow us on facebook" class="text-light" href="https://facebook.com/"
+                <a title="follow us on facebook" class="text-light" href="https://www.facebook.com/mhussain.sarvari.9"
                     aria-label="Visit our Facebook page">
                     <svg class="bi bi-facebook-f" fill="#fff" height="16" viewBox="0 0 24 24"
                         width="16" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +106,7 @@
 
                         {{-- tools --}}
                         <li class="flex justify-center">
-                            <a class="scroll-to-section peer new-ite mt-0" href="#online-tools"
+                            <a class="scroll-to-section peer new-ite mt-0" href="{{url('online-tools')}}"
                                 title="Online Tools" aria-haspopup="true" aria-expanded="false"
                                 role="menuitem">Tools</a>
 
@@ -201,7 +201,7 @@
                         </li>
                         {{-- blog --}}
                         <li class="flex justify-center">
-                            <a class="scroll-to-section peer new-ite mt-0" href="#" title="blog"
+                            <a class="scroll-to-section peer new-ite mt-0" href="{{url('blog')}}" title="blog"
                                 aria-haspopup="true" aria-expanded="false" role="menuitem">Blog</a>
 
                             <ul class="fixed flex-col hidden top-[7em] p-2 w-fit bg-white shadow-lg rounded-xl peer-hover:flex hover:flex h-fit"
@@ -266,12 +266,12 @@
 
 
 
-                        <li class="scroll-to-section"><a title="services" href="#services"
+                        <li class="scroll-to-section"><a title="services" href="{{url('http://localhost:8000/')}}#service"
                                 class="text-slate-900">Services</a>
                         </li>
 
-                        <li class="scroll-to-section"><a title="contact" href="#contacts">Contacts</a></li>
-                        <li class="scroll-to-section"><a title="about us" href="#about-us">About Us</a></li>
+                        <li class="scroll-to-section"><a title="contact" href="{{url('http://localhost:8000/')}}#contact">Contacts</a></li>
+                        <li class="scroll-to-section"><a title="about us" href="{{url('http://localhost:8000/')}}#about-us">About Us</a></li>
                     </ul>
                     <a title='menu' aria-haspopup="true" aria-hidden="true" class='menu-trigger'>
                         <span>Menu</span>

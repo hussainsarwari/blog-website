@@ -2,15 +2,14 @@
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\tools;
 use App\Http\Controllers\blogSection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 Route::get('/',function (){return view('index');})->name('home');
 Route::get('/login',[LoginController::class , 'showLoginForm'])->name('login');
-Route::get('/Mohammad-Hussain-Sarvari',function(){
-return view("Mohammad_Hussain_Sarvari");
-})->name('login');
+
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register-post');
 // online tools
@@ -62,12 +61,27 @@ Route::get('/Privacy-Policy', function (){
 return view('Privacy_policy');
 })->name('Privacy-Policy');
 
+Route::get('/Mohammad-Hussain-Sarvari',function(){
+    return view("Mohammad_Hussain_Sarvari");
+    })->name('myprofile');
 
+Route::get('profile', function () {
+    return view("profile");
+})->name("profile");
 
+Route::get('dashboard/General_visit', [dashboardController::class, 'general_visit'] )->name("general_visit");
+Route::get('dashboard/command', [dashboardController::class, 'command'] )->name("command");
+Route::get('dashboard/messages', [dashboardController::class, 'messages'] )->name("messages");
+Route::get('dashboard/users', [dashboardController::class, 'users'] )->name("users");
+Route::get('dashboard/blogDetails', [dashboardController::class, 'blogDetails'] )->name("blogDetails");
+Route::get('dashboard/add_new_blog_post', [dashboardController::class, 'add_new_blog_post'] )->name("add_new_blog_post");
+Route::post('dashboard/save-content', [dashboardController::class, 'saveContent'] )->name("saveContent");
+Route::get('dashboard/add_new_author', [dashboardController::class, 'add_new_author'] )->name("add_new_author");
+Route::post('/upload-image', [dashboardController::class, 'uploadImage']);
 
-
-
+Route::post('/uploadLink', [dashboardController::class, 'uploadLink'])->name('uploadLink');
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');
+Route::get('/dashboard', [dashboardController::class, 'index'])->name('dashboard');
 
