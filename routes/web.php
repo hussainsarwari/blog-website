@@ -72,8 +72,14 @@ Route::get('profile', function () {
 Route::get('dashboard/General_visit', [dashboardController::class, 'general_visit'] )->name("general_visit");
 Route::get('dashboard/command', [dashboardController::class, 'command'] )->name("command");
 Route::get('dashboard/messages', [dashboardController::class, 'messages'] )->name("messages");
+Route::get('dashboard/users', [dashboardController::class, 'users'] )->name("users");
+Route::get('dashboard/blogDetails', [dashboardController::class, 'blogDetails'] )->name("blogDetails");
+Route::get('dashboard/add_new_blog_post', [dashboardController::class, 'add_new_blog_post'] )->name("add_new_blog_post");
+Route::post('dashboard/save-content', [dashboardController::class, 'saveContent'] )->name("saveContent");
+Route::get('dashboard/add_new_author', [dashboardController::class, 'add_new_author'] )->name("add_new_author");
+Route::post('/upload-image', [dashboardController::class, 'uploadImage']);
 
-
+Route::post('/uploadLink', [dashboardController::class, 'uploadLink'])->name('uploadLink');
 Auth::routes();
 
 // Route::get('/dashboard', [dashboardController::class, 'index'])->middleware('auth')->name('dashboard');

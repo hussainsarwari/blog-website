@@ -44,4 +44,57 @@ class dashboardController extends Controller
     public function messages(){
         return view('dashboard.message');
     }
+    public function users(){
+        return view('dashboard.newUser');
+    }
+    public function blogDetails(){
+        return view('dashboard.blog');
+    }
+    public function add_new_blog_post(){
+        return view('dashboard.add_new_blog_post');
+    }
+    public function add_new_author(){
+        return view('dashboard.add_new_author');
+    }
+    public function saveContent(Request $request)
+    {
+        $content = $request->input('content');
+
+        // Store the content in the database or file
+        // Example: BlogPost::create(['content' => $content]);
+
+        return response()->json(['message' => 'Content saved successfully!']);
+    }
+    public function uploadImage(Request $request)
+    {
+        // Validate the image file
+        $validated = $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        // Store the image file
+        $imagePath = $request->file('image')->store('images', 'public');
+
+        // Return the URL of the uploaded image
+        return response()->json([
+            'url' => asset('storage/' . $imagePath),
+        ]);
+    }
+
+      // Handle link upload from Editor.js
+      public function uploadLink(Request $request)
+      {
+          // You can process the link data here, e.g., validate the URL
+          $url = $request->input('link');
+   
+          // You can store or process the link as needed. For now, return the link in the response.
+          return response()->json([
+              'success' => 1,
+              'link' => $url, // Send back the URL
+          ]);
+      }
 }
+
+
+
+// now create a new view file for add new blog post section , it should has these items: 1 title 2 keywords 3 category 4 description 5 introduction  6 
