@@ -19,9 +19,8 @@ class RegisterController extends Controller
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),]);
-        Alert::success(
-            'good job',
-            'your acount created successfuly');return redirect('login');}
+     
+        }
     /**
      * Where to redirect users after registration.
      *
@@ -67,5 +66,8 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+    public function index(){
+        return view("auth.register");
     }
 }

@@ -126,147 +126,87 @@
             </div>
 
             <!-- Filter Menu with animation -->
-            <div id="filterMenu"
-                class="max-w-4xl relative z-[200] top-[1em]   mx-auto bg-white p-6  rounded-lg shadow-lg mt-8 hidden opacity-0 transition-opacity duration-300">
-                <div class="flex items-center justify-center mb-6">
+            <form action="filter_blog" method="POST" id="filterMenu"
+            class="max-w-4xl relative z-[200] top-[1em]   mx-auto bg-white p-6  rounded-lg shadow-lg mt-8 hidden opacity-0 transition-opacity duration-300">
+           @csrf
+            <div class="flex items-center justify-center mb-6">
 
-                    <button onclick="closeFilterMenu()"
-                        class="px-3 py-2 text-blue-500 transition-all duration-300 border-2 border-blue-500 rounded-md hover:text-red-500 focus:outline-none hover:border-red-500">
-                        close
-                    </button>
-                </div>
+                <button type="button" onclick="closeFilterMenu()"
+                    class="px-3 py-2 text-blue-500 transition-all duration-300 border-2 border-blue-500 rounded-md hover:text-red-500 focus:outline-none hover:border-red-500">
+                    close
+                </button>
+            </div>
 
 
-                <!-- Filter by Tags (as clickable buttons) -->
-                <div class="mb-6 ">
-                    <label class="block mb-2 font-medium text-gray-700">Filter by Tags:</label>
-                    <div class="flex flex-wrap gap-2">
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Affiliate Marketing
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Online Businesses
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Marketing
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Degital Marketing
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Finance
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Business
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            E-commerce
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Business Strategy
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Startups
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Sales
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Customer Service
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Human Resources
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Business Development
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Investment
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Market Research
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Branding
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Product Management
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Email Marketing
-                        </button>
-                        <button onclick="toggleTag(this)"
-                            class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
-                            Social Marketing
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Date Range Filter -->
-                <div class="mb-6">
-                    <label class="block mb-2 font-medium text-gray-700">Filter by Date Range:</label>
-                    <div class="flex flex-col ">
-                        <div class="flex-1">
-                            <label for="startDate" class="block mb-1 text-gray-500">Start Date:</label>
-                            <input type="date" id="startDate"
-                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div class="flex-1">
-                            <label for="endDate" class="block mb-1 text-gray-500">End Date:</label>
-                            <input type="date" id="endDate"
-                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rating Filter (Slider) -->
-                <div class="mb-6">
-                    <label for="rating" class="block mb-2 font-medium text-gray-700">Minimum Rating:</label>
-                    <input type="range" id="rating" min="1" max="5" step="1"
-                        class="w-full focus:ring-2 focus:ring-blue-500">
-                    <div class="mt-2 text-sm text-gray-500">Rating: <span id="ratingValue">3</span> stars or higher
-                    </div>
-                </div>
-
-                <!-- Sort By Filter -->
-                <div class="mb-6">
-                    <label for="sort" class="block mb-2 font-medium text-gray-700">Sort by:</label>
-                    <select id="sort"
-                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="latest">Latest</option>
-                        <option value="popular">Most Popular</option>
-                        <option value="trending">Trending</option>
-                        <option value="highestRated">Highest Rated</option>
-                    </select>
-                </div>
-
-                <!-- Filter Button -->
-                <div class="flex justify-end">
-                    <button
-                        class="px-6 py-3 text-white transition-all duration-300 bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
-                        Apply Filters
+            <!-- Filter by Tags (as clickable buttons) -->
+            <div class="mb-6 ">
+                <label class="block mb-2 font-medium text-gray-700">Filter by Tags:</label>
+                <div class="flex flex-wrap gap-2">
+                 
+                    <button type="button" onclick="toggleTag(this)"
+                        class="px-4 py-2 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full hover:bg-blue-500 hover:text-white">
+                        Social Marketing
                     </button>
                 </div>
             </div>
-            {{-- end of fillter section --}}
+
+            <!-- Date Range Filter -->
+            <div class="mb-6">
+                <label class="block mb-2 font-medium text-gray-700">Filter by Date Range:</label>
+                <div class="flex flex-col ">
+                    <div class="flex-1">
+                        <label for="startDate" class="block mb-1 text-gray-500">Start Date:</label>
+                        <input name="startdate" type="date" id="startDate"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="flex-1">
+                        <label for="endDate" class="block mb-1 text-gray-500">End Date:</label>
+                        <input name="enddate" type="date" id="endDate"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rating Filter (Slider) -->
+            <div class="mb-6">
+                <label for="rating" class="block mb-2 font-medium text-gray-700">Minimum Rating:</label>
+                <input name="rating" type="range" id="rating" min="1" max="5" step="1"
+                    class="w-full focus:ring-2 focus:ring-blue-500">
+                <div class="mt-2 text-sm text-gray-500">Rating: <span id="ratingValue">3</span> stars or higher
+                </div>
+            </div>
+
+            <!-- Sort By Filter -->
+            <div class="mb-6">
+                <label for="sort" class="block mb-2 font-medium text-gray-700">Sort by:</label>
+                <select id="sort" name="sort" 
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="latest">Latest</option>
+                    <option value="popular">Most Popular</option>
+                    <option value="trending">Trending</option>
+                    <option value="highestRated">Highest Rated</option>
+                </select>
+            </div>
+            <!-- Filter by category -->
+            <div class="mb-6">
+                <label for="sort" class="block mb-2 font-medium text-gray-700">Category:</label>
+                <select id="sort" name="sort" 
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="latest">Latest</option>
+                    <option value="popular">Most Popular</option>
+                    <option value="trending">Trending</option>
+                    <option value="highestRated">Highest Rated</option>
+                </select>
+            </div>
+
+            <!-- Filter Button -->
+            <div class="flex justify-end">
+                <button type="submit"
+                    class="px-6 py-3 text-white transition-all duration-300 bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    Apply Filters
+                </button>
+            </div>
+        </form> {{-- end of fillter section --}}
         </div>
 
 

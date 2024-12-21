@@ -2,6 +2,89 @@ const downloadBtn = document.getElementById('downloadBtn');
 const modalOverlay = document.getElementById('modalOverlay');
 const closeModal = document.getElementById('closeModal');
 const secondes = document.querySelector('.seconde');
+const poll_btn=document.querySelector(".poll_btn");
+const poll_result=document.querySelector(".poll_result")
+const loading_section=document.querySelector(".loading_section");
+const quizze_btn=document.querySelector(".quizze-btn")
+
+
+document.querySelector(".next_qustion").addEventListener("click",()=>{
+  document.querySelector(".qustion").textContent='next qustion';
+  document.querySelector(".ans-1").innerText='answer 1';
+  document.querySelector(".ans-2").innerText='answer 2';
+  document.querySelector(".ans-3").innerText='answer 3';
+  document.querySelector(".ans-4").innerText='answer 4';
+  document.querySelector("#ans-1").value='answer 1';
+  document.querySelector("#ans-2").value='answer 2';
+  document.querySelector("#ans-3").value='answer 3';
+  document.querySelector("#ans-4").value='answer 4';
+
+})
+
+
+poll_btn.addEventListener("click",()=>{
+    loading_section.classList.remove("hidden")
+    setTimeout(() => {
+        
+        loading_section.classList.add("hidden")
+    poll_result.classList.remove("hidden")
+}, 2000);
+
+})
+quizze_btn.addEventListener("click",()=>{
+
+    
+    
+    const selectedOption = document.querySelector('input[name="answer"]:checked');
+    const resultDiv = document.getElementById('quizResult');
+    const resultMessage = document.getElementById('resultMessage');
+
+    if (!selectedOption) {
+        const alertBox = document.getElementById('alertBox');
+
+        // Show alert
+        alertBox.classList.remove('hidden');
+        setTimeout(() => alertBox.classList.add('opacity-100'), 10); // Smooth show
+
+        // Automatically hide after 5 seconds
+        setTimeout(() => {
+            alertBox.classList.remove('opacity-100'); // Fade out
+            setTimeout(() => alertBox.classList.add('hidden'), 500); // Fully hide
+        }, 5000);
+        return;
+    }
+  
+    if (selectedOption.value === 'Paris') {
+        resultMessage.textContent = 'Correct! Paris is the capital of France.';
+        resultMessage.className = 'text-green-500';
+        document.querySelector(".next_qustion").classList.remove("hidden")
+        document.querySelector(".next_qustion").classList.add("flex")
+        document.querySelector(".reset_btn").classList.add("hidden")
+        document.querySelector(".reset_btn").classList.remove("flex")
+       
+    } else {
+        resultMessage.textContent = `Wrong! The correct answer is Paris.`;
+        resultMessage.className = 'text-red-500';
+        document.querySelector(".reset_btn").classList.remove("hidden")
+        document.querySelector(".reset_btn").classList.add("flex")
+        document.querySelector(".next_qustion").classList.add("hidden")
+        document.querySelector(".next_qustion").classList.remove("flex")
+        
+    }
+
+    resultDiv.classList.remove('hidden');
+    // document.getElementById('quizForm').classList.add('hidden');
+})
+
+document.querySelector(".reset_btn").addEventListener("click",()=>{
+
+        document.getElementById('quizForm').classList.remove('hidden');
+        document.getElementById('quizResult').classList.add('hidden');
+        const options = document.querySelectorAll('input[name="answer"]');
+        options.forEach(option => option.checked = false);
+    
+})
+
 
 downloadBtn.addEventListener('click', () => {
     let timer =5;

@@ -30,6 +30,7 @@
     @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
+    @vite(['resources/css/show_blog_post.css'])
     {{-- @vite(['resources/css/templatemo-art-factory.css']) --}}
     {{-- @vite(['resources/css/style.css']) --}}
 </head>
@@ -73,7 +74,7 @@
     <x-header />
 
     {{-- main section --}}
-    <div class="parallax"  style="background-image: url('{{ asset('images/welcome1.png') }}');">
+    <div class="parallax" style="background-image: url('{{ asset('images/welcome1.png') }}');">
         <div class="absolute inset-0 "></div>
         <div class="flex items-center justify-center h-full">
             <div class="scroll-down text-white flex flex-col items-center mt-[10em]">
@@ -322,67 +323,361 @@
 
                     {{-- FAQ --}}
                     <section aria-label="FAQ of this post"
-                    class="fag bg-slate-100 my-[3em] px-0 py-2 md:p-[2em] shadow-md rounded-md">
-                    <div class="container rounded-lg">
-                        <!-- ***** Section Title Start ***** -->
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section-heading">
-                                    <h2 aria-label="Frequently asked questions title" class=" my-3 font-semibold "
-                                        style="color: rgb(14, 103, 236);">Frequently
-                                        Asked Questions</h2>
+                        class="fag bg-slate-100 my-[3em] px-0 py-2 md:p-[2em] shadow-md rounded-md">
+                        <div class="container rounded-lg">
+                            <!-- ***** Section Title Start ***** -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="section-heading">
+                                        <h2 aria-label="Frequently asked questions title" class=" my-3 font-semibold "
+                                            style="color: rgb(14, 103, 236);">Frequently
+                                            Asked Questions</h2>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- ***** Section Title End ***** -->
+
+                            <div class="row">
+
+
+                                <div class="col-12 ">
+                                    <div class="accordions is-first-expanded ">
+                                        <article class="accordion">
+                                            <div class="accordion-head ">
+                                                <h3 id="question1" aria-label="FAQ question"
+                                                    class="text-blue-500 text-sm md:text-md">quesition </h3>
+
+
+
+
+                                            </div>
+                                            <div class="accordion-body">
+                                                <div class="content">
+                                                    <p aria-labelledby="question1" aria-label="answer of question"
+                                                        class="text-blue-400 bg-slate-100 p-1 md:p-2">
+                                                        ansower
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="accordion">
+                                            <div class="text-blue-500 accordion-head">
+                                                <h3 id="question2" class="text-blue-500 text-sm md:text-md">quesition
+                                                </h3>
+
+                                            </div>
+                                            <div class="accordion-body">
+                                                <div class="content">
+                                                    <p aria-labelledby="question2"
+                                                        class="text-blue-400 bg-slate-100 p-1 md:p-2">
+                                                        ansower
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                    {{-- poll section  --}}
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-96 mx-auto my-10">
+                        <!-- Poll Form -->
+                        <h2 class="text-lg font-bold text-gray-700 mb-4">
+                            <i class="fas fa-poll text-indigo-500"></i> What is your favorite programming language?
+                        </h2>
+                        <div class="flex items-center mb-3">
+                            <input type="radio" name="option" id="php" value="PHP"
+                                class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                            <label for="php" class="ml-2 text-gray-700">PHP</label>
+                        </div>
+                        <button type="button"
+                            class="bg-indigo-500 poll_btn hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full flex items-center justify-center">
+                            <i class="fas fa-vote-yea mr-2"></i> Submit Vote
+                        </button>
+
+                        <div class="loading_section hidden">
+
+
+                            <div class="socket">
+                                <div class="gel center-gel">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c1 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c2 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c3 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c4 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c5 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c6 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+
+                                <div class="gel c7 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+
+                                <div class="gel c8 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c9 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c10 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c11 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c12 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c13 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c14 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c15 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c16 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c17 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c18 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c19 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c20 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c21 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c22 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c23 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c24 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c25 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c26 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c28 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c29 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c30 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c31 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c32 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c33 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c34 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c35 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c36 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c37 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Static Poll Results -->
+                        <div class="poll_result hidden">
+
+
+                            <h2 class="text-lg font-bold text-gray-700 mt-8 ">
+                                <i class="fas fa-chart-bar text-green-500"></i> Poll Results
+                            </h2>
+                            <div class="mb-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-700">PHP</span>
+                                    <span class="text-gray-700 font-bold">40 votes</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4">
+                                    <div class="bg-green-500 h-4 rounded-full" style="width: 40%"></div>
                                 </div>
                             </div>
 
                         </div>
-                        <!-- ***** Section Title End ***** -->
+                    </div>
+                    {{-- quizze section --}}
+                    <div class="quizze_section">
+                        <div class="bg-white p-6 rounded-lg shadow-lg w-96 m-auto">
+                            <!-- Quiz Section -->
+                            <h2 class="text-lg font-bold text-gray-700 mb-4">
+                                <i class="fas fa-question-circle text-indigo-500"></i> Test Your Knowledge!
+                            </h2>
+                            <p class="text-gray-600 mb-4 qustion">What is the capital of France?</p>
 
-                        <div class="row">
-
-
-                            <div class="col-12 ">
-                                <div class="accordions is-first-expanded ">
-                                    <article class="accordion">
-                                        <div class="accordion-head ">
-                                            <h3 id="question1" aria-label="FAQ question"
-                                                class="text-blue-500 text-sm md:text-md">quesition </h3>
-
-
-
-
-                                        </div>
-                                        <div class="accordion-body">
-                                            <div class="content">
-                                                <p aria-labelledby="question1" aria-label="answer of question"
-                                                    class="text-blue-400 bg-slate-100 p-1 md:p-2">
-                                                    ansower
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="accordion">
-                                        <div class="text-blue-500 accordion-head">
-                                            <h3 id="question2" class="text-blue-500 text-sm md:text-md">quesition
-                                            </h3>
-
-                                        </div>
-                                        <div class="accordion-body">
-                                            <div class="content">
-                                                <p aria-labelledby="question2"
-                                                    class="text-blue-400 bg-slate-100 p-1 md:p-2">
-                                                    ansower
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </article>
-
+                            <!-- Quiz Options -->
+                            <div id="quizForm">
+                                <div class="flex items-center mb-3">
+                                    <input type="radio" name="answer" id="ans-1" value="Paris"
+                                        class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                                    <label for="ans-1" class="ml-2 text-gray-700 ans-1">Paris</label>
                                 </div>
+                                <div class="flex items-center mb-3">
+                                    <input type="radio" name="answer" id="ans-2" value="Rome"
+                                        class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                                    <label for="ans-1" class="ml-2 text-gray-700 ans-2">Rome</label>
+                                </div>
+                                <div class="flex items-center mb-3">
+                                    <input type="radio" name="answer" id="ans-3" value="Berlin"
+                                        class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                                    <label for="ans-3" class="ml-2 text-gray-700 ans-3">Berlin</label>
+                                </div>
+                                <div class="flex items-center mb-3">
+                                    <input type="radio" name="answer" id="ans-4" value="Madrid"
+                                        class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                                    <label for="ans-4" class="ml-2 text-gray-700 ans-4">Madrid</label>
+                                </div>
+                                <button type="button"
+                                    class="bg-indigo-500 quizze-btn hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full flex items-center justify-center">
+                                    <i class="fas fa-check-circle mr-2"></i> Submit Answer
+                                </button>
+                            </div>
+
+                            <!-- Quiz Result -->
+                            <div id="quizResult" class="hidden mt-6">
+                                <h3 class="text-lg font-bold text-gray-700">
+                                    <i class="fas fa-clipboard-check text-green-500"></i> Result
+                                </h3>
+                                <p id="resultMessage" class="text-gray-600 mt-2"></p>
+                                <button
+                                    class="bg-indigo-500 reset_btn hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full flex items-center justify-center">
+                                    <i class="fas fa-redo mr-2"></i> Try Again
+                                </button>
+                                <button
+                                    class="bg-indigo-500 next_qustion hidden hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full  items-center justify-center">
+                                    Next Quistion
+                                </button>
                             </div>
                         </div>
                     </div>
-
-                </section>
-
+                    <!-- Alert Box -->
+                    <div id="alertBox"
+                        class="hidden fixed top-6 right-6 max-w-sm bg-red-500 text-white shadow-lg rounded-lg p-4 flex items-center space-x-4 opacity-0 transition-opacity duration-500">
+                        <i class="fas fa-info-circle text-2xl"></i>
+                        <div>
+                            <p class="text-white">Please Choose one answer!</p>
+                        </div>
+                    </div>
                     {{-- CTA --}}
                     <section class="bg-gradient-to-r from-indigo-600 to-purple-500 py-12 px-6 rounded-md ">
                         <div class="container mx-auto text-center">
@@ -394,55 +689,66 @@
                             </p>
                             <div class="flex flex-col sm:flex-row justify-center sm:space-x-4">
                                 <!-- Button 1: Sign Up -->
-                                <button 
-                                   class="signup-modal-btn flex items-center px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 ">
+                                <button
+                                    class="signup-modal-btn flex items-center px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 ">
                                     <i class="fas fa-user-plus mr-2"></i> Sign Up Now
                                 </button>
-                    
+
                                 <!-- Button 2: Contact Us -->
                                 <button
-                                   class="contact-modal-btn flex my-[2em] sm:my-0 items-center px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 ">
+                                    class="contact-modal-btn flex my-[2em] sm:my-0 items-center px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 ">
                                     <i class="fas fa-phone-alt mr-2"></i> Contact Us
                                 </button>
                             </div>
                         </div>
                     </section>
-                    
+
                     <!-- Sign Up Modal -->
-                    <div id="signup-modal" class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
+                    <div id="signup-modal"
+                        class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
                         <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4 animate-fadeIn">
                             <div class="flex justify-between items-center mb-4">
                                 <h3 class="text-2xl font-bold">Sign Up</h3>
-                                <i class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-signup-modal-btn" ></i>
+                                <i
+                                    class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-signup-modal-btn"></i>
                             </div>
                             <form id="registerForm">
                                 @csrf
-                                <input aria-label="name for register" type="text" placeholder="Name" id="name_rgs" class="w-full px-4 py-2 mb-4 border rounded">
-                                <input aria-label="email address for register" type="email" id="email_rgs" placeholder="Email" class="w-full px-4 py-2 mb-4 border rounded">
-                               <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Sign Up</button>
-                            </form>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Modal -->
-                    <div id="contact-modal" class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
-                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4 animate-fadeIn">
-                            <div class="flex justify-between items-center mb-4">
-                                <h3 class="text-2xl font-bold">Contact Us</h3>
-                                <i class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-contact-modal-btn" ></i>
-                            </div>
-                            <form id="contactForm" method="post">
-                                @csrf
-                                <input type="text" id="name_msg" placeholder="Name" class="w-full px-4 py-2 mb-4 border rounded">
-                                <input type="email" id="email_msg" placeholder="Email" class="w-full px-4 py-2 mb-4 border rounded">
-                              
-                                <textarea placeholder="Message" id="msg" class="w-full px-4 py-2 mb-4 border rounded"></textarea>
-                               
-                                <button  type="submit" class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Send Message</button>
+                                <input aria-label="name for register" type="text" placeholder="Name"
+                                    id="name_rgs" class="w-full px-4 py-2 mb-4 border rounded">
+                                <input aria-label="email address for register" type="email" id="email_rgs"
+                                    placeholder="Email" class="w-full px-4 py-2 mb-4 border rounded">
+                                <button type="submit"
+                                    class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Sign
+                                    Up</button>
                             </form>
                         </div>
                     </div>
 
+                    <!-- Contact Modal -->
+                    <div id="contact-modal"
+                        class="fixed inset-0  items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300">
+                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4 animate-fadeIn">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl font-bold">Contact Us</h3>
+                                <i
+                                    class="fas fa-times cursor-pointer text-gray-600 hover:text-gray-800 close-contact-modal-btn"></i>
+                            </div>
+                            <form id="contactForm" method="post">
+                                @csrf
+                                <input type="text" id="name_msg" placeholder="Name"
+                                    class="w-full px-4 py-2 mb-4 border rounded">
+                                <input type="email" id="email_msg" placeholder="Email"
+                                    class="w-full px-4 py-2 mb-4 border rounded">
+
+                                <textarea placeholder="Message" id="msg" class="w-full px-4 py-2 mb-4 border rounded"></textarea>
+
+                                <button type="submit"
+                                    class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Send
+                                    Message</button>
+                            </form>
+                        </div>
+                    </div>
                     {{-- tags --}}
                     <section aria-label="Tags related to this blog post"
                         class="tags bg-slate-100 p-3 my-5 rounded-md shadow-md text-slate-500">
@@ -685,7 +991,7 @@
 
 
     {{-- footer section --}}
-    <div class="parallax"  style="background-image: url('{{ asset('images/thanks.png') }}');">
+    <div class="parallax" style="background-image: url('{{ asset('images/thanks.png') }}');">
 
     </div>
 
@@ -694,25 +1000,27 @@
     </footer>
 
 
-<!-- Add Font Awesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<!-- Tailwind Animation -->
-<style>
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+    <!-- Tailwind Animation -->
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
-    .animate-fadeIn {
-        animation: fadeIn 0.5s ease-out;
-    }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-out;
+        }
+
         .table_of_content::before {
             content: '';
             width: 10em;

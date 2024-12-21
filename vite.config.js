@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/css/bootstrap.min.css',
                 'resources/css/owl-carousel.css',
+                'resources/css/show_blog_post.css',
                 'resources/css/style.css',
                 'resources/css/style2.css',
                 'resources/css/templatemo-art-factory.css',

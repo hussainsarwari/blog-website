@@ -8,20 +8,20 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id('id');
+        Schema::create('registered_users', function (Blueprint $table) {
+            $table->id('user_id');
             $table->string('name');
             $table->string('email');
-            $table->string('category');
-            $table->date('createAtdate');
-           $table->Integer("visit_counter");
+            $table->boolean('blog')->default(true);
+            $table->string('category')->nullable();
+            $table->date('date');
+         
             $table->rememberToken();
             $table->timestamps();
-           
         });
     }
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('registered_users');
     }
 };
