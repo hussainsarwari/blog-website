@@ -617,7 +617,7 @@
                         </div>
                     </div>
                     {{-- quizze section --}}
-                    <div class="quizze_section">
+                    <div class="quizze_section my-5">
                         <div class="bg-white p-6 rounded-lg shadow-lg w-96 m-auto">
                             <!-- Quiz Section -->
                             <h2 class="text-lg font-bold text-gray-700 mb-4">
@@ -659,12 +659,9 @@
                                     <i class="fas fa-clipboard-check text-green-500"></i> Result
                                 </h3>
                                 <p id="resultMessage" class="text-gray-600 mt-2"></p>
+                               
                                 <button
-                                    class="bg-indigo-500 reset_btn hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full flex items-center justify-center">
-                                    <i class="fas fa-redo mr-2"></i> Try Again
-                                </button>
-                                <button
-                                    class="bg-indigo-500 next_qustion hidden hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full  items-center justify-center">
+                                    class="bg-indigo-500 next_qustion flex hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full  items-center justify-center">
                                     Next Quistion
                                 </button>
                             </div>

@@ -57,33 +57,19 @@ quizze_btn.addEventListener("click",()=>{
     if (selectedOption.value === 'Paris') {
         resultMessage.textContent = 'Correct! Paris is the capital of France.';
         resultMessage.className = 'text-green-500';
-        document.querySelector(".next_qustion").classList.remove("hidden")
-        document.querySelector(".next_qustion").classList.add("flex")
-        document.querySelector(".reset_btn").classList.add("hidden")
-        document.querySelector(".reset_btn").classList.remove("flex")
+        
        
     } else {
         resultMessage.textContent = `Wrong! The correct answer is Paris.`;
         resultMessage.className = 'text-red-500';
-        document.querySelector(".reset_btn").classList.remove("hidden")
-        document.querySelector(".reset_btn").classList.add("flex")
-        document.querySelector(".next_qustion").classList.add("hidden")
-        document.querySelector(".next_qustion").classList.remove("flex")
-        
+
     }
 
     resultDiv.classList.remove('hidden');
     // document.getElementById('quizForm').classList.add('hidden');
 })
 
-document.querySelector(".reset_btn").addEventListener("click",()=>{
 
-        document.getElementById('quizForm').classList.remove('hidden');
-        document.getElementById('quizResult').classList.add('hidden');
-        const options = document.querySelectorAll('input[name="answer"]');
-        options.forEach(option => option.checked = false);
-    
-})
 
 
 downloadBtn.addEventListener('click', () => {

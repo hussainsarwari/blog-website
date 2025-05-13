@@ -28,6 +28,7 @@
     @vite(['resources/css/app.css'])
     @vite(['resources/css/bootstrap.min.css'])
     @vite(['resources/css/owl-carousel.css'])
+    @vite(['resources/css/show_blog_post.css'])
     {{-- @vite(['resources/css/templatemo-art-factory.css']) --}}
     {{-- @vite(['resources/css/style.css']) --}}
 </head>
@@ -379,6 +380,298 @@
                         </div>
 
                     </section>
+                    
+
+                    {{-- poll section  --}}
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-96 mx-auto my-10">
+                        <!-- Poll Form -->
+                        <h2 class="text-lg font-bold text-gray-700 mb-4">
+                            <i class="fas fa-poll text-indigo-500"></i> What is your favorite programming language?
+                        </h2>
+                        <div class="flex items-center mb-3">
+                            <input type="radio" name="option" id="php" value="PHP"
+                                class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                            <label for="php" class="ml-2 text-gray-700">PHP</label>
+                        </div>
+                        <button type="button"
+                            class="bg-indigo-500 poll_btn hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full flex items-center justify-center">
+                            <i class="fas fa-vote-yea mr-2"></i> Submit Vote
+                        </button>
+
+                        <div class="loading_section hidden">
+
+
+                            <div class="socket">
+                                <div class="gel center-gel">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c1 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c2 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c3 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c4 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c5 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c6 r1">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+
+                                <div class="gel c7 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+
+                                <div class="gel c8 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c9 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c10 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c11 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c12 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c13 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c14 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c15 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c16 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c17 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c18 r2">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c19 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c20 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c21 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c22 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c23 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c24 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c25 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c26 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c28 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c29 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c30 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c31 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c32 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c33 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c34 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c35 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c36 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+                                <div class="gel c37 r3">
+                                    <div class="hex-brick h1"></div>
+                                    <div class="hex-brick h2"></div>
+                                    <div class="hex-brick h3"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Static Poll Results -->
+                        <div class="poll_result hidden">
+
+
+                            <h2 class="text-lg font-bold text-gray-700 mt-8 ">
+                                <i class="fas fa-chart-bar text-green-500"></i> Poll Results
+                            </h2>
+                            <div class="mb-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-700">PHP</span>
+                                    <span class="text-gray-700 font-bold">40 votes</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4">
+                                    <div class="bg-green-500 h-4 rounded-full" style="width: 40%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    {{-- quizze section --}}
+                    <div class="quizze_section my-5">
+                        <div class="bg-white p-6 rounded-lg shadow-lg w-96 m-auto">
+                            <!-- Quiz Section -->
+                            <h2 class="text-lg font-bold text-gray-700 mb-4">
+                                <i class="fas fa-question-circle text-indigo-500"></i> Test Your Knowledge!
+                            </h2>
+                            <p class="text-gray-600 mb-4 qustion">What is the capital of France?</p>
+
+                            <!-- Quiz Options -->
+                            <div id="quizForm">
+                                <div class="flex items-center mb-3">
+                                    <input type="radio" name="answer" id="ans-1" value="Paris"
+                                        class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                                    <label for="ans-1" class="ml-2 text-gray-700 ans-1">Paris</label>
+                                </div>
+                                <div class="flex items-center mb-3">
+                                    <input type="radio" name="answer" id="ans-2" value="Rome"
+                                        class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                                    <label for="ans-1" class="ml-2 text-gray-700 ans-2">Rome</label>
+                                </div>
+                                <div class="flex items-center mb-3">
+                                    <input type="radio" name="answer" id="ans-3" value="Berlin"
+                                        class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                                    <label for="ans-3" class="ml-2 text-gray-700 ans-3">Berlin</label>
+                                </div>
+                                <div class="flex items-center mb-3">
+                                    <input type="radio" name="answer" id="ans-4" value="Madrid"
+                                        class="form-radio text-indigo-500 focus:ring focus:ring-indigo-300">
+                                    <label for="ans-4" class="ml-2 text-gray-700 ans-4">Madrid</label>
+                                </div>
+                                <button type="button"
+                                    class="bg-indigo-500 quizze-btn hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full flex items-center justify-center">
+                                    <i class="fas fa-check-circle mr-2"></i> Submit Answer
+                                </button>
+                            </div>
+
+                            <!-- Quiz Result -->
+                            <div id="quizResult" class="hidden mt-6">
+                                <h3 class="text-lg font-bold text-gray-700">
+                                    <i class="fas fa-clipboard-check text-green-500"></i> Result
+                                </h3>
+                                <p id="resultMessage" class="text-gray-600 mt-2"></p>
+                                <button
+                                class="bg-indigo-500 next_qustion flex hover:bg-indigo-600 text-white px-4 py-2 rounded-lg mt-4 w-full  items-center justify-center">
+                                Next Quistion
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alert Box -->
+                    <div id="alertBox"
+                        class="hidden fixed top-6 right-6 max-w-sm bg-red-500 text-white shadow-lg rounded-lg p-4 flex items-center space-x-4 opacity-0 transition-opacity duration-500">
+                        <i class="fas fa-info-circle text-2xl"></i>
+                        <div>
+                            <p class="text-white">Please Choose one answer!</p>
+                        </div>
+                    </div>
+
                        {{-- CTA --}}
                        <section class="bg-gradient-to-r from-indigo-600 to-purple-500 py-12 px-6 rounded-md ">
                         <div class="container mx-auto text-center">
